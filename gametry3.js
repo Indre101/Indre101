@@ -96,17 +96,19 @@ function openDoors() {
 
   if (randomScenario === 0) {
     door1 = spiderman;
+    //door1 = radomPhotoToDoors(3);
     door2 = radomPhotoToDoors(3);
     door3 = radomPhotoToDoors(3);
   } else if (randomScenario === 1) {
     door1 = radomPhotoToDoors(3);
 
     door2 = spiderman;
+    //door2 = radomPhotoToDoors(3);
     door3 = radomPhotoToDoors(3);
   } else {
     door1 = radomPhotoToDoors(3);
     door2 = radomPhotoToDoors(3);
-
+    //door3 = radomPhotoToDoors(3);
     door3 = spiderman;
   }
 }
@@ -151,6 +153,7 @@ const gameOver = status => {
   } else {
     startButton.innerHTML = "Game over! play again?";
     pointsOf.innerHTML = 0;
+    pointsArray = [];
   }
   // startButton.innerHTML = "Start!";
   currentPlay = false;
@@ -183,15 +186,44 @@ startButton.onclick = function () {
 let pointsOf = document.getElementById('points');
 let pointsArray = [];
 
-const displayPoints = () => {
+let recordOfPoints = document.getElementById('record');
+let pointsRecord = [];
 
-  function getSum(total, num) {
-    return total + num;
-  }
+
+function getSum(total, num) {
+  return total + num;
+}
+
+// function findingMax(minValue, MaxValue) {
+//   return Math.max(minValue, MaxValue);
+// }
+
+const displayPoints = () => {
+  console.log(pointsRecord);
+  //console.log(pointsArray);
+  // assigned to show points 
   let point = 0;
   point++;
   pointsArray.push(point);
-  pointsOf.innerHTML = pointsArray.reduce(getSum);
+
+  let newPoints = pointsArray.reduce(getSum);
+  pointsOf.innerHTML = newPoints;
+  pointsRecord.push(newPoints);
+
+
+
+
+
+  let maxPointValue = pointsRecord.reduce(function (minValue, MaxValue) {
+    return Math.max(minValue, MaxValue);
+  });
+
+  recordOfPoints.innerHTML = maxPointValue;
+  console.log(maxPointValue);
+
+
+  return newPoints;
+
 
 }
 
