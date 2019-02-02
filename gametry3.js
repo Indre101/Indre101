@@ -36,25 +36,10 @@ const startClicked = () => {
 };
 
 // door functionality
-//const isItOpen = door => (door.src === closed) ? true : false;
+const isItOpen = door => (door.src === closed) ? true : false;
 
+const isTheDoorWrong = door => (door.getAttribute("src") === spiderman) ? true : false;
 
-function isItOpen(door) {
-  if (door.src === closed) {
-    return true;
-  } else {
-    //door.style.pointerEvents = 'none';
-    return false;
-  }
-}
-
-function isTheDoorWrong(door) {
-  if (door.getAttribute("src") === spiderman) {
-    return true;
-  } else {
-    return false;
-  }
-}
 
 /// checking if all doors are isItOpen
 function areAllOpen(door) {
@@ -147,6 +132,8 @@ thirdDoor.onclick = function () {
   }
 };
 
+/// GameOver function
+
 const gameOver = status => {
   if (status === "win") {
     startButton.innerHTML = "You win! Play again?";
@@ -157,14 +144,14 @@ const gameOver = status => {
     pointsOf.innerHTML = 0;
     pointsArray = [];
   }
-  // startButton.innerHTML = "Start!";
   currentPlay = false;
 };
-/// closed doors
+
+
+/// original function to start the game and to begin it again;
 
 function startOver() {
   firstDoor.src = closed;
-  // console.log(firstDoor.src);
   secondDoor.src = closed;
   thirdDoor.src = closed;
   currentPlay = true;
@@ -174,6 +161,7 @@ function startOver() {
   thirdDoor.style.pointerEvents = "auto";
 }
 
+// pressing the start button fires the game, and restarts it;
 startButton.onclick = function () {
   startClicked();
   openDoors();
@@ -191,18 +179,15 @@ let pointsArray = [];
 let recordOfPoints = document.getElementById('record');
 let pointsRecord = [];
 
-
+// function to pass in the reduce method
 function getSum(total, num) {
   return total + num;
 }
 
-// function findingMax(minValue, MaxValue) {
-//   return Math.max(minValue, MaxValue);
-// }
 
+/// function to show the points and the record
 const displayPoints = () => {
-  // console.log(pointsRecord);
-  //console.log(pointsArray);
+
   // assigned to show points 
   let point = 0;
   point++;
@@ -213,7 +198,7 @@ const displayPoints = () => {
   pointsRecord.push(newPoints);
 
 
-
+  /// sorting to find the largest number through points Record array 
 
 
   let maxPointValue = pointsRecord.reduce(function (minValue, MaxValue) {
@@ -221,12 +206,7 @@ const displayPoints = () => {
   });
 
   recordOfPoints.innerHTML = maxPointValue;
-  //console.log(maxPointValue);
-
-
-  return newPoints;
+  // return newPoints;
 
 
 }
-
-/// showing the record
