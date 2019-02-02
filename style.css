@@ -212,3 +212,86 @@ footer {
   grid-column-start: 2;
   /* margin-bottom: 4rem; */
 }
+
+@media only screen and (max-width: 320px),
+(max-height: 568px) {
+
+  .container {
+    grid-template-columns: 100%;
+  }
+
+  .blackAndWhite {
+    visibility: hidden;
+  }
+
+  .blackAndWhite1 {
+    visibility: hidden;
+    width: 50px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .findSpiderman {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+
+  #firstDoor,
+  #secondDoor,
+  #thirdDoor {
+    /* background-image: url('door.jpg'); */
+    background-size: contain;
+    width: 50px;
+    height: 130px;
+    padding: 1rem;
+  }
+
+  .rules {
+    margin-top: 0;
+  }
+
+  /* CSS ruleset */
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    //grid-template-columns: 100%;
+  }
+
+  .blackAndWhite {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+
+
+
+  .findSpiderman {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+
+  #firstDoor,
+  #secondDoor,
+  #thirdDoor {
+    /* background-image: url('door.jpg'); */
+    background-size: contain;
+    width: 60px;
+    height: 160px;
+    padding: 1rem;
+  }
+
+  .rules {
+    margin-top: 0;
+  }
+
+  footer {
+    margin-top: 2rem;
+    grid-column-start: 1;
+    //grid-row-start: 2;
+
+  }
+
+}
