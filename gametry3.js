@@ -181,12 +181,40 @@ startButton.onclick = function () {
 
 let pointsOf = document.getElementById('points');
 
-function displayPoints() {
-
-  if (notStarted()) {
-    pointsOf.innerHTML = 0;
-  }
+const displayPoints = () => {
+  pointsOf.innerHTML = 0;
 
 }
 
 displayPoints();
+
+//const countingPoints = () => {
+
+//   let point = 1
+//   if (gameOver('win')) {
+
+
+//     pointsOf.innerHTML = point++;
+//   }
+
+// }
+
+// function totalPoints() {
+
+//   if (gameOver() || startButton.innerHTML === 'Start!') {
+//     point = 0
+//     return point
+//   } else if (gameOver('win')) {
+//     point++
+//     return point;
+//   }
+
+// }
+
+
+// pointsOf.innerHTML = totalPoints();
+//countingPoints();
+
+// const totalPoints = () => {
+
+// }
