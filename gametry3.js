@@ -36,6 +36,8 @@ const startClicked = () => {
 };
 
 // door functionality
+//const isItOpen = door => (door.src === closed) ? true : false;
+
 
 function isItOpen(door) {
   if (door.src === closed) {
@@ -199,7 +201,7 @@ function getSum(total, num) {
 // }
 
 const displayPoints = () => {
-  console.log(pointsRecord);
+  // console.log(pointsRecord);
   //console.log(pointsArray);
   // assigned to show points 
   let point = 0;
@@ -219,7 +221,7 @@ const displayPoints = () => {
   });
 
   recordOfPoints.innerHTML = maxPointValue;
-  console.log(maxPointValue);
+  //console.log(maxPointValue);
 
 
   return newPoints;
