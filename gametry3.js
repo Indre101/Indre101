@@ -109,7 +109,7 @@ function openDoors() {
   }
 }
 
-firstDoor.onclick = function() {
+firstDoor.onclick = function () {
   if (!notStarted() && !isItOpen(firstDoor)) {
     firstDoor.src = door1;
 
@@ -121,7 +121,7 @@ firstDoor.onclick = function() {
   }
 };
 
-secondDoor.onclick = function() {
+secondDoor.onclick = function () {
   if (!notStarted() && !isItOpen(secondDoor)) {
     secondDoor.src = door2;
 
@@ -131,7 +131,7 @@ secondDoor.onclick = function() {
   }
 };
 
-thirdDoor.onclick = function() {
+thirdDoor.onclick = function () {
   if (!notStarted() && !isItOpen(thirdDoor)) {
     thirdDoor.src = door3;
 
@@ -164,7 +164,7 @@ function startOver() {
   thirdDoor.style.pointerEvents = "auto";
 }
 
-startButton.onclick = function() {
+startButton.onclick = function () {
   startClicked();
   openDoors();
 
@@ -176,3 +176,17 @@ startButton.onclick = function() {
     startOver();
   }
 };
+
+/// point calculation
+
+let pointsOf = document.getElementById('points');
+
+function displayPoints() {
+
+  if (notStarted()) {
+    pointsOf.innerHTML = 0;
+  }
+
+}
+
+displayPoints();
