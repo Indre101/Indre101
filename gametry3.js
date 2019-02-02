@@ -100,11 +100,13 @@ function openDoors() {
     door3 = radomPhotoToDoors(3);
   } else if (randomScenario === 1) {
     door1 = radomPhotoToDoors(3);
+
     door2 = spiderman;
     door3 = radomPhotoToDoors(3);
   } else {
     door1 = radomPhotoToDoors(3);
     door2 = radomPhotoToDoors(3);
+
     door3 = spiderman;
   }
 }
@@ -144,8 +146,11 @@ thirdDoor.onclick = function () {
 const gameOver = status => {
   if (status === "win") {
     startButton.innerHTML = "You win! Play again?";
+    displayPoints();
+
   } else {
     startButton.innerHTML = "Game over! play again?";
+    pointsOf.innerHTML = 0;
   }
   // startButton.innerHTML = "Start!";
   currentPlay = false;
@@ -168,11 +173,7 @@ startButton.onclick = function () {
   startClicked();
   openDoors();
 
-  if (
-    notStarted()
-    // startButton.innerHTML === "You win! Play again?" ||
-    // startButton.innerHTML === "Game over! play again?"
-  ) {
+  if (notStarted()) {
     startOver();
   }
 };
@@ -180,41 +181,18 @@ startButton.onclick = function () {
 /// point calculation
 
 let pointsOf = document.getElementById('points');
+let pointsArray = [];
 
 const displayPoints = () => {
-  pointsOf.innerHTML = 0;
+
+  function getSum(total, num) {
+    return total + num;
+  }
+  let point = 0;
+  point++;
+  pointsArray.push(point);
+  pointsOf.innerHTML = pointsArray.reduce(getSum);
 
 }
 
-displayPoints();
-
-//const countingPoints = () => {
-
-//   let point = 1
-//   if (gameOver('win')) {
-
-
-//     pointsOf.innerHTML = point++;
-//   }
-
-// }
-
-// function totalPoints() {
-
-//   if (gameOver() || startButton.innerHTML === 'Start!') {
-//     point = 0
-//     return point
-//   } else if (gameOver('win')) {
-//     point++
-//     return point;
-//   }
-
-// }
-
-
-// pointsOf.innerHTML = totalPoints();
-//countingPoints();
-
-// const totalPoints = () => {
-
-// }
+/// showing the record
