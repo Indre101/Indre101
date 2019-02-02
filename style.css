@@ -179,7 +179,8 @@
 
 /* points */
 
-#points {
+#points,
+#record {
   border: 2px solid black;
   width: 4rem;
   height: 3rem;
@@ -187,6 +188,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+/* record */
+
+.recordLayout {
+  display: flex;
+
+  margin-top: 2rem;
+  align-items: center;
+  color: violet;
+
+}
+
+#record {
+  margin-left: 1rem;
 }
 
 /* footer part */
