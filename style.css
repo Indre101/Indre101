@@ -287,3 +287,9 @@ footer {
     //grid-row-start: 2;
   }
 }
+
+/* photo collage of passion */
+#collage {
+  max-width: 700px;
+  max-height: 400px;
+}
