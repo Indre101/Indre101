@@ -14,3 +14,11 @@ function onSubmit(event) {
 labas.onclick = function () {
   onSubmit(event);
 }
+
+function myJsFunction() {
+  var text = document.getElementById('input1').value;
+}
+
+function myJsFunctionTwo() {
+  var text = document.getElementById('input2').value;
+}
