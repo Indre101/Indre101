@@ -290,8 +290,8 @@ footer {
 
 /* photo collage of passion */
 #collage {
-  max-height: 1280px;
-  max-width: 1920px;
+  height: 1280px;
+  width: 1920px;
 }
 
 /*  Triangle page styling */
