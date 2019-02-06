@@ -6,10 +6,26 @@ let labas = document.getElementById('labas');
 let ansverButton = document.getElementById('submitButton');
 let mistake = document.getElementById('printsOuterror');
 
+// trianlge function
+
 function myJsFunction() {
   let firstWall = text1.value;
   let secondWall = text2.value;
   let thirdWall = text3.value;
+
+  let a = firstWall + secondWall;
+  let b = secondWall + thirdWall;
+  let c = thirdWall + firstWall;
+
+  if (firstWall < 0 || secondWall < 0 || thirdWall < 0) {
+    mistake.innerHTML = 'Please enter positive numbers';
+  } else if (thirdWall > a || secondWall > c || thirdWall > b) {
+    mistake.innerHTML = 'The sum of the lengths of any 2 sides of a triangle must be greater than the third side';
+  }
+
+
+
+
 
   const totalOfThree = firstWall * secondWall * thirdWall;
   //console.log(text);
@@ -19,9 +35,11 @@ function myJsFunction() {
 
 ansverButton.onclick = function () {
 
-  labas.innerHTML = myJsFunction();
+  myJsFunction();
 
 }
+
+
 
 // clearing the form
 
@@ -30,6 +48,7 @@ const clearTheForm = () => {
   text1.value = '';
   text2.value = '';
   text3.value = '';
+  mistake.innerHTML = '';
 
 };
 
