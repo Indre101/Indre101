@@ -1,37 +1,40 @@
-let test = document.getElementById('firstLength');
-let submitButton = document.getElementById('submitButton')
-
-
-// function submitting() {
-//   document.getElementById('myForm').submit();
-// };
-
+let text1 = document.getElementById('input1');
+let text2 = document.getElementById('input2');
+let text3 = document.getElementById('input3');
+let naujasMygtukas = document.getElementById('theButtonToClear');
+let labas = document.getElementById('labas');
+let ansverButton = document.getElementById('submitButton');
+let mistake = document.getElementById('printsOuterror');
 
 function myJsFunction() {
-  let text = document.getElementById('input1').value;
+  let firstWall = text1.value;
+  let secondWall = text2.value;
+  let thirdWall = text3.value;
+
+  const totalOfThree = firstWall * secondWall * thirdWall;
   //console.log(text);
-  return text;
+  return totalOfThree;
 }
-
-function myJsFunctionTwo() {
-  let text1 = document.getElementById('input2').value;
-  //console.log(text1);
-  return text1;
-}
-
-function calculateTriange() {
-  let gf = myJsFunction() * myJsFunctionTwo();
-  //console.log(gf);
-  return gf
-}
-
-let labas = document.getElementById('labas');
-
-let ansverButton = document.getElementById('submitButton');
 
 
 ansverButton.onclick = function () {
 
-  labas.innerHTML = calculateTriange();
+  labas.innerHTML = myJsFunction();
 
 }
+
+// clearing the form
+
+const clearTheForm = () => {
+
+  text1.value = '';
+  text2.value = '';
+  text3.value = '';
+
+};
+
+naujasMygtukas.onclick = function () {
+  clearTheForm();
+  // labas.innerHTML = myJsFunction();
+
+};
