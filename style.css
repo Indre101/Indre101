@@ -76,11 +76,17 @@
 
 .text,
 .text2 {
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-row-start: 2;
-  height: 70vh;
-  /* background-image: url('orange.jpg'); */
-  background-size: cover;
+}
+
+/* photo collage of passion */
+#ManoKoliazas {
+  width: 100%;
+  height: auto;
+  /* display: flex;
+  overflow: scroll; */
+  margin: 3rem;
 }
 
 /* rainbow css */
@@ -287,12 +293,6 @@ footer {
     //grid-row-start: 2;
   }
 }
-
-/* photo collage of passion */
-/* #ManoKoliazas {
-  max-height: 80%;
-  max-width: 90%;
-} */
 
 /*  Triangle page styling */
 
