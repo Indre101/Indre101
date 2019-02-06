@@ -6,19 +6,32 @@ let submitButton = document.getElementById('submitButton')
 //   document.getElementById('myForm').submit();
 // };
 
-function onSubmit(event) {
-  labas.innerHTML = 'sfs'
-
-}
-
-labas.onclick = function () {
-  onSubmit(event);
-}
 
 function myJsFunction() {
-  var text = document.getElementById('input1').value;
+  let text = document.getElementById('input1').value;
+  //console.log(text);
+  return text;
 }
 
 function myJsFunctionTwo() {
-  var text = document.getElementById('input2').value;
+  let text1 = document.getElementById('input2').value;
+  //console.log(text1);
+  return text1;
+}
+
+function calculateTriange() {
+  let gf = myJsFunction() * myJsFunctionTwo();
+  //console.log(gf);
+  return gf
+}
+
+let labas = document.getElementById('labas');
+
+let ansverButton = document.getElementById('submitButton');
+
+
+ansverButton.onclick = function () {
+
+  labas.innerHTML = calculateTriange();
+
 }
