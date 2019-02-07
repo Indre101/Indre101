@@ -30,16 +30,11 @@ function myJsFunction() {
     let a_kampas = (((firstWall ** 2 + secondWall ** 2 - thirdWall ** 2) / (2 * firstWall * secondWall)));
     let b_kampas = (((secondWall ** 2 + thirdWall ** 2 - firstWall ** 2) / (2 * secondWall * thirdWall)));
     let c_kampas = (((firstWall ** 2 + thirdWall ** 2 - secondWall ** 2) / (2 * firstWall * thirdWall)));
+
+    let degree = Math.floor(a_kampas * 180 / Math.PI);
+    console.log(degree);
     console.log(a_kampas);
   }
-
-
-
-
-
-  const totalOfThree = firstWall * secondWall * thirdWall;
-  console.log(text);
-  return totalOfThree;
 }
 
 
