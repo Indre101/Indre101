@@ -9,9 +9,9 @@ let mistake = document.getElementById('printsOuterror');
 // trianlge function
 
 function myJsFunction() {
-  let firstWall = text1.value;
-  let secondWall = text2.value;
-  let thirdWall = text3.value;
+  let firstWall = parseInt(text1.value);
+  let secondWall = parseInt(text2.value);
+  let thirdWall = parseInt(text3.value);
 
 
 
@@ -21,25 +21,25 @@ function myJsFunction() {
   let c_sum = thirdWall + firstWall;
   console.log(`${firstWall} ${secondWall} ${thirdWall} ${a_sum} ${b_sum} ${c_sum}`)
 
-  // if (firstWall < 0 || secondWall < 0 || thirdWall < 0) {
-  //   mistake.innerHTML = 'Please enter positive numbers';
-  // } else if (thirdWall > a_sum || secondWall > c_sum || firstWall > b_sum) {
+  if (firstWall < 0 || secondWall < 0 || thirdWall < 0) {
+    mistake.innerHTML = 'Please enter positive numbers';
+  } else if (thirdWall > a_sum || secondWall > c_sum || firstWall > b_sum) {
 
-  //   mistake.innerHTML = 'The sum of the lengths of any 2 sides of a triangle must be greater than the third side';
-  // } else {
-  //   let a_kampas = (((firstWall ** 2 + secondWall ** 2 - thirdWall ** 2) / (2 * firstWall * secondWall)));
-  //   let b_kampas = (((secondWall ** 2 + thirdWall ** 2 - firstWall ** 2) / (2 * secondWall * thirdWall)));
-  //   let c_kampas = (((firstWall ** 2 + thirdWall ** 2 - secondWall ** 2) / (2 * firstWall * thirdWall)));
-  //   console.log(a_kampas);
-  // }
-
-
+    mistake.innerHTML = 'The length of one side can not be longer than the sum of other two';
+  } else {
+    let a_kampas = (((firstWall ** 2 + secondWall ** 2 - thirdWall ** 2) / (2 * firstWall * secondWall)));
+    let b_kampas = (((secondWall ** 2 + thirdWall ** 2 - firstWall ** 2) / (2 * secondWall * thirdWall)));
+    let c_kampas = (((firstWall ** 2 + thirdWall ** 2 - secondWall ** 2) / (2 * firstWall * thirdWall)));
+    console.log(a_kampas);
+  }
 
 
 
-  //const totalOfThree = firstWall * secondWall * thirdWall;
-  //console.log(text);
-  //return totalOfThree;
+
+
+  const totalOfThree = firstWall * secondWall * thirdWall;
+  console.log(text);
+  return totalOfThree;
 }
 
 
