@@ -45,6 +45,14 @@ function myJsFunction() {
   } else if (degree1 === 90 || degree2 === 90 || degree3 === 90) {
 
     mistake.innerHTML = `The corners are ${degree1}, ${degree2}, ${degree3} the triangle is rectanlge`
+  } else if (firstWall === secondWall && secondWall === thirdWall && thirdWall === firstWall) {
+    degree1 = 60;
+    degree2 = degree1;
+    degree3 = degree2;
+
+    mistake.innerHTML = `All the corners are 60 degree, cause the triangle is Equilateral `
+
+
   } else {
     mistake.innerHTML = `The corners are ${degree1}, ${degree2}, ${degree3} the triangle is not rectanlge`
   }
