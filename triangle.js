@@ -38,6 +38,10 @@ function myJsFunction() {
   } else if (thirdWall >= a_sum || secondWall >= c_sum || firstWall >= b_sum) {
 
     mistake.innerHTML = 'The length of one side can not be equal to or more than the sum of other two';
+  } else if (firstWall === secondWall || secondWall === thirdWall || thirdWall === firstWall) {
+    degree1 = degree2
+    degree3 = 180 - degree1 - degree2;
+    mistake.innerHTML = `The corners are ${degree1}, ${degree2}, ${degree3} the triangle is Isosceles`
   } else if (degree1 === 90 || degree2 === 90 || degree3 === 90) {
 
     mistake.innerHTML = `The corners are ${degree1}, ${degree2}, ${degree3} the triangle is rectanlge`
