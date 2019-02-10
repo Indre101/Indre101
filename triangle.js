@@ -24,10 +24,14 @@ function myJsFunction() {
   let a_kampas = Math.acos((((firstWall ** 2 + secondWall ** 2 - thirdWall ** 2) / (2 * firstWall * secondWall))));
   let b_kampas = Math.acos((((secondWall ** 2 + thirdWall ** 2 - firstWall ** 2) / (2 * secondWall * thirdWall))));
   let c_kampas = Math.acos((((firstWall ** 2 + thirdWall ** 2 - secondWall ** 2) / (2 * firstWall * thirdWall))));
+  console.log(a_kampas);
 
   let degree1 = Math.floor(a_kampas * 180 / Math.PI);
-  let degree2 = Math.floor(b_kampas * 180 / Math.PI);
-  let degree3 = Math.ceil(c_kampas * 180 / Math.PI);
+  let degree2 = Math.ceil(b_kampas * 180 / Math.PI);
+  let degree3 = 180 - degree1 - degree2;
+
+  //  console.log(degree1 + degree2 + degree3)
+
 
   if (firstWall <= 0 || secondWall <= 0 || thirdWall <= 0) {
     mistake.innerHTML = 'Please enter positive numbers';
