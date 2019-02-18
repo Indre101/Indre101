@@ -1,28 +1,38 @@
- header {
-   position: fixed;
-   height: 300px;
-   background-image: linear-gradient(#ff9d2f, #ff6126);
- }
+header {
+  position: relative;
+  height: 300px;
+  background-image: linear-gradient(#ff9d2f, #ff6126);
+}
 
- h1 {
-   padding: 100px 0;
-   font: 44px "Arial";
-   text-align: center;
- }
+h1 {
+  padding: 100px 0;
+  font: 44px "Arial";
+  text-align: center;
+}
 
- header h1 {
-   color: white;
- }
+header h1 {
+  color: white;
+}
 
- svg {
-   bottom: 0;
-   width: 100%;
-   height: 100px;
-   background-color: #cf4917;
-   margin-top: 0%;
- }
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
 
- /* 
+/* svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #cf4917;
+  text-shadow: 10px 10px black;
+  margin-top: 0%;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+} */
+
+/* 
  @media (max-width: 699px) {
    .svg--lg {
      display: none;
