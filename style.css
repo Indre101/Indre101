@@ -6,15 +6,31 @@ header {
   background-color: #cf4917;
 }
 
-
 /* menu/navigation styling */
 .menu {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
-.menu li {}
+.menu li {
+  border: 3px black dotted;
+  display: flex;
+  font-size: 1.2rem;
+  margin: 1rem;
+  max-width: 8rem;
+  width: 100%;
+  max-height: 5rem;
+  height: 100%;
+  justify-content: center;
+}
+
+#home {
+  border: none;
+}
+
+/* the pattern for cut out header */
 
 svg {
   position: absolute;
@@ -22,5 +38,4 @@ svg {
   width: 100%;
   max-height: 3em;
   height: 100%;
-
 }
