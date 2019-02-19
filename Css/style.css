@@ -64,6 +64,8 @@ header {
   flex-direction: column;
   justify-content: center;
   max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .greeting {
@@ -71,10 +73,8 @@ header {
   font-size: 2em;
 }
 
-/* .something {
-  columns: 1;
-  max-width: 700px;
-  width: 100%;
+.something {
+
   text-align: justify;
 
-} */
+}
