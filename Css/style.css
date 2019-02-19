@@ -58,12 +58,14 @@ header {
   width: 100%;
   height: 100%;
   justify-content: center;
+
 }
 
 
 .menu li a {
   text-decoration: none;
   color: black;
+  padding: 0.2em;
 
 }
 
@@ -119,4 +121,51 @@ footer {
 
 #makeup {
   box-shadow: 5px 5px 8px black;
+}
+
+/* color scheme */
+
+.burntSiena,
+.harvestGold,
+.black,
+.red,
+.honeyFlower {
+  background-color: #cf4917;
+  clip-path: polygon(0% 34%, 39% 22%, 83% 26%, 93% 43%, 100% 58%, 54% 59%, 9% 55%, 0% 58%);
+  max-height: 100px;
+  height: 100vh;
+  max-width: 200px;
+  width: 100%;
+}
+
+/* color polygons  */
+
+.harvestGold {
+  clip-path: polygon(30% 15%, 12% 39%, 28% 65%, 69% 64%, 90% 34%, 72% 11%, 49% 8%);
+  background-color: #f9ac3d;
+}
+
+
+.black {
+  clip-path: polygon(8% 11%, 43% 8%, 83% 6%, 85% 64%, 85% 85%, 59% 83%, 33% 82%, 5% 85%);
+  background-color: black;
+}
+
+.shadowPolygonBlack {
+  filter: drop-shadow(10px 2px white);
+
+}
+
+.red {
+  clip-path: polygon(47% 31%, 80% 13%, 95% 42%, 79% 79%, 50% 95%, 23% 65%, 10% 23%, 24% 5%);
+  background-color: #cc0b1c;
+}
+
+.honeyFlower {
+  clip-path: polygon(47% 52%, 15% 19%, 23% 14%, 48% 45%, 57% 14%, 69% 18%, 52% 48%, 83% 47%, 79% 58%, 51% 51%, 60% 69%, 54% 80%, 42% 51%, 33% 73%, 21% 69%, 36% 51%, 39% 45%, 14% 41%, 14% 34%, 16% 46%);
+  background-color: #573D64;
+}
+
+.shadowPolygon {
+  filter: drop-shadow(10px 2px black);
 }
