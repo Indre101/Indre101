@@ -51,6 +51,12 @@ header {
   justify-content: center;
 }
 
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+}
+
 #home {
   border: none;
 }
@@ -74,5 +80,11 @@ header {
 
 .something {
   text-align: justify;
+  line-height: 1.3em;
 
+}
+
+/* footer styling */
+footer {
+  text-align: center;
 }
