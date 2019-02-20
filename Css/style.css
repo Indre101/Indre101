@@ -117,17 +117,16 @@ header {
 
 }
 
-#home {
+.homeImage {
   border: none;
   height: 2em;
   width: 2em;
 }
 
-#home1 {
+
+
+.menu .noBorder {
   border: none;
-  height: 3em;
-  width: 3em;
-  margin: 0.8em;
 }
 
 /* text */
