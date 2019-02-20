@@ -414,17 +414,30 @@ footer {
 
 /* typography */
 
-.usedFont {
-  max-width: 700px;
-  width: 100%;
-  box-shadow: 4px 2px black;
-  float: left;
-
+.allTypoinfo {
+  columns: 2;
 }
 
-.fontImages {
+.fontImagesGroup {
   margin: 2em;
   text-align: center;
   font-size: 0.8em;
+}
+
+.fontImagesGroup div {
+  margin-bottom: 2em;
+}
+
+.usedFontImage {
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 4px 2px black;
+
+}
+
+.informationTypography {
+  max-width: 700px;
+  width: 100%;
+  line-height: 2em;
 
 }
