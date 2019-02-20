@@ -353,7 +353,7 @@ h6 {
 
 }
 
-*/ #smallest {
+#smallest {
   grid-area: 1/1/span 4 /span 2;
   background-image: url('./../Images/image_assets/33percent.jpg');
   background-size: cover;
