@@ -69,7 +69,8 @@ header {
 }
 
 .menu li,
-.galeryLi {
+.galeryLi,
+.noBorder {
   display: flex;
   font-size: 1em;
   margin: 1em;
