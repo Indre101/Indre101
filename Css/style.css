@@ -418,6 +418,8 @@ footer {
   max-width: 700px;
   width: 100%;
   box-shadow: 4px 2px black;
+  float: left;
+
 }
 
 .fontImages {
