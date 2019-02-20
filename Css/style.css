@@ -24,7 +24,8 @@ header {
 
 .shapeContainer,
 .shapeContainer1,
-.shapeContainer2 {
+.shapeContainer2,
+.shapeContainer3 {
   max-height: 100px;
   height: 100vh;
   width: 100%;
@@ -40,6 +41,10 @@ header {
   background-color: #573D64;
 }
 
+.shapeContainer3 {
+  background-color: #f9ac3d;
+
+}
 
 /* menu/navigation styling */
 .menu {
