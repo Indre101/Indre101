@@ -463,9 +463,15 @@ footer {
 }
 
 
-/*  web hierarhy */
+/* skeches skeches skechesskechesskechesskechesskeches */
+.sketchedContent {
+  text-align: center;
+  margin: 0 auto;
+
+}
+
 .sketches div {
-  margin-bottom: 2em;
+  margin: 2em;
   display: inline-block;
 }
 
@@ -475,12 +481,8 @@ footer {
   box-shadow: 10px 5px black;
 }
 
-.sketchedContent {
 
-  display: inline;
-  max-width: 700px;
-  width: 100%;
-}
+
 
 .webHierarchy {
   max-height: 500px;
@@ -488,14 +490,21 @@ footer {
   box-shadow: 10px 5px black;
 }
 
-
+#sketch1 {
+  display: inline-block;
+  transform: rotate(90deg);
+  max-height: 250px;
+  height: 100%;
+}
 
 /* sketched content */
 
 .logoText {
-  margin: 2em;
   line-height: 2em;
   text-align: justify;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 
