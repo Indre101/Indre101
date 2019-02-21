@@ -11,6 +11,11 @@ body {
   background-color: #f6f1ed;
   font-family: Helvetica, sans-serif;
   font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+
 
 
 }
