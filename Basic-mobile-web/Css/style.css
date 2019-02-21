@@ -20,6 +20,7 @@ body {
 header {
   filter: drop-shadow(10px 20px black);
 
+
 }
 
 .galeryShadow {
@@ -31,16 +32,20 @@ header {
 .shapeContainer1,
 .shapeContainer2,
 .shapeContainer3,
-.shapeContainer4 {
+.shapeContainer4,
+.shapeContainer5 {
 
   max-height: 100px;
   height: 100vh;
   width: 100%;
   background-color: #cf4917;
   clip-path: polygon(0% 0%, 0% 100%, 12% 88%, 22% 92%, 30% 98%, 41% 93%, 53% 88%, 63% 93%, 76% 97%, 86% 91%, 100% 99%, 100% 74%, 100% 2%, 100% 0%);
+
+
 }
 
-.shapeContainer1 {
+.shapeContainer1,
+.shapeContainer5 {
   background-color: #cc0b1c;
 }
 
@@ -98,6 +103,7 @@ header {
   color: black;
 
 }
+
 
 
 .galeryLi {
@@ -452,6 +458,65 @@ footer {
   box-shadow: 10px 5px black;
 }
 
-caption {
-  font-size: 0.8em;
+
+
+/* sketched content */
+
+.logoText {
+  margin: 2em;
+  line-height: 2em;
+  text-align: justify;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 1024px) {
+
+  .shapeContainer,
+  .shapeContainer1,
+  .shapeContainer2,
+  .shapeContainer3,
+  .shapeContainer4,
+  .shapeContainer5 {
+    max-height: 100px;
+    height: 100vh;
+    width: 1024px;
+
+
+  }
+
+  .menu,
+  .navGaleri {
+    list-style-type: none;
+    display: flex;
+
+  }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  .shapeContainer,
+  .shapeContainer1,
+  .shapeContainer2,
+  .shapeContainer3,
+  .shapeContainer4,
+  .shapeContainer5 {
+    max-height: 100px;
+    height: 100vh;
+    width: 768px;
+
+
+  }
+
+  .menu,
+  .navGaleri {
+    list-style-type: none;
+    display: flex;
+
+  }
+
+
 }
