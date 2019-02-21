@@ -173,7 +173,10 @@ header {
 }
 
 
-
+.siteList {
+  max-width: 700px;
+  width: 100%;
+}
 
 /* about me page styling start  */
 
