@@ -504,19 +504,19 @@ footer {
   .shapeContainer3,
   .shapeContainer4,
   .shapeContainer5 {
-    max-height: 100px;
+    max-height: 200px;
     height: 100vh;
-    width: 768px;
+    width: 100vh;
 
 
   }
 
-  .menu,
+  /* .menu,
   .navGaleri {
     list-style-type: none;
     display: flex;
 
-  }
+  } */
 
 
 }
