@@ -180,18 +180,16 @@ header {
 
 /* about me page styling start  */
 
-#myPassionCollage,
-#makeup {
+#travel {
   float: left;
   box-shadow: 5px 5px 8px #cc0b1c;
   margin: 1em;
-
+  max-height: 300px;
+  margin: 2em;
 
 }
 
-#makeup {
-  box-shadow: 5px 5px 8px black;
-}
+
 
 /* color scheme */
 
@@ -429,9 +427,11 @@ h6 {
 
 /* footer styling */
 footer {
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: 0.6em;
-  margin: 2em;
+  width: 100%;
 
 }
 
