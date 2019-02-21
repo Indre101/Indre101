@@ -11,7 +11,6 @@ body {
   background-color: #f6f1ed;
   font-family: Helvetica, sans-serif;
   font-size: 1.3em;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
@@ -26,12 +25,14 @@ header {
   filter: drop-shadow(10px 20px black);
 
 
+
 }
 
 .galeryShadow {
   filter: drop-shadow(10px 20px white);
 
 }
+
 
 .shapeContainer,
 .shapeContainer1,
@@ -71,10 +72,13 @@ header {
 /* menu/navigation styling */
 .menu,
 .navGaleri {
+
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+
+
+
 
 }
 
@@ -82,12 +86,15 @@ header {
 .galeryLi,
 .noBorder {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1em;
   margin: 1em;
   max-width: 8em;
   width: 100%;
-  height: 100%;
-  justify-content: center;
+
+
+
 
 }
 
@@ -101,6 +108,7 @@ header {
 .galeryLi a {
   text-decoration: none;
   padding: 0.2em;
+  display: block;
 
 }
 
@@ -456,6 +464,23 @@ footer {
 
 
 /*  web hierarhy */
+.sketches div {
+  margin-bottom: 2em;
+  display: inline-block;
+}
+
+.sketches div img {
+  max-height: 300px;
+  height: 100%;
+  box-shadow: 10px 5px black;
+}
+
+.sketchedContent {
+
+  display: inline;
+  max-width: 700px;
+  width: 100%;
+}
 
 .webHierarchy {
   max-height: 500px;
@@ -484,24 +509,23 @@ footer {
   .shapeContainer3,
   .shapeContainer4,
   .shapeContainer5 {
-    max-height: 100px;
+
+    max-height: 200px;
     height: 100vh;
-    width: 1024px;
-
-
   }
 
   .menu,
   .navGaleri {
-    list-style-type: none;
-    display: flex;
+    flex-wrap: wrap;
 
   }
 
-
+  body {
+    font-size: 1em;
+  }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
 
   .shapeContainer,
   .shapeContainer1,
@@ -509,19 +533,53 @@ footer {
   .shapeContainer3,
   .shapeContainer4,
   .shapeContainer5 {
-    max-height: 200px;
-    height: 100vh;
-    width: 100vh;
 
+    max-height: 350px;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+
+  .shapeContainer,
+  .shapeContainer1,
+  .shapeContainer2,
+  .shapeContainer3,
+  .shapeContainer4,
+  .shapeContainer5 {
+
+    max-height: 260px;
+    height: 100vh;
+  }
+
+  body {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .shapeContainer,
+  .shapeContainer1,
+  .shapeContainer2,
+  .shapeContainer3,
+  .shapeContainer4,
+  .shapeContainer5 {
+
+    max-height: 500px;
+    height: 100vh;
 
   }
 
-  /* .menu,
+  body {
+    font-size: 0.8em;
+
+  }
+
+  .menu,
   .navGaleri {
-    list-style-type: none;
-    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  } */
-
-
+  }
 }
