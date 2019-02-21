@@ -494,6 +494,9 @@ h5 {
 .webHierarchy {
   max-height: 500px;
   height: 100%;
+  max-width: 600px;
+  width: 100%;
+
   box-shadow: 10px 5px black;
 }
 
