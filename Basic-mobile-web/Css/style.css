@@ -495,9 +495,12 @@ h5 {
   max-width: 300px;
   width: 100%;
   box-shadow: 10px 5px black;
+
 }
 
-
+.rotate {
+  transform: rotate(-90deg);
+}
 
 
 .webHierarchy {
@@ -509,12 +512,7 @@ h5 {
   box-shadow: 10px 5px black;
 }
 
-#sketch1 {
-  display: inline-block;
-  transform: rotate(90deg);
-  max-height: 250px;
-  height: 100%;
-}
+
 
 /* sketched content */
 
