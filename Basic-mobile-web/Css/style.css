@@ -428,6 +428,7 @@ h6 {
 
 /* footer styling */
 footer {
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -443,7 +444,6 @@ footer {
 }
 
 .fontImagesGroup {
-  margin: 2em;
   text-align: center;
   font-size: 0.8em;
 }
@@ -466,6 +466,9 @@ footer {
   text-align: justify;
 }
 
+h5 {
+  margin-top: 0px;
+}
 
 /* skeches skeches skechesskechesskechesskechesskeches */
 .sketchedContent {
