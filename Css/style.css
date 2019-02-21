@@ -441,3 +441,16 @@ footer {
   line-height: 2em;
   text-align: justify;
 }
+
+
+/*  web hierarhy */
+
+.webHierarchy {
+  max-height: 500px;
+  height: 100%;
+  box-shadow: 10px 5px black;
+}
+
+caption {
+  font-size: 0.8em;
+}
