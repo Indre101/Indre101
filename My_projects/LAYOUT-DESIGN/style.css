@@ -3,7 +3,6 @@
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-columns: minmax(100px auto);
   font-family: "Raleway";
 }
 
@@ -14,11 +13,10 @@
 
 header {
   grid-column-start: 1;
-  grid-column-end: 13;
+  grid-column-end: span 12;
   grid-row-start: 1;
   grid-row-end: 3;
   text-align: center;
-  width: 100%;
   background-color: #00657F;
   padding: 3em;
 }
@@ -38,25 +36,42 @@ h1 {
 
 .navigation {
   grid-column-start: 1;
-  grid-column-end: 13;
+  grid-column-end: span 12;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: -2em;
-
-
+  text-align: center;
   /* display: grid;
   grid-template-columns: repeat(4, 1fr); */
 
 }
 
-.navigation>div {
+.navigation>div,
+.content>div {
   padding-top: 20px;
   max-width: 150px;
-  width: 100%;
   text-align: center;
   border: 3px seashell solid;
   background-color: white;
-  justify-self: center;
   margin: 0.5em;
+}
+
+.content {
+  grid-column-end: span 12;
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 3em;
+  border: 2px grey solid;
+}
+
+footer {
+  grid-column-end: span 12;
+  text-align: center;
+  background: darkgrey;
+  margin-top: 1em;
 }
