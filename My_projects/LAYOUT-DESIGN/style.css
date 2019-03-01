@@ -75,3 +75,8 @@ footer {
   background: darkgrey;
   margin-top: 1em;
 }
+
+.bottomPage {
+  border: none;
+  box-shadow: 10px 10px seashell;
+}
