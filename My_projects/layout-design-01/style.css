@@ -2,19 +2,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  max-width: 500px;
+  max-width: 400px;
 }
 
-.circular {
-  margin: 1em;
-  display: flex;
-}
 
 #firstMove,
 #thirdMove {
   margin: 0;
   align-self: flex-end;
   justify-self: flex-end;
+  background-image: url("black-pencil.png");
+  background-size: contain;
 }
 
 #secondMove {
@@ -34,7 +32,8 @@
 }
 
 #fithMove {
-  margin-top: 2em;
+  margin-top: 1em;
+  display:
 }
 
 #sixthMove {
@@ -43,7 +42,7 @@
   justify-self: flex-end;
 }
 
-.main {
+.menuelement {
   border: 2px black solid;
   border-radius: 50%;
   text-align: center;
@@ -53,4 +52,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
+}
+
+#burger {
+  background-image: url("Menu-512.png");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  border: none;
+  background-position: center;
+  display: block;
 }
