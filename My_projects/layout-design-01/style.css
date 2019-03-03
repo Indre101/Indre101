@@ -1,9 +1,28 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  max-width: 500px;
+  width: 100%;
+}
+
+.circular {
+  margin: 1em;
+}
+
 .main {
   border: 2px black solid;
-  border-radius: 5%;
+  border-radius: 50%;
   text-align: center;
-  width: 50px;
+  width: 100px;
   margin: 0 auto;
-  height: 80px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+
+.firstMove {
+  position: relative;
 }
