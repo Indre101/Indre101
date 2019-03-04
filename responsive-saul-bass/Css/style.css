@@ -55,6 +55,27 @@ body {
   background-color: #f9ac3d;
 }
 
+#images {
+  background-color: #000000;
+  background-image: url("./../Images/sketched-content/menu.png");
+  background-size: 80px;
+}
+
+#folders {
+  background-color: #cc0b1c;
+
+}
+
+#sketched {
+  background-color: #cf4917;
+
+}
+
+#aboutme {
+  background-color: #573D64;
+
+}
+
 /* styling header and creating the crooked pattern for saul bass style */
 
 header {
