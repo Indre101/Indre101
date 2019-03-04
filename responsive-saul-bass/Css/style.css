@@ -11,7 +11,6 @@
 body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   background-color: #f6f1ed;
   font-family: Helvetica, sans-serif;
   font-size: 1.3em;
@@ -81,7 +80,7 @@ body {
 header {
   filter: drop-shadow(10px 20px black);
   grid-column: 1/span 4;
-  width: 100%;
+  width: 100vw;
 
 
 }
