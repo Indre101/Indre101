@@ -46,6 +46,15 @@ body {
 
 }
 
+#colors {
+  background-color: #573D64;
+
+}
+
+#typography {
+  background-color: #f9ac3d;
+}
+
 /* styling header and creating the crooked pattern for saul bass style */
 
 header {
@@ -680,6 +689,13 @@ h5 {
   .image {
     font-size: 0.6em;
   }
+
+  .allTypoinfo {
+    columns: 1;
+    grid-column: 1/ span 1;
+  }
+
+
 }
 
 
