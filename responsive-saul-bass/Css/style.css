@@ -26,6 +26,26 @@ body {
   display: none;
 }
 
+.btn-mob-menu {
+  background-image: url("./../Images/sketched-content/Menu-512.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 80px;
+  max-width: 80px;
+  margin-top: 2em;
+  display: none;
+}
+
+#firstMenu {
+  background-color: #cf4917;
+
+}
+
+#saulBass {
+  background-color: #cc0b1c;
+
+}
+
 /* styling header and creating the crooked pattern for saul bass style */
 
 header {
@@ -606,11 +626,13 @@ h5 {
     width: 100%;
   }
 
-  #desktopMenu {
+  #desktopMenu,
+  header {
     display: none;
 
   }
 
+  .btn-mob-menu,
   #mobileMenu {
     display: block;
   }
