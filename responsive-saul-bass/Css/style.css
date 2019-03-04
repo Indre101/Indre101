@@ -8,6 +8,9 @@
 
 
 body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
   background-color: #f6f1ed;
   font-family: Helvetica, sans-serif;
   font-size: 1.3em;
@@ -23,7 +26,8 @@ body {
 
 header {
   filter: drop-shadow(10px 20px black);
-
+  grid-column: 1/span 4;
+  width: 100%;
 
 
 }
@@ -159,6 +163,7 @@ header {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 4em;
+  grid-column: 1 /span 4;
 }
 
 .greeting {
@@ -359,6 +364,7 @@ h6 {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  grid-column: 1/span 2;
 
 }
 
@@ -368,6 +374,11 @@ h6 {
   margin: 1em;
   max-width: 800px;
   width: 100%
+}
+
+
+.moviePostersSaul {
+  grid-column: 3/span 2;
 }
 
 /* imgae Asset page  */
@@ -441,6 +452,7 @@ footer {
   text-align: center;
   font-size: 0.6em;
   width: 100%;
+  grid-column: 1/span 4;
 
 }
 
