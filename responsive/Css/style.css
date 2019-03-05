@@ -709,6 +709,7 @@ h5 {
   #desktopMenu,
   header {
     display: none;
+    margin-top: 0;
 
   }
 
@@ -716,7 +717,6 @@ h5 {
   .menu,
   .navGaleri {
     flex-direction: column;
-    margin-top: 0;
 
     align-items: center;
 
