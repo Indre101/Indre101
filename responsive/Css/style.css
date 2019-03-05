@@ -719,7 +719,7 @@ h5 {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   /* #poster8 {
