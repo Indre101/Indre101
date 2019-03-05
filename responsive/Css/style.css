@@ -696,7 +696,6 @@ h5 {
     align-content: center;
     justify-content: space-between;
     padding-top: 6em;
-    margin-top: 0;
   }
 
 }
@@ -717,6 +716,7 @@ h5 {
   .menu,
   .navGaleri {
     flex-direction: column;
+    margin-top: 0;
 
     align-items: center;
 
