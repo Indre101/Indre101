@@ -249,7 +249,7 @@ header {
 /* color scheme */
 
 .colorScheme {
-  grid-column: 1/ span 4;
+  grid-column: 1/ span 3;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -652,16 +652,9 @@ h5 {
     height: 100vh;
   }
 
-  .btn-mob-menu,
-  #mobileMenu {
-    display: block;
-  }
-
-
-  #desktopMenu,
-  header {
-    display: none;
-
+  .moviePosters {
+    max-height: 200px;
+    height: 100%;
   }
 
 
@@ -764,17 +757,6 @@ h5 {
     justify-content: center;
   }
 
-  /* #poster8 {
-    display: block;
-    margin-bottom: 2em;
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .newPargraph {
-    display: block;
-    margin: 1em;
-  } */
 
   .textSmallest {
     grid-area: 1/6/ span 10/ span 9;
@@ -815,17 +797,6 @@ h5 {
 
   .textSmallest {
     grid-area: 1/6/ span 10/ span 9;
-  }
-
-}
-
-
-/* responsive 320 */
-@media only screen and (max-width: 320px) {
-
-  body {
-    font-size: 0.8em;
-
   }
 
 }
