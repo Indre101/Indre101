@@ -207,7 +207,6 @@ header {
 
 .bodyText {
   text-align: center;
-  flex-direction: column;
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
@@ -657,6 +656,27 @@ h5 {
     height: 100%;
   }
 
+  #poster8 {
+    max-height: 300px;
+  }
+
+  .image {
+    font-size: 0.7em;
+  }
+
+  .textSmallest {
+    grid-area: 1/6/ span 10/ span 9;
+  }
+
+  .textSmall {
+    grid-area: 5/8/ span 10/ span 5;
+
+  }
+
+  .textMedium {
+    grid-area: 9/8/ span 10/ span 5;
+
+  }
 
 }
 
@@ -764,9 +784,15 @@ h5 {
   }
 
   .textSmall {
-    grid-area: 4/8/ span 10/ span 5;
+    grid-area: 5/8/ span 10/ span 5;
 
   }
+
+  .textMedium {
+    grid-area: 9/8/ span 10/ span 5;
+
+  }
+
 
   .image {
     font-size: 0.6em;
@@ -777,6 +803,9 @@ h5 {
     grid-column: 1/ span 1;
   }
 
+  #travel {
+    float: none;
+  }
 
 }
 
@@ -785,10 +814,13 @@ h5 {
 @media only screen and (max-width: 380px) {
 
 
+
   body {
     font-size: 0.8em;
 
   }
+
+
 
   .textSmallest {
     grid-area: 1/6/ span 10/ span 9;
