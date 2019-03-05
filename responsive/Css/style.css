@@ -717,8 +717,8 @@ h5 {
   .menu,
   .navGaleri {
     flex-direction: column;
-
     align-items: center;
+    padding-bottom: 4em;
 
   }
 
@@ -788,12 +788,6 @@ h5 {
   body {
     font-size: 0.8em;
 
-  }
-
-
-
-  #poster8 {
-    display: block;
   }
 
   .textSmallest {
