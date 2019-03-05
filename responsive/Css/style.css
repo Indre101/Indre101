@@ -667,9 +667,51 @@ h5 {
 
 }
 
+
+/* for landscape and under 812px */
+@media screen and (max-width:823px) {
+
+  .shapeContainer,
+  .shapeContainer1,
+  .shapeContainer2,
+  .shapeContainer3,
+  .shapeContainer4,
+  .shapeContainer5 {
+    max-height: 500px;
+    height: 100vh;
+
+  }
+
+  #desktopMenu,
+  header {
+    display: none;
+
+  }
+
+  .btn-mob-menu,
+  #mobileMenu {
+    display: block;
+  }
+
+  h1 {
+    margin-bottom: 1em;
+  }
+
+  .menu,
+  .navGaleri {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding-top: 6em;
+  }
+
+}
+
 /* responsive 414 */
 
 @media only screen and (max-width:414px) {
+
+
 
   #desktopMenu,
   header {
