@@ -698,7 +698,7 @@ h5 {
   .shapeContainer4,
   .shapeContainer5 {
     max-height: 900px;
-    height: 100%;
+    height: 100vh;
 
   }
 
@@ -715,23 +715,31 @@ h5 {
     padding-block-end: 8em;
   }
 
-  #poster8 {
+  .SaulBassText {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: space-around;
+  }
+
+  /* #poster8 {
     display: block;
+    margin-bottom: 2em;
+    max-width: 400px;
+    width: 100%;
   }
 
   .newPargraph {
-    margin-top: 1em;
     display: block;
-  }
+    margin: 1em;
+  } */
 
   .textSmallest {
     grid-area: 1/6/ span 10/ span 9;
-    /* grid-area: 1/3/span 3/ span 4; */
   }
 
   .textSmall {
     grid-area: 4/8/ span 10/ span 5;
-    /* grid-area: 3 /5/span 3/ span 4; */
 
   }
 
@@ -765,7 +773,6 @@ h5 {
 
   .textSmallest {
     grid-area: 1/6/ span 10/ span 9;
-    /* grid-area: 1/3/span 3/ span 4; */
   }
 
 }
@@ -773,18 +780,6 @@ h5 {
 
 /* responsive 320 */
 @media only screen and (max-width: 320px) {
-
-  /* .shapeContainer,
-  .shapeContainer1,
-  .shapeContainer2,
-  .shapeContainer3,
-  .shapeContainer4,
-  .shapeContainer5 {
-
-    max-height: 500px;
-    height: 100vh; */
-
-  /* } */
 
   body {
     font-size: 0.8em;
