@@ -23,7 +23,8 @@ body {
   display: none;
 }
 
-.btn-mob-menu {
+.btn-mob-menu,
+.btn-mob-menu-1 {
   background-image: url("./../Images/sketched-content/Menu-512.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -701,10 +702,6 @@ h5 {
 
   }
 
-  .btn-mob-menu,
-  #mobileMenu {
-    display: block;
-  }
 
   h1 {
     margin-bottom: 1em;
@@ -717,6 +714,20 @@ h5 {
     justify-content: space-between;
     padding-top: 6em;
   }
+
+
+  .btn-mob-menu,
+  #mobileMenu,
+  .btn-mob-menu-1 {
+    display: block;
+
+  }
+
+  .btn-mob-menu {
+    position: fixed;
+    width: 100%;
+  }
+
 
 }
 
@@ -742,9 +753,24 @@ h5 {
 
   }
 
-  .btn-mob-menu,
+  /* .btn-mob-menu,
   #mobileMenu {
     display: block;
+
+
+  } */
+
+  .btn-mob-menu,
+  #mobileMenu,
+  .btn-mob-menu-1 {
+    display: block;
+
+
+  }
+
+  .btn-mob-menu {
+    position: fixed;
+    width: 100%;
   }
 
   .shapeContainer,
@@ -807,6 +833,9 @@ h5 {
     float: none;
   }
 
+  h1 {
+    margin-top: 2em;
+  }
 }
 
 

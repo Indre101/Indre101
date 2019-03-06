@@ -5,56 +5,49 @@ let menu = document.getElementById("burger");
 let myarray = [];
 
 
+// menu.onclick = function () {
 
+//   function showAll() {
+
+//     let j = menuelement.length;
+
+//     do {
+//       j--;
+
+//       setTimeout((menuelement[j].style.display = "block"), 3000)
+
+//     } while (j >= 1);
+
+//   }
+
+//   showAll()
+
+// }
 
 
 menu.onclick = function () {
 
 
-  console.log(myarray);
-  console.log(menuelement);
+  i = menuelement.length;
 
-  setInterval(function () {
-    let a = 8;
+
+  setTimeout(() => {
+
     do {
 
-      for (i in menuelement) {
-        a--
-        menuelement[i].style.display = "block"
-      }
-    } while (a === 7);
-  }, 2000)
+      i--;
+      console.log(i)
 
+    } while (i >= 0);
 
+  }, 2000);
 
-  // for (i in menuelement) {
-  //   menuelement[i].style.display = "block";
-  // }
+  for (let i in menuelement) {
+    menuelement[div[i--]].style.display = "block"
 
+  }
 
-  // setTimeout(function () {
-  //   for (i in menuelement) {
-  //     menuelement[i].style.display = "block";
-  //   }
-  // }, 5)
-
-
-  // for (let i = 0; i < menuelement.length; i++) {
-
-  //   setTimeout(function () {
-  //     menuelement[i].style.display = "block";
-  //   }, 5);
-
-  // }
-
-  //   menuelement[i].style.display = setTimeout(function () {
-  //     menuelement[i].style.display = "block";
-  //   }, 2);
-
-  // }
-  // }
 }
-
 
 
 menu.onmouseover = function () {

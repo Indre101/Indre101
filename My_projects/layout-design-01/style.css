@@ -42,7 +42,8 @@
   justify-self: flex-end;
 }
 
-.menuelement {
+.menuelement,
+.menuelement1 {
   border: 2px black solid;
   border-radius: 50%;
   text-align: center;
@@ -52,7 +53,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.menuelement {
   display: none;
+
 }
 
 #burger {
