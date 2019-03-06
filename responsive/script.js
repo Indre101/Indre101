@@ -1,4 +1,6 @@
-let menuButton = document.getElementById("saulBass");
+let menuButton = document.getElementsByClassName("btn-mob-menu");
+
+let myArray = Array.prototype.slice.call(menuButton);
 
 console.log(menuButton)
 
@@ -9,14 +11,17 @@ let userHasScrolled = false;
 window.onscroll = function () {
   // menuButton.style.opacity = 0.5;
 
-  menuButton.style.opacity = 0.5;
+  for (i in myArray) {
 
-  if (menuButton.style.opacity = 0.5) {
+    myArray[i].style.opacity = 0.5;
 
-    setTimeout(function () {
-      menuButton.style.opacity = 1;
-    }, 2000);
-  };
+    if (myArray[i].style.opacity = 0.5) {
+
+      setTimeout(function () {
+        myArray[i].style.opacity = 1;
+      }, 2000);
+    };
+  }
 
 
 }
