@@ -834,7 +834,16 @@ h5 {
   }
 
   h1 {
-    margin-top: 2em;
+    margin-top: 3em;
+    margin-bottom: 1em;
+  }
+
+  .bodyText {
+    margin-bottom: 0;
+  }
+
+  .welcome-mobile {
+    margin-top: 1em;
   }
 }
 
