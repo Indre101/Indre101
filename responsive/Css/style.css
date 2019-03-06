@@ -721,11 +721,13 @@ h5 {
   .btn-mob-menu-1 {
     display: block;
 
+
   }
 
   .btn-mob-menu {
     position: fixed;
     width: 100%;
+    z-index: 999;
   }
 
 
@@ -771,6 +773,7 @@ h5 {
   .btn-mob-menu {
     position: fixed;
     width: 100%;
+    z-index: 999;
   }
 
   .shapeContainer,
