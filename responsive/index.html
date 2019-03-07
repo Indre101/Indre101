@@ -15,9 +15,9 @@
   <!-- menu for mobile version -->
 
   <header id='mobileMenu'>
-    <nav class='shapeContainer'>
+    <nav id="shapeContainer" class='shapeContainer'>
       <ul class='menu'>
-        <li class='noBorder'><a href="#Welcome">
+        <li id="houseButton" class='noBorder'><a href="#Welcome">
             <img class='homeImage' src="./Images/images-for-decorations/home.png" alt='home button' style="height:2em; width:2em;">
           </a></li>
         <li><a href="Saul_Bass.html">Saul Bass</a></li>
@@ -62,12 +62,15 @@
 
 
   <section class='bodyText'>
-
-    <div id="Welcome" class='greeting'>
-      <a href="#mobileMenu">
+    <a id="Welcome" href="#mobileMenu">
+      <div id="firstMenu" class="btn-mob-menu-1">
+      </div>
+    </a>
+    <div class='greeting'>
+      <!-- <a href="#mobileMenu">
         <div id="firstMenu" class="btn-mob-menu-1">
         </div>
-      </a>
+      </a> -->
       <h1 class="welcome-mobile">Welcome</h1>
     </div>
 
@@ -95,7 +98,7 @@
   <footer>
     <h4>2019 Indre Zygaityte</h4>
   </footer>
-   <script src="./script.js">
+  <script src="./script.js">
 
   </script>
 </body>
