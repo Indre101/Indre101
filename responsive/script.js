@@ -1,6 +1,7 @@
 let menuButton = document.getElementsByClassName("btn-mob-menu");
 let firstMenu = document.getElementById("firstMenu");
-let houseButton = document.getElementById("houseButton");
+
+const houseButton = document.getElementById("houseButton");
 let shapeContainer = document.getElementById("shapeContainer");
 let welcome = document.getElementById("Welcome");
 
@@ -24,6 +25,8 @@ window.onscroll = function () {
 
 }
 
+
+
 houseButton.onclick = function () {
 
   firstMenu.style.position = "fixed";
@@ -36,6 +39,7 @@ houseButton.onclick = function () {
 
 
 }
+
 
 firstMenu.onclick = function () {
 

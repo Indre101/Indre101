@@ -36,12 +36,11 @@ body {
 #firstMenu {
   background-color: #cf4917;
   margin-top: 2em;
-
-
 }
 
 #saulBass {
   background-color: #cc0b1c;
+
 
 }
 
@@ -370,7 +369,6 @@ h6 {
 .quote1 {
   grid-column: 1/ span 4;
   max-width: 600px;
-  width: 100%;
   font-family: 'Poor Story', cursive, sans-serif;
   text-align: center;
   margin: 3em auto;
@@ -728,6 +726,7 @@ h5 {
     position: fixed;
     width: 100%;
     z-index: 999;
+
   }
 
 
@@ -755,19 +754,13 @@ h5 {
 
   }
 
-  /* .btn-mob-menu,
-  #mobileMenu {
-    display: block;
-
-
-  } */
-
   .btn-mob-menu,
   #mobileMenu,
   .btn-mob-menu-1 {
     display: block;
-
-
+    bottom: 0;
+    right: 0;
+    /* padding-left: 100vw; */
   }
 
   .btn-mob-menu {
@@ -783,7 +776,7 @@ h5 {
   .shapeContainer4,
   .shapeContainer5 {
     max-height: 900px;
-    height: 100vh;
+
 
   }
 
@@ -837,7 +830,6 @@ h5 {
   }
 
   h1 {
-    margin-top: 3em;
     margin-bottom: 1em;
   }
 
