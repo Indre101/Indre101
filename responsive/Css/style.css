@@ -19,7 +19,8 @@ body {
 }
 
 
-#mobileMenu {
+#mobileMenu,
+#Welcome {
   display: none;
 }
 
@@ -41,9 +42,8 @@ body {
 
 #saulBass {
   background-color: #cc0b1c;
-
-
 }
+
 
 #colors {
   background-color: #573D64;
@@ -101,7 +101,7 @@ header {
 
   max-height: 100px;
   height: 100vh;
-  width: 100%;
+  /* width: 100vw; */
   background-color: #cf4917;
   clip-path: polygon(0% 0%, 0% 100%, 12% 88%, 22% 92%, 30% 98%, 41% 93%, 53% 88%, 63% 93%, 76% 97%, 86% 91%, 100% 99%, 100% 74%, 100% 2%, 100% 0%);
   -webkit-clip-path: polygon(0% 0%, 0% 100%, 12% 88%, 22% 92%, 30% 98%, 41% 93%, 53% 88%, 63% 93%, 76% 97%, 86% 91%, 100% 99%, 100% 74%, 100% 2%, 100% 0%);
@@ -636,11 +636,6 @@ h5 {
 /* for screens  under 600px */
 @media only screen and (max-width: 600px) {
 
-  body {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
   .shapeContainer,
   .shapeContainer1,
   .shapeContainer2,
@@ -694,26 +689,26 @@ h5 {
     max-height: 500px;
     height: 100vh;
     width: 100vw;
-    margin-left: -68px;
+    /* margin-left: -68px; */
 
   }
 
   #desktopMenu,
   header {
+
     display: none;
 
   }
 
-  #mobileMenu {
+  /* #mobileMenu {
     grid-column-start: 1;
-  }
+  } */
 
 
   h1 {
     margin-bottom: 1em;
   }
 
-  header {}
 
   .menu,
   .navGaleri {
@@ -726,6 +721,7 @@ h5 {
 
   .btn-mob-menu,
   #mobileMenu,
+  #Welcome,
   .btn-mob-menu-1 {
     display: block;
     max-width: 80px;
@@ -743,6 +739,7 @@ h5 {
 
   #firstMenu {
     bottom: 0;
+    /* margin-left: 2em; */
   }
 
 
@@ -771,7 +768,8 @@ h5 {
 
   .btn-mob-menu,
   #mobileMenu,
-  .btn-mob-menu-1 {
+  .btn-mob-menu-1,
+  #Welcome {
     display: block;
     bottom: 0;
     right: 0;
@@ -890,19 +888,3 @@ h5 {
   }
 
 }
-
-/* 
-@media only screen and (max-width: 320px) and (max-) {
-
-  .btn-mob-menu,
-  .btn-mob-menu-1 {
-    height: 60px;
-
-  }
-
-  #images {
-    background-size: 40px;
-  }
-
-
-} */
