@@ -1,7 +1,7 @@
 let menuButton = document.getElementsByClassName("btn-mob-menu");
 let firstMenu = document.getElementById("firstMenu");
 
-const houseButton = document.getElementById("houseButton");
+consthouseButton = document.getElementById("houseButton");
 let shapeContainer = document.getElementById("shapeContainer");
 let welcome = document.getElementById("Welcome");
 
@@ -30,12 +30,10 @@ window.onscroll = function () {
 houseButton.onclick = function () {
 
   firstMenu.style.position = "fixed";
-  firstMenu.style.bottom = "0";
-  shapeContainer.style.height = "700px";
+  shapeContainer.style.height = "800px";
 
   firstMenu.style.width = "97%";
   firstMenu.style.opacity = 0.5;
-  firstMenu.style.marginTop = "100px";
 
 
 }
@@ -55,7 +53,7 @@ window.onscroll = function () {
   firstMenu.style.display = "block";
   setTimeout(function () {
     firstMenu.style.display = "none";
-  }, 7000);
+  }, 6000);
 
 
 };
