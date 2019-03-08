@@ -797,7 +797,7 @@ h5 {
   .shapeContainer3,
   .shapeContainer4,
   .shapeContainer5 {
-    max-height: 900px;
+    max-height: 850px;
   }
 
 
@@ -890,3 +890,19 @@ h5 {
   }
 
 }
+
+/* 
+@media only screen and (max-width: 320px) and (max-) {
+
+  .btn-mob-menu,
+  .btn-mob-menu-1 {
+    height: 60px;
+
+  }
+
+  #images {
+    background-size: 40px;
+  }
+
+
+} */
