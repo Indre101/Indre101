@@ -30,7 +30,7 @@ window.onscroll = function () {
 houseButton.onclick = function () {
 
   firstMenu.style.position = "fixed";
-  shapeContainer.style.height = "800px";
+  shapeContainer.style.height = "900px";
 
   firstMenu.style.width = "97%";
   firstMenu.style.opacity = 0.5;

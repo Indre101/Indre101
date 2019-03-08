@@ -29,7 +29,8 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   height: 80px;
-  max-width: 80px;
+  /* max-width: 80px; */
+  width: 100vw;
   display: none;
 }
 
@@ -57,6 +58,7 @@ body {
   background-color: #000000;
   background-image: url("./../Images/sketched-content/menu.png");
   background-size: 80px;
+
 }
 
 #folders {
@@ -78,7 +80,7 @@ body {
 
 header {
   filter: drop-shadow(10px 20px black);
-  grid-column: 1/span 4;
+  grid-column: 1;
   width: 100vw;
 
 
@@ -691,6 +693,8 @@ h5 {
   .shapeContainer5 {
     max-height: 500px;
     height: 100vh;
+    width: 100vw;
+    margin-left: -68px;
 
   }
 
@@ -700,10 +704,16 @@ h5 {
 
   }
 
+  #mobileMenu {
+    grid-column-start: 1;
+  }
+
 
   h1 {
     margin-bottom: 1em;
   }
+
+  header {}
 
   .menu,
   .navGaleri {
@@ -718,6 +728,8 @@ h5 {
   #mobileMenu,
   .btn-mob-menu-1 {
     display: block;
+    max-width: 80px;
+
 
 
   }
@@ -749,7 +761,6 @@ h5 {
 
   }
 
-
   .menu,
   .navGaleri {
     flex-direction: column;
@@ -764,6 +775,7 @@ h5 {
     display: block;
     bottom: 0;
     right: 0;
+    background-position: right;
 
   }
 
@@ -771,11 +783,13 @@ h5 {
     position: fixed;
     width: 100%;
     z-index: 999;
-    /* -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%; */
+
+
   }
+
+  /* #firstMenu {
+    width: 100%;
+  } */
 
   .shapeContainer,
   .shapeContainer1,
@@ -784,8 +798,6 @@ h5 {
   .shapeContainer4,
   .shapeContainer5 {
     max-height: 900px;
-
-
   }
 
 
@@ -862,6 +874,12 @@ h5 {
 
   body {
     font-size: 0.8em;
+
+  }
+
+  #images {
+
+    background-size: 60px;
 
   }
 
