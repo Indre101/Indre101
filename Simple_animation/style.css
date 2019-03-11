@@ -1,6 +1,8 @@
 body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  background-image: url("./images/background.jpg");
+  background-size: cover;
 }
 
 header {
@@ -20,4 +22,6 @@ nav {
   max-height: 50px;
   height: 100vh;
   margin: 0.5em;
+  color: white;
+  background-color: black;
 }
