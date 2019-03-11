@@ -1,0 +1,10 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+header {
+  grid-area: 1/1/span 1/ span 3;
+}
+
+.movementButton {}
