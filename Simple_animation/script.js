@@ -27,21 +27,74 @@ const regularColor = (event) => {
 
 }
 
+const cantClick = (event) => {
+  event.target.style.pointerEvents = "none";
+
+}
+
 const changeBackandForth = function (element) {
-
-
   element.onclick = function () {
+
+
+
     if (element.style.backgroundColor === "") {
-      console.log(element.style.backgroundColor);
       changeColor(event);
 
+
     } else if (element.style.backgroundColor != "") {
-      console.log(element.style.backgroundColor);
 
       regularColor(event);
+
+    }
+
+
+  }
+
+  for (let i in newButtonArray) {
+    if (newButtonArray[i].style.backgroundColor != "") {
+      console.log(newButtonArray[i]);
+      cantClick(event);
     }
 
   }
+
+
+
 }
+
+// const changeBackandForth = function (element) {
+//   element.onclick = function () {
+//     if (element.style.backgroundColor === "") {
+//       changeColor(event);
+
+//       for (let i in newButtonArray) {
+//         newButtonArray[i].style.pointerEvents = "none";
+
+//       }
+
+//     } else if (element.style.backgroundColor != "") {
+//       regularColor(event);
+
+//     }
+
+//   }
+// }
+
+// function canNotBeclicked() {
+
+//   for (let i in newButtonArray) {
+//     if (newButtonArray[i].style.backgroundColor != "") {
+//       newButtonArray[i].style.pointerEvents = "none";
+
+//     } else if (newButtonArray[i].style.backgroundColor === "") {
+//       regularColor(event);
+
+//     }
+
+
+//   }
+
+// }
+
 
 newButtonArray.forEach(changeBackandForth);
