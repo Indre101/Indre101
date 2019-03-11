@@ -1,13 +1,16 @@
 body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-image: url("./images/background.jpg");
+  background-image: url("./images/background1.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
 }
 
 header {
   grid-column-start: 1;
   height: 100vh;
+  z-index: 1000;
 }
 
 nav {
@@ -24,4 +27,41 @@ nav {
   margin: 0.5em;
   color: white;
   background-color: black;
+}
+
+
+
+.imageContainer {
+  grid-area: 1/2 / span 1 / span 2;
+  align-self: center;
+  /* justify-self: center; */
+  /* position: relative; */
+  /*position: relative; */
+  /* overflow: hidden; */
+
+
+
+}
+
+.imageOption {
+  max-height: 300px;
+  height: 100vh;
+  position: absolute
+}
+
+#firstAnimation {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes breakBoundries {
+  0% {
+    transform: translate(-1000px, 0);
+  }
+
+  100% {
+    transform: translate(1100px, 0);
+  }
 }
