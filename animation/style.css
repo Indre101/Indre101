@@ -8,9 +8,9 @@ body {
   width: 100px;
   height: 100px;
   background-color: white;
-  margin: o auto;
+  margin: 1em auto;
   transition: all;
-  margin: 1em;
+  /* margin: 1em; */
   /* animation: boxanimation;
   animation-duration: 3s; */
 }
@@ -19,6 +19,7 @@ body {
 .box1 {
   transition-duration: 2s;
   transition-timing-function: ease-in-out;
+
 }
 
 .box2 {
@@ -53,6 +54,7 @@ body {
 
 .box1:hover {
   background-color: aqua;
+  transform: skewx(-30deg);
 }
 
 .box2:hover {
