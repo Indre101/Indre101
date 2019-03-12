@@ -94,9 +94,9 @@ nav {
 
 .movefrom30 {
   animation: movefrom30;
-  animation-duration: 1s;
-  animation-iteration-count: 2;
-  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-iteration-count: 4;
+  animation-timing-function: cubic-bezier(0, 1.01, .98, .16);
   animation-fill-mode: forwards;
 }
 
@@ -107,6 +107,6 @@ nav {
 
 
   100% {
-    transform: translate(800px, 0);
+    transform: translate(900px, 0);
   }
 }
