@@ -1,4 +1,3 @@
-let firstImage = document.getElementById("firstImgae"); //first spongebob image for moving in and out of viewport
 const breakBoundries = document.getElementById("boundriesButton"); // movement in and out of viewport
 
 
@@ -17,6 +16,7 @@ buttonArray.forEach(function (element) {
 const changeColor = (event) => {
   event.target.style.backgroundColor = "#006994";
   event.target.style.transform = "skewX(20deg)";
+
 }
 
 //////////// changing back the color and skewX
@@ -38,6 +38,7 @@ function checkIfAllareNotpressed() {
 
     if (document.getElementById(i).style.backgroundColor === "") {
       found = true;
+
       return found;
     } else if (document.getElementById(i).style.backgroundColor != "") {
       found = false;
@@ -49,6 +50,34 @@ function checkIfAllareNotpressed() {
 
 }
 
+///
+let firstImage = document.getElementById("firstImgae"); //first spongebob image for moving in and out of viewport
+
+// let motionArray = {
+//   0 {
+//     "class": " breakingBoundries",
+//     "target": "firstImage"
+//   }
+
+// };
+
+let motionArray = {
+  0: {
+    "class": " breakingBoundries",
+    "target": "firstImage"
+  }
+}
+
+
+
+function playingAnimation(element) {
+
+  if (newButtonArray.indexOf(element) === motionArray)
+
+    firstImage.className += motionArray[newButtonArray.indexOf(element)];
+  console.log(motionArray[newButtonArray.indexOf(element)]);
+}
+
 // creating a function to assing the click elements if the is statment is fulfilled
 const changeBackandForth = function (element) {
 
@@ -56,6 +85,8 @@ const changeBackandForth = function (element) {
   element.onclick = function () {
     if (checkIfAllareNotpressed()) {
       changeColor(event);
+      console.log(newButtonArray.indexOf(element));
+      playingAnimation(element);
 
     } else if (!checkIfAllareNotpressed()) {
       regularColor(event);
@@ -67,3 +98,4 @@ const changeBackandForth = function (element) {
 newButtonArray.forEach(changeBackandForth);
 
 ////// finished the funtionality that only one button at the time would be pressed
+/// assigning classes to the image element

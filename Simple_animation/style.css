@@ -49,7 +49,8 @@ nav {
   position: absolute
 }
 
-#firstAnimation {
+.breakingBoundries {
+  animation: breakBoundries;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
