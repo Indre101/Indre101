@@ -49,14 +49,16 @@ nav {
   position: absolute
 }
 
+/* //breaking boundries */
+
 .breakingBoundries {
   animation: breakBoundries;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
 }
+
 
 @keyframes breakBoundries {
   0% {
@@ -66,4 +68,29 @@ nav {
   100% {
     transform: translate(1100px, 0);
   }
+}
+
+/* move to 30% */
+
+.move30 {
+  animation: moveto30;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveto30 {
+  0% {
+    transform: translate(1500px, 0);
+  }
+
+
+  100% {
+    transform: translate(30vw, 0);
+  }
+
+
+
 }

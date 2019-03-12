@@ -60,6 +60,10 @@ let motionArray = {
   0: {
     "class": "breakingBoundries",
     "target": "firstImage"
+  },
+  1: {
+    "class": "move30",
+    "target": "firstImage"
   }
 }
 
