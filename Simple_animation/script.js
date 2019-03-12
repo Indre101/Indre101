@@ -24,6 +24,7 @@ const regularColor = (event) => {
 
   event.target.style.backgroundColor = "";
   event.target.style.transform = "";
+  event.target.style.webkitAnimationPlayState = "paused";
 }
 
 
@@ -57,23 +58,30 @@ function checkIfAllareNotpressed() {
 
 let motionArray = {
   0: {
-    "class": " breakingBoundries",
-    "target": "firstImgae"
+    "class": "breakingBoundries",
+    "target": "firstImage"
   }
 }
 
 
-// function for playing animation
+// function for playing animation takes the element idex and inserts it for taking properties from objcet
 function playingAnimation(element) {
 
 
   let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
-  targetOfbutton.className += motionArray[newButtonArray.indexOf(element)]["class"];
+  targetOfbutton.classList.add(motionArray[newButtonArray.indexOf(element)]["class"]);
+}
 
-  console.log(motionArray[newButtonArray.indexOf(element)]["target"])
-  console.log(targetOfbutton)
+// stopping animation
+
+function stoppingAnimation(element) {
+  let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
+  targetOfbutton.classList.remove(motionArray[newButtonArray.indexOf(element)]["class"]);
+  targetOfbutton.classList.add("imageOption");
 
 }
+
+
 
 // creating a function to assing the click elements if the is statment is fulfilled
 const changeBackandForth = function (element) {
@@ -87,6 +95,7 @@ const changeBackandForth = function (element) {
 
     } else if (!checkIfAllareNotpressed()) {
       regularColor(event);
+      stoppingAnimation(element);
     }
 
   }
