@@ -1,8 +1,8 @@
 body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* background-image: url("./images/background.jpg");
-  background-size: 100vh 100vw;
+  background-image: url("./images/background.jpg");
+  /*background-size: 100vh 100vw;
   background-repeat: no-repeat; */
   /* width: 100vw; */
 }
@@ -166,5 +166,47 @@ nav {
 
   100% {
     opacity: 0;
+  }
+}
+
+/* addding a glow */
+
+.glowUp {
+  animation: glowing;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes glowing {
+
+  0% {
+    opacity: 0;
+
+  }
+
+  25% {
+    opacity: 0.25;
+
+  }
+
+  50% {
+    opacity: 0.5;
+    -webkit-filter: drop-shadow(5px 5px 10px yellow);
+    filter: drop-shadow(5px 5px 5px yellow);
+  }
+
+  75% {
+    opacity: 0.75;
+    -webkit-filter: drop-shadow(10px 10px 25px yellow);
+    filter: drop-shadow(10px 10px 10px yellow);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-filter: drop-shadow(15px 15px 35px yellow);
+    filter: drop-shadow(15px 15px 25px yellow);
+
   }
 }

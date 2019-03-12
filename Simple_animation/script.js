@@ -76,6 +76,12 @@ let motionArray = {
   4: {
     "class": "fadeInandOut",
     "target": "firstImage"
+  },
+  5: {
+    "class": "glowUp",
+    "target": "firstImage"
+
+
   }
 }
 
