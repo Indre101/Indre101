@@ -7,94 +7,62 @@ let buttonArray = ["button1", "button2", "button3", "button4", "button5", "butto
 let newButtonArray = [];
 
 
-
+//////////
 buttonArray.forEach(function (element) {
 
   newButtonArray.push(document.getElementById(element));
 });
 
-
+////////////
 const changeColor = (event) => {
   event.target.style.backgroundColor = "#006994";
   event.target.style.transform = "skewX(20deg)";
 }
 
+////////////
 const regularColor = (event) => {
 
   event.target.style.backgroundColor = "";
   event.target.style.transform = "";
-
-
 }
 
-const cantClick = (event) => {
-  event.target.style.pointerEvents = "none";
+
+///////////
+
+function checkIfAllareNotpressed() {
+
+  let found;
+  for (let i in buttonArray) {
+    buttonArray.every(function (i) {
+
+      if (document.getElementById(i).style.backgroundColor === "") {
+        found = true;
+        return found;
+      } else if (document.getElementById(i).style.backgroundColor != "") {
+        found = false;
+        return found;
+      }
+
+    })
+  }
+  return found;
 
 }
 
 const changeBackandForth = function (element) {
+
+  let numOfbutton = 1;
+
   element.onclick = function () {
-
-
-
-    if (element.style.backgroundColor === "") {
+    if (checkIfAllareNotpressed()) {
       changeColor(event);
+      let numOfbutton = 0;
 
-
-    } else if (element.style.backgroundColor != "") {
-
+    } else if (!checkIfAllareNotpressed()) {
       regularColor(event);
-
-    }
-
-
-  }
-
-  for (let i in newButtonArray) {
-    if (newButtonArray[i].style.backgroundColor != "") {
-      console.log(newButtonArray[i]);
-      cantClick(event);
     }
 
   }
-
-
-
 }
-
-// const changeBackandForth = function (element) {
-//   element.onclick = function () {
-//     if (element.style.backgroundColor === "") {
-//       changeColor(event);
-
-//       for (let i in newButtonArray) {
-//         newButtonArray[i].style.pointerEvents = "none";
-
-//       }
-
-//     } else if (element.style.backgroundColor != "") {
-//       regularColor(event);
-
-//     }
-
-//   }
-// }
-
-// function canNotBeclicked() {
-
-//   for (let i in newButtonArray) {
-//     if (newButtonArray[i].style.backgroundColor != "") {
-//       newButtonArray[i].style.pointerEvents = "none";
-
-//     } else if (newButtonArray[i].style.backgroundColor === "") {
-//       regularColor(event);
-
-//     }
-
-
-//   }
-
-// }
-
 
 newButtonArray.forEach(changeBackandForth);
