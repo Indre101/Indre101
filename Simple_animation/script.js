@@ -80,7 +80,10 @@ let motionArray = {
   5: {
     "class": "glowUp",
     "target": "firstImage"
-
+  },
+  6: {
+    "class": "shotDown",
+    "target": "firstImage"
 
   }
 }
