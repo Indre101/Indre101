@@ -64,6 +64,10 @@ let motionArray = {
   1: {
     "class": "move30",
     "target": "firstImage"
+  },
+  2: {
+    "class": "movefrom30",
+    "target": "firstImage"
   }
 }
 
