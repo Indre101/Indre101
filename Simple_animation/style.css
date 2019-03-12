@@ -193,20 +193,21 @@ nav {
 
   50% {
     opacity: 0.5;
-    -webkit-filter: drop-shadow(5px 5px 10px yellow);
+    -webkit-filter: drop-shadow(5px 5px 10px 20px yellow);
     filter: drop-shadow(5px 5px 5px yellow);
   }
 
   75% {
     opacity: 0.75;
-    -webkit-filter: drop-shadow(10px 10px 25px yellow);
+    -webkit-filter: drop-shadow(10px 10px 25px 30px yellow);
     filter: drop-shadow(10px 10px 10px yellow);
   }
 
   100% {
     opacity: 1;
-    -webkit-filter: drop-shadow(15px 15px 35px yellow);
+    -webkit-filter: drop-shadow(15px 15px 35px 40px yellow);
     filter: drop-shadow(15px 15px 25px yellow);
+
 
   }
 }
