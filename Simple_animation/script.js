@@ -2,7 +2,9 @@ const breakBoundries = document.getElementById("boundriesButton"); // movement i
 
 
 //function to make all the buttons change colors of background and font when clicked
-let buttonArray = ["button1", "button2", "button3", "button4", "button5", "button6", "button7", "button8", "button9", "button10", "button11", "button12", "button13", "button14", "button15"]; //creating an array from all the buttons
+let buttonArray = ["button1", "button2", "button3", "button4", "button5", "button6",
+  "button7", "button8", "button9", "button10", "button11", "button12", "button13", "button14", "button15"
+]; //creating an array from all the buttons
 let newButtonArray = [];
 
 
@@ -59,42 +61,73 @@ function checkIfAllareNotpressed() {
 let motionArray = {
   0: {
     "class": "breakingBoundries",
-    "target": "firstImage"
+    "target": "firstImage",
+    "second": "secondImage"
+
   },
   1: {
     "class": "move30",
-    "target": "firstImage"
+    "target": "firstImage",
+    "second": "secondImage"
+
   },
   2: {
     "class": "movefrom30",
-    "target": "firstImage"
+    "target": "firstImage",
+    "second": "secondImage"
+
   },
   3: {
     "class": "oneJumpto",
-    "target": "firstImage"
+    "target": "firstImage",
+    "second": "secondImage"
+
   },
   4: {
     "class": "fadeInandOut",
-    "target": "firstImage"
+    "target": "firstImage",
+    "second": "secondImage"
+
   },
   5: {
     "class": "glowUp",
-    "target": "firstImage"
+    "target": "firstImage",
+    "second": "secondImage"
+
   },
   6: {
     "class": "shotDown",
-    "target": "firstImage"
-
+    "target": "firstImage",
+    "second": "secondImage"
+  },
+  7: {
+    "class": "talking",
+    "target": "firstImage",
+    "second": "secondImage"
   }
 }
 
 
+
 // function for playing animation takes the element idex and inserts it for taking properties from objcet
+
 function playingAnimation(element) {
 
-
+  let secondImage = document.getElementById(motionArray[newButtonArray.indexOf(element)]["second"])
   let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
   targetOfbutton.classList.add(motionArray[newButtonArray.indexOf(element)]["class"]);
+  secondImage.style.display = "none";
+
+  if (newButtonArray.indexOf(element) >= 7) {
+    let secondImage = document.getElementById(motionArray[newButtonArray.indexOf(element)]["second"])
+    // let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
+
+    targetOfbutton.style.display = "none";
+    secondImage.style.display = "block";
+
+
+    secondImage.classList.add(motionArray[newButtonArray.indexOf(element)]["class"])
+  }
 
   console.log(targetOfbutton);
 
@@ -117,9 +150,11 @@ const changeBackandForth = function (element) {
 
   element.onclick = function () {
     if (checkIfAllareNotpressed()) {
+
       changeColor(event);
       console.log(newButtonArray.indexOf(element));
       playingAnimation(element);
+
 
     } else if (!checkIfAllareNotpressed()) {
       regularColor(event);
