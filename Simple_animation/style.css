@@ -136,3 +136,35 @@ nav {
 
   }
 }
+
+/* fading */
+.fadeInandOut {
+  animation: fading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+
+@keyframes fading {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

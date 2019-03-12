@@ -72,6 +72,10 @@ let motionArray = {
   3: {
     "class": "oneJumpto",
     "target": "firstImage"
+  },
+  4: {
+    "class": "fadeInandOut",
+    "target": "firstImage"
   }
 }
 
