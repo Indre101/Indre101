@@ -51,31 +51,28 @@ function checkIfAllareNotpressed() {
 }
 
 ///
-let firstImage = document.getElementById("firstImgae"); //first spongebob image for moving in and out of viewport
 
-// let motionArray = {
-//   0 {
-//     "class": " breakingBoundries",
-//     "target": "firstImage"
-//   }
 
-// };
+/// object for having all target and class values
 
 let motionArray = {
   0: {
     "class": " breakingBoundries",
-    "target": "firstImage"
+    "target": "firstImgae"
   }
 }
 
 
-
+// function for playing animation
 function playingAnimation(element) {
 
-  if (newButtonArray.indexOf(element) === motionArray)
 
-    firstImage.className += motionArray[newButtonArray.indexOf(element)];
-  console.log(motionArray[newButtonArray.indexOf(element)]);
+  let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
+  targetOfbutton.className += motionArray[newButtonArray.indexOf(element)]["class"];
+
+  console.log(motionArray[newButtonArray.indexOf(element)]["target"])
+  console.log(targetOfbutton)
+
 }
 
 // creating a function to assing the click elements if the is statment is fulfilled
