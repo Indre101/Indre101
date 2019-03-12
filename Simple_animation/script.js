@@ -68,6 +68,10 @@ let motionArray = {
   2: {
     "class": "movefrom30",
     "target": "firstImage"
+  },
+  3: {
+    "class": "oneJumpto",
+    "target": "firstImage"
   }
 }
 
@@ -78,6 +82,9 @@ function playingAnimation(element) {
 
   let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
   targetOfbutton.classList.add(motionArray[newButtonArray.indexOf(element)]["class"]);
+
+  console.log(targetOfbutton);
+
 }
 
 // stopping animation

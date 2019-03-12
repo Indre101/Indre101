@@ -1,10 +1,10 @@
 body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-image: url("./images/background1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
+  /* background-image: url("./images/background.jpg");
+  background-size: 100vh 100vw;
+  background-repeat: no-repeat; */
+  /* width: 100vw; */
 }
 
 header {
@@ -34,11 +34,6 @@ nav {
 .imageContainer {
   grid-area: 1/2 / span 1 / span 2;
   align-self: center;
-  /* justify-self: center; */
-  /* position: relative; */
-  /*position: relative; */
-  /* overflow: hidden; */
-
 
 
 }
@@ -46,7 +41,9 @@ nav {
 .imageOption {
   max-height: 300px;
   height: 100vh;
-  position: absolute
+  margin: 0 auto;
+
+  /* position: absolute; */
 }
 
 /* //breaking boundries */
@@ -108,5 +105,34 @@ nav {
 
   100% {
     transform: translate(900px, 0);
+  }
+}
+
+/* /// one jump */
+
+.oneJumpto {
+  animation: oneJumpto;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes oneJumpto {
+
+
+
+  0% {
+    transform: translateY(-50px);
+  }
+
+  50% {
+    transform: translateY(300px);
+
+  }
+
+  100% {
+    transform: translateY(-50px);
+
   }
 }
