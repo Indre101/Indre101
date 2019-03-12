@@ -7,19 +7,19 @@ let buttonArray = ["button1", "button2", "button3", "button4", "button5", "butto
 let newButtonArray = [];
 
 
-//////////
+////////// pushing the chosen button into the array;
 buttonArray.forEach(function (element) {
 
   newButtonArray.push(document.getElementById(element));
 });
 
-////////////
+//////////// function for changing color and skewX
 const changeColor = (event) => {
   event.target.style.backgroundColor = "#006994";
   event.target.style.transform = "skewX(20deg)";
 }
 
-////////////
+//////////// changing back the color and skewX
 const regularColor = (event) => {
 
   event.target.style.backgroundColor = "";
@@ -27,36 +27,35 @@ const regularColor = (event) => {
 }
 
 
-///////////
+// using for each to iterate through array and make sure all the buttons are with blackbackground
+// since forEach does not return a value I used found for storing and returning result
 
 function checkIfAllareNotpressed() {
 
   let found;
-  for (let i in buttonArray) {
-    buttonArray.every(function (i) {
 
-      if (document.getElementById(i).style.backgroundColor === "") {
-        found = true;
-        return found;
-      } else if (document.getElementById(i).style.backgroundColor != "") {
-        found = false;
-        return found;
-      }
+  buttonArray.every(function (i) {
 
-    })
-  }
+    if (document.getElementById(i).style.backgroundColor === "") {
+      found = true;
+      return found;
+    } else if (document.getElementById(i).style.backgroundColor != "") {
+      found = false;
+      return found;
+    }
+
+  })
   return found;
 
 }
 
+// creating a function to assing the click elements if the is statment is fulfilled
 const changeBackandForth = function (element) {
 
-  let numOfbutton = 1;
 
   element.onclick = function () {
     if (checkIfAllareNotpressed()) {
       changeColor(event);
-      let numOfbutton = 0;
 
     } else if (!checkIfAllareNotpressed()) {
       regularColor(event);
@@ -66,3 +65,5 @@ const changeBackandForth = function (element) {
 }
 
 newButtonArray.forEach(changeBackandForth);
+
+////// finished the funtionality that only one button at the time would be pressed
