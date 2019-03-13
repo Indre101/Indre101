@@ -62,48 +62,40 @@ let motionArray = {
   0: {
     "class": "breakingBoundries",
     "target": "firstImage",
-    "second": "secondImage"
 
   },
   1: {
     "class": "move30",
     "target": "firstImage",
-    "second": "secondImage"
 
   },
   2: {
     "class": "movefrom30",
     "target": "firstImage",
-    "second": "secondImage"
 
   },
   3: {
     "class": "oneJumpto",
     "target": "firstImage",
-    "second": "secondImage"
 
   },
   4: {
     "class": "fadeInandOut",
     "target": "firstImage",
-    "second": "secondImage"
 
   },
   5: {
     "class": "glowUp",
     "target": "firstImage",
-    "second": "secondImage"
 
   },
   6: {
     "class": "shotDown",
     "target": "firstImage",
-    "second": "secondImage"
   },
   7: {
     "class": "talking",
     "target": "firstImage",
-    "second": "secondImage"
   }
 }
 
@@ -113,25 +105,19 @@ let motionArray = {
 
 function playingAnimation(element) {
 
-  let secondImage = document.getElementById(motionArray[newButtonArray.indexOf(element)]["second"])
   let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
   targetOfbutton.classList.add(motionArray[newButtonArray.indexOf(element)]["class"]);
   secondImage.style.display = "none";
 
-  if (newButtonArray.indexOf(element) >= 7) {
-    let secondImage = document.getElementById(motionArray[newButtonArray.indexOf(element)]["second"])
-    // let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
-
-    targetOfbutton.style.display = "none";
-    secondImage.style.display = "block";
-
-
-    secondImage.classList.add(motionArray[newButtonArray.indexOf(element)]["class"])
+  if (newButtonArray.indexOf(element) === 6) {
+    targetOfbutton.src = "./spongebob/cry.png";
   }
-
   console.log(targetOfbutton);
 
 }
+
+
+
 
 // stopping animation
 
@@ -140,8 +126,8 @@ function stoppingAnimation(element) {
   targetOfbutton.classList.remove(motionArray[newButtonArray.indexOf(element)]["class"]);
   targetOfbutton.classList.add("imageOption");
 
-}
 
+}
 
 
 // creating a function to assing the click elements if the is statment is fulfilled

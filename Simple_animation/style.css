@@ -1,10 +1,10 @@
 body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* background-image: url("./images/background.jpg"); */
-  /* background-size: 100vh; */
-  /* background-repeat: no-repeat; 
-  width: 100vw; */
+  background-image: url("./images/background.jpg");
+  */ background-size: 100vh;
+  background-repeat: no-repeat;
+  width: 100vw;
 }
 
 header {
@@ -248,7 +248,7 @@ nav {
 
   100% {
     transform-origin: bottom right;
-    transform: rotate(-45deg);
+    transform: rotate(-65deg);
   }
 
 }
@@ -257,28 +257,24 @@ nav {
 
 
 
-.talking {
-  display: block;
-  background-image: url("./spongebob/sprite.png");
-  height: 2600px;
-  width: 80px;
-  margin: 2em auto;
-  /* background-size: 2500px 2000px; */
+/* .talking {
+
+  background-image: url("./spongebob/sprite10.png");
   background-repeat: no-repeat;
-  background-position: center;
-  animation: talking 1s steps(8) infinite;
-  animation-timing-function: cubic-bezier(.61, .07, .79, 1.35);
+  display: block;
+
+  width: 374px;
+  height: 600px;
+  display: block;
+  animation: talking 2s steps(11) infinite;
+  /* animation-direction: reverse; */
+
 }
 
+*/ @keyframes talking {
 
-@keyframes talking {
-
-
-  from {
-    background-position: 0px;
+  100% {
+    background-position: 4000px;
   }
 
-  to {
-    background-position: -500px;
-  }
 }
