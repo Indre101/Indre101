@@ -120,7 +120,7 @@ let motionArray = {
   13: {
     "class": "mountain",
     "target": "firstImage"
-  }
+  },
   14: {
     "class": "climb",
     "target": "firstImage"
