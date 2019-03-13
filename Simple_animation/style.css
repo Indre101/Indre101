@@ -43,9 +43,7 @@ nav {
 .imageOption {
   max-height: 300px;
   height: 100vh;
-  margin: 0 auto;
 
-  /* position: absolute; */
 }
 
 /* //breaking boundries */
@@ -255,26 +253,120 @@ nav {
 
 /* /// talkiing animation */
 
+.quotes {
+  grid-area: 1/2/ span 1/ span 2;
+}
 
-
-/* .talking {
-
-  background-image: url("./spongebob/sprite10.png");
-  background-repeat: no-repeat;
-  display: block;
+.talking2 {
 
   width: 374px;
   height: 600px;
-  display: block;
-  animation: talking 2s steps(11) infinite;
-  /* animation-direction: reverse; */
+  float: left;
+  animation: talking2 2s linear infinite;
+  animation-direction: alternate;
+  transition: all;
 
 }
 
-*/ @keyframes talking {
+@keyframes talking2 {
 
-  100% {
-    background-position: 4000px;
+
+
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+
+  }
+
+}
+
+
+.text {
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 50vw;
+  top: 150px;
+}
+
+
+.text1 {
+  opacity: 0;
+  background-image: url("./spongebob/text1.png");
+  animation: talking 6s ease-in 1;
+
+
+
+}
+
+.text2 {
+  opacity: 0;
+
+  background-image: url("./spongebob/text2.png");
+  animation: talking1 7s 7s ease-in-out 1;
+
+
+}
+
+
+
+.text3 {
+  opacity: 0;
+
+  background-image: url("./spongebob/text5.png");
+  animation-delay: 15s;
+  animation: talking1 6s 14s ease-in-out 1;
+
+
+}
+
+.text4 {
+  opacity: 0;
+
+  background-image: url("./spongebob/text6.png");
+  animation-delay: 25s;
+  animation: talking1 8s 20s ease-out 1;
+
+}
+
+
+
+
+@keyframes talking {
+
+
+
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    opacity: 0;
+
+  }
+
+}
+
+@keyframes talking1 {
+
+
+
+  from {
+    -webkit-transform: rotate(0deg);
+    display: none;
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    display: block;
+    opacity: 1;
+
   }
 
 }

@@ -94,7 +94,7 @@ let motionArray = {
     "target": "firstImage",
   },
   7: {
-    "class": "talking",
+    "class": "talking2",
     "target": "firstImage",
   }
 }
@@ -104,15 +104,20 @@ let motionArray = {
 // function for playing animation takes the element idex and inserts it for taking properties from objcet
 
 function playingAnimation(element) {
-
   let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
   targetOfbutton.classList.add(motionArray[newButtonArray.indexOf(element)]["class"]);
 
 
   if (newButtonArray.indexOf(element) === 6) {
     targetOfbutton.src = "./spongebob/cry.png";
+  } else if (newButtonArray.indexOf(element) === 7) {
+    document.getElementById("textContainer").classList.remove("optiontodisplay");
+
+
+
   }
-  console.log(document.getElementById(buttonArray[6]));
+
+  console.log(document.getElementById("button8").style.backgroundColor);
   // console.log(targetOfbutton);
 
 }
@@ -127,6 +132,8 @@ function stoppingAnimation(element) {
   targetOfbutton.classList.remove(motionArray[newButtonArray.indexOf(element)]["class"]);
   targetOfbutton.classList.add("imageOption");
   targetOfbutton.src = "./spongebob/jumpup.png";
+  document.getElementById("textContainer").classList.add("optiontodisplay");
+
 
 
 }
