@@ -253,12 +253,7 @@ nav {
 
 /* /// talkiing animation */
 
-.paused {
-  -webkit-animation-play-state: paused;
-  -moz-animation-play-state: paused;
-  -o-animation-play-state: paused;
-  animation-play-state: paused;
-}
+
 
 
 #firstImageBackground,
@@ -445,16 +440,71 @@ nav {
 .mirror {
   animation: mirror 1s ease-in-out infinite;
   animation-direction: alternate;
-  margin: 0 auto;
   display: flex;
 
 }
 
 @keyframes mirror {
-  100% {
-    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
-    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
-    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+  0% {
+    transform: translate(200px, 0);
   }
+
+  100% {
+    transform: rotate(360deg) scale(-1.1, 1.1) translate(20%, 30px);
+  }
+}
+
+/* extra */
+
+.flipping {
+  animation: extra1 1s ease-in-out infinite;
+  animation-direction: alternate;
+
+}
+
+@keyframes extra1 {
+  100% {
+
+    transform: rotate(60deg) scale(-1.1, 1.1) translate(-20%, 30px);
+
+  }
+
+}
+
+/* extra2 */
+
+.extra2 {
+  animation: extra2 1s ease-in-out infinite;
+  animation-direction: alternate;
+
+}
+
+@keyframes extra2 {
+  0% {
+    transform: skewX(60deg);
+  }
+
+  100% {
+    transform: skewY(-60deg);
+  }
+}
+
+/* extra3 */
+
+.swing {
+  animation: extra3 1s ease-in-out forwards alternate 3;
+
+}
+
+@keyframes extra3 {
+  0% {
+    transform: rotate(120deg) scale(0.3, 2.1) translate(20%, 30px);
+
+  }
+
+  100% {
+    transform: translate(300px, 0) rotate(0deg);
+
+  }
+
 }

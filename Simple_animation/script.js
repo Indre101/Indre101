@@ -61,49 +61,65 @@ function checkIfAllareNotpressed() {
 let motionArray = {
   0: {
     "class": "breakingBoundries",
-    "target": "firstImage",
+    "target": "firstImage"
 
   },
   1: {
     "class": "move30",
-    "target": "firstImage",
+    "target": "firstImage"
 
   },
   2: {
     "class": "movefrom30",
-    "target": "firstImage",
+    "target": "firstImage"
 
   },
   3: {
     "class": "oneJumpto",
-    "target": "firstImage",
+    "target": "firstImage"
 
   },
   4: {
     "class": "fadeInandOut",
-    "target": "firstImage",
+    "target": "firstImage"
 
   },
   5: {
     "class": "glowUp",
-    "target": "firstImage",
+    "target": "firstImage"
 
   },
   6: {
     "class": "shotDown",
-    "target": "firstImage",
+    "target": "firstImage"
   },
   7: {
     "class": "talking2",
-    "target": "firstImage",
+    "target": "firstImage"
   },
   8: {
     "class": "shake",
-    "target": "firstImage",
+    "target": "firstImage"
   },
   9: {
     "class": "mirror",
-    "target": "firstImage",
+    "target": "firstImage"
+  },
+  10: {
+    "class": "flipping",
+    "target": "firstImage"
+  },
+  11: {
+    "class": "extra2",
+    "target": "firstImage"
+  },
+  12: {
+    "class": "extra3",
+    "target": "firstImage"
+  },
+  13: {
+    "class": "swing",
+    "target": "firstImage"
   }
 }
 
