@@ -107,12 +107,13 @@ function playingAnimation(element) {
 
   let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
   targetOfbutton.classList.add(motionArray[newButtonArray.indexOf(element)]["class"]);
-  secondImage.style.display = "none";
+
 
   if (newButtonArray.indexOf(element) === 6) {
     targetOfbutton.src = "./spongebob/cry.png";
   }
-  console.log(targetOfbutton);
+  console.log(document.getElementById(buttonArray[6]));
+  // console.log(targetOfbutton);
 
 }
 
@@ -125,6 +126,7 @@ function stoppingAnimation(element) {
   let targetOfbutton = document.getElementById(motionArray[newButtonArray.indexOf(element)]["target"]);
   targetOfbutton.classList.remove(motionArray[newButtonArray.indexOf(element)]["class"]);
   targetOfbutton.classList.add("imageOption");
+  targetOfbutton.src = "./spongebob/jumpup.png";
 
 
 }
@@ -138,7 +140,7 @@ const changeBackandForth = function (element) {
     if (checkIfAllareNotpressed()) {
 
       changeColor(event);
-      console.log(newButtonArray.indexOf(element));
+      // console.log(newButtonArray.indexOf(element));
       playingAnimation(element);
 
 
