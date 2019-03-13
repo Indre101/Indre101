@@ -262,7 +262,8 @@ nav {
 
 
 #firstImageBackground,
-.quotes {
+.quotes,
+.apple {
   grid-area: 1/2/ span 1/ span 2;
 }
 
@@ -409,4 +410,32 @@ nav {
 
   }
 
+}
+
+/* skaing anaimtion */
+
+.apple {
+  margin: 2em auto;
+}
+
+
+
+.shake {
+  animation: shaking 0.2s ease-in alternate-reverse infinite;
+  margin: 0 180px;
+}
+
+
+@keyframes shaking {
+  0% {
+    transform: translate(-100px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+    transform: rotate(20deg);
+    transform-origin: bottom right;
+
+
+  }
 }

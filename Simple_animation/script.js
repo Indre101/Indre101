@@ -96,6 +96,10 @@ let motionArray = {
   7: {
     "class": "talking2",
     "target": "firstImage",
+  },
+  8: {
+    "class": "shake",
+    "target": "firstImage",
   }
 }
 
@@ -112,9 +116,10 @@ function playingAnimation(element) {
     targetOfbutton.src = "./spongebob/cry.png";
   } else if (newButtonArray.indexOf(element) === 7) {
     document.getElementById("textContainer").classList.remove("optiontodisplay");
-
     document.getElementById("firstImageBackground").classList.remove("optiontodisplay");
-
+  } else if (newButtonArray.indexOf(element) === 8) {
+    targetOfbutton.src = "./spongebob/shake2.png";
+    document.getElementById("apple").classList.remove("optiontodisplay");
   }
 
   console.log(document.getElementById("button8").style.backgroundColor);
@@ -135,6 +140,8 @@ function stoppingAnimation(element) {
   document.getElementById("textContainer").classList.add("optiontodisplay");
   document.getElementById("firstImageBackground").classList.add("optiontodisplay");
   document.getElementById("firstImageBackground").classList.add("optiontodisplay");
+  document.getElementById("apple").classList.add("optiontodisplay");
+
 }
 
 
