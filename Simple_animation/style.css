@@ -253,9 +253,48 @@ nav {
 
 /* /// talkiing animation */
 
+.paused {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+
+#firstImageBackground,
 .quotes {
   grid-area: 1/2/ span 1/ span 2;
 }
+
+
+.backofSpongebob {
+  opacity: 0;
+  background-image: url("./spongebob/patrick.png");
+  animation: talking3 2s alternate infinite;
+  z-index: -1;
+  animation-delay: 12s;
+
+}
+
+
+@keyframes talking3 {
+
+
+
+  from {
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    opacity: 1;
+
+  }
+
+}
+
 
 .talking2 {
 
@@ -263,8 +302,9 @@ nav {
   height: 600px;
   float: left;
   animation: talking2 2s linear infinite;
-  animation-direction: alternate;
+  /* animation-direction: alternate; */
   transition: all;
+  justify-self: center;
 
 }
 
@@ -274,10 +314,12 @@ nav {
 
   from {
     -webkit-transform: rotate(0deg);
+
   }
 
   to {
     -webkit-transform: rotate(359deg);
+
 
   }
 
@@ -341,6 +383,7 @@ nav {
 
   from {
     -webkit-transform: rotate(0deg);
+
     opacity: 1;
   }
 

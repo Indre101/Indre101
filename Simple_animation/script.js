@@ -113,7 +113,7 @@ function playingAnimation(element) {
   } else if (newButtonArray.indexOf(element) === 7) {
     document.getElementById("textContainer").classList.remove("optiontodisplay");
 
-
+    document.getElementById("firstImageBackground").classList.remove("optiontodisplay");
 
   }
 
@@ -133,9 +133,8 @@ function stoppingAnimation(element) {
   targetOfbutton.classList.add("imageOption");
   targetOfbutton.src = "./spongebob/jumpup.png";
   document.getElementById("textContainer").classList.add("optiontodisplay");
-
-
-
+  document.getElementById("firstImageBackground").classList.add("optiontodisplay");
+  document.getElementById("firstImageBackground").classList.add("optiontodisplay");
 }
 
 
