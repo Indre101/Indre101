@@ -439,3 +439,20 @@ nav {
 
   }
 }
+
+/* mirrrrorrrrs */
+
+.mirror {
+  animation: mirror 1s ease-in-out infinite;
+  animation-direction: alternate;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+@keyframes mirror {
+  100% {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+}

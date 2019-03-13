@@ -100,6 +100,10 @@ let motionArray = {
   8: {
     "class": "shake",
     "target": "firstImage",
+  },
+  9: {
+    "class": "mirror",
+    "target": "firstImage",
   }
 }
 
