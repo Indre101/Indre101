@@ -508,3 +508,122 @@ nav {
   }
 
 }
+
+/* extra 4 */
+
+.mountain {
+  animation: mountain 3s linear forwards alternate 3;
+
+}
+
+@keyframes mountain {
+
+  0% {
+    transform: translate(-200px, 0);
+  }
+
+  10% {
+    transform: translate(-100px, 200px);
+  }
+
+  20% {
+    transform: translate(50px, 0px);
+
+  }
+
+  30% {
+    transform: translate(100px, 200px);
+
+  }
+
+  40% {
+    transform: translate(300px, 0px);
+
+  }
+
+  60% {
+    transform: translate(400px, 200px);
+
+  }
+
+  80% {
+    transform: translate(500px, 0px);
+
+  }
+
+  100% {
+    transform: translate(600px, 200px);
+  }
+}
+
+/* climb */
+
+
+.climb {
+  animation: climb 3s linear forwards alternate 3;
+  /* animation-direction: reverse; */
+  display: flex;
+}
+
+@keyframes climb {
+
+  0% {
+    transform: translate(-200px, 500px);
+  }
+
+  10% {
+    transform: translate(-100px, 200px);
+  }
+
+  20% {
+    transform: translate(100px, 200px);
+
+  }
+
+  30% {
+    transform: translate(200px, 50px);
+
+  }
+
+  40% {
+    transform: translate(300px, 50px);
+
+  }
+
+  50% {
+    transform: translate(400px, -100px);
+
+  }
+
+  60% {
+    transform: translate(450px, -100px);
+
+  }
+
+  60% {
+    transform: translate(550px, -150px);
+    filter: drop-shadow(5px 5px 5px blue);
+
+
+  }
+
+  80% {
+    transform: translate(630px, -150px);
+    filter: drop-shadow(10px 10px 10px green);
+
+
+  }
+
+  80% {
+    transform: translate(700px, -250px);
+    filter: drop-shadow(15px 15px 15px red);
+
+  }
+
+  100% {
+    transform: translate(750px, -300px);
+    filter: drop-shadow(15px 15px 30px #FFF03B);
+
+
+  }
+}

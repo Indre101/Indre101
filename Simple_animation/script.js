@@ -114,11 +114,15 @@ let motionArray = {
     "target": "firstImage"
   },
   12: {
-    "class": "extra3",
+    "class": "swing",
     "target": "firstImage"
   },
   13: {
-    "class": "swing",
+    "class": "mountain",
+    "target": "firstImage"
+  }
+  14: {
+    "class": "climb",
     "target": "firstImage"
   }
 }
@@ -173,7 +177,7 @@ const changeBackandForth = function (element) {
     if (checkIfAllareNotpressed()) {
 
       changeColor(event);
-      // console.log(newButtonArray.indexOf(element));
+      console.log(newButtonArray.indexOf(element));
       playingAnimation(element);
 
 
