@@ -300,12 +300,10 @@ nav {
 
   width: 374px;
   height: 600px;
-  float: left;
   animation: talking2 2s linear infinite;
   /* animation-direction: alternate; */
-  transition: all;
-  justify-self: center;
-
+  display: flex;
+  margin: 0 auto;
 }
 
 @keyframes talking2 {
@@ -338,8 +336,7 @@ nav {
 .text1 {
   opacity: 0;
   background-image: url("./spongebob/text1.png");
-  animation: talking 6s ease-in 1;
-
+  animation: talking 4s ease-in 1;
 
 
 }
@@ -348,7 +345,7 @@ nav {
   opacity: 0;
 
   background-image: url("./spongebob/text2.png");
-  animation: talking1 7s 7s ease-in-out 1;
+  animation: talking1 4s 4s ease-in 1;
 
 
 }
@@ -360,7 +357,7 @@ nav {
 
   background-image: url("./spongebob/text5.png");
   animation-delay: 15s;
-  animation: talking1 6s 14s ease-in-out 1;
+  animation: talking1 5s 7s ease-in 1;
 
 
 }
@@ -370,7 +367,7 @@ nav {
 
   background-image: url("./spongebob/text6.png");
   animation-delay: 25s;
-  animation: talking1 8s 20s ease-out 1;
+  animation: talking1 6s 13s ease-in 1;
 
 }
 
