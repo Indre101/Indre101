@@ -7,7 +7,6 @@ const check2 = document.getElementById("selectEnterprice");
 const thirdButton = document.getElementById("bt3");
 const fourthButton = document.getElementById("bt4");
 const imageBackground = document.getElementById("imagesection");
-const imageBackground = document.getElementById("right");
 
 
 // function for turning around the plane
@@ -49,10 +48,29 @@ thirdButton.onclick = function () {
 }
 // change background
 
+
+
+function changeLayout() {
+
+  imageBackground.style.gridTemplateAreas = "'left middle middle''right middle middle'";
+
+
+}
+
+
+function changeBack() {
+
+
+  imageBackground.style.gridTemplateAreas = "";
+
+
+}
 fourthButton.onclick = function () {
 
-  eaglePlane.classList.toggle("gridLayout");
-  eaglePlane.classList.toggle("gridLayout1");
 
-
+  if (imageBackground.style.gridTemplateAreas != "") {
+    changeBack()
+  } else if (imageBackground.style.gridTemplateAreas === "") {
+    changeLayout()
+  }
 }
