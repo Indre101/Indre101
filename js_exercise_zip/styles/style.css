@@ -175,6 +175,13 @@ ul {
     height: 100%;
 }
 
+.imageOf1 {
+    background-image: url("./../images/yellowstar.jpg");
+    background-size: contain;
+
+}
+
+
 /* change grid */
 
 .gridLayout {

@@ -35,10 +35,14 @@ secondButton.onclick = function () {
 
 //changing the background
 
+let backArray = ["imageOf", "imageOf1"];
+
 thirdButton.onclick = function () {
 
-  imageBackground.classList.toggle("imageOf");
-  // eaglePlane.classList.toggle("imageOf");
+  let found = Math.floor(Math.random() * 2);
+  console.log(found);
+
+  imageBackground.classList.toggle(backArray[found]);
 
 }
 // change background
