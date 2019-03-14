@@ -12,7 +12,8 @@ main#imagesection {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
     grid-template-areas:
-        "left middle right";
+        "left middle middle"
+        "righ middle middle";
 }
 
 #left {
@@ -192,4 +193,11 @@ ul {
 
 .gridLayout1 {
     grid-area: 2/1/span 1/ span 1;
+}
+
+.layounew {
+    grid-template-areas:
+        "left middle middle"
+        "righ middle middle";
+
 }

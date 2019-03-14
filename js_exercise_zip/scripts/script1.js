@@ -7,6 +7,8 @@ const check2 = document.getElementById("selectEnterprice");
 const thirdButton = document.getElementById("bt3");
 const fourthButton = document.getElementById("bt4");
 const imageBackground = document.getElementById("imagesection");
+const imageBackground = document.getElementById("right");
+
 
 // function for turning around the plane
 firstButton.onclick = function () {
