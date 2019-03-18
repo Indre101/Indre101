@@ -1,0 +1,19 @@
+div {
+  background-image: url("./images/new.png");
+  height: 440px;
+  background-repeat: no-repeat;
+  width: 260px;
+  animation: moving 3s steps(8) infinite;
+  background-color: pink;
+  /* background-position: bottom; */
+  margin-left: 2em;
+
+}
+
+@keyframes moving {
+  to {
+    /* transform: translateX(-2000px); */
+    background-position: -2100px;
+
+  }
+}
