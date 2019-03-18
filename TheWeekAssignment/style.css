@@ -6,19 +6,53 @@ body {
 
 }
 
-/* button */
-.button1 {
-  max-width: 300px;
-  width: 100vw;
-  max-height: 200px;
-  height: 100vh;
-  background-color: #52B2A6;
-  grid-column-start: 2;
-  align-self: center;
-
+#test {
+  width: 200px;
+  height: 200px;
+  background-color: black;
 }
 
 /* button */
+.button1 {
+  width: 50px;
+  height: 50px;
+  background-color: #52B2A6;
+  grid-column-start: 2;
+  align-self: center;
+  justify-self: center;
+  transition: height 1s, width 1s 1s, border-radius 1s 2s, transform 1s 3s, box-shadow 1s 4s;
+}
+
+
+.button1:hover {
+  height: 200px;
+  width: 300px;
+  border-radius: 40% 40% 70% 40%;
+  transform: rotate(-360deg);
+  box-shadow: 10px 10px 25px 20px hotpink;
+  transform-origin: bottom left;
+}
+
+/* button */
+/* :start */
+
+.start {
+  opacity: 0;
+  font-size: 2em;
+  /* animation: starting 2s ease-in 4s 1 forwards; */
+
+}
+
+/* @keyframes starting {
+  100% {
+    opacity: 1;
+    /* transform: rotate(180deg); */
+
+
+/* start */
+
+
+
 
 div {
   margin-top: 5em;
