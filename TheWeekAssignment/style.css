@@ -1,12 +1,28 @@
 body {
   background-color: pink;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
 
 }
 
+/* button */
+.button1 {
+  max-width: 300px;
+  width: 100vw;
+  max-height: 200px;
+  height: 100vh;
+  background-color: #52B2A6;
+  grid-column-start: 2;
+  align-self: center;
+
+}
+
+/* button */
+
 div {
   margin-top: 5em;
-  background-image: url("./images/new3.png");
+  /* background-image: url("./images/new3.png"); */
   height: 440px;
   background-repeat: no-repeat;
   width: 300px;
