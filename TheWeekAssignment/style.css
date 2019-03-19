@@ -2,10 +2,14 @@
 
 
 body {
-  background-color: pink;
+  background-image: url("./images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: pink; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  height: 100vh;
 
 
 }
@@ -162,33 +166,42 @@ body {
 }
 
 /* options */
+.optionsContainer {
+  display: none;
+  grid-area: 1/ 1/ span 1/span 4;
+
+
+
+}
 
 .options {
-  display: none;
+  display: flex;
   max-height: 200px;
   height: 100vh;
-  max-width: 200px;
+  max-width: 250px;
   width: 100vw;
   background-repeat: no-repeat;
   background-size: contain;
-  grid-area: 1/ 2/ span 1/span 3;
   font-family: 'Indie Flower', cursive;
   font-size: 2em;
   text-align: center;
+  align-items: center;
+  margin-left: 3em;
+
   background-image: url("./images/optionBackground.png");
+
 
 
 }
 
 .option1 {
-  margin-top: 3em;
+  margin-top: 1em;
   animation: showOption 1s 1 forwards;
 
 
 }
 
 .option2 {
-  margin-top: 4em;
   animation: showOption2 1s 1 forwards;
 
 }
@@ -215,7 +228,7 @@ body {
 
   100% {
     opacity: 1;
-    transform: translate(400px, 0)
+    transform: translate(300px, -100px)
   }
 }
 

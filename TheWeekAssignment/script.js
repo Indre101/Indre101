@@ -3,9 +3,10 @@ const monster1 = document.getElementById("monster1");
 const monter2 = document.getElementById("monster2");
 const Wmonster = document.getElementById("Wmonster");
 const interaction = document.getElementById("interaction");
+const optionsOf = document.getElementById("optionsContainer");
 
 
-
+console.log(optionsOf)
 
 // added animation to the start button
 function firstClick() {
@@ -69,6 +70,20 @@ function monsterListener2(event) {
       monter2.style.display = "none";
       Wmonster.style.display = "none";
       interaction.style.display = "block"
+      break;
+
+  }
+}
+
+// showing options
+
+interaction.addEventListener("animationend", monsterListener3, false);
+
+
+function monsterListener3(event) {
+  switch (event.type) {
+    case "animationend":
+      optionsOf.style.display = "block";
       break;
 
   }
