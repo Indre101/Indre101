@@ -95,7 +95,7 @@ const monster3 = document.getElementById("monster3");
 const wmonster2 = document.getElementById("wmonster2");
 
 
-option1.onclick = function () {
+option2.onclick = function () {
   interaction.style.display = "none";
   option1.style.display = "none";
   option2.style.display = "none";

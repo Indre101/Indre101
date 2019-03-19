@@ -3,20 +3,39 @@
 
 body {
   background-image: url("./images/background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
+  background-size: cover;
   /* background-color: pink; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
-
 }
 
+/* .container {
+  background-image: url("./images/backgroundSliding.png");
+  height: 100vh;
+  width: 100vw;
+
+  grid-area: 1/ 1/ span 1/ span 4;
+  animation: backgroundAnimatio 9s ease-in-out;
+
+
+} */
+
+/* .backgroundAnimation {
+  animation: backgroundAnimatio 3s ease-in-out;
+
+} */
+
+@keyframes backgroundAnimatio {
+  to {
+    transform: translateX(4000px);
+  }
+}
 
 /* button */
 .button1 {
+  grid-area: 1/2/ span 1/ span 2;
   width: 50px;
   height: 50px;
   background-color: #52B2A6;
@@ -300,5 +319,23 @@ body {
     transform: translateX(-400px);
     background-position: -3157px;
     opacity: 0;
+  }
+}
+
+/* swinging */
+
+
+.swinging {
+  margin-top: 20vw;
+  margin-left: 4em;
+  background-image: url("./images/swinging.png");
+  width: 568px;
+  background-repeat: no-repeat;
+  animation: swinging 3s steps(10) infinite;
+}
+
+@keyframes swinging {
+  100% {
+    background-position: -5735px;
   }
 }
