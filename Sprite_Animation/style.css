@@ -342,18 +342,16 @@ body {
 }
 
 .tvnews {
-  position: sticky;
-  grid-area: 1/ 2/ span 1/ span 2;
-  margin-top: 20em;
+  0 grid-area: 1/ 2/ span 1/ span 2;
+  /* margin-top: 20vw; */
   background-image: url("./images/tvnews.png");
   background-repeat: no-repeat;
-  height: 1000px;
-  width: 490px;
-  animation: tvnews 4s steps(11) infinite;
+  width: 500px;
+  animation: tvnews 3s steps(11) infinite;
 }
 
 @keyframes tvnews {
   100% {
-    background-position: -5350px;
+    background-position: -5330px;
   }
 }
