@@ -164,7 +164,7 @@ body {
 /* options */
 
 .options {
-  opacity: 0;
+  display: none;
   max-height: 200px;
   height: 100vh;
   max-width: 200px;
@@ -175,22 +175,48 @@ body {
   font-family: 'Indie Flower', cursive;
   font-size: 2em;
   text-align: center;
-  animation: showOption 1s 1 forwards;
+  background-image: url("./images/optionBackground.png");
+
+
 }
 
 .option1 {
-  background-image: url("./images/optionBackground.png");
+  margin-top: 3em;
+  animation: showOption 1s 1 forwards;
+
+
+}
+
+.option2 {
+  margin-top: 4em;
+  animation: showOption2 1s 1 forwards;
 
 }
 
 @keyframes showOption {
 
   0% {
-    transform: translate(0 0)
+    transform: translate(-400px, 400px);
+    opacity: 0;
   }
 
   100% {
     opacity: 1;
-    transform: translate(-400px 400px)
+    transform: translate(0, 0)
   }
 }
+
+@keyframes showOption2 {
+
+  0% {
+    transform: translate(-400px, 400px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(400px, 0)
+  }
+}
+
+/* options */
