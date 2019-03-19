@@ -29,40 +29,45 @@ body {
 }
 
 /* button */
-/* :start */
-
-.start {
-  opacity: 0;
-  font-size: 2em;
-  /* animation: starting 2s ease-in 4s 1 forwards; */
-
-}
-
-/* @keyframes starting {
-  100% {
-    opacity: 1;
-    /* transform: rotate(180deg); */
-
-
-/* start */
-
-
-
-
-div {
-  margin-top: 5em;
-  /* background-image: url("./images/new3.png"); */
+/* walking */
+.monster {
+  margin-top: 20em;
+  background-image: url("./images/walking1.png");
   height: 440px;
   background-repeat: no-repeat;
-  width: 300px;
-  animation: moving 2s steps(11) infinite;
+  width: 280px;
+  animation: moving 4s steps(11) forwards 1;
+  /* animation-timing-function: cubic-bezier(.25, .53, .37); */
 
 }
 
 @keyframes moving {
   to {
-    /* transform: translateX(-2000px); */
+    transform: translateX(600px);
     background-position: -3157px;
 
   }
 }
+
+/* talking */
+.monster2 {
+
+  margin-top: 20em;
+  background-image: url("./images/talking.png");
+  height: 440px;
+  background-repeat: no-repeat;
+  width: 280px;
+  animation: talking 4s steps(19) 1;
+  animation-delay: 4s;
+
+}
+
+@keyframes talking {
+  to {
+    /* transform: translateX(600px); */
+    background-position: -5453px;
+    display: block;
+  }
+
+
+  /* }talking */
