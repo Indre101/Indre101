@@ -259,7 +259,7 @@ body {
 }
 
 .monster3 {
-  display: block;
+  /* display: block; */
   margin-top: 20em;
   background-image: url("./images/walking1.png");
   height: 440px;
@@ -287,7 +287,7 @@ body {
 }
 
 .wmonster2 {
-  display: block;
+  /* display: block; */
   /* -webkit-animation: movingHome1 3s steps(11) forwards 1; */
   animation: movingHome1 3s steps(11) forwards 1;
 
