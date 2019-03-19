@@ -4,7 +4,7 @@
 body {
   background-color: pink;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   height: 100vh;
 
 
@@ -17,6 +17,7 @@ body {
   height: 50px;
   background-color: #52B2A6;
   grid-column-start: 2;
+  grid-column-end: span 2;
   align-self: center;
   justify-self: center;
   font-size: 4em;
@@ -28,7 +29,8 @@ body {
 
 
 .changes {
-  animation: changes 2s ease-in 1 forwards;
+  animation: changes 1s ease-in 1 forwards;
+  -webkit-animation: changes 1s ease-in 1 forwards;
 
 }
 
@@ -49,6 +51,36 @@ body {
 }
 
 /* button */
+
+
+/* monster placement */
+#monster1 {
+
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+}
+
+#monster2 {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+}
+
+#Wmonster {
+  grid-column-start: 3;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+
+}
+
+#interaction {
+  grid-area: 1/2/span 1/ span 2;
+}
+
+/* monster placement */
+
+
 /* walking */
 .monster {
   display: none;
@@ -58,12 +90,14 @@ body {
   background-repeat: no-repeat;
   width: 280px;
   animation: moving 4s steps(11) forwards 1;
+  -webkit-animation: moving 4s steps(11) forwards 1;
+
 
 }
 
 @keyframes moving {
   to {
-    transform: translateX(40vw);
+    transform: translateX(30vw);
     background-position: -3157px;
 
   }
@@ -77,9 +111,8 @@ body {
   height: 440px;
   background-repeat: no-repeat;
   width: 280px;
-  animation: talking 4s steps(19) 1;
-  /* animation-delay: 4s; */
-
+  animation: talking 5s steps(19) 1;
+  -webkit-animation: talking 5s steps(19) 1;
 }
 
 @keyframes talking {
@@ -100,18 +133,64 @@ body {
   height: 440px;
   background-repeat: no-repeat;
   width: 280px;
+  -webkit-animation: moving 4s steps(11) forwards reverse 1;
   animation: moving 4s steps(11) forwards reverse 1;
 
   /* animation-delay: 4s; */
 
 }
 
-@keyframes talking {
+
+/* /wmonster */
+/* interaction */
+.interaction {
+  display: none;
+  margin-top: 20em;
+  background-image: url("./images/interaction.png");
+  height: 440px;
+  background-repeat: no-repeat;
+  width: 570px;
+  animation: interaction 2s steps(7) 1;
+  -webkit-animation: interaction 2s steps(7) 1;
+
+}
+
+@keyframes interaction {
   to {
-    /* transform: translateX(40vw); */
-    background-position: 3157px;
+    background-position: -4000px;
+  }
+}
 
+/* options */
 
+.options {
+  opacity: 0;
+  max-height: 200px;
+  height: 100vh;
+  max-width: 200px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-area: 1/ 2/ span 1/span 3;
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+  text-align: center;
+  animation: showOption 1s 1 forwards;
+}
+
+.option1 {
+  background-image: url("./images/optionBackground.png");
+
+}
+
+@keyframes showOption {
+
+  0% {
+    transform: translate(0 0)
   }
 
-  /* /wmonster */
+  100% {
+    opacity: 1;
+    transform: translate(-400px 400px)
+  }
+}

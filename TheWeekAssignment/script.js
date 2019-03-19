@@ -2,6 +2,7 @@ const btn1 = document.getElementById("btn1");
 const monster1 = document.getElementById("monster1");
 const monter2 = document.getElementById("monster2");
 const Wmonster = document.getElementById("Wmonster");
+const interaction = document.getElementById("interaction");
 
 
 
@@ -44,9 +45,7 @@ btn1.onclick = function () {
 // finished with the start button
 // animation time
 
-monster1.addEventListener("animationstart", monsterListener, false);
 monster1.addEventListener("animationend", monsterListener, false);
-monster1.addEventListener("animationiteration", monsterListener, false);
 
 
 function monsterListener(event) {
@@ -59,4 +58,18 @@ function monsterListener(event) {
   }
 }
 
-// animation
+// interaction
+
+monster2.addEventListener("animationend", monsterListener2, false);
+
+
+function monsterListener2(event) {
+  switch (event.type) {
+    case "animationend":
+      monter2.style.display = "none";
+      Wmonster.style.display = "none";
+      interaction.style.display = "block"
+      break;
+
+  }
+}
