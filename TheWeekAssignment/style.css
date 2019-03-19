@@ -86,17 +86,22 @@ body {
 
 
 /* walking */
-.monster {
+.monster,
+.monster3 {
   display: none;
   margin-top: 20em;
   background-image: url("./images/walking1.png");
   height: 440px;
   background-repeat: no-repeat;
   width: 280px;
+
+
+
+}
+
+.monster {
   animation: moving 4s steps(11) forwards 1;
   -webkit-animation: moving 4s steps(11) forwards 1;
-
-
 }
 
 @keyframes moving {
@@ -130,20 +135,26 @@ body {
 
 /* /wmonster */
 
-.Wmonster {
+.Wmonster,
+.wmonster2 {
   display: none;
-  margin-top: 20em;
   background-image: url("./images/wmonsterWalking.png");
+
+  margin-top: 20em;
   height: 440px;
   background-repeat: no-repeat;
   width: 280px;
-  -webkit-animation: moving 4s steps(11) forwards reverse 1;
-  animation: moving 4s steps(11) forwards reverse 1;
 
   /* animation-delay: 4s; */
 
 }
 
+.Wmonster {
+
+  -webkit-animation: moving 4s steps(11) forwards reverse 1;
+  animation: moving 4s steps(11) forwards reverse 1;
+
+}
 
 /* /wmonster */
 /* interaction */
@@ -187,11 +198,18 @@ body {
   text-align: center;
   align-items: center;
   margin-left: 3em;
-
+  cursor: pointer;
   background-image: url("./images/optionBackground.png");
 
 
 
+
+}
+
+.options:hover {
+  /* filter: drop-shadow(10px 10px 10px 15px #52B2A6); */
+  -webkit-filter: drop-shadow(5px 5px 10px yellow);
+  filter: drop-shadow(5px 5px 5px yellow);
 }
 
 .option1 {
@@ -233,3 +251,55 @@ body {
 }
 
 /* options */
+
+/* going home */
+
+.monster3 {
+  grid-area: 1/2/span 1/span 1;
+}
+
+.monster3 {
+  display: block;
+  margin-top: 20em;
+  background-image: url("./images/walking1.png");
+  height: 440px;
+  background-repeat: no-repeat;
+  width: 280px;
+  animation: movingHome 3s steps(11) forwards 1;
+  -webkit-animation: movingHome 3s steps(11) forwards 1;
+
+
+}
+
+@keyframes movingHome {
+
+
+  to {
+    transform: translateX(100vw);
+    background-position: -3157px;
+    opacity: 0;
+
+  }
+}
+
+#wmonster2 {
+  grid-area: 1/2/span 1/span 2;
+}
+
+.wmonster2 {
+  display: block;
+  /* -webkit-animation: movingHome1 3s steps(11) forwards 1; */
+  animation: movingHome1 3s steps(11) forwards 1;
+
+
+
+}
+
+@keyframes movingHome1 {
+
+  to {
+    transform: translateX(-400px);
+    background-position: -3157px;
+    opacity: 0;
+  }
+}

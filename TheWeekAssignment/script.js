@@ -88,3 +88,18 @@ function monsterListener3(event) {
 
   }
 }
+
+const option1 = document.getElementById("option1");
+const option2 = document.getElementById("option2");
+const monster3 = document.getElementById("monster3");
+const wmonster2 = document.getElementById("wmonster2");
+
+
+option1.onclick = function () {
+  interaction.style.display = "none";
+  option1.style.display = "none";
+  option2.style.display = "none";
+  monster3.style.display = "block";
+  wmonster2.style.display = "block";
+
+}
