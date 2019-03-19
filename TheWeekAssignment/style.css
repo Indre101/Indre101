@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+
 body {
   background-color: pink;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 100vh;
+
 
 }
 
@@ -15,35 +19,51 @@ body {
   grid-column-start: 2;
   align-self: center;
   justify-self: center;
-  transition: height 1s, width 1s 1s, border-radius 1s 2s, transform 1s 3s, box-shadow 1s 4s;
+  font-size: 4em;
+  font-family: 'Indie Flower', cursive;
+  cursor: pointer;
+
+
 }
 
 
-.button1:hover {
-  height: 200px;
-  width: 300px;
-  border-radius: 40% 40% 70% 40%;
-  transform: rotate(-360deg);
-  box-shadow: 10px 10px 25px 20px hotpink;
-  transform-origin: bottom left;
+.changes {
+  animation: changes 2s ease-in 1 forwards;
+
+}
+
+
+@keyframes changes {
+
+  100% {
+    height: 200px;
+    width: 300px;
+    border-radius: 40% 40% 70% 40%;
+    transform: rotate(-360deg);
+    transform-origin: bottom left;
+    box-shadow: 10px 10px 25px 20px hotpink;
+
+  }
+
+
 }
 
 /* button */
 /* walking */
 .monster {
+  display: none;
   margin-top: 20em;
   background-image: url("./images/walking1.png");
   height: 440px;
   background-repeat: no-repeat;
   width: 280px;
   animation: moving 4s steps(11) forwards 1;
-  /* animation-timing-function: cubic-bezier(.25, .53, .37); */
 
 }
 
 @keyframes moving {
   to {
-    transform: translateX(600px);
+    transform: translateX(40vw);
     background-position: -3157px;
 
   }
@@ -51,14 +71,14 @@ body {
 
 /* talking */
 .monster2 {
-
+  display: none;
   margin-top: 20em;
   background-image: url("./images/talking.png");
   height: 440px;
   background-repeat: no-repeat;
   width: 280px;
   animation: talking 4s steps(19) 1;
-  animation-delay: 4s;
+  /* animation-delay: 4s; */
 
 }
 
@@ -66,8 +86,32 @@ body {
   to {
     /* transform: translateX(600px); */
     background-position: -5453px;
-    display: block;
+  }
+}
+
+/* }talking */
+
+/* /wmonster */
+
+.Wmonster {
+  display: none;
+  margin-top: 20em;
+  background-image: url("./images/wmonsterWalking.png");
+  height: 440px;
+  background-repeat: no-repeat;
+  width: 280px;
+  animation: moving 4s steps(11) forwards reverse 1;
+
+  /* animation-delay: 4s; */
+
+}
+
+@keyframes talking {
+  to {
+    /* transform: translateX(40vw); */
+    background-position: 3157px;
+
+
   }
 
-
-  /* }talking */
+  /* /wmonster */
