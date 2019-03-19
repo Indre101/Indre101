@@ -340,3 +340,20 @@ body {
     background-position: -5735px;
   }
 }
+
+.tvnews {
+  position: sticky;
+  grid-area: 1/ 2/ span 1/ span 2;
+  margin-top: 20em;
+  background-image: url("./images/tvnews.png");
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 490px;
+  animation: tvnews 4s steps(11) infinite;
+}
+
+@keyframes tvnews {
+  100% {
+    background-position: -5350px;
+  }
+}
