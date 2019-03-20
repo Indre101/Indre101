@@ -137,6 +137,9 @@ option1.onclick = function () {
 
 // transferring to date 
 
+const datetv = document.getElementById("datetv");
+const dateEnd = document.getElementById("dateend")
+
 together.addEventListener("animationend", monsterListener5, false);
 
 
@@ -144,9 +147,39 @@ function monsterListener5(event) {
   switch (event.type) {
     case "animationend":
       mainPart.style.backgroundImage = "url('./images/DateBackground.png')";
-      document.getElementById("dateend").style.display = "block";
-      document.getElementById("datetv").style.display = "block";
+      dateEnd.style.display = "block";
+      datetv.style.display = "block";
       break;
 
   }
+}
+
+
+const replay = document.getElementById("replaybtn");
+const replay1 = document.getElementById("replaybtn1");
+
+
+datetv.addEventListener("animationend", monsterListener6, false);
+
+
+function monsterListener6(event) {
+  switch (event.type) {
+    case "animationend":
+      replay1.style.display = "block";
+      datetv.classList.remove("datenews");
+      dateEnd.classList.remove("dateEnding");
+      break;
+
+  }
+}
+
+
+
+// element.style.webkitAnimationPlayState = "running";
+
+replay.onclick = function () {
+
+  datetv.classList.add("datenews");
+  dateEnd.classList.add("dateEnding");
+
 }
