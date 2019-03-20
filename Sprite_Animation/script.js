@@ -137,10 +137,10 @@ option1.onclick = function () {
 
 // transferring to date 
 
-together.addEventListener("animationend", monsterListener4, false);
+together.addEventListener("animationend", monsterListener5, false);
 
 
-function monsterListener4(event) {
+function monsterListener5(event) {
   switch (event.type) {
     case "animationend":
       mainPart.style.backgroundImage = "url('./images/DateBackground.png')";
