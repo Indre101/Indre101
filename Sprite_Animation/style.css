@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
-
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 
 body {
   background-image: url("./images/homebackground.png");
@@ -36,31 +35,25 @@ body {
 
 /* button */
 .button1 {
-  grid-area: 1/2/ span 1/ span 2;
+  grid-area: 1/2 / span 1 / span 2;
   width: 50px;
   height: 50px;
-  background-color: #52B2A6;
+  background-color: #52b2a6;
   grid-column-start: 2;
   grid-column-end: span 2;
   align-self: center;
   justify-self: center;
   font-size: 4em;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   cursor: pointer;
-
-
 }
-
 
 .changes {
   animation: changes 1s ease-in 1 forwards;
   -webkit-animation: changes 1s ease-in 1 forwards;
-
 }
 
-
 @keyframes changes {
-
   100% {
     height: 200px;
     width: 300px;
@@ -68,18 +61,13 @@ body {
     transform: rotate(-360deg);
     transform-origin: bottom left;
     box-shadow: 10px 10px 25px 20px hotpink;
-
   }
-
-
 }
 
 /* button */
 
-
 /* monster placement */
 #monster1 {
-
   grid-column-start: 1;
   grid-column-end: span 2;
   grid-row-start: 1;
@@ -95,15 +83,13 @@ body {
   grid-column-start: 3;
   grid-column-end: span 2;
   grid-row-start: 1;
-
 }
 
 #interaction {
-  grid-area: 1/2/span 1/ span 2;
+  grid-area: 1/2 / span 1 / span 2;
 }
 
 /* monster placement */
-
 
 /* walking */
 .monster,
@@ -114,9 +100,6 @@ body {
   height: 440px;
   background-repeat: no-repeat;
   width: 280px;
-
-
-
 }
 
 .monster {
@@ -128,7 +111,6 @@ body {
   to {
     transform: translateX(30vw);
     background-position: -3157px;
-
   }
 }
 
@@ -166,14 +148,11 @@ body {
   width: 280px;
 
   /* animation-delay: 4s; */
-
 }
 
 .Wmonster {
-
   -webkit-animation: moving 4s steps(11) forwards reverse 1;
   animation: moving 4s steps(11) forwards reverse 1;
-
 }
 
 /* /wmonster */
@@ -187,7 +166,6 @@ body {
   width: 570px;
   animation: interaction 2s steps(7) 1;
   -webkit-animation: interaction 2s steps(7) 1;
-
 }
 
 @keyframes interaction {
@@ -199,10 +177,7 @@ body {
 /* options */
 .optionsContainer {
   display: none;
-  grid-area: 1/ 1/ span 1/span 4;
-
-
-
+  grid-area: 1/ 1 / span 1 / span 4;
 }
 
 .options {
@@ -213,17 +188,13 @@ body {
   width: 100vw;
   background-repeat: no-repeat;
   background-size: contain;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   font-size: 2em;
   text-align: center;
   align-items: center;
   margin-left: 3em;
   cursor: pointer;
   background-image: url("./images/optionBackground.png");
-
-
-
-
 }
 
 .options:hover {
@@ -235,17 +206,13 @@ body {
 .option1 {
   margin-top: 1em;
   animation: showOption 1s 1 forwards;
-
-
 }
 
 .option2 {
   animation: showOption2 1s 1 forwards;
-
 }
 
 @keyframes showOption {
-
   0% {
     transform: translate(-400px, 400px);
     opacity: 0;
@@ -253,12 +220,11 @@ body {
 
   100% {
     opacity: 1;
-    transform: translate(0, 0)
+    transform: translate(0, 0);
   }
 }
 
 @keyframes showOption2 {
-
   0% {
     transform: translate(-400px, 400px);
     opacity: 0;
@@ -266,7 +232,7 @@ body {
 
   100% {
     opacity: 1;
-    transform: translate(300px, -100px)
+    transform: translate(300px, -100px);
   }
 }
 
@@ -275,7 +241,7 @@ body {
 /* going home */
 
 .monster3 {
-  grid-area: 1/2/span 1/span 1;
+  grid-area: 1/2 / span 1 / span 1;
 }
 
 .monster3 {
@@ -287,35 +253,27 @@ body {
   width: 280px;
   animation: movingHome 3s steps(11) forwards 1;
   -webkit-animation: movingHome 3s steps(11) forwards 1;
-
-
 }
 
 @keyframes movingHome {
-
-
   to {
     transform: translateX(100vw);
     background-position: -3157px;
     opacity: 0;
-
   }
 }
 
 #wmonster2 {
-  grid-area: 1/2/span 1/span 2;
+  grid-area: 1/2 / span 1 / span 2;
 }
 
 .wmonster2 {
   /* display: block; */
   /* -webkit-animation: movingHome1 3s steps(11) forwards 1; */
   animation: movingHome1 3s steps(11) forwards 1;
-
-
 }
 
 @keyframes movingHome1 {
-
   to {
     transform: translateX(-400px);
     background-position: -3157px;
@@ -324,7 +282,6 @@ body {
 }
 
 /* swinging */
-
 
 .swinging {
   margin-top: 20vw;
@@ -342,16 +299,19 @@ body {
 }
 
 .tvnews {
-  0 grid-area: 1/ 2/ span 1/ span 2;
+  grid-area: 1/ 1 / span 1 / span 2;
+  margin-top: 25vw;
+  margin-left: 3em;
   /* margin-top: 20vw; */
-  background-image: url("./images/tvnews.png");
+  background-image: url("./images/tvnews01-2.png");
   background-repeat: no-repeat;
-  width: 500px;
-  animation: tvnews 3s steps(11) infinite;
+  width: 395px;
+  height: 473px;
+  animation: tvnews 7s steps(33) 7;
 }
 
 @keyframes tvnews {
   100% {
-    background-position: -5330px;
+    background-position: -14680px;
   }
 }
