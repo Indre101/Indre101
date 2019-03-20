@@ -134,3 +134,19 @@ option1.onclick = function () {
   together.style.display = "block";
 
 }
+
+// transferring to date 
+
+together.addEventListener("animationend", monsterListener4, false);
+
+
+function monsterListener4(event) {
+  switch (event.type) {
+    case "animationend":
+      mainPart.style.backgroundImage = "url('./images/DateBackground.png')";
+      document.getElementById("dateend").style.display = "block";
+      document.getElementById("datetv").style.display = "block";
+      break;
+
+  }
+}
