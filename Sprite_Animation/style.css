@@ -306,11 +306,31 @@
   background-repeat: no-repeat;
   width: 395px;
   height: 473px;
-  animation: tvnews 7s steps(33) 7;
+  animation: tvnews 8s steps(33) 7;
 }
 
 @keyframes tvnews {
   100% {
     background-position: -14680px;
+  }
+}
+
+/* going home together */
+
+.together {
+  display: none;
+  grid-area: 1/2 / span 1 / span 2;
+  background-image: url("./images/together1.png");
+  margin-top: 15vw;
+  height: 450px;
+  width: 607px;
+  animation: together 5s steps(12) infinite;
+}
+
+@keyframes together {
+  to {
+    transform: translateX(500px);
+    background-position: -7641px;
+    opacity: 0;
   }
 }

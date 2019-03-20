@@ -122,3 +122,15 @@ function monsterListener4(event) {
 
   }
 }
+
+// option1 isClicked
+
+const together = document.getElementById("together");
+
+option1.onclick = function () {
+  interaction.style.display = "none";
+  option1.style.display = "none";
+  option2.style.display = "none";
+  together.style.display = "block";
+
+}
