@@ -12,6 +12,7 @@ console.log(optionsOf)
 // added animation to the start button
 function firstClick() {
   btn1.classList.add("changes");
+  btn1.classList.remove("blinking");
 }
 
 //the start Button

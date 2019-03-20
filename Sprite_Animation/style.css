@@ -25,6 +25,24 @@
   cursor: pointer;
 }
 
+.blinking {
+  animation: blinking 1s linear infinite;
+}
+@keyframes blinking {
+  0% {
+    box-shadow: 1px 1px 2px blue;
+  }
+  35% {
+    box-shadow: 5px 5px 6px blue;
+  }
+  50% {
+    box-shadow: 10px 10px 10px green;
+  }
+  100% {
+    box-shadow: 15px 15px 15px blue;
+  }
+}
+
 .changes {
   animation: changes 1s ease-in 1 forwards;
   -webkit-animation: changes 1s ease-in 1 forwards;
