@@ -4,6 +4,7 @@ const monter2 = document.getElementById("monster2");
 const Wmonster = document.getElementById("Wmonster");
 const interaction = document.getElementById("interaction");
 const optionsOf = document.getElementById("optionsContainer");
+const mainPart = document.getElementById("container");
 
 
 console.log(optionsOf)
@@ -21,6 +22,7 @@ function listener(event) {
   switch (event.type) {
     case "animationend":
       btn1.innerHTML = "START?";
+
       break;
 
   }
@@ -32,6 +34,7 @@ function isClicked() {
 
   btn1.style.display = "none";
   monster1.style.display = "block";
+  mainPart.style.backgroundImage = "url('./images/background.png')"
 
 }
 
@@ -102,4 +105,19 @@ option2.onclick = function () {
   monster3.style.display = "block";
   wmonster2.style.display = "block";
 
+}
+
+// changing to home atmosphere
+monster3.addEventListener("animationend", monsterListener4, false);
+
+
+function monsterListener4(event) {
+  switch (event.type) {
+    case "animationend":
+      mainPart.style.backgroundImage = "url('./images/homebackground.png')";
+      document.getElementById("swinging").style.display = "block";
+      document.getElementById("tvnews").style.display = "block";
+      break;
+
+  }
 }

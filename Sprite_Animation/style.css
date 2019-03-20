@@ -1,36 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 
-body {
-  background-image: url("./images/homebackground.png");
+.container {
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  /* background-color: pink; */
+  background-color: pink;
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-
-/* .container {
-  background-image: url("./images/backgroundSliding.png");
-  height: 100vh;
-  width: 100vw;
-
-  grid-area: 1/ 1/ span 1/ span 4;
-  animation: backgroundAnimatio 9s ease-in-out;
-
-
-} */
-
-/* .backgroundAnimation {
-  animation: backgroundAnimatio 3s ease-in-out;
-
-} */
-
-@keyframes backgroundAnimatio {
-  to {
-    transform: translateX(4000px);
-  }
 }
 
 /* button */
@@ -284,6 +261,9 @@ body {
 /* swinging */
 
 .swinging {
+  grid-area: 1/ 3 / span 1 / span 2;
+
+  display: none;
   margin-top: 20vw;
   margin-left: 4em;
   background-image: url("./images/swinging.png");
@@ -299,6 +279,7 @@ body {
 }
 
 .tvnews {
+  display: none;
   grid-area: 1/ 1 / span 1 / span 2;
   margin-top: 25vw;
   margin-left: 3em;
