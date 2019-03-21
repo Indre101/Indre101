@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+/* @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+ */
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
 
 .container {
   height: 100vh;
@@ -21,7 +23,9 @@
   align-self: center;
   justify-self: center;
   font-size: 4em;
-  font-family: "Indie Flower", cursive, sans-serif;
+  /* font-family: "Indie Flower", cursive, sans-serif; */
+  font-family: "Shadows Into Light", cursive, sans-serif;
+
   cursor: pointer;
 }
 
@@ -183,7 +187,9 @@
   width: 100vw;
   background-repeat: no-repeat;
   background-size: contain;
-  font-family: "Indie Flower", cursive;
+  /* font-family: "Indie Flower", cursive; */
+  font-family: "Shadows Into Light", cursive, sans-serif;
+
   font-size: 2em;
   text-align: center;
   align-items: center;
@@ -382,7 +388,9 @@
   height: 150px;
   width: 150px;
   font-size: 2em;
-  font-family: "Indie Flower", cursive, sans-serif;
+  /* font-family: "Indie Flower", cursive, sans-serif; */
+  font-family: "Shadows Into Light", cursive, sans-serif;
+
   justify-content: center;
   align-items: center;
 }
