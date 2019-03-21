@@ -126,17 +126,6 @@ function monsterListener4(event) {
 // option1 isClicked
 
 const together = document.getElementById("together");
-
-option1.onclick = function () {
-  interaction.style.display = "none";
-  option1.style.display = "none";
-  option2.style.display = "none";
-  together.style.display = "block";
-
-}
-
-// transferring to date 
-
 const datetv = document.getElementById("datetv");
 const dateEnd = document.getElementById("dateend")
 
@@ -146,13 +135,29 @@ together.addEventListener("animationend", monsterListener5, false);
 function monsterListener5(event) {
   switch (event.type) {
     case "animationend":
-      mainPart.style.backgroundImage = "url('./images/DateBackground.png')";
       dateEnd.style.display = "block";
       datetv.style.display = "block";
+      mainPart.style.backgroundImage = "url('./images/dateBacground.png')";
+
       break;
 
   }
 }
+
+option1.onclick = function () {
+  interaction.style.display = "none";
+  option1.style.display = "none";
+  option2.style.display = "none";
+  together.style.display = "block";
+
+
+}
+
+// transferring to date 
+
+
+
+
 
 
 const replay = document.getElementById("replaybtn");

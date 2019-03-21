@@ -329,12 +329,12 @@
   margin-top: 15vw;
   height: 450px;
   width: 607px;
-  animation: together 5s steps(12) 1 forwards;
+  animation: together 3s steps(12) 1 forwards;
 }
 
 @keyframes together {
   to {
-    transform: translateX(500px);
+    /* transform: translateX(300px); */
     background-position: -7641px;
     opacity: 0;
   }
