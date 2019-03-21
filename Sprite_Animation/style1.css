@@ -2,5 +2,61 @@
 
 body {
   font-family: "Shadows Into Light", cursive, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #abdef6;
+  font-size: 2em;
 
+}
+
+.text {
+  opacity: 0;
+  animation: textanimation 1s linear forwards 1;
+}
+
+@keyframes textanimation {
+  0% {
+    transform: skew(-10deg, 90deg);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: skewY(0, 0);
+
+    /* transform: skewY(1); */
+    opacity: 1;
+  }
+}
+
+.gohome {
+  opacity: 0;
+  border: 2px solid black;
+  width: 250px;
+  background-color: pink;
+  opacity: 0.6;
+  animation: appearing 1s forwards linear 1;
+  cursor: pointer;
+
+
+}
+
+.gohome a {
+  text-decoration: none;
+
+}
+
+@keyframes appearing {
+  0% {
+    transform: translateX(-1000px)
+  }
+
+  100% {
+    transform: translateX(50%);
+
+  }
 }

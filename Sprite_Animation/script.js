@@ -97,6 +97,15 @@ const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
 const monster3 = document.getElementById("monster3");
 const wmonster2 = document.getElementById("wmonster2");
+const gotoTitle = document.getElementById("gotitles");
+
+
+function showingAButton() {
+  setTimeout(() => {
+    gotoTitle.style.display = "block";
+  }, 5000);
+
+}
 
 
 option2.onclick = function () {
@@ -105,6 +114,7 @@ option2.onclick = function () {
   option2.style.display = "none";
   monster3.style.display = "block";
   wmonster2.style.display = "block";
+  showingAButton();
 
 }
 
@@ -156,11 +166,6 @@ option1.onclick = function () {
 // transferring to date 
 
 
-
-
-
-
-const replay = document.getElementById("replaybtn");
 const replay1 = document.getElementById("replaybtn1");
 
 
@@ -171,8 +176,10 @@ function monsterListener6(event) {
   switch (event.type) {
     case "animationend":
       replay1.style.display = "block";
+      gotoTitle.style.display = "block";
       datetv.classList.remove("datenews");
       dateEnd.classList.remove("dateEnding");
+
       break;
 
   }
@@ -182,7 +189,7 @@ function monsterListener6(event) {
 
 // element.style.webkitAnimationPlayState = "running";
 
-replay.onclick = function () {
+replay1.onclick = function () {
 
   datetv.classList.add("datenews");
   dateEnd.classList.add("dateEnding");
