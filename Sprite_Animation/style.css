@@ -339,7 +339,7 @@
 
 @keyframes together {
   to {
-    /* transform: translateX(300px); */
+    transform: translateX(300px);
     background-position: -7641px;
     opacity: 0;
   }
