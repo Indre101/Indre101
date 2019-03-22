@@ -23,7 +23,6 @@
   align-self: center;
   justify-self: center;
   font-size: 4em;
-  /* font-family: "Indie Flower", cursive, sans-serif; */
   font-family: "Shadows Into Light", cursive, sans-serif;
 
   cursor: pointer;
@@ -53,7 +52,7 @@
 
 .changes {
   animation: changes 1s ease-in 1 forwards;
-  /* -webkit-animation: changes 1s ease-in 1 forwards; */
+  -webkit-animation: changes 1s ease-in 1 forwards;
 }
 
 @keyframes changes {
@@ -107,7 +106,7 @@
 
 .monster {
   animation: moving 4s steps(11) forwards 1;
-  /* -webkit-animation: moving 4s steps(11) forwards 1; */
+  -webkit-animation: moving 4s steps(11) forwards 1;
 }
 
 @keyframes moving {
@@ -154,7 +153,7 @@
 }
 
 .Wmonster {
-  /* -webkit-animation: moving 4s steps(11) forwards reverse 1; */
+  -webkit-animation: moving 4s steps(11) forwards reverse 1;
   animation: moving 4s steps(11) forwards reverse 1;
 }
 
@@ -191,7 +190,6 @@
   width: 100vw;
   background-repeat: no-repeat;
   background-size: contain;
-  /* font-family: "Indie Flower", cursive; */
   font-family: "Shadows Into Light", cursive, sans-serif;
 
   font-size: 2em;
@@ -205,7 +203,6 @@
 .replaybtn:hover,
 .options:hover,
 .gotitles:hover {
-  filter: drop-shadow(5px 5px 5px 5px yellow);
   filter: drop-shadow(5px 5px 5px yellow);
 }
 
@@ -258,7 +255,7 @@
   background-repeat: no-repeat;
   width: 280px;
   animation: movingHome 3s steps(11) forwards 1;
-  /* -webkit-animation: movingHome 3s steps(11) forwards 1; */
+  -webkit-animation: movingHome 3s steps(11) forwards 1;
 }
 
 @keyframes movingHome {
@@ -275,7 +272,7 @@
 
 .wmonster2 {
   /* display: block; */
-  /* -webkit-animation: movingHome1 3s steps(11) forwards 1; */
+  -webkit-animation: movingHome1 3s steps(11) forwards 1;
   animation: movingHome1 3s steps(11) forwards 1;
 }
 
@@ -369,7 +366,7 @@
   background-repeat: no-repeat;
   width: 630px;
   height: 450px;
-  margin-top: 25vw;
+  margin-top: 28vw;
   margin-left: 15vw;
 }
 
@@ -395,7 +392,6 @@
   height: 150px;
   width: 150px;
   font-size: 2em;
-  /* font-family: "Indie Flower", cursive, sans-serif; */
   font-family: "Shadows Into Light", cursive, sans-serif;
   cursor: pointer;
   justify-self: center;
