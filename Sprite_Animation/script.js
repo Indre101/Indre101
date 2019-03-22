@@ -103,7 +103,7 @@ const gotoTitle = document.getElementById("gotitles");
 function showingAButton() {
   setTimeout(() => {
     gotoTitle.style.display = "block";
-  }, 5000);
+  }, 6000);
 
 }
 
