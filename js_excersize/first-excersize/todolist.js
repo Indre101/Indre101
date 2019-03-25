@@ -52,11 +52,13 @@
 
 const input = document.querySelector("input");
 const button = document.querySelector("button");
-const list = document.getElementById("newList");
+const list = document.querySelector("newList");
 
 
 
 button.addEventListener("click", newItem);
+
+
 
 function newItem() {
 
