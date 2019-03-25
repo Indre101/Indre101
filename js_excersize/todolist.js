@@ -20,6 +20,8 @@ function crossOut() {
   }
 };
 
+
+// flower part
 const imageList = document.querySelectorAll("img");
 const backGroundColor = document.querySelector("body");
 
@@ -37,7 +39,7 @@ function fading() {
   counter++
   this.classList.toggle("fadeout");
 
-  if (counter == 3) {
+  if (counter == 2) {
     counter = 0;
     backGroundColor.style.backgroundColor = "blue";
   } else if (counter < 3) {
@@ -45,4 +47,4 @@ function fading() {
 
   }
 
-}
+};
