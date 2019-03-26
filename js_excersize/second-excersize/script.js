@@ -8,20 +8,28 @@ const listItems = document.querySelector("li");
 button.addEventListener("click", newItemAdd);
 
 
-listItems.addEventListener("click", strikingOut);
-
-function strikingOut() {
-
-  newItem.classList.toggle("strikeOut");
-}
 
 
 function newItemAdd() {
 
   const newItem = document.createElement("li");
 
-  newItem.textContent = input.value;
-  list.appendChild(newItem);
+  newItem.addEventListener("click", strikingOut);
+
+  function strikingOut() {
+
+    newItem.classList.toggle("strikeOut");
+  }
+
+
+  if (!input.value) {
+    alert("Yu have to put value in");
+
+  } else {
+    newItem.textContent = input.value;
+    list.appendChild(newItem);
+
+  }
 
 
 
