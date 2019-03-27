@@ -25,3 +25,13 @@ console.log(todos[1].todo);
 const todosJSON = JSON.stringify(todos);
 
 console.log(todosJSON);
+
+//for of loop;
+
+for (let todo of todos) {
+  console.log(todo)
+}
+
+for (let todo of todos) {
+  console.log(todo.id);
+}
