@@ -45,3 +45,9 @@ const {
 
 console.log(hobbies[0]);
 console.log(street);
+
+//  adding a new property;
+
+person.email = "jjjkl";
+
+console.log(person);
