@@ -62,3 +62,11 @@ function pressedKey(e) {
   }
 
 }
+
+// mouse events
+
+myVideo.onmouseover = function () {
+  myVideo.play();
+  console.log(true);
+
+}
