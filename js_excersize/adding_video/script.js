@@ -30,3 +30,35 @@ pause.onclick = function () {
   }
 
 }
+
+
+function pauseVideo() {
+  if ((myVideo.paused == true) && (myVideo.currentTime != 0)) {
+    myVideo.play();
+
+  } else {
+    myVideo.pause();
+  }
+
+}
+
+// keyborad events
+document.addEventListener("keydown", pressedKey);
+
+
+function pressedKey(e) {
+
+  switch (e.which) {
+    case 32:
+      myVideo.play();
+      break;
+    case 18:
+      myVideo.pause()
+      myVideo.currentTime = 0;
+      break;
+    case 13:
+      pauseVideo();
+
+  }
+
+}
