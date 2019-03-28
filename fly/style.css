@@ -1,3 +1,12 @@
-#fly {
-  skdlsdksl
+.fly {
+  background-image: url("./") width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+}
+
+.blood {
+  background-image: url(media/graphics/blood.png);
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
 }
