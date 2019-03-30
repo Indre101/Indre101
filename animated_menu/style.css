@@ -5,12 +5,15 @@
   height: 100vh;
 }
 
+
 .burgerContainer {
   grid-area: 1/2/span 1/ span 1;
   justify-self: center;
   align-self: center;
   display: grid;
-  grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+  grid-template: repeat(3, 200px)/ repeat(3, 200px);
+  background-color: rebeccapurple;
+  border-radius: 50%;
 }
 
 .burger {
@@ -18,7 +21,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   width: 100px;
-  height: 100px;
   grid-area: 2/2/span 1/span 1;
 }
 
@@ -27,11 +29,14 @@
   position: absolute;
   border: 1px black solid;
   border-radius: 50%;
-  animation: appear 0.2s 0.8s linear 1 forwards;
-
+  width: 80px;
+  height: 80px;
+  background-color: blue;
 }
 
 .item1 {
+  align-self: flex-end;
+  justify-self: flex-end;
   animation: appear1 0.2s linear 1 forwards;
 }
 
@@ -63,6 +68,7 @@
 
 
 .item6 {
+  justify-self: flex-end;
   animation: appear6 0.2s 1s linear 1 forwards;
 }
 
@@ -80,28 +86,38 @@
 }
 
 .item5 {
+  align-self: center;
+  justify-self: center;
   animation: appear 0.2s 0.8s linear 1 forwards;
 }
 
 .item2 {
+  justify-self: center;
   animation: appear 0.2s 0.2s linear 1 forwards;
 }
 
 
 .item3 {
+  align-self: flex-end;
+  justify-self: flex-start;
   animation: appear 0.2s 0.4s linear 1 forwards;
 }
 
 
 .item4 {
+  justify-self: center;
+  align-self: center;
   animation: appear4 0.2s 0.6s linear 1 forwards;
 }
 
 .item7 {
+  align-self: flex-end;
+  justify-self: center;
   animation: appear 0.2s 1.2s linear 1 forwards;
 }
 
 .item8 {
+  justify-self: flex-start;
   animation: appear 0.2s 1.4s linear 1 forwards;
 }
 
