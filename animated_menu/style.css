@@ -5,13 +5,115 @@
   height: 100vh;
 }
 
-.burger {
+.burgerContainer {
   grid-area: 1/2/span 1/ span 1;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+}
+
+.burger {
   background-image: url("./Menu-512.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 100px;
   height: 100px;
-  justify-self: center;
-  align-self: center;
+  grid-area: 2/2/span 1/span 1;
+}
+
+.item {
+  opacity: 0;
+  position: absolute;
+  border: 1px black solid;
+  border-radius: 50%;
+  animation: appear 0.2s 0.8s linear 1 forwards;
+
+}
+
+.item1 {
+  animation: appear1 0.2s linear 1 forwards;
+}
+
+
+
+@keyframes appear1 {
+  from {
+    transform: translate(80px, 30px)
+  }
+
+  to {
+    position: relative;
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes appear4 {
+  from {
+    transform: translateX(30px)
+  }
+
+  to {
+    position: relative;
+    opacity: 1;
+  }
+}
+
+
+.item6 {
+  animation: appear6 0.2s 1s linear 1 forwards;
+}
+
+
+
+@keyframes appear6 {
+  from {
+    transform: translate(80px, -30px)
+  }
+
+  to {
+    position: relative;
+    opacity: 1;
+  }
+}
+
+.item5 {
+  animation: appear 0.2s 0.8s linear 1 forwards;
+}
+
+.item2 {
+  animation: appear 0.2s 0.2s linear 1 forwards;
+}
+
+
+.item3 {
+  animation: appear 0.2s 0.4s linear 1 forwards;
+}
+
+
+.item4 {
+  animation: appear4 0.2s 0.6s linear 1 forwards;
+}
+
+.item7 {
+  animation: appear 0.2s 1.2s linear 1 forwards;
+}
+
+.item8 {
+  animation: appear 0.2s 1.4s linear 1 forwards;
+}
+
+
+
+@keyframes appear {
+  from {
+    transform: translate(-30px)
+  }
+
+  to {
+    position: relative;
+    opacity: 1;
+  }
 }
