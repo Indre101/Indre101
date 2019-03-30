@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+  height: 100vh;
+}
+
+.burger {
+  grid-area: 1/2/span 1/ span 1;
+  background-image: url("./Menu-512.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  justify-self: center;
+  align-self: center;
+}
