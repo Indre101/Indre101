@@ -93,6 +93,7 @@
 }
 
 .item2 {
+  margin-bottom: 1em;
   justify-self: center;
   animation: appear 0.2s 0.2s linear 1 forwards;
 }
@@ -112,6 +113,7 @@
 }
 
 .item7 {
+  margin-top: 1em;
   align-self: flex-end;
   justify-self: center;
   animation: appear 0.2s 1.2s linear 1 forwards;
