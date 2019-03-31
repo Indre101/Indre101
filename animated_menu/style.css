@@ -11,8 +11,7 @@
   justify-self: center;
   align-self: center;
   display: grid;
-  grid-template: repeat(3, 200px)/ repeat(3, 200px);
-  background-color: rebeccapurple;
+  grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
   border-radius: 50%;
 }
 
@@ -22,6 +21,8 @@
   background-size: contain;
   width: 100px;
   grid-area: 2/2/span 1/span 1;
+  background-position: center;
+
 }
 
 .item {
