@@ -1,3 +1,13 @@
+const btnMaze = document.getElementById("btn3")
+
+
+btnMaze.onclick = function () {
+  // btnMaze.textContent = "Good Luck";
+  console.log("kl")
+  this.disabled = true;
+  startMazeGame();
+}
+
 let template = [
 
   0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
@@ -124,23 +134,19 @@ function keyPress(e) {
   ctx.drawImage(childRunning, player.x * 32, player.y * 32, 32, 32);
   if (mazeLayoutGame[player.loc].state == 2) {
 
-    mazeGameContainer1.style.position = "absolute";
-    setTimeout(() => {
-      bgEnding.classList.remove("bgNone");
-      bgEnding.classList.add("bgGrid");
-    }, 1000);
+    console.log("you win")
 
 
 
 
 
-    // location.reload();
+    location.reload();
   }
 
 }
 
 function startMazeGame() {
-  console.log(true)
+  console.log("true")
   for (let i = 0; i < 15 * 15; i++) {
 
     if (mazeLayoutGame[i].state == 1 || mazeLayoutGame[i].state == "1") {
