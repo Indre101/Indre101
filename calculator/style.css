@@ -1,0 +1,31 @@
+body {
+  background-color: #ffd1dc;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+
+}
+
+.container {
+  align-self: center;
+  max-width: 500px;
+  width: 100vw;
+  border: grey 2px solid;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #f4d1ff;
+}
+
+.inputContainers {
+  background-color: white;
+  max-width: 400px;
+
+
+}
+
+.inputFields {
+  max-width: 400px;
+  width: 100vw;
+  border: none;
+  padding: 0;
+}
