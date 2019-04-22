@@ -1,18 +1,24 @@
 const input = document.getElementById("input");
 const input1 = document.getElementById("input1");
-
+const equality = document.getElementById("equality");
 const numbers = document.querySelectorAll(".inputValues");
 const plus = document.getElementById("plus");
 const actions = document.querySelectorAll(".actions");
 const actionclear = document.querySelector(".actionclear");
 
 
+
+// clearing the fields
 actionclear.addEventListener("click", clearFields);
 
 function clearFields() {
   input.value = "";
   input1.value = "";
 }
+
+// 
+
+// creating empty array with values
 
 let values = [];
 
@@ -22,24 +28,28 @@ numbers.forEach(function (element) {
 
 function addValue() {
   values.push(this.value);
-  console.log(this.value);
+  // input1.value = values.join("");
   input1.value = values.join("");
 
+
+
+
+
 }
-// arithmetics
-actions.forEach(doingArithmetics)
-console.log(actions);
+// 
 
-function doingArithmetics(element) {
-
-  element.addEventListener("click", arithmetics)
-}
-
-function arithmetics() {
-
-  input.value = "";
+let theValues = []
 
 
 
+plus.onclick = function () {
+  values = []
+  theValues.push(parseInt(input1.value));
+
+  let sum = theValues.reduce((acc, val) => {
+    return acc + val;
+  })
+
+  input.value = sum;
 
 }
