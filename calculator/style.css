@@ -8,6 +8,8 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   align-self: center;
   max-width: 500px;
   width: 100vw;
@@ -17,6 +19,8 @@ body {
 }
 
 .inputContainers {
+  margin: 0 auto;
+
   background-color: white;
   max-width: 400px;
 
@@ -26,6 +30,27 @@ body {
 .inputFields {
   max-width: 400px;
   width: 100vw;
-  border: none;
+  /* border: none; */
   padding: 0;
+  text-align: right;
+}
+
+#input2 {
+  max-height: 20px;
+  height: 100vh;
+  font-size: 0.7em;
+}
+
+#input1 {
+  max-height: 30px;
+  height: 100vh;
+  font-size: 1em;
+
+}
+
+#input {
+  max-height: 35px;
+  height: 100vh;
+  font-size: 1.2em;
+
 }
