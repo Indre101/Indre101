@@ -40,10 +40,18 @@ c.stroke()
 
 for (let i = 0; i < 100; i++) {
 
+  let r = Math.floor(Math.random() * 256)
+  let a = Math.floor(Math.random() * 256)
+  let b = Math.floor(Math.random() * 256)
+
+  let rValue = `rgb(${r},${a},${b})`
+  console.log(rValue)
+
   let x = Math.random() * window.innerWidth;
   let y = Math.random() * window.innerHeight;
   c.beginPath();
+
   c.arc(x, y, 30, 0, Math.PI * 2, false);
-  c.strokeStyle = "black";
+  c.strokeStyle = rValue;
   c.stroke()
 }
