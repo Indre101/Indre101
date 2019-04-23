@@ -25,3 +25,12 @@ c.lineTo(300, 100);
 c.lineTo(400, 300);
 c.strokeStyle = "blue";
 c.stroke();
+
+//arc
+
+
+// c.arc(x:int, y:int, r:int, startAngle: Float32Array, endAngel:Float32Array, drawCountterClockwise:Boolean(false))
+c.beginPath();
+c.arc(300, 300, 30, 0, Math.PI * 2, false);
+c.strokeStyle = "black";
+c.stroke()
