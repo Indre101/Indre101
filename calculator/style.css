@@ -12,6 +12,8 @@ body {
   flex-direction: column;
   align-self: center;
   max-width: 500px;
+  max-height: 700px;
+  height: 100vh;
   width: 100vw;
   border: grey 2px solid;
   border-radius: 5px;
@@ -20,7 +22,6 @@ body {
 
 .inputContainers {
   margin: 0 auto;
-
   background-color: white;
   max-width: 400px;
 
@@ -28,6 +29,7 @@ body {
 }
 
 .inputFields {
+
   max-width: 400px;
   width: 100vw;
   /* border: none; */
@@ -53,4 +55,34 @@ body {
   height: 100vh;
   font-size: 1.2em;
 
+}
+
+/* button numbers */
+
+#sameLine {
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.numbersAnd {
+  max-width: 300px;
+  width: 100vw;
+
+}
+
+.inputValues {
+  max-width: 80px;
+  width: 100vw;
+  font-size: 20px;
+  padding: 1em;
+
+}
+
+
+.actionsStyle {
+  display: flex;
+  flex-direction: column;
 }
