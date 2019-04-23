@@ -37,21 +37,27 @@ c.stroke()
 
 // creating 100 circles
 
-
-for (let i = 0; i < 100; i++) {
-
+function randomColors() {
   let r = Math.floor(Math.random() * 256)
   let a = Math.floor(Math.random() * 256)
   let b = Math.floor(Math.random() * 256)
 
   let rValue = `rgb(${r},${a},${b})`
-  console.log(rValue)
+
+  return rValue;
+
+}
+
+
+for (let i = 0; i < 100; i++) {
+
+
 
   let x = Math.random() * window.innerWidth;
   let y = Math.random() * window.innerHeight;
   c.beginPath();
 
   c.arc(x, y, 30, 0, Math.PI * 2, false);
-  c.strokeStyle = rValue;
+  c.strokeStyle = randomColors();
   c.stroke()
 }
