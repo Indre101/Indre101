@@ -34,3 +34,16 @@ c.beginPath();
 c.arc(300, 300, 30, 0, Math.PI * 2, false);
 c.strokeStyle = "black";
 c.stroke()
+
+// creating 100 circles
+
+
+for (let i = 0; i < 100; i++) {
+
+  let x = Math.random() * window.innerWidth;
+  let y = Math.random() * window.innerHeight;
+  c.beginPath();
+  c.arc(x, y, 30, 0, Math.PI * 2, false);
+  c.strokeStyle = "black";
+  c.stroke()
+}
