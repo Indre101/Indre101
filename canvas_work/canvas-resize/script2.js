@@ -25,3 +25,27 @@ c.beginPath();
 c.strokeStyle = "red";
 c.arc(500, 100, 50, 0, Math.PI * 2, true);
 c.stroke();
+
+
+function randomColor() {
+
+  let r = Math.floor(Math.random() * 255)
+  let g = Math.floor(Math.random() * 255)
+  let b = Math.floor(Math.random() * 255)
+  let newColor = `rgb(${r}, ${g}, ${b})`
+  return newColor
+
+}
+
+
+for (let i = 0; i < 200; i++) {
+
+  let x = Math.random() * window.innerWidth;
+  let y = Math.random() * window.innerHeight;
+
+  c.beginPath();
+  c.strokeStyle = randomColor();
+  c.arc(x, y, 30, 0, Math.PI * 2, false);
+  c.stroke();
+
+}
