@@ -24,6 +24,7 @@ function Circle(x, y, dx, dy, radius) {
   this.radius = radius;
 
   this.draw = function () {
+
     c.beginPath();
 
     c.arc(this.x, this.y, this.radius, Math.PI * 2, false);
@@ -33,10 +34,11 @@ function Circle(x, y, dx, dy, radius) {
 
   this.update = function () {
     if (this.x + this.radius > window.innerWidth || this.x - this.radius < 0) {
-      c.strokeStyle = randomColor();
+      // c.strokeStyle = randomColor()
+
       this.dx = -this.dx;
     } else if (this.y + this.radius > window.innerHeight || this.y - this.radius < 0) {
-      c.strokeStyle = randomColor();
+      // c.strokeStyle = randomColor()
 
       this.dy = -this.dy;
     }
@@ -51,7 +53,6 @@ let circleArray = [];
 for (let index = 0; index < 200; index++) {
   let x = Math.random() * window.innerWidth;
   let y = Math.random() * window.innerHeight;
-
   let dx = (Math.random() - 0.5) + Math.random() * 6;
   let dy = (Math.random() - 0.5) + Math.random() * 6;
   let radius = 30;
@@ -67,8 +68,17 @@ function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, innerWidth, innerHeight);
   circleArray.forEach((e) => {
+
     e.draw()
     e.update();
+
+    // if (e.x + e.radius > window.innerWidth || e.x - e.radius < 0) {
+    //   c.strokeStyle = randomColor()
+
+    // } else if (e.y + e.radius > window.innerHeight || e.y - e.radius < 0) {
+    //   c.strokeStyle = randomColor()
+
+    // }
   })
 
 }
