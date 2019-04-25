@@ -81,7 +81,7 @@ let radiusC = 30;
 
 function animate() {
   requestAnimationFrame(animate);
-  c.clearRect(0, 0, innerWidth, innerHeight);
+  // c.clearRect(0, 0, innerWidth, innerHeight);
   c.beginPath();
   x += dx;
   y += dy;
@@ -98,4 +98,8 @@ function animate() {
   }
 }
 
-animate();
+
+for (let index = 0; index < 5; index++) {
+  animate();
+
+}
