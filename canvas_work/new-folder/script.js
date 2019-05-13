@@ -16,6 +16,7 @@ function randomColor() {
 }
 
 
+
 function Circle(x, y, dx, dy, radius) {
   this.x = x;
   this.y = y;
@@ -34,11 +35,9 @@ function Circle(x, y, dx, dy, radius) {
 
   this.update = function () {
     if (this.x + this.radius > window.innerWidth || this.x - this.radius < 0) {
-      // c.strokeStyle = randomColor()
 
       this.dx = -this.dx;
     } else if (this.y + this.radius > window.innerHeight || this.y - this.radius < 0) {
-      // c.strokeStyle = randomColor()
 
       this.dy = -this.dy;
     }
@@ -55,6 +54,7 @@ for (let index = 0; index < 200; index++) {
   let y = Math.random() * window.innerHeight;
   let dx = (Math.random() - 0.5) + Math.random() * 6;
   let dy = (Math.random() - 0.5) + Math.random() * 6;
+
   let radius = 30;
   circleArray.push(new Circle(x, y, dx, dy, radius));
 }
@@ -72,13 +72,6 @@ function animate() {
     e.draw()
     e.update();
 
-    // if (e.x + e.radius > window.innerWidth || e.x - e.radius < 0) {
-    //   c.strokeStyle = randomColor()
-
-    // } else if (e.y + e.radius > window.innerHeight || e.y - e.radius < 0) {
-    //   c.strokeStyle = randomColor()
-
-    // }
   })
 
 }
