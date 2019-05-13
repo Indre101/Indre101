@@ -12,9 +12,15 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.heading {
 
-  border: 2px solid grey;
+
+
+.heading,
+.logo {
+
+  border-bottom: 2px solid grey;
+
+
 }
 
 .menuContainer {
