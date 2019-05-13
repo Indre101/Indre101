@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+
+}
+
+
+.container {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.heading {
+
+  border: 2px solid grey;
+}
+
+.menuContainer {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 3vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
