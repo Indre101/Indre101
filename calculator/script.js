@@ -1,6 +1,6 @@
 const input = document.getElementById("input");
 const input1 = document.getElementById("input1");
-const input2 = document.getElementById("input2");
+// const input2 = document.getElementById("input2");
 
 const equality = document.getElementById("equality");
 const numbers = document.querySelectorAll(".inputValues");
@@ -13,14 +13,20 @@ const actionclear = document.querySelector(".actionclear");
 // clearing the fields
 actionclear.addEventListener("click", clearFields);
 
-function clearFields() {
-  input.value = "";
-  input1.value = "";
-}
+
 
 // 
 
 let theValues = []
+let inputArray = [];
+let inputArray1 = [];
+let inputArray2 = [];
+
+function clearFields() {
+  input.value = inputArray;
+  input1.value = inputArray1;
+  // input2.value = inputArray2;
+}
 
 let values = [];
 
@@ -36,27 +42,38 @@ function addAction() {
   values = []
   theValues.push(parseFloat(input1.value));
 
-  let sum = theValues.reduce((acc, val) => {
-    return `${acc} ${this.value} ${val}`;
-  })
+  // let sum = theValues.reduce((acc, val) => {
+  //   console.log("hk")
+  //   return `${acc} ${this.value} ${val}`;
+  // })
+
+  let results = []
+
+  if (input.value != "") {
+
+    results.push(input.value)
 
 
-  input2.value = sum;
 
-  let sum1 = theValues.reduce((acc, val) => {
+  }
+
+
+  // input2.value = sum;
+
+  let sum1 = theValues.reduce((acc1, val1) => {
 
     switch (this.value) {
       case "+":
-        return acc + val
+        return acc1 + val1
         break;
       case "-":
-        return acc - val
+        return acc1 - val1
         break;
       case "*":
-        return acc * val
+        return acc1 * val1
         break;
       case "/":
-        return acc / val
+        return acc1 / val1
         break;
       case "=":
         input1.value = "";
@@ -72,6 +89,9 @@ function addAction() {
 
 
 }
+
+
+
 
 
 

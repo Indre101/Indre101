@@ -17,11 +17,15 @@ body {
 
 .heading,
 .logo {
-
-  border-bottom: 2px solid grey;
-
-
+  border-bottom: 1vh solid #605052;
 }
+
+.menuContainer li {
+  transition: all;
+}
+
+
+
 
 .menuContainer {
   display: flex;
