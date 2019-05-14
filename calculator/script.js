@@ -37,6 +37,9 @@ actions.forEach(function (e) {
 })
 
 
+
+let results = [];
+
 function addAction() {
 
   values = []
@@ -48,61 +51,62 @@ function addAction() {
   // })
 
 
-
-
-
-
-
-
   // input2.value = sum;
 
-  let sum1 = theValues.reduce((acc1, val1) => {
-    let results = []
 
 
+  if (results.length < 2) {
     console.log(results)
 
-    switch (this.value) {
+    results = []
 
-      case "+":
-
-        resulting = acc1 + val1
-        results.push(resulting);
-        return resulting;
-        break;
-      case "-":
-        resulting = acc1 - val1
-        results.push(resulting);
-        return resulting;
-
-        break;
-      case "*":
-        resulting = acc1 * val1
-        results.push(resulting);
-        return resulting;
-
-        break;
-      case "/":
-        resulting = acc1 / val1
-        results.push(resulting);
-        return resulting;
-
-        break;
-      case "=":
-        input1.value = "";
-        input.value = sum1;
-        break;
+    let sum1 = theValues.reduce((acc1, val1) => {
 
 
-    }
-  })
+      switch (this.value) {
+
+        case "+":
+
+          resulting = (acc1 + val1)
+
+          return resulting;
+          break;
+        case "-":
+          resulting = acc1 - val1
+          // results.push(resulting);
+          return resulting;
+
+          break;
+        case "*":
+          resulting = acc1 * val1
+          // results.push(resulting);
+          return resulting;
+
+          break;
+        case "/":
+          resulting = acc1 / val1
+          // results.push(resulting);
+          return resulting;
+
+          break;
+        case "=":
+          input1.value = "";
+          input.value = sum1;
+          break;
 
 
-  input.value = sum1;
+      }
 
+
+
+    })
+    results.push(sum1);
+    console.log(results)
+    input.value = sum1;
+
+  }
 
 }
-
 
 
 
