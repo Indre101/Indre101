@@ -47,33 +47,46 @@ function addAction() {
   //   return `${acc} ${this.value} ${val}`;
   // })
 
-  let results = []
-
-  if (input.value != "") {
-
-    results.push(input.value)
 
 
 
-  }
+
+
 
 
   // input2.value = sum;
 
   let sum1 = theValues.reduce((acc1, val1) => {
+    let results = []
+
+
+    console.log(results)
 
     switch (this.value) {
+
       case "+":
-        return acc1 + val1
+
+        resulting = acc1 + val1
+        results.push(resulting);
+        return resulting;
         break;
       case "-":
-        return acc1 - val1
+        resulting = acc1 - val1
+        results.push(resulting);
+        return resulting;
+
         break;
       case "*":
-        return acc1 * val1
+        resulting = acc1 * val1
+        results.push(resulting);
+        return resulting;
+
         break;
       case "/":
-        return acc1 / val1
+        resulting = acc1 / val1
+        results.push(resulting);
+        return resulting;
+
         break;
       case "=":
         input1.value = "";
