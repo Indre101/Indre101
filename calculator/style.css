@@ -96,21 +96,20 @@ body {
 
 
 .actionsStyle {
-  width: 100vw;
-  justify-content: center;
+  width: 20vw;
   display: flex;
-  flex-direction: row;
-  text-align: center;
-
+  flex-wrap: wrap;
+  justify-content: space-between;
 
 
 }
 
 .act {
-  width: 5.2vw;
+  width: 6vw;
   height: 4vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3vh;
-}
+  background-color: bisque;
+  border: 1px solid black;
