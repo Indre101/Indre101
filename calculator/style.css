@@ -1,5 +1,5 @@
 body {
-  background-color: #ffd1dc;
+  background-color: #9CB2FF;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   height: 100vh;
@@ -8,11 +8,12 @@ body {
 }
 
 .container {
+  background-color: #FFEBB5;
   display: flex;
   flex-direction: column;
   align-self: center;
   max-width: 25vw;
-  max-height: 70vh;
+  max-height: 60vh;
   height: 100vh;
   width: 100vw;
   border: grey 2px solid;
@@ -73,20 +74,25 @@ body {
 }
 
 .numbersAnd {
-  max-width: 70vw;
+  padding-top: 1vh;
+  max-width: 20vw;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-around;
+  background-color: #FFE59B;
 
 }
 
 .inputValues {
-  max-width: 80px;
-  width: 100vw;
-  font-size: 2vh;
-  padding: 1em;
+  height: 8vh;
+  margin: 0.5vh;
+  width: 6vw;
+  font-size: 3vh;
+  background-color: #FFEBB5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -96,20 +102,24 @@ body {
 
 
 .actionsStyle {
+  background-color: #9CB2FF;
+
   width: 20vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: space-around;
 
 
 }
 
 .act {
+  margin: 0.5vh;
   width: 6vw;
   height: 4vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3vh;
-  background-color: bisque;
-  border: 1px solid black;
+  background-color: #4961B3;
+}
