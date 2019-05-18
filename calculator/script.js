@@ -20,13 +20,6 @@ function pushValue() {
   input1.innerHTML = valueArray.join("");
 }
 
-// actions
-
-function calculation() {
-
-
-
-}
 
 // adding another numbers
 
@@ -44,5 +37,32 @@ let caclculationValues = [];
 function actionsOf() {
   valueArray = [];
   caclculationValues.push(parseFloat(input1.innerHTML))
+  console.log("hjjk")
+  input.innerHTML
+  let a;
+  caclculationValues.reduce((accumulator, currentValue) => {
+    switch (this.innerHTML) {
+      case "+":
+        a = accumulator + currentValue;
+        break;
+      case "-":
+        a = accumulator - currentValue;
+        break;
+      case "*":
+        a = accumulator * currentValue;
+        break;
+      case "/":
+        a = accumulator - currentValue;
+        break;
+
+    }
+    console.log(a);
+
+  })
+
 
 }
+
+
+
+// actions
