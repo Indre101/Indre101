@@ -1,127 +1,48 @@
-const input = document.getElementById("input");
 const input1 = document.getElementById("input1");
-// const input2 = document.getElementById("input2");
-
-const equality = document.getElementById("equality");
-const numbers = document.querySelectorAll(".inputValues");
-const actions = document.querySelectorAll(".actions")
-const actionclear = document.querySelector(".actionclear");
+const input = document.getElementById("input");
+const valueNumbers = document.querySelectorAll(".inputValues");
+const actionsMath = document.querySelectorAll(".act")
+let valueArray = [];
 
 
+valueNumbers.forEach((e) => {
 
+  e.addEventListener("click", pushValue)
 
-// clearing the fields
-actionclear.addEventListener("click", clearFields);
+})
 
+// displays numbers 
 
+function pushValue() {
 
-// 
-
-let theValues = []
-let inputArray = [];
-let inputArray1 = [];
-let inputArray2 = [];
-
-function clearFields() {
-  input.value = inputArray;
-  input1.value = inputArray1;
-  // input2.value = inputArray2;
+  valueArray.push(parseFloat(this.innerHTML));
+  console.log(valueArray);
+  input1.innerHTML = valueArray.join("");
 }
 
-let values = [];
+// actions
+
+function calculation() {
 
 
-actions.forEach(function (e) {
 
-  e.addEventListener("click", addAction);
+}
+
+// adding another numbers
+
+
+actionsMath.forEach((f) => {
+
+  f.addEventListener("click", actionsOf)
+
+
 })
 
 
+let caclculationValues = [];
 
-let results = [];
-
-function addAction() {
-
-  values = []
-  theValues.push(parseFloat(input1.value));
-
-  // let sum = theValues.reduce((acc, val) => {
-  //   console.log("hk")
-  //   return `${acc} ${this.value} ${val}`;
-  // })
-
-
-  // input2.value = sum;
-
-
-
-  if (results.length < 2) {
-    console.log(results)
-
-    results = []
-
-    let sum1 = theValues.reduce((acc1, val1) => {
-
-
-      switch (this.value) {
-
-        case "+":
-
-          resulting = (acc1 + val1)
-
-          return resulting;
-          break;
-        case "-":
-          resulting = acc1 - val1
-          // results.push(resulting);
-          return resulting;
-
-          break;
-        case "*":
-          resulting = acc1 * val1
-          // results.push(resulting);
-          return resulting;
-
-          break;
-        case "/":
-          resulting = acc1 / val1
-          // results.push(resulting);
-          return resulting;
-
-          break;
-        case "=":
-          input1.value = "";
-          input.value = sum1;
-          break;
-
-
-      }
-
-
-
-    })
-    results.push(sum1);
-    console.log(results)
-    input.value = sum1;
-
-  }
+function actionsOf() {
+  valueArray = [];
+  caclculationValues.push(parseFloat(input1.innerHTML))
 
 }
-
-
-
-
-
-
-// creating empty array with values
-
-numbers.forEach(function (element) {
-  element.addEventListener("click", addValue)
-})
-
-function addValue() {
-  values.push(this.value);
-  input1.value = values.join("");
-}
-
-// 
