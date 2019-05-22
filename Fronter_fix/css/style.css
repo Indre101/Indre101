@@ -22,14 +22,63 @@ body {
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
+  animation: dorp 0.5s ease-in forwards 1;
+}
+
+@keyframes dorp {
+  0% {
+    transform: translateY(-100vh);
+  }
 }
 
 .formLogin {
+
+  /* opacity: 0; */
   display: flex;
   flex-direction: column;
+  animation: appearFromLeft 1s ease-in-out forwards 1;
+}
+
+@keyframes appearFromLeft {
+  0% {
+    transform: translateX(-100vw);
+  }
+
 }
 
 .formLogin input {
   margin-top: 0.3vh;
   margin-bottom: 2vh;
+  width: 20vw;
+  height: 5vh;
+  font-size: 2vh;
+
+}
+
+.formLogin label {
+  margin-top: 3vh;
+  font-size: 3vh;
+}
+
+#btn1 {
+  background-color: #ea5045;
+  width: 20vw;
+  height: 5vh;
+  margin-top: 0;
+  /* justify-self: center; */
+
+}
+
+#message1 {
+  text-align: center;
+  width: 20vw;
+  background-color: #ea5045;
+  margin-bottom: 0;
+  animation: moving 0.5s linear forwards 1;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateY(100vh);
+  }
 }

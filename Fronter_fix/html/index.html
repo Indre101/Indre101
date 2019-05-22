@@ -13,18 +13,19 @@
   <div class="container">
     <div class="keaLogo"></div>
 
-    <div class="formContainerLogin">
-      <form class="formLogin" action="">
-        <label for="email">Email</label>
-        <input type="email" name="email" autocomplete="off" required class="login">
-        <label for="password">Password</label>
-        <input type="password" name="password" required class="login">
-        <input type="submit" name="Log in">
-      </form>
+    <form id="formLogin" class="formLogin" action="">
+      <label for="email">Email</label>
+      <input autofocus type="email" name="email" autocomplete="off" required class="login">
+      <label for="password">Password</label>
+      <input id="pass" type="password" name="password" required class="login">
+      <div id="message1"></div>
 
-    </div>
+      <input id="btn1" type="submit" name="Login" value="Log in">
+
+    </form>
+
   </div>
-  <!-- <script src="script.js"></script> -->
+  <script src="../js/script.js"></script>
 
 </body>
 

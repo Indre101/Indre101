@@ -1,27 +1,30 @@
-const color1 = document.getElementById("color");
-const animal = document.getElementById("animal");
-const btn1 = document.getElementById("submitButton");
-const result1 = document.getElementById("result");
-const btn2 = document.getElementById("reseting")
+const btn1 = document.getElementById("btn1");
+const pass = document.getElementById("pass")
+const message1 = document.getElementById("message1");
+const formLogin = document.getElementById("formLogin");
+
+
 
 
 btn1.onclick = function () {
 
-  if (color1.value == "" || animal.value == "") {
-    result1.style.backgroundColor = "white";
-
-    result1.textContent = "Please enter the required fields"
-  } else {
-
-    result1.style.backgroundColor = "white";
-    result1.textContent = `Your spirit animal is ${color1.value} ${animal.value}`
-    event.preventDefault()
-
-  }
+  checkPassword()
 }
 
+function checkPassword() {
 
-reseting.onclick = function () {
-  result1.style.backgroundColor = "";
-  result1.textContent = "";
+  if (pass.value.length > 7) {
+    message1.style.display = "none";
+
+  } else if (pass.value.length < 7) {
+    pass.innerHTML = ""
+    message1.style.padding = "1em 0";
+    message1.textContent = "Must be at least 7 characters long"
+    event.preventDefault();
+  }
+
+
+
+
+
 }
