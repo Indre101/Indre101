@@ -8,6 +8,8 @@ const btn2 = document.getElementById("reseting")
 btn1.onclick = function () {
 
   if (color1.value == "" || animal.value == "") {
+    result1.style.backgroundColor = "white";
+
     result1.textContent = "Please enter the required fields"
   } else {
 

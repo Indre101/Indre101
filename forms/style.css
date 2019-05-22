@@ -17,11 +17,33 @@ form {
   background-image: url("./dog.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  animation: appear 0.5s linear forwards;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(-100vw);
+  }
 }
 
 h2 {
+  opacity: 0;
   color: black;
+  animation: spining 1s 0.5s linear forwards;
 }
+
+
+
+@keyframes spining {
+  0% {
+    transform: translateY(-100vw);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 
 input[type="radio"] {
   display: inline;
@@ -44,6 +66,16 @@ label {
 .result {
   width: 40vw;
   padding: 2vh;
+}
+
+
+#date {
+  margin-top: 5vh;
+
+}
+
+#submitButton {
+  margin-top: 6vh;
 }
 
 input[type="submit"],
