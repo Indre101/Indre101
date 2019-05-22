@@ -14,21 +14,26 @@
     <form action="">
       <h2>Your spirit animal</h2>
 
-      <label for="gender">Gender</label>
-      <input name="gender" type="radio" checked>Female
-      <input name="gender" type="radio">Male
-      <input name="gender" type="radio">Does not matter
+      <label for="gender">Gender</label><br>
+      <input name="gender" type="radio" checked>Female <br>
+      <input name="gender" type="radio">Male <br>
+      <input name="gender" type="radio">Does not matter <br><br>
       <label for="date">Date of birth</label>
       <input type="date" name="date" required>
       <label for="color">Your favorite color</label>
-      <input type="text" name="color">
+      <input id="color" type="text" name="color" autocomplete="off" required>
       <label for="animal">Your favorite animal</label>
-      <input type="text" name="animal">
-      <input type="submit">
+      <input id="animal" type="text" name="animal" autocomplete="off" required>
+      <input id="submitButton" type="submit">
+      <input id="reseting" type="reset" value="Clear">
+
+      <div id="result" class="result">
+      </div>
     </form>
-    <div id="result" class="result">
-    </div>
+
   </div>
+  <script src="script.js"></script>
+
 </body>
 
 </html>

@@ -6,16 +6,47 @@
   justify-content: center;
   justify-items: center;
   align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+
 
 form {
   border: 2px solid;
-  padding: 2em;
+  padding: 4em;
+  background-image: url("./dog.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+h2 {
+  color: black;
+}
 
+input[type="radio"] {
+  display: inline;
+  margin-bottom: 0;
 }
 
 input {
-
+  margin-bottom: 2vh;
+  margin-top: .5vh;
   display: block;
+}
+
+
+label {
+  font-weight: bold;
+  margin-top: 2vh;
+
+}
+
+.result {
+  width: 40vw;
+  padding: 2vh;
+}
+
+input[type="submit"],
+#reseting {
+  width: 10vw;
 }
