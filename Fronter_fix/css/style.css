@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/HelveticaNeueLTStd\ Lt.woff")
+}
+
+body {
+  font-family: "Helvetica Neue";
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+}
+
+
+.keaLogo {
+  width: 20vw;
+  background-image: url("../logo/kea.png");
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLogin input {
+  margin-top: 0.3vh;
+  margin-bottom: 2vh;
+}
