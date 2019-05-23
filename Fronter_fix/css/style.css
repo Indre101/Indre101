@@ -95,6 +95,10 @@ header {
   background-color: black;
 }
 
+.filterDate {
+  float: right;
+}
+
 h3 {
   margin-left: 1.5vw;
   font-size: 1.5vh;
