@@ -105,6 +105,7 @@ h3 {
   text-align: center;
   width: 20vw;
   padding: 0.2em;
+  cursor: pointer;
 }
 
 .module1 {
@@ -181,7 +182,7 @@ h5 {
 h6 {
   color: black;
   margin: 0.5vh;
-  font-size: 1.3vh;
+  font-size: 1.5vh;
   margin-left: 15vw;
 }
 
@@ -195,14 +196,27 @@ h6 {
 
 .themeDes {
   display: none;
-  background-color: white;
   padding: 0.5vh;
+}
+
+#teaching {
+  padding: 0.1vh;
+  background-color: #ffb4aa;
+
+}
+
+#submission1 {
+  padding: 0.1vh;
+
+  background-color: #8e7fae;
 }
 
 .linkas1 {
   display: none;
 }
 
+
+.material {}
 
 /* modules and tasks */
 
