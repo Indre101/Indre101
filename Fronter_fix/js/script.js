@@ -17,7 +17,7 @@ function checkPassword() {
     message1.style.display = "none";
 
   } else if (pass.value.length < 7) {
-    pass.innerHTML = ""
+    pass.value = ""
     message1.style.padding = "1em 0";
     message1.textContent = "Must be at least 7 characters long"
     event.preventDefault();

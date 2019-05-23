@@ -47,6 +47,7 @@ body {
 }
 
 .formLogin input {
+  border: 1px solid black;
   margin-top: 0.3vh;
   margin-bottom: 2vh;
   width: 20vw;
