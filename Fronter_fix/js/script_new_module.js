@@ -104,3 +104,21 @@ function filterByTheme() {
 
   }
 }
+
+// date
+
+const datesOf = document.querySelectorAll(".date");
+
+datesOf.forEach((j) => {
+
+  let year = [2018, 2019];
+
+  let a = Math.floor(Math.random() * 2);
+  let b = Math.floor((Math.random() * 12) + 1);
+  let c = Math.floor((Math.random() * 28) + 1);
+
+  let d = new Date(`${b} ${c}, ${year[a]}`)
+  console.log(d);
+  j.innerHTML = d;
+
+})
