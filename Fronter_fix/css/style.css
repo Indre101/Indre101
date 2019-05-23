@@ -121,12 +121,12 @@ h3 {
 
 .module3 {
 
-  background-color: rgba(255, 103, 31, 0.5);
+  background-color: rgba(255, 103, 31, 0.3);
 }
 
 .module4 {
 
-  background-color: rgba(240, 78, 152, 0.5);
+  background-color: rgba(240, 78, 152, 0.3);
 }
 
 /* themes */
@@ -164,14 +164,14 @@ h4 {
 }
 
 .theme3 {
-  background-color: rgba(255, 103, 31, 0.5);
+  background-color: rgba(255, 103, 31, 0.3);
   padding: 0.5vh;
 }
 
 .theme4 {
   padding: 0.5vh;
 
-  background-color: rgba(240, 78, 152, 0.5);
+  background-color: rgba(240, 78, 152, 0.3);
 }
 
 h5 {

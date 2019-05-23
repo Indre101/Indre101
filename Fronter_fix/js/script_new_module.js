@@ -77,26 +77,26 @@ function filterByTheme() {
 
 
 
-  if (colorBG == "rgb(89, 203, 232)") {
+  if (colorBG == "rgba(255, 180, 170, 0.5)") {
     console.log("themesmm")
     document.getElementById("theme2").style.display = "none";
     document.getElementById("theme3").style.display = "none";
     document.getElementById("theme4").style.display = "none";
 
-  } else if (colorBG == "rgb(110, 206, 178)") {
+  } else if (colorBG == "rgba(110, 206, 178, 0.3)") {
     console.log("themesmm")
     document.getElementById("theme2").style.display = "block";
     document.getElementById("theme3").style.display = "none";
     document.getElementById("theme4").style.display = "none";
 
-  } else if (colorBG == "rgb(7, 98, 200)") {
+  } else if (colorBG == "rgba(255, 103, 31, 0.3)") {
     console.log("themesmm")
     document.getElementById("theme3").style.display = "block";
 
     document.getElementById("theme2").style.display = "none";
     document.getElementById("theme4").style.display = "none";
 
-  } else if (colorBG == "rgb(86, 194, 113)") {
+  } else if (colorBG == "rgba(240, 78, 152, 0.3)") {
     console.log("themesmm")
     document.getElementById("theme2").style.display = "none";
     document.getElementById("theme3").style.display = "none";
