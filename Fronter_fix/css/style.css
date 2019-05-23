@@ -4,7 +4,6 @@
 }
 
 body {
-  overflow: hidden;
   font-family: "Helvetica Neue";
 }
 
@@ -101,25 +100,32 @@ h3 {
 }
 
 .module {
+
+  background-size: contain;
+  text-align: center;
   width: 20vw;
   padding: 0.2em;
 }
 
 .module1 {
-  background-color: #ffb4aa;
+
+  background-color: #59cbe8;
 
 }
 
 .module2 {
+
   background-color: #6eceb2;
 }
 
 .module3 {
-  background-color: #8e7fae;
+
+  background-color: #0762c8;
 }
 
 .module4 {
-  background-color: #ff671f;
+
+  background-color: #56c271;
 }
 
 /* themes */
@@ -131,29 +137,40 @@ h3 {
 h4 {
   display: inline;
   margin: 1vh;
+  font-size: 2vh;
 
 }
 
 .themeBlock {
   margin: 1vh;
   padding: 0.7vh;
+  cursor: pointer;
 
 }
 
 .themeBlock:hover {
   background-color: white;
+
 }
 
 
+.theme {}
 
 .theme2 {
+  background: 5vw;
   background-color: #6eceb2;
   padding: 0.5vh;
 }
 
 .theme3 {
-  background-color: #8e7fae;
-  pad: 0.5vh;
+  background-color: #0762c8;
+  padding: 0.5vh;
+}
+
+.theme4 {
+  padding: 0.5vh;
+
+  background-color: #56c271;
 }
 
 h5 {
@@ -161,6 +178,30 @@ h5 {
   margin-left: 10vw;
 }
 
+h6 {
+  color: black;
+  margin: 0.5vh;
+  font-size: 1.3vh;
+  margin-left: 15vw;
+}
+
+
+/* form upload file */
+.uploadFile {
+  margin-top: 3vh;
+  margin-left: 10vw;
+}
+
+
+.themeDes {
+  display: none;
+  background-color: white;
+  padding: 0.5vh;
+}
+
+.linkas1 {
+  display: none;
+}
 
 
 /* modules and tasks */

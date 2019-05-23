@@ -24,7 +24,3 @@ function checkPassword() {
   }
 
 }
-
-
-// modules
-// modules
