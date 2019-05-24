@@ -88,6 +88,13 @@ body {
   }
 }
 
+/* resultatai */
+
+.filterResult {
+
+  margin: 0.5vh 0;
+}
+
 /* modules and tasks */
 header {
   height: 10vh;

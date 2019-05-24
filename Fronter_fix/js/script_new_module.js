@@ -34,7 +34,7 @@ function addFolders() {
   } else if (themeDes.style.display != "") {
 
     themeDes.classList.toggle("themeDes");
-    // this.removeChild(themeDes);
+    this.removeChild(themeDes);
 
 
   }
@@ -44,12 +44,16 @@ function addFolders() {
 
 
 }
+const datesOf = document.querySelectorAll(".date");
 
 
 
 
 submission.onclick = function () {
-  // link2.style.display = "";
+  link2.style.display = "";
+
+
+
   forma.appendChild(link2)
   link2.classList.toggle("linkas1");
 
@@ -103,16 +107,19 @@ function filterByTheme() {
 
 // date
 
-const datesOf = document.querySelectorAll(".date");
+
+
 
 datesOf.forEach((j) => {
-
 
   let b = Math.floor((Math.random() * 5) + 1);
   let c = Math.floor((Math.random() * 28) + 1);
 
   let d = new Date(`${b}- ${c}- 2019`)
   j.innerHTML = d.toLocaleDateString("en-US");
+
+
+
 
 })
 
@@ -131,9 +138,8 @@ let today1 = today.toLocaleDateString("en-US")
 
 
 var de = new Date();
-de.setDate(de.getDate() - 20);
+de.setDate(de.getDate() - 21);
 
-de2 = de.toLocaleDateString("en-US")
 
 
 // newwest project
@@ -142,18 +148,36 @@ const filterResult = document.getElementById("filterResult");
 
 btn3.onclick = function () {
 
-  for (let h = 0; h < datesOf.length; h++) {
 
-    let dateToCompare = new Date(datesOf[h].innerHTML);
-    console.log(dateToCompare);
+  let currentProjectDateArray = [];
+  let currentProjectDateArrayID = [];
 
-    if (dateToCompare <= today && dateToCompare > de) {
-      console.log("blk")
-      filterResult.innerHTML = dateToCompare;
+
+  datesOf.forEach((l) => {
+    currentProjectDateArray.push(l.innerHTML);
+    currentProjectDateArrayID.push(l.id);
+  })
+
+  let sortedDate = currentProjectDateArray.sort();
+
+  let latestDate = sortedDate[sortedDate.length - 1];
+
+
+  currentProjectDateArrayID.forEach((g) => {
+
+    if (document.getElementById(g).innerHTML == latestDate) {
+
+      let x = document.getElementById(g).parentElement
+      x.style.backgroundColor = "rgba(253,215,87,0.3)"
+      filterResult.appendChild(x);
+
+
+
     }
+  })
 
 
-  }
+
 
 
 }
@@ -168,8 +192,7 @@ let filterDatebutton = document.getElementById("filterDatebutton");
 filterDatebutton.onclick = function () {
   event.preventDefault();
   let dof = new Date(datesOf[0].innerHTML);
-  console.log(past1)
-  console.log(today1);
+
 
 
   if (+dof >= +today) {
