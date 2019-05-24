@@ -96,10 +96,20 @@ body {
 }
 
 /* modules and tasks */
+
+
+
+
 header {
   height: 10vh;
   width: 100vw;
   background-color: black;
+}
+
+
+.filterplaces {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .filterDate {

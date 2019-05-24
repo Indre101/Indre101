@@ -80,7 +80,6 @@ modules.forEach((f) => {
 
 function filterByTheme() {
   let colorBG = window.getComputedStyle(this, null).getPropertyValue('background-color');
-  console.log(colorBG)
 
 
 
@@ -230,7 +229,6 @@ filterDatebutton.onclick = function () {
 
     for (let index = 0; index < dates_id_1.length; index++) {
       for (let j = 0; j < datesOf_3.length; j++) {
-        console.log("lyginimas")
         if (document.getElementById(dates_id_1[index]).innerHTML === datesOf_3[j].toLocaleDateString("en-US")) {
 
           theMatchingDatesArray.push(dates_id_1[index]);
@@ -244,12 +242,10 @@ filterDatebutton.onclick = function () {
   }
 
   checkForTheSame()
-  console.log(datesOf_3)
 
   if (datesOf_3.length < 1) {
     // let errorMessage = document.createElement("h4");
     // errorMessage.textContent
-    console.log(datesOf_3)
     result2.textContent = "There are no results in this date frame"
   } else if (datesOf_3.length >= 1) {
     result2.textContent = ""
@@ -262,10 +258,7 @@ filterDatebutton.onclick = function () {
 
       }
 
-      // let x_1_clone = x_1.cloneNode(true);
 
-
-      // console.log(x_1_clone);
 
     })
 
