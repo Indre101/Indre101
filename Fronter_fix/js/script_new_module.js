@@ -149,9 +149,11 @@ const filterResult = document.getElementById("filterResult");
 btn3.onclick = function () {
 
 
+
+  filterResult.textContent = ""
+
   let currentProjectDateArray = [];
   let currentProjectDateArrayID = [];
-
 
   datesOf.forEach((l) => {
     currentProjectDateArray.push(l.innerHTML);
@@ -187,32 +189,108 @@ let filterDatebutton = document.getElementById("filterDatebutton");
 
 filterDatebutton.onclick = function () {
   event.preventDefault();
+
   let smallerDate_2 = new Date(smallerDate.value)
   let largerDate_2 = new Date(largerDate.value)
 
   let datesOf_2 = []
+  let dates_id_1 = [];
+
 
   datesOf.forEach((z) => {
     let z_1 = new Date(z.innerHTML);
     datesOf_2.push(z_1);
+    dates_id_1.push(z.id)
+
   })
-
-  console.log(datesOf_2[10]);
-
-  if (datesOf_2[10] >= smallerDate_2) {
-    console.log("yes true")
-  }
 
 
   let datesOf_3 = datesOf_2.filter((z_3) => {
-
 
     return z_3 >= smallerDate_2 && z_3 <= largerDate_2
 
   });
 
-  console.log(datesOf_3);
+  let theMatchingDatesArray = []
 
+  function checkForTheSame() {
+
+    for (let index = 0; index < dates_id_1.length; index++) {
+      for (let j = 0; j < datesOf_3.length; j++) {
+
+        if (document.getElementById(dates_id_1[index]).innerHTML === datesOf_3[j].toLocaleDateString("en-US")) {
+
+          theMatchingDatesArray.push(dates_id_1[index]);
+          // datesOf_3 = [];
+
+        }
+      }
+
+    }
+
+  }
+
+  checkForTheSame()
+  console.log(datesOf_3)
+
+  // if (datesOf_3.length >= 0) {
+
+  //   for (let m_date = 0; m_date < theMatchingDatesArray.length; m_date++) {
+
+  //     // cloneNode(true);
+  //     console.log(m_date);
+  //     filterResult.textContent = ""
+
+  //     let x_1 = document.getElementById(theMatchingDatesArray[m_date]).parentElement
+
+  //     // let x_1_clone = x_1.cloneNode(true);
+  //     x_1.style.backgroundColor = "rgba(253,215,87,0.3)"
+
+
+  //     // console.log(x_1_clone);
+
+  //     filterResult.appendChild(x_1);
+  //   }
+
+
+  // }
+
+
+  theMatchingDatesArray.forEach((m_date) => {
+    let x_1 = document.getElementById(m_date).parentElement
+
+
+    if (datesOf_3.length < 1) {
+      // let errorMessage = document.createElement("h4");
+      // errorMessage.textContent
+      console.log(datesOf_3)
+      filterResult.textContent = "There are no results in this date frame"
+    } else {
+
+      for (let index = 0; index < theMatchingDatesArray.length; index++) {
+        appednResult(x_1)
+
+      }
+
+      // let x_1_clone = x_1.cloneNode(true);
+
+
+      // console.log(x_1_clone);
+
+    }
+
+
+
+  })
+
+}
+
+
+function appednResult(res) {
+
+  res.style.backgroundColor = "rgba(253,215,87,0.3)"
+
+  filterResult.appendChild(res);
 
 
 
