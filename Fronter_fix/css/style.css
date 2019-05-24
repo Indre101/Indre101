@@ -142,9 +142,19 @@ h3 {
 
 /* themes */
 
-.allProjects {
+
+.allProjects_3 {
   margin-top: 3vh;
+
 }
+
+.allProjects {}
+
+.allProjects_2 {
+  display: none;
+
+}
+
 
 h4 {
   display: inline;

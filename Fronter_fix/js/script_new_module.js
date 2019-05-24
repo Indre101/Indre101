@@ -1,6 +1,4 @@
 // modules
-// modules
-
 
 
 
@@ -12,9 +10,14 @@ const link2 = document.getElementById("linkas2");
 const teaching = document.getElementById("teaching");
 const link1 = document.getElementById("linkas1");
 const themeName = document.querySelectorAll(".themeName");
-
 const modules = document.querySelectorAll(".module");
 const themesColor = document.querySelectorAll(".theme")
+let smallerDate = document.getElementById("dateInput1");
+let largerDate = document.getElementById("dateInput2");
+let filterDatebutton = document.getElementById("filterDatebutton");
+let result2 = document.getElementById("filterResult2")
+let allProjects = document.getElementById("allProjects")
+let allProjects_2 = document.getElementById("allProjects_2")
 
 themeName.forEach((project) => {
   project.addEventListener("click", addFolders)
@@ -151,6 +154,17 @@ btn3.onclick = function () {
 
   filterResult.textContent = ""
 
+  // filterResult.appendChild(x);
+  // filterResult.appendChild(findTheLatest());
+  findTheLatest()
+
+
+
+
+
+}
+
+function findTheLatest() {
   let currentProjectDateArray = [];
   let currentProjectDateArrayID = [];
 
@@ -169,9 +183,8 @@ btn3.onclick = function () {
     if (document.getElementById(g).innerHTML == latestDate) {
 
       let x = document.getElementById(g).parentElement
-      x.style.backgroundColor = "rgba(253,215,87,0.3)"
-      filterResult.appendChild(x);
-
+      x.style.backgroundColor = "#f04e98"
+      allProjects.insertAdjacentElement('afterbegin', x)
 
 
     }
@@ -181,13 +194,14 @@ btn3.onclick = function () {
 
 
 
-let smallerDate = document.getElementById("dateInput1");
-let largerDate = document.getElementById("dateInput2");
-let filterDatebutton = document.getElementById("filterDatebutton");
 
 
 filterDatebutton.onclick = function () {
   event.preventDefault();
+
+  // allProjects.classList.toggle("allProjects_2");
+  // allProjects_2.classList.toggle("allProjects_2");
+
 
   let smallerDate_2 = new Date(smallerDate.value)
   let largerDate_2 = new Date(largerDate.value)
@@ -216,7 +230,7 @@ filterDatebutton.onclick = function () {
 
     for (let index = 0; index < dates_id_1.length; index++) {
       for (let j = 0; j < datesOf_3.length; j++) {
-
+        console.log("lyginimas")
         if (document.getElementById(dates_id_1[index]).innerHTML === datesOf_3[j].toLocaleDateString("en-US")) {
 
           theMatchingDatesArray.push(dates_id_1[index]);
@@ -232,39 +246,16 @@ filterDatebutton.onclick = function () {
   checkForTheSame()
   console.log(datesOf_3)
 
-  // if (datesOf_3.length >= 0) {
+  if (datesOf_3.length < 1) {
+    // let errorMessage = document.createElement("h4");
+    // errorMessage.textContent
+    console.log(datesOf_3)
+    result2.textContent = "There are no results in this date frame"
+  } else if (datesOf_3.length >= 1) {
+    result2.textContent = ""
 
-  //   for (let m_date = 0; m_date < theMatchingDatesArray.length; m_date++) {
-
-  //     // cloneNode(true);
-  //     console.log(m_date);
-  //     filterResult.textContent = ""
-
-  //     let x_1 = document.getElementById(theMatchingDatesArray[m_date]).parentElement
-
-  //     // let x_1_clone = x_1.cloneNode(true);
-  //     x_1.style.backgroundColor = "rgba(253,215,87,0.3)"
-
-
-  //     // console.log(x_1_clone);
-
-  //     filterResult.appendChild(x_1);
-  //   }
-
-
-  // }
-
-
-  theMatchingDatesArray.forEach((m_date) => {
-    let x_1 = document.getElementById(m_date).parentElement
-
-
-    if (datesOf_3.length < 1) {
-      // let errorMessage = document.createElement("h4");
-      // errorMessage.textContent
-      console.log(datesOf_3)
-      filterResult.textContent = "There are no results in this date frame"
-    } else {
+    theMatchingDatesArray.forEach((m_date) => {
+      let x_1 = document.getElementById(m_date).parentElement
 
       for (let index = 0; index < theMatchingDatesArray.length; index++) {
         appednResult(x_1)
@@ -276,20 +267,22 @@ filterDatebutton.onclick = function () {
 
       // console.log(x_1_clone);
 
-    }
+    })
 
-
-
-  })
+  }
 
 }
+
+
+
+
 
 
 function appednResult(res) {
 
   res.style.backgroundColor = "rgba(253,215,87,0.3)"
 
-  filterResult.appendChild(res);
+  allProjects.insertAdjacentElement('afterbegin', res)
 
 
 
