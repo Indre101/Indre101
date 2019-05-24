@@ -176,37 +176,44 @@ btn3.onclick = function () {
     }
   })
 
-
-
-
-
 }
 
 
 
-let firstDate = document.getElementById("dateInput1");
-let second = document.getElementById("dateInput2");
+let smallerDate = document.getElementById("dateInput1");
+let largerDate = document.getElementById("dateInput2");
 let filterDatebutton = document.getElementById("filterDatebutton");
 
 
 filterDatebutton.onclick = function () {
   event.preventDefault();
-  let dof = new Date(datesOf[0].innerHTML);
+  let smallerDate_2 = new Date(smallerDate.value)
+  let largerDate_2 = new Date(largerDate.value)
 
+  let datesOf_2 = []
 
+  datesOf.forEach((z) => {
+    let z_1 = new Date(z.innerHTML);
+    datesOf_2.push(z_1);
+  })
 
-  if (+dof >= +today) {
-    console.log("pirmas");
-  } else if (+dof <= +today) {
-    console.log("antras");
+  console.log(datesOf_2[10]);
 
-
+  if (datesOf_2[10] >= smallerDate_2) {
+    console.log("yes true")
   }
 
-  // else if (07 / 07 / 2020 > today) {
-  //   console.log("antras");
-  //   console.log(datesOf[0].innerHTML)
-  //   console.log(today);
-  // }
+
+  let datesOf_3 = datesOf_2.filter((z_3) => {
+
+
+    return z_3 >= smallerDate_2 && z_3 <= largerDate_2
+
+  });
+
+  console.log(datesOf_3);
+
+
+
 
 }
