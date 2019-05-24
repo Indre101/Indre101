@@ -4,6 +4,7 @@
 }
 
 body {
+
   font-family: "Helvetica Neue";
 }
 
@@ -62,7 +63,7 @@ body {
 }
 
 #btn1 {
-  background-color: #ea5045;
+  background-color: rgba(234, 80, 69, 0.4);
   height: 5vh;
   margin-top: 0;
   /* justify-self: center; */
@@ -108,8 +109,36 @@ header {
 
 
 .filterplaces {
+  margin-top: 2vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+
+.btn3 {
+  width: 20vw;
+  padding: 0.2em;
+
+  height: 4vw;
+  font-size: 2vh;
+  background-color: rgba(234, 80, 69, 0.7);
+  margin-bottom: 3vh;
+
+}
+
+.dateInput {
+  height: 5vh;
+  width: 15vw;
+  display: block;
+  margin: 6vh;
+
+}
+
+.inputDateButton {
+  box-sizing: 15vh, 5vh;
+  width: 15vw;
+  display: block;
+  margin: 6vh;
 }
 
 .filterDate {
