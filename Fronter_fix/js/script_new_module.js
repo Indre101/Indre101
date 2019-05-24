@@ -93,7 +93,6 @@ function filterByTheme() {
 
   } else if (colorBG == "rgba(255, 103, 31, 0.3)") {
     document.getElementById("theme3").style.display = "block";
-
     document.getElementById("theme2").style.display = "none";
     document.getElementById("theme4").style.display = "none";
 
