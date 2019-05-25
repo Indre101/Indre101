@@ -7,10 +7,16 @@ body {
   font-family: "Helvetica Neue", sans-serif;
 }
 
+
 .keaListContainer {
   /* width: 30vw; */
   background-color: rgba(7, 98, 200, 0.3);
   border-radius: 30px;
+}
+
+
+.layoutClass {
+  margin-top: 15vh;
 }
 
 .name {
