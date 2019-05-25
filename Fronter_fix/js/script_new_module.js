@@ -212,12 +212,14 @@ filterDatebutton.onclick = function () {
   let dates_id_1 = [];
 
 
+
   datesOf.forEach((z) => {
     let z_1 = new Date(z.innerHTML);
     datesOf_2.push(z_1);
     dates_id_1.push(z.id)
 
   })
+
 
 
   let datesOf_3 = datesOf_2.filter((z_3) => {

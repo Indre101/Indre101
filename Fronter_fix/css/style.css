@@ -78,6 +78,12 @@ body {
 
 }
 
+span {
+  color: white;
+  padding: 0 1vh;
+  font-weight: bolder;
+}
+
 #message1 {
   text-align: center;
   background-color: #ea5045;
