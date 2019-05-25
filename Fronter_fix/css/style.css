@@ -13,7 +13,6 @@ body {
   align-items: center;
   flex-direction: column;
   display: flex;
-  height: 100vh;
 }
 
 
@@ -103,22 +102,26 @@ body {
 
 header {
   height: 10vh;
-  width: 100vw;
+  width: 100%;
   background-color: black;
 }
 
+.containerModulesAll {
+  display: grid;
 
-.filterplaces {
+  grid-template-columns: 1fr 2fr;
+}
+
+/* .filterplaces {
   margin-top: 2vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
+} */
 
 
 .btn3 {
   width: 20vw;
-  padding: 0.2em;
-
+  /* padding: 0.2em; */
   height: 4vw;
   font-size: 2vh;
   background-color: rgba(234, 80, 69, 0.7);
@@ -127,6 +130,7 @@ header {
 }
 
 .dateInput {
+  border: 1px black solid;
   height: 5vh;
   width: 15vw;
   display: block;
@@ -152,6 +156,7 @@ h3 {
 
 .module {
 
+  border-radius: 30px;
   background-size: contain;
   /* text-align: center; */
   width: 20vw;
@@ -203,6 +208,7 @@ h4 {
 }
 
 .themeBlock {
+
   margin: 1vh;
   padding: 0.7vh;
   cursor: pointer;
@@ -215,7 +221,11 @@ h4 {
 }
 
 
-.theme {}
+.theme {
+  margin-bottom: 2vh;
+  border: 2px solid white;
+  border-radius: 20px;
+}
 
 .theme2 {
   background: 5vw;

@@ -151,10 +151,13 @@ btn3.onclick = function () {
 
 
 
-  filterResult.textContent = ""
+  // filterResult.textContent = ""
 
   // filterResult.appendChild(x);
   // filterResult.appendChild(findTheLatest());
+
+  result2.textContent = ""
+
   findTheLatest()
 
 
