@@ -108,28 +108,32 @@ header {
 
 .containerModulesAll {
   display: grid;
-
   grid-template-columns: 1fr 2fr;
+  height: 100vh;
 }
 
-/* .filterplaces {
-  margin-top: 2vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-} */
+.filterplaces {
+  justify-self: center;
+  margin-top: 4vh;
+}
 
 
 .btn3 {
+  border-radius: 30px;
+  font-family: "Helvetica Neue", sans-serif;
   width: 20vw;
   /* padding: 0.2em; */
   height: 4vw;
-  font-size: 2vh;
+  font-size: 1.5vh;
   background-color: rgba(234, 80, 69, 0.7);
   margin-bottom: 3vh;
 
 }
 
 .dateInput {
+  font-family: "Helvetica Neue", sans-serif;
+
+  border-radius: 30px;
   border: 1px black solid;
   height: 5vh;
   width: 15vw;
@@ -138,16 +142,17 @@ header {
 
 }
 
-.inputDateButton {
-  box-sizing: 15vh, 5vh;
-  width: 15vw;
+input.inputDateButton {
+  font-family: "Helvetica Neue", sans-serif;
+  border-radius: 30px;
   display: block;
   margin: 6vh;
+  width: 15vw;
+  height: 4vh;
+  background-size: contain;
 }
 
-.filterDate {
-  float: right;
-}
+.filterDate {}
 
 h3 {
   margin-left: 1.5vw;
@@ -187,16 +192,11 @@ h3 {
 /* themes */
 
 
-.allProjects_3 {
-  margin-top: 3vh;
+.allProjects_3 {}
 
-}
-
-.allProjects {}
-
-.allProjects_2 {
-  display: none;
-
+.allProjects {
+  justify-content: center;
+  margin-top: 4vh;
 }
 
 
