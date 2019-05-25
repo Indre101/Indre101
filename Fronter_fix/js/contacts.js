@@ -3,8 +3,13 @@ const searchInput = document.getElementById("insertName");
 const nameOfKea = document.querySelectorAll(".nameOfKea");
 const emailOfKea = document.querySelectorAll(".emailOfKea");
 const keaListContainer = document.getElementById("keaListContainer");
+const namesAndEmails = document.querySelectorAll(".name");
+const chatBox = document.getElementById("chatBox");
+const airplane = document.getElementById("airplane");
+const sendButton = document.getElementById("sendButton");
 
 
+// 
 
 let resultName = []
 let resultNameID = [];
@@ -21,6 +26,8 @@ function searchTheName() {
 
     document.getElementById(n.id).parentElement.classList.remove("resultName");
 
+
+
     if (n.innerHTML.toLowerCase().includes(searchInput.value.toLowerCase())) {
       // resultName.push(n.innerHTML)
 
@@ -34,14 +41,6 @@ function searchTheName() {
 
 
 
-function checkIfNameBelongs() {
-
-  // for()
-
-}
-
-
-
 // appending function
 
 function appednResult(res) {
@@ -51,6 +50,34 @@ function appednResult(res) {
   res.classList.add("resultName");
 
   keaListContainer.insertAdjacentElement('afterbegin', res)
+
+
+
+}
+
+// 
+// 
+// 
+
+
+namesAndEmails.forEach((ne) => {
+
+  ne.addEventListener("click", sendMessage)
+})
+
+
+
+function sendMessage() {
+  chatBox.style.display = "flex";
+  airplane.style.display = "none";
+
+}
+
+
+sendButton.onclick = function () {
+
+  airplane.style.display = "block";
+  chatBox.style.display = "none";
 
 
 

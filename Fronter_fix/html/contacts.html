@@ -16,13 +16,28 @@
     <!-- header -->
     <header>
     </header>
+
     <!-- search bar -->
-    <form id="searchFormContainer" class="the_form_for_dates" action="">
-      <input type="text" name="" id="insertName" class="dateInput" required>
-      <input type="submit" name="" id="searchButton" class="inputDateButton" value="search">
-    </form>
-    <!-- search bar -->
+    <div>
+      <form id="searchFormContainer" class="the_form_for_dates" action="">
+        <input type="text" name="" autocomplete="off" id="insertName" required class="dateInput">
+        <input type="submit" name="" id="searchButton" class="inputDateButton" value="search">
+      </form>
+      <!-- search bar -->
+
+      <div id="chatBox" class="chatBox">
+        <textarea name="text" class="textArea" cols="40" rows="10">
+            Type your text message here...
+            </textarea>
+        <button id="sendButton" class="inputDateButton">Send</button>
+      </div>
+      <div id="airplane" class="airplane"></div>
+    </div>
+    <!--  -->
+
     <div id="keaListContainer" class="keaListContainer">
+
+
       <div id="nameC1" class="name">
         <h4 id="name1" class="nameOfKea">Funch, Camilla</h4>
         <h4 class="emailOfKea">email@kea.teach.dk</h4>

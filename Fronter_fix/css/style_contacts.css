@@ -25,5 +25,50 @@ body {
 
 
 .resultName {
-  background-color: blueviolet;
+  background-color: rgba(253, 215, 87, 0.3);
+}
+
+.chatBox {
+  display: none;
+  /* display: flex; */
+  padding: 2vh 0;
+  background-color: rgba(253, 215, 87, 0.3);
+  border-radius: 30px;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 10vh;
+}
+
+.textArea {
+  font-size: 1.5vh;
+  width: 15vw;
+  border-radius: 30px;
+
+}
+
+
+.airplane {
+  display: none;
+  background-image: url("../icons/paperairplane.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 8vh;
+  position: relative;
+
+  /* position: absolute; */
+  animation: fly 2s ease-in-out forwards 1;
+}
+
+@keyframes fly {
+
+
+  30% {
+    transform: translate(50vw, 50vh);
+  }
+
+  100% {
+    transform: translate(100vw, -100vh);
+  }
+
 }
