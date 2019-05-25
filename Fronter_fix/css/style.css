@@ -5,6 +5,10 @@
 
 body {
 
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+
   font-family: "Helvetica Neue";
 }
 
@@ -13,7 +17,7 @@ body {
   align-items: center;
   flex-direction: column;
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 
@@ -110,24 +114,28 @@ span {
 
 
 header {
-  height: 10vh;
+  /* height: 10vh; */
   width: 100%;
   background-color: black;
 }
 
 .containerModulesAll {
+  align-self: center;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  height: 100vh;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-gap: 5%;
+  height: 100%;
 }
 
 .filterplaces {
+  align-self: center;
   justify-self: center;
-  margin-top: 4vh;
+  /* margin-top: 4vh; */
 }
 
 .btn3Container {
   text-align: center;
+
 }
 
 .btn3 {
@@ -138,7 +146,7 @@ header {
   font-family: "Helvetica Neue", sans-serif;
   width: 20vw;
   /* padding: 0.2em; */
-  height: 4vw;
+  height: 5vh;
   font-size: 1.5vh;
   background-color: rgba(234, 80, 69, 0.7);
   margin-bottom: 3vh;
@@ -283,7 +291,8 @@ h3 {
 
 .allProjects {
   justify-content: center;
-  margin-top: 4vh;
+  align-self: center;
+  /* margin-top: 4vh; */
 }
 
 
