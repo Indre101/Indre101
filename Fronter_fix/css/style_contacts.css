@@ -27,6 +27,12 @@ body {
   border-bottom: 1px solid white;
   border-radius: 30px;
   align-items: flex-end;
+
+  cursor: pointer;
+}
+
+.name:hover {
+  background-color: white;
 }
 
 
