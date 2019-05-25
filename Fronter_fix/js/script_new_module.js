@@ -18,6 +18,15 @@ let filterDatebutton = document.getElementById("filterDatebutton");
 let result2 = document.getElementById("filterResult2")
 let allProjects = document.getElementById("allProjects")
 let allProjects_2 = document.getElementById("allProjects_2")
+const refreshButton = document.getElementById("refreshButton");
+
+
+refreshButton.onclick = function () {
+  // document.location.reload()
+  result2.textContent = ""
+  result2.style.display = "none"
+}
+
 
 themeName.forEach((project) => {
   project.addEventListener("click", addFolders)
