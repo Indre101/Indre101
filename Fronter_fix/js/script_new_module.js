@@ -157,6 +157,8 @@ btn3.onclick = function () {
   // filterResult.appendChild(findTheLatest());
 
   result2.textContent = ""
+  result2.style.display = "none"
+
 
   findTheLatest()
 
@@ -252,8 +254,11 @@ filterDatebutton.onclick = function () {
     // let errorMessage = document.createElement("h4");
     // errorMessage.textContent
     result2.textContent = "There are no results in this date frame"
+    result2.style.display = "block"
   } else if (datesOf_3.length >= 1) {
     result2.textContent = ""
+    result2.style.display = "none"
+
 
     theMatchingDatesArray.forEach((m_date) => {
       let x_1 = document.getElementById(m_date).parentElement
