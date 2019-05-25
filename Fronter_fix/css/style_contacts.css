@@ -22,3 +22,8 @@ body {
   border-radius: 30px;
   align-items: flex-end;
 }
+
+
+.resultName {
+  background-color: blueviolet;
+}
