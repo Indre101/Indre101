@@ -13,6 +13,7 @@ body {
   align-items: center;
   flex-direction: column;
   display: flex;
+  height: 100vh;
 }
 
 
@@ -48,6 +49,7 @@ body {
 }
 
 .formLogin input {
+  border-radius: 30px;
   border: 1px solid black;
   margin-top: 0.3vh;
   margin-bottom: 2vh;
@@ -58,11 +60,12 @@ body {
 
 .formLogin label {
   margin-top: 3vh;
-  font-size: 3vh;
+  font-size: 2vh;
 }
 
 #btn1 {
-  background-color: rgba(234, 80, 69, 0.4);
+  border-radius: 30px;
+  background-color: rgba(234, 80, 69);
   height: 5vh;
   margin-top: 0;
   /* justify-self: center; */
@@ -122,6 +125,8 @@ header {
 }
 
 .btn3 {
+  cursor: pointer;
+
   margin: 0 auto;
   border-radius: 30px;
   font-family: "Helvetica Neue", sans-serif;
@@ -155,12 +160,16 @@ header {
   background-size: contain;
   margin-top: 2.5em;
   justify-self: center;
-  background-color: rgba(234, 80, 69, 0.7);
-
+  background-color: rgba(234, 80, 69);
   color: black;
   font-size: 1.5vh;
+  cursor: pointer;
 }
 
+#filterDatebutton:hover {
+  background-color: #ffb4aa;
+
+}
 
 
 .dateForms {
@@ -275,12 +284,18 @@ h3 {
 
 h4 {
   margin: 1vh;
-  font-size: 2vh;
+  font-size: 1.5vh;
 
 }
 
 .date {
   float: right;
+}
+
+.imagedown {
+  background-image: url("../icons/down_button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .themeBlock {
