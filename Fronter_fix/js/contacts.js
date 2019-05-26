@@ -31,7 +31,6 @@ function searchTheName() {
     if (n.innerHTML.toLowerCase().includes(searchInput.value.toLowerCase())) {
       // resultName.push(n.innerHTML)
 
-      console.log(n.id);
       let x_1 = document.getElementById(n.id).parentElement
 
       appednResult(x_1)
