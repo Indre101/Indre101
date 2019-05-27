@@ -147,8 +147,8 @@ let today1 = today.toLocaleDateString("en-US")
 
 
 
-var de = new Date();
-de.setDate(de.getDate() - 21);
+// var de = new Date();
+// de.setDate(de.getDate() - 21);
 
 
 
