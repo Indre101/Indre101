@@ -1,15 +1,19 @@
 .statusImage {
   width: 4vw;
   height: 3vh;
-  justify-self: center;
+  justify-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .submissionsList {
-
+  width: 80%;
   background-color: rgba(110, 206, 178, 0.3);
   border-radius: 30px;
-  grid-area: 1/3/ span 1/ span 1;
 }
+
+.dateClass {}
 
 
 
@@ -22,4 +26,14 @@
   border-radius: 30px;
   padding: 1em;
   align-items: center;
+}
+
+
+.alignBtn {
+  grid-area: 1/2/ span 1/ span 2;
+
+}
+
+.btn5Container {
+  left: 10vh;
 }
