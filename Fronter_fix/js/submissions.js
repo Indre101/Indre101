@@ -32,7 +32,7 @@ function setDate() {
 
 
 function setName() {
-  let subNameArray = ["Video project", "Responsive website", "Photo collage", "Bicycle guide", "Hand in 01", "Mobile firsst"];
+  let subNameArray = ["Video_project.pdf", "Responsive_website.pdf", "Photo_collage.pdf", "Bicycle_guide.pdf", "Hand_in_01.pdf", "Mobile_first.pdf"];
   let e = Math.floor(Math.random() * (subNameArray.length));
   return subNameArray[e];
 }
@@ -65,7 +65,26 @@ for (let index = 0; index < 12; index++) {
   newDiv.classList.add("theDiv");
 
   newDiv.onclick = function () {
-    addComment(newDiv, newImgDiv)
+
+    // let img_source = window.getComputedStyle(newImgDiv, null).getPropertyValue("background-image")
+
+
+    // console.log(status3.src)
+    // console.log(newImgDiv.style.getPropertyValue("background-image"));
+
+    console.log(window.getComputedStyle(newImgDiv, true).getPropertyValue('background-image'));
+
+    // console.log("url('" + status3.src + "')")
+
+    if (window.getComputedStyle(newImgDiv).getPropertyValue('background-image') === "url('" + status3.src + "')") {
+
+      newDiv.style.pointerEvents = "none";
+      console.log("true")
+    } else if (window.getComputedStyle(newImgDiv).getPropertyValue('background-image') != "url('" + status3.src + "')") {
+      addComment(newDiv, newImgDiv)
+      console.log("pridetas img")
+
+    }
   }
 
   submissionsList.appendChild(newDiv);
@@ -78,20 +97,31 @@ function addComment(divParent, imageStatus) {
 
   let commentDiv = document.createElement("div");
   let commentH = document.createElement("h4");
-  commentH.textContent = "Great work, Kind Regards";
+  let breakLine = document.createElement("br");
+
+
+  commentH.textContent = "Great work";
+  commentDiv.appendChild(breakLine);
+
+
+
+
   commentDiv.appendChild(commentH);
   imageStatus.style.display = "none";
   commentDiv.style.display = "block";
-
   divParent.insertAdjacentElement("afterbegin", commentDiv);
-
   divParent.onclick = function () {
 
     commentDiv.style.display = "none";
     imageStatus.style.display = "block";
 
 
+
   }
+
+
+
+
 
 }
 
