@@ -45,19 +45,25 @@ for (let index = 0; index < 12; index++) {
   let newDiv = document.createElement("div");
   let newH = document.createElement("h4");
   let newH_2 = document.createElement("h4");
-  let newImgDiv = document.createElement("div");
+
+  let imageContainer = document.createElement("div");
+  let newImgDiv = document.createElement("img");
 
 
-  newImgDiv.style.backgroundImage = "url('" + statusArray[setStatus()] + "')";
+  newImgDiv.src = statusArray[setStatus()];
 
   newImgDiv.classList.add("statusImage")
+
+
+  imageContainer.appendChild(newImgDiv);
+
 
   newH_2.textContent = setName();
   newH.textContent = setDate();
   newH.classList.add("dateClass");
 
 
-  newDiv.appendChild(newImgDiv);
+  newDiv.appendChild(imageContainer);
   newDiv.appendChild(newH_2)
   newDiv.appendChild(newH)
 
@@ -68,24 +74,37 @@ for (let index = 0; index < 12; index++) {
 
     // let img_source = window.getComputedStyle(newImgDiv, null).getPropertyValue("background-image")
 
+    let commentH = document.createElement("h4");
 
-    // console.log(status3.src)
-    // console.log(newImgDiv.style.getPropertyValue("background-image"));
 
-    console.log(window.getComputedStyle(newImgDiv, true).getPropertyValue('background-image'));
 
-    // console.log("url('" + status3.src + "')")
 
-    if (window.getComputedStyle(newImgDiv).getPropertyValue('background-image') === "url('" + status3.src + "')") {
+    if (newImgDiv.src === status3.src) {
 
       newDiv.style.pointerEvents = "none";
-      console.log("true")
-    } else if (window.getComputedStyle(newImgDiv).getPropertyValue('background-image') != "url('" + status3.src + "')") {
-      addComment(newDiv, newImgDiv)
-      console.log("pridetas img")
+
+
+    } else if (newImgDiv.src === status1.src) {
+
+      commentH.textContent = "Great work";
+
+      newImgDiv.style.display = "none";
+
+      imageContainer.insertAdjacentElement("afterbegin", commentH);
+
+
+      newDiv.onclick = function () {
+        console.log("bjlkæ")
+        newImgDiv.style.display = "block";
+        commentH.style.display = "none";
+      }
 
     }
+
+
+
   }
+
 
   submissionsList.appendChild(newDiv);
 
@@ -93,37 +112,7 @@ for (let index = 0; index < 12; index++) {
 
 
 
-function addComment(divParent, imageStatus) {
 
-  let commentDiv = document.createElement("div");
-  let commentH = document.createElement("h4");
-  let breakLine = document.createElement("br");
-
-
-  commentH.textContent = "Great work";
-  commentDiv.appendChild(breakLine);
-
-
-
-
-  commentDiv.appendChild(commentH);
-  imageStatus.style.display = "none";
-  commentDiv.style.display = "block";
-  divParent.insertAdjacentElement("afterbegin", commentDiv);
-  divParent.onclick = function () {
-
-    commentDiv.style.display = "none";
-    imageStatus.style.display = "block";
-
-
-
-  }
-
-
-
-
-
-}
 
 
 const dateClass = document.querySelectorAll(".dateClass");
