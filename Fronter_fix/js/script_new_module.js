@@ -126,7 +126,7 @@ datesOf.forEach((j) => {
   let c = Math.floor((Math.random() * 28) + 1);
 
   let d = new Date(`${b}- ${c}- 2019`)
-  j.innerHTML = d.toLocaleDateString("en-US");
+  j.innerHTML = d.toLocaleDateString("eu-EU");
 
 
 
@@ -143,7 +143,7 @@ let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 let yyyy = today.getFullYear();
 
 
-let today1 = today.toLocaleDateString("en-US")
+let today1 = today.toLocaleDateString("eu-EU")
 
 
 
@@ -245,7 +245,7 @@ filterDatebutton.onclick = function () {
 
     for (let index = 0; index < dates_id_1.length; index++) {
       for (let j = 0; j < datesOf_3.length; j++) {
-        if (document.getElementById(dates_id_1[index]).innerHTML === datesOf_3[j].toLocaleDateString("en-US")) {
+        if (document.getElementById(dates_id_1[index]).innerHTML === datesOf_3[j].toLocaleDateString("eu-EU")) {
 
           theMatchingDatesArray.push(dates_id_1[index]);
           // datesOf_3 = [];

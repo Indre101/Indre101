@@ -16,7 +16,9 @@
 .dateClass {}
 
 
-
+.inputDateButton_1 {
+  background-color: rgba(7, 98, 200, 0.5)
+}
 
 .theDiv {
   display: flex;
@@ -37,3 +39,49 @@
 .btn5Container {
   left: 10vh;
 }
+
+/* News feeeeed */
+
+
+.newsFeedlist {
+  width: 50%;
+  grid-area: 1/3/ span 1 /span 1;
+}
+
+
+.kea {
+  background-color: #fdd7574d;
+  border-radius: 30px;
+  margin: 1vh;
+  padding: 2em;
+
+}
+
+.inlineDate {
+  display: inline;
+
+}
+
+li {
+  list-style: none;
+}
+
+
+
+.keaAlign {
+  display: flex;
+  border-top: 1px solid white;
+
+}
+
+.dateInline {
+
+
+  border-right: 2px solid white;
+}
+
+.textWrap {
+  text
+}
+
+h2 {}
