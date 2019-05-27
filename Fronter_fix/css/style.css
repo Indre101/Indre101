@@ -12,14 +12,20 @@ body {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-.menuItem_1 img {
-  width: 70%;
+.menuItem_1 {
+  align-items: center;
+}
 
+.menuItem_1 img {
+  width: 65%;
+
+  align-items: center;
 
 }
 
 .menuItem img {
   width: 65%;
+  align-items: self-end;
 
 }
 
@@ -39,12 +45,15 @@ body {
 }
 
 .menu {
+  /* position: fixed; */
+  grid-area: 1/1/ span 1/ span 1;
   margin: 0 0;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 
 }
 
@@ -154,6 +163,7 @@ span {
 
 
 header {
+
   /* height: 10vh; */
   /* width: 100%; */
   /* background-color: black; */

@@ -14,13 +14,23 @@ const sendButton = document.getElementById("sendButton");
 let resultName = []
 let resultNameID = [];
 
+let messageError = document.createElement("div")
+
 
 searchButton.onclick = function () {
   event.preventDefault();
   searchTheName();
+  if (messageError.style.display === "") {
+    messageError.style.display = "none"
+
+  }
+
+
 }
 
 function searchTheName() {
+
+  let i = 0
 
   nameOfKea.forEach((n) => {
 
@@ -30,12 +40,25 @@ function searchTheName() {
 
     if (n.innerHTML.toLowerCase().includes(searchInput.value.toLowerCase())) {
       // resultName.push(n.innerHTML)
+      i++
+      messageError.style.display = "none"
 
       let x_1 = document.getElementById(n.id).parentElement
 
       appednResult(x_1)
     }
   })
+
+  if (i === 0) {
+    i = 0;
+    messageError.classList.add("filterResult");
+    messageError.innerHTML = "There are no results "
+    messageError.style.display = "block";
+
+
+    keaListContainer.insertAdjacentElement('afterbegin', messageError)
+
+  }
 }
 
 
