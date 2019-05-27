@@ -12,6 +12,42 @@ body {
   font-family: "Helvetica Neue", sans-serif;
 }
 
+.menuItem_1 img {
+  width: 70%;
+
+
+}
+
+.menuItem img {
+  width: 65%;
+
+}
+
+.menuItem,
+.menuItem_1 {
+  display: flex;
+  margin: 3vh;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.menuItem h4 {
+  color: white;
+  background-color: black;
+  width: 85%;
+}
+
+.menu {
+  margin: 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .container {
   justify-content: center;
   align-items: center;
@@ -119,8 +155,8 @@ span {
 
 header {
   /* height: 10vh; */
-  width: 100%;
-  background-color: black;
+  /* width: 100%; */
+  /* background-color: black; */
 }
 
 .containerModulesAll {

@@ -72,7 +72,6 @@ for (let index = 0; index < 12; index++) {
 
   newDiv.onclick = function () {
 
-    // let img_source = window.getComputedStyle(newImgDiv, null).getPropertyValue("background-image")
 
     let commentH = document.createElement("h4");
 
@@ -120,15 +119,17 @@ const dateClass = document.querySelectorAll(".dateClass");
 let dateClass_1 = [];
 
 
+
+
 filterButton_2.onclick = function name() {
+
+
 
   for (let index = 0; index < dateClass.length; index++) {
 
 
-    dateClass_1.push(dateClass[index].innerHTML);
-    let dateClass_2 = dateClass_1.sort();
 
-    console.log(dateClass_2)
+
 
 
 
