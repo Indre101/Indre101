@@ -19,7 +19,7 @@ function checkPassword() {
     window.location.href = "../html/home_page.html";
 
 
-  } else if (pass.value.length < 7) {
+  } else if (psw.value.length < 7) {
     psw.value = ""
     message1.style.padding = "1em 0";
     message1.textContent = "Must be at least 7 characters long"
