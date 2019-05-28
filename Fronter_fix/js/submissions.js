@@ -85,6 +85,21 @@ for (let index = 0; index < 12; index++) {
 
     } else if (newImgDiv.src === status1.src) {
 
+      commentH.textContent = "Work on it";
+
+      newImgDiv.style.display = "none";
+
+      imageContainer.insertAdjacentElement("afterbegin", commentH);
+
+
+      newDiv.onclick = function () {
+        console.log("bjlkæ")
+        newImgDiv.style.display = "block";
+        commentH.style.display = "none";
+      }
+
+    } else if (newImgDiv.src === status2.src) {
+
       commentH.textContent = "Great work";
 
       newImgDiv.style.display = "none";
