@@ -290,7 +290,7 @@ h3 {
 .module1 {
   position: absolute;
   /* opacity: 0; */
-  background-color: rgba(255, 180, 170, 0.5);
+  background-color: rgba(255, 180, 170, 0.7);
   animation: toBlock 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards 1;
 
 }
@@ -299,7 +299,7 @@ h3 {
 .module2 {
   position: absolute;
   /* opacity: 0; */
-  background-color: rgba(110, 206, 178, 0.3);
+  background-color: rgba(110, 206, 178, 0.7);
   animation: toBlock 0.5s 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards 1;
 
 }
@@ -307,7 +307,7 @@ h3 {
 .module3 {
   position: absolute;
   /* opacity: 0; */
-  background-color: rgba(255, 103, 31, 0.3);
+  background-color: rgba(255, 103, 31, 0.7);
   animation: toBlock 0.5s 1s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards 1;
 
 }
@@ -315,7 +315,7 @@ h3 {
 .module4 {
   position: absolute;
   /* opacity: 0; */
-  background-color: rgba(240, 78, 152, 0.3);
+  background-color: rgba(240, 78, 152, 0.7);
   animation: toBlock 0.5s 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.335) forwards 1;
 
 }
@@ -512,7 +512,7 @@ h6 {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:1024px) {
 
   .formLogin {
     width: 80vw;
@@ -622,5 +622,6 @@ h6 {
 
   .allProjects_3 {
     width: 100%;
+    margin-top: 2vh;
   }
 }

@@ -92,22 +92,22 @@ function filterByTheme() {
 
 
 
-  if (colorBG == "rgba(255, 180, 170, 0.5)") {
+  if (colorBG == "rgba(255, 180, 170, 0.7)") {
     document.getElementById("theme2").style.display = "none";
     document.getElementById("theme3").style.display = "none";
     document.getElementById("theme4").style.display = "none";
 
-  } else if (colorBG == "rgba(110, 206, 178, 0.3)") {
+  } else if (colorBG == "rgba(110, 206, 178, 0.7)") {
     document.getElementById("theme2").style.display = "block";
     document.getElementById("theme3").style.display = "none";
     document.getElementById("theme4").style.display = "none";
 
-  } else if (colorBG == "rgba(255, 103, 31, 0.3)") {
+  } else if (colorBG == "rgba(255, 103, 31, 0.7)") {
     document.getElementById("theme3").style.display = "block";
     document.getElementById("theme2").style.display = "none";
     document.getElementById("theme4").style.display = "none";
 
-  } else if (colorBG == "rgba(240, 78, 152, 0.3)") {
+  } else if (colorBG == "rgba(240, 78, 152, 0.7)") {
     document.getElementById("theme2").style.display = "none";
     document.getElementById("theme3").style.display = "none";
     document.getElementById("theme4").style.display = "block";
