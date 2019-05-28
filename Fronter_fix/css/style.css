@@ -35,6 +35,7 @@ body {
   margin: 3vh;
   flex-direction: column;
   align-items: center;
+  object-fit: contain;
 
 }
 
@@ -102,7 +103,7 @@ body {
 }
 
 .formLogin input {
-  border-radius: 30px;
+  border-radius: 15px;
   border: 1px solid black;
   margin-top: 0.3vh;
   margin-bottom: 2vh;
@@ -117,7 +118,7 @@ body {
 }
 
 #btn1 {
-  border-radius: 30px;
+  border-radius: 15px;
   background-color: rgba(234, 80, 69);
   height: 5vh;
   margin-top: 0;
@@ -157,7 +158,7 @@ span {
   margin: 0.5vh 3vh;
   background-color: rgba(234, 80, 69);
   padding: 2vh;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 /* modules and tasks */
@@ -197,7 +198,7 @@ header {
   cursor: pointer;
 
   margin: 0 auto;
-  border-radius: 30px;
+  border-radius: 15px;
   font-family: "Helvetica Neue", sans-serif;
   width: 20vw;
   /* padding: 0.2em; */
@@ -210,7 +211,7 @@ header {
 
 .dateInput {
   font-family: "Helvetica Neue", sans-serif;
-  border-radius: 30px;
+  border-radius: 15px;
   border: 1px black solid;
   height: 5vh;
   width: 15vw;
@@ -223,7 +224,7 @@ header {
 .inputDateButton {
 
   font-family: "Helvetica Neue", sans-serif;
-  border-radius: 30px;
+  border-radius: 15px;
   width: 15vw;
   height: 4vh;
   background-size: contain;
@@ -244,7 +245,7 @@ header {
 .dateForms {
   background-color: rgba(253, 218, 87, 0.3);
   /* padding: 0.1%; */
-  border-radius: 30px;
+  border-radius: 15px;
   opacity: 0;
   margin-top: 6vh;
   padding: 2em 0.2em;
@@ -278,7 +279,7 @@ h3 {
 
 .module {
   margin: 0 auto;
-  border-radius: 30px;
+  border-radius: 15px;
   background-size: contain;
   /* text-align: center; */
   width: 20vw;
@@ -371,7 +372,7 @@ h4 {
 
 .themeBlock {
   border-bottom: 1px solid white;
-  border-radius: 30px;
+  border-radius: 15px;
   margin: 1vh;
   padding: 0.7vh;
   cursor: pointer;
@@ -387,7 +388,7 @@ h4 {
 .theme {
   margin-bottom: 2vh;
   border: 2px solid white;
-  border-radius: 50px;
+  border-radius: 15px;
 }
 
 .theme2 {
@@ -433,7 +434,7 @@ h6 {
 }
 
 #teaching {
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 0.1vh;
   background-color: rgba(7, 98, 200, 0.3);
 
@@ -441,7 +442,7 @@ h6 {
 
 #submission1 {
   padding: 0.1vh;
-  border-radius: 30px;
+  border-radius: 15px;
 
   background-color: rgba(142, 127, 175, 0.5);
 }
@@ -455,16 +456,171 @@ h6 {
 .material {}
 
 /* modules and tasks */
+/* alternative menu */
 
+.menu_mobile {
+  display: none;
+  /* display: flex; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.menu_mobile a {
+  display: flex;
+  align-items: flex-end;
+
+  justify-content: center;
+}
+
+.kea_logo_1 {
+  width: 100%;
+}
+
+.menuItem_2 {
+  margin: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.menuItem_2 img {
+  width: 30vw;
+  align-self: center;
+  object-fit: contain;
+  height: 15vh;
+
+}
+
+
+
+.menuItem_2 h4 {
+  color: white;
+  background-color: black;
+  width: 100%;
+}
+
+
+
+.kea_home_logo {
+  position: fixed;
+  bottom: 0;
+  display: none;
+}
 
 
 
 @media screen and (max-width: 600px) {
+
   .formLogin {
     width: 80vw;
   }
 
   .keaLogo {
     width: 80vw;
+  }
+
+  .menu_mobile {
+    display: flex;
+  }
+
+  .containerModulesAll_1 {
+    display: none;
+  }
+
+  .containerModulesAll {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    display: flex;
+  }
+
+  /* schedule */
+  /* schedule */
+
+
+  .kea_home_logo_img {
+
+
+    background-color: #2B2A29;
+    width: 100%;
+    object-fit: contain;
+    height: 10vh;
+
+
+  }
+
+  .kea_home_logo {
+
+    background-color: black;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  /* kea logo */
+
+
+  /* contacts */
+  .the_form_for_dates {
+    flex-direction: row;
+  }
+
+
+  .dateInput {
+    width: 40%;
+  }
+
+  .inputDateButton {
+    width: 40%;
+    margin: 0;
+
+  }
+
+  .textArea {
+    width: 90%;
+
+  }
+
+  /* modules */
+  .btn3 {
+    width: 100%;
+
+  }
+
+  .module {
+    width: 100%;
+
+    display: block;
+    position: relative;
+    animation: none;
+  }
+
+  .dateForms {
+    animation: none;
+    opacity: 1;
+    padding: 1vh;
+  }
+
+  #the_form_for_dates_1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+  }
+
+  .dateInput {
+    margin: 0.5vh;
+  }
+
+  .allProjects_3 {
+    width: 100%;
   }
 }

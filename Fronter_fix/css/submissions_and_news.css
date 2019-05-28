@@ -5,12 +5,14 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  object-fit: contain;
+
 }
 
 .submissionsList {
   width: 80%;
   background-color: rgba(110, 206, 178, 0.3);
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 .dateClass {}
@@ -25,7 +27,7 @@
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid white;
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 1em;
   align-items: center;
 }
@@ -44,16 +46,16 @@
 
 
 .newsFeedlist {
-  width: 50%;
   grid-area: 1/3/ span 1 /span 1;
+
 }
 
 
 .kea {
   background-color: #fdd7574d;
-  border-radius: 30px;
+  border-radius: 15px;
   margin: 1vh;
-  padding: 2em;
+  padding: 1em;
 
 }
 
@@ -90,4 +92,26 @@ h2 {
 
 .btnContainer {
   grid-area: 1/ 2/ span 1/ span 1;
+}
+
+@media screen and (max-width: 600px) {
+
+  .btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .inputDateButton_1 {
+    margin: 1vh;
+  }
+
+  .newsFeedlist {
+    margin: 4vh 0;
+    padding: 0;
+  }
+
+  .submissionsList {
+    width: 100%;
+  }
 }
