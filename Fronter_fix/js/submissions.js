@@ -15,7 +15,7 @@ let statusArray = [status1.src, status2.src, status3.src];
 
 function setStatus() {
   let a_1 = Math.floor(Math.random() * 3);
-  return a_1
+  return statusArray[a_1]
 }
 
 function setDate() {
@@ -50,9 +50,12 @@ for (let index = 0; index < 12; index++) {
   let newImgDiv = document.createElement("img");
 
 
-  newImgDiv.src = statusArray[setStatus()];
+  newImgDiv.src = setStatus();
+
 
   newImgDiv.classList.add("statusImage")
+
+  // newImgDiv.src = statusArray[setStatus()];
 
 
   imageContainer.appendChild(newImgDiv);

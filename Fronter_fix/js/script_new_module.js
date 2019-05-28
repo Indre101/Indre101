@@ -129,21 +129,19 @@ datesOf.forEach((j) => {
   j.innerHTML = d.toLocaleDateString("eu-EU");
 
 
-
-
 })
 
 // filtering by date
 
 const btn3 = document.getElementById("btn3");
 
-let today = new Date();
-let dd = String(today.getDate()).padStart(2, '0');
-let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-let yyyy = today.getFullYear();
+// let today = new Date();
+// let dd = String(today.getDate()).padStart(2, '0');
+// let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+// let yyyy = today.getFullYear();
 
 
-let today1 = today.toLocaleDateString("eu-EU")
+// let today1 = today.toLocaleDateString("eu-EU")
 
 
 
@@ -187,7 +185,6 @@ function findTheLatest() {
   })
 
   let sortedDate = currentProjectDateArray.sort();
-
   let latestDate = sortedDate[sortedDate.length - 1];
 
 
