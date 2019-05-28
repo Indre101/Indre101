@@ -87,3 +87,7 @@ li {
 h2 {
   font-size: 3vh;
 }
+
+.btnContainer {
+  grid-area: 1/ 2/ span 1/ span 1;
+}
