@@ -17,7 +17,7 @@ function checkPassword() {
     message1.style.display = "none";
     event.preventDefault();
 
-    window.location.href = "../html/home_page.html";
+    window.location.href = "../html/schedule.html";
 
 
   } else if (pass.value.length < 7) {

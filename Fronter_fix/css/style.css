@@ -17,15 +17,17 @@ body {
 }
 
 .menuItem_1 img {
-  width: 65%;
-
+  width: 45%;
+  object-fit: contain;
   align-items: center;
 
 }
 
 .menuItem img {
-  width: 65%;
+  width: 45%;
   align-items: self-end;
+  object-fit: contain;
+
 
 }
 
@@ -139,6 +141,7 @@ span {
 }
 
 #message1 {
+  border-radius: 15px;
   text-align: center;
   background-color: #ea5045;
   margin-bottom: 0;
@@ -173,7 +176,8 @@ header {
   /* background-color: black; */
 }
 
-.containerModulesAll {
+.containerModulesAll,
+.containerModulesAll_Home {
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 1fr 3fr;
@@ -492,6 +496,7 @@ h6 {
   object-fit: contain;
   height: 15vh;
 
+
 }
 
 
@@ -513,6 +518,11 @@ h6 {
 
 
 @media screen and (max-width:1024px) {
+
+  .containerModulesAll_Home {
+    display: none;
+  }
+
 
   .formLogin {
     width: 80vw;
