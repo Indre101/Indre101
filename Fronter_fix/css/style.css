@@ -12,6 +12,11 @@ body {
   font-family: "Helvetica Neue", sans-serif;
 }
 
+.selected {
+  box-shadow: 10px 10px #ea5045;
+  border-radius: 15px;
+}
+
 .menuItem_1 {
   align-items: center;
 }
@@ -24,6 +29,7 @@ body {
 }
 
 .menuItem img {
+  height: 5vh;
   width: 45%;
   align-items: self-end;
   object-fit: contain;
@@ -40,6 +46,12 @@ body {
   object-fit: contain;
 
 }
+
+
+
+
+.menuItem:hover {}
+
 
 .menuItem h4 {
   color: white;

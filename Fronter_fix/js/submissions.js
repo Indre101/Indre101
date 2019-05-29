@@ -1,6 +1,13 @@
 let submissionsList = document.getElementById("submissionsList");
 const filterButton_2 = document.getElementById("filterButton_2");
 
+// 
+
+
+
+
+
+
 
 let status1 = new Image();
 status1.src = "../icons/anX.png"
@@ -22,7 +29,12 @@ function setDate() {
   let b = Math.floor((Math.random() * 5) + 1);
   let c = Math.floor((Math.random() * 28) + 1);
 
-  let d = new Date(`${b}- ${c}- 2019`)
+  let d = new Date(`
+          $ {
+            b
+          } - $ {
+            c
+          } - 2019 `)
   let d1 = d.toLocaleDateString("en-US");
   return d1;
 

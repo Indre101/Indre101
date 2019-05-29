@@ -4,7 +4,6 @@ const message1 = document.getElementById("message1");
 
 
 
-
 btn1.onclick = function () {
 
   checkPassword()
