@@ -26,16 +26,16 @@ function setStatus() {
 }
 
 function setDate() {
+
+
+
   let b = Math.floor((Math.random() * 5) + 1);
   let c = Math.floor((Math.random() * 28) + 1);
 
-  let d = new Date(`
-          $ {
-            b
-          } - $ {
-            c
-          } - 2019 `)
-  let d1 = d.toLocaleDateString("en-US");
+  let d = new Date(`${b}- ${c}- 2019`)
+  let d1 = d.toLocaleDateString("eu-EU");
+
+
   return d1;
 
 }
@@ -108,7 +108,6 @@ for (let index = 0; index < 12; index++) {
 
 
       newDiv.onclick = function () {
-        console.log("bjlkæ")
         newImgDiv.style.display = "block";
         commentH.style.display = "none";
       }
@@ -123,7 +122,6 @@ for (let index = 0; index < 12; index++) {
 
 
       newDiv.onclick = function () {
-        console.log("bjlkæ")
         newImgDiv.style.display = "block";
         commentH.style.display = "none";
       }
@@ -146,24 +144,46 @@ for (let index = 0; index < 12; index++) {
 
 const dateClass = document.querySelectorAll(".dateClass");
 
-let dateClass_1 = [];
+
+
+// const date_sort_asc = function (date1, date2) {
+//   // This is a comparison function that will result in dates being sorted in
+//   // ASCENDING order. As you can see, JavaScript's native comparison operators
+//   // can be used to compare dates. This was news to me.
+//   if (date1 > date2) return 1;
+//   if (date1 < date2) return -1;
+//   return 0;
+// };
+
+
+
+// filterButton_2.onclick = function name() {
+
+//   let dateClass_1 = [];
+
+
+//   dateClass.forEach((n) => {
+//     dateClass_1.push(n.innerHTML);
+
+
+//   })
+
+//   dateClass_1.sort(date_sort_asc)
+
+//   // document.write('<p>Dates sorted in descending order (newest to oldest):</p>');
+//   for (var i = 0; i < dateClass_1.length; i++) {
+//     // document.write(i + ': ' + dateClass_1[i] + '<br>');
+//     console.log((dateClass_1[i]))
+
+//     // submissionsList.insertAdjacentElement("afterbegin", dateClass_1[i].parentElement);
+
+//   }
+
+//   // let dateClass_2 = dateClass_1.sort();
 
 
 
 
-filterButton_2.onclick = function name() {
 
 
-
-  for (let index = 0; index < dateClass.length; index++) {
-
-
-
-
-
-
-
-  }
-
-
-}
+// }
