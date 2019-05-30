@@ -40,7 +40,7 @@ function randomColor() {
   let b = Math.floor(Math.random() * 255)
   let a = (Math.random() * 1);
 
-  let colorCode = `rgb(${r}, ${g}, ${b})`
+  let colorCode = `rgb(${r}, ${g}, ${b}, ${a})`
   return colorCode
 }
 // 

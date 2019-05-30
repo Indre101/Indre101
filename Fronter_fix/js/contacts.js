@@ -17,7 +17,14 @@ let resultNameID = [];
 let messageError = document.createElement("div")
 
 
+
+
+
 searchButton.onclick = function () {
+
+
+
+
   event.preventDefault();
   searchTheName();
   if (messageError.style.display === "") {

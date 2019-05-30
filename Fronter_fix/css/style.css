@@ -542,11 +542,14 @@ h6 {
 
 
 
-@media screen and (max-width:1024px) {
+
+
+@media screen and (max-width:1030px) {
 
   .containerModulesAll_Home {
     display: none;
   }
+
 
 
   .formLogin {
