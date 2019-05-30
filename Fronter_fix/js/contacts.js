@@ -23,14 +23,25 @@ let messageError = document.createElement("div")
 searchButton.onclick = function () {
 
 
+  if (searchInput.value === "") {
+    messageError.classList.add("filterResult");
+    messageError.innerHTML = "Please insert a name"
+    messageError.style.display = "block";
+    keaListContainer.insertAdjacentElement('afterbegin', messageError)
 
-
-  event.preventDefault();
-  searchTheName();
-  if (messageError.style.display === "") {
+  } else if (messageError.style.display === "") {
     messageError.style.display = "none"
 
+  } else if (searchInput.value != "") {
+    searchTheName();
+
   }
+
+  event.preventDefault();
+
+
+
+
 
 
 }
