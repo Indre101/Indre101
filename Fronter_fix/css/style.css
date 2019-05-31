@@ -634,7 +634,7 @@ h6 {
 
   .module {
     width: 100%;
-
+    opacity: 1;
     display: block;
     position: relative;
     animation: none;
