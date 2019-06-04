@@ -30,32 +30,19 @@ body {
 }
 
 .inputFields {
-  text-align: right;
+  text-align: left;
   border: none;
-
-  max-height: 5vh;
-  height: 100vh;
+  width: 20vw;
+  height: 5vh;
   font-size: 1.2em;
 }
 
 
-#input {
-  border: none;
 
-  max-height: 5vh;
-  height: 100vh;
-  font-size: 1.2em;
-
-}
 
 /* button numbers */
 
-#sameLine {
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 .numbersAnd {
   margin: 0 auto;
