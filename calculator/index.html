@@ -13,37 +13,34 @@
 <body>
 
   <div class="container">
+
+
     <div class="inputContainers">
-      <!-- <input id="input2" type="text" class="inputFields"> -->
-      <div id="input1" class="inputFields"></div>
-      <div id="input" class="inputFields"></div>
+      <input type="text" id="result" class="inputFields" />
+      <!-- clr() function will call clr to clear all value -->
     </div>
-    <div id="sameLine" class="sameLine">
 
-      <div class="actionsStyle">
-        <div id="plus" class="act ">+</div>
-        <div id="minus" class="act">-</div>
-        <div id="multiply" class="act">*</div>
-        <div id="division" class="act">/</div>
-        <div id="equality" class="act">=</div>
-        <div class="act">AC</div>
-      </div>
-      <div class="numbersAnd">
-        <div class="inputValues">1</div>
-        <div class="inputValues">2</div>
-        <div class="inputValues">3</div>
-        <div class="inputValues">4</div>
-        <div class="inputValues">5</div>
-        <div class="inputValues">6</div>
-        <div class="inputValues">7</div>
-        <div class="inputValues">8</div>
-        <div class="inputValues">9</div>
-        <div class="inputValues">0</div>
-
-
-      </div>
-
-
+    <div class="numbersAnd">
+      <input type="button" value="1" class="inputValues values" />
+      <input type="button" value="2" class="inputValues values" />
+      <input type="button" value="3" class="inputValues values" />
+      <input type="button" value="4" class="inputValues values" />
+      <input type="button" value="5" class="inputValues values" />
+      <input type="button" value="6" class="inputValues values" />
+      <input type="button" value="7" class="inputValues values" />
+      <input type="button" value="8" class="inputValues values" />
+      <input type="button" value="9" class="inputValues values" />
+      <input type="button" value="." class="inputValues values" />
+      <input type="button" value="0" class="inputValues values" />
+    </div>
+    <!-- solve function call function solve to evaluate value -->
+    <div class="actionsStyle">
+      <input type="button" value="c" onclick="clr()" class="act" />
+      <input type="button" value="-" class="act values" />
+      <input type="button" value="+" class="act values" />
+      <input type="button" value="/" class="act values" />
+      <input type="button" value="*" class="act values" />
+      <input type="button" value="=" onclick="solve()" class="act" />
     </div>
   </div>
 

@@ -31,23 +31,13 @@ body {
 
 .inputFields {
   text-align: right;
-}
-
-#input2 {
-  border: none;
-  max-height: 5vh;
-  height: 100vh;
-  font-size: 0.7em;
-}
-
-#input1 {
   border: none;
 
   max-height: 5vh;
   height: 100vh;
-  font-size: 1em;
-
+  font-size: 1.2em;
 }
+
 
 #input {
   border: none;
@@ -68,6 +58,7 @@ body {
 }
 
 .numbersAnd {
+  margin: 0 auto;
   padding-top: 1vh;
   max-width: 20vw;
   width: 100vw;
@@ -96,6 +87,8 @@ body {
 
 
 .actionsStyle {
+  margin: 0 auto;
+
   background-color: #9CB2FF;
 
   width: 20vw;
@@ -108,6 +101,7 @@ body {
 }
 
 .act {
+
   margin: 0.5vh;
   width: 6vw;
   height: 4vh;
