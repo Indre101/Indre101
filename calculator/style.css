@@ -1,5 +1,5 @@
 body {
-  background-color: #9CB2FF;
+  /* background-color: #9CB2FF; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   height: 100vh;
@@ -140,9 +140,55 @@ body {
 
 }
 
-
+/* /jvhaknjlkmæl,æ */
 #canvas_1 {
   width: 100%;
   height: 100%;
   border: 2px solid black;
+}
+
+
+.body_1 {
+  display: flex;
+  justify-content: center;
+  background-color: #3333;
+
+}
+
+.cube_1 {
+  align-self: center;
+  width: 10em;
+  height: 10em;
+  border: 0.01em solid black;
+  box-sizing: border-box;
+  background-color: #fff;
+  transform: rotate(-30deg) skewX(25deg);
+}
+
+.cube_1::before {
+  content: "";
+  left: -2em;
+  top: 1em;
+  position: absolute;
+  width: 2em;
+  height: 100%;
+  background-color: #fff;
+  border: 0.01em solid black;
+
+
+  transform: skewY(-45deg);
+}
+
+.cube_1::after {
+  border: 0.01em solid black;
+  content: "";
+  width: 100%;
+  height: 2em;
+  background-color: #fff;
+  position: absolute;
+  left: -1em;
+  bottom: -2em;
+  transform: skewX(-45deg);
+
+
 }

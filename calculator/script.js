@@ -48,7 +48,10 @@ canvas1.height = canvas1.scrollHeight
 // function draw() {
 
 ctx.beginPath();
-
+ctx.strokeStyle = "black";
+ctx.lineStyle = ""
+ctx.lineWidth = 2;
+ctx.lineCap = "round";
 ctx.moveTo(window.innerWidth, 30);
 ctx.lineTo(200, 200);
 ctx.lineTo(200, window.innerHeight);
@@ -56,12 +59,30 @@ ctx.stroke();
 
 ctx.beginPath()
 ctx.moveTo(200, 200);
-ctx.lineTo(900, 200);
-
-
-
+ctx.lineTo(500, 250);
+ctx.lineTo(300, 350)
+ctx.lineTo(300, window.innerHeight);
 ctx.stroke();
 
+ctx.beginPath()
+ctx.moveTo(300, 350);
+ctx.lineTo(600, 450);
+ctx.lineTo(400, 550);
+ctx.lineTo(400, window.innerHeight);
+ctx.stroke();
+
+ctx.beginPath()
+ctx.moveTo(400, 550);
+ctx.lineTo(600, 600);
+ctx.lineTo(500, 700);
+ctx.lineTo(500, window.innerHeight);
+ctx.stroke();
+
+
+ctx.beginPath()
+ctx.moveTo(500, 700);
+ctx.lineTo(800, 700);
+ctx.stroke();
 
 // }
 
