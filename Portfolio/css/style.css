@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5vh;
+}
+
+.navigation a {
+
+  width: 7em;
+  height: 5em;
+  color: blue;
+  text-decoration: none;
+  background-color: #062C38;
+  margin: 5vh;
+  transform: rotate(-30deg) skewX(25deg) translate(0, 0);
+  transform: 0.5s;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.navigation a:hover {
+  transform: rotate(-30deg) skewX(25deg) translateY(-5vh);
+}
+
+.navigation a::before {
+  border: 0.1vh solid #062C38;
+  box-sizing: border-box;
+
+  content: "";
+  position: absolute;
+  background-color: rgba(6, 44, 56, 0.3);
+  width: 2em;
+  height: 100%;
+  transform: skewY(-45deg) translate(0, 0);
+  left: -2em;
+  top: 1em;
+  margin: 0vh;
+}
+
+.navigation a::after {
+  border: 0.1vh solid #062C38;
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  background-color: rgba(6, 44, 56, 0.3);
+  width: 100%;
+  height: 2em;
+  transform: skewX(-45deg) translate(0, 0);
+  bottom: -2em;
+  right: 1em;
+  margin: 0vh;
+
+}
+
+.navImage {
+  height: 4vh;
+  object-fit: contain;
+}
+
+
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: white;
+  align-items: center;
+  list-style: none;
+}
+
+h2 {
+  font-size: 1.5vh;
+  padding: 1vh;
+}
