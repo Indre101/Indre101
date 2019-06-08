@@ -151,11 +151,18 @@ body {
 .body_1 {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #3333;
 
 }
 
+h4 {
+  font-size: 2rem;
+}
+
 .cube_1 {
+  margin: 6vh;
+  font-size: 10px;
   align-self: center;
   width: 10em;
   height: 10em;
@@ -163,32 +170,65 @@ body {
   box-sizing: border-box;
   background-color: #fff;
   transform: rotate(-30deg) skewX(25deg);
+  transition: 0.5s ease-out;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+
 }
 
 .cube_1::before {
   content: "";
-  left: -2em;
-  top: 1em;
+  left: -2rem;
+  top: 1rem;
   position: absolute;
-  width: 2em;
+  width: 2rem;
   height: 100%;
   background-color: #fff;
-  border: 0.01em solid black;
+  border: 0.01rem solid black;
+  transition: 0.5s ease-out;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transform: skewY(-45deg) rotate(0deg) translate(0, 0);
 
-
-  transform: skewY(-45deg);
 }
 
 .cube_1::after {
-  border: 0.01em solid black;
+  border: 0.01rem solid black;
   content: "";
   width: 100%;
-  height: 2em;
+  height: 2rem;
   background-color: #fff;
   position: absolute;
-  left: -1em;
-  bottom: -2em;
-  transform: skewX(-45deg);
+  left: -1rem;
+  bottom: -2rem;
+  transform: skewX(-45deg) rotate(0deg) translate(0, 0);
+  transition: 0.5s ease-out;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+
+}
+
+.cube_1:hover {
+  transform: rotate(-30deg) skewX(25deg) translate(2vw, -2vh);
+}
 
 
+/* test 3 */
+
+.cube_3 {
+  font-size: 3vh;
+  width: 20em;
+  height: 3em;
+  background-color: thistle;
+  transform: rotate(-30deg) skewX(40deg);
+}
+
+.cube_3::before {
+
+  content: "";
+  position: absolute;
+  width: 6em;
 }
