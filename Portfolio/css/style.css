@@ -3,28 +3,31 @@
 
 body {
   margin: 0;
-  overflow: hidden;
   font-family: 'Ubuntu', sans-serif;
+
+}
+
+.displayFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3vh;
 }
 
 .navigation {
   width: 100%;
   grid-area: 1/ 1/ span 1/ span 3;
   background-color: rgba(6, 44, 56, 0.8);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   padding: 5vh;
   position: fixed;
+  margin-bottom: 1vh;
 
 }
 
@@ -36,7 +39,7 @@ body {
   /* background-color: rgba(0, 0, 0, 0.5); */
   transform: rotate(-30deg) skewX(25deg) translate(0, 0);
   transition: 0.5s;
-  display: flex;
+
   justify-content: space-around;
   box-shadow: -2em 2em rgba(6, 44, 56, 0.3);
   margin: 2vh 6vh;
@@ -91,15 +94,14 @@ body {
 
 
 .navImage {
-  height: 4vh;
+  height: 3vh;
   object-fit: contain;
 }
 
 
 
 li {
-  display: flex;
-  flex-direction: row;
+
   justify-content: space-around;
   align-items: center;
   list-style: none;
@@ -114,31 +116,63 @@ h2 {
 
 /* information on front page */
 .introContainer {
-  margin-top: 15%;
+  margin-top: 18%;
   grid-area: 2/1/ span 1/span 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   /* background-color: rgba(235, 199, 14, 0.5); */
-  background-color: #EBC70E;
+  /* background-color: white; */
+  /* background: repeating-linear-gradient(-55deg,
+      white,
+      #222 1%,
+      #222 4%,
+      white 4%); */
+
   font-size: 2vh;
   line-height: 4vh;
   text-align: justify;
-  padding: 3vh;
   grid-gap: 3%;
+  margin-bottom: 3%;
+  /* padding-bottom: 10vh; */
   grid-auto-rows: minmax(60vh, auto);
-  box-shadow: inset 0vh 1vh 1vh black;
 }
 
 
 
+
+.animationAbout {
+  background-color: white;
+  padding: 0 8%;
+  justify-self: center;
+  opacity: 0;
+  animation: movefromLeft 0.5s linear forwards 1;
+}
+
+@keyframes movefromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    /* background-color: rgba(235, 199, 14, 0.5); */
+
+  }
+}
+
+
 .Aboutme1 {
   grid-area: 1/1/span 1/span 1;
+  height: 50%;
 
 
 }
 
 .Aboutme2 {
   align-self: center;
+  animation-delay: 0.5s;
+
 
 }
 
@@ -149,11 +183,13 @@ h2 {
   align-items: flex-end;
   flex-direction: column;
   justify-content: flex-end;
+  animation-delay: 1s;
 
 }
 
 
 .canvas {
+
   border: 1px solid black;
   width: 100%;
   height: 30%;
@@ -162,23 +198,33 @@ h2 {
 }
 
 
-.Aboutme3::after {
+/* .Aboutme3::after {
   content: "-George Carlin";
   margin-top: 3vh;
   font-style: italic;
   display: inline;
   position: absolute;
-}
+} */
 
 
 h1 {
-  font-size: 6vh;
+  font-size: 5vh;
   margin-bottom: 3vh;
+  color: black;
 }
+
+.hiThere::before {
+  content: "";
+  width: 100%;
+  height: 10%;
+  position: absolute;
+}
+
 
 footer {
   grid-area: 3/1/span 1/ span 3;
   background-color: rgba(6, 44, 56, 0.1);
   width: 100%;
   text-align: center;
+  font-size: 1.5vh;
 }
