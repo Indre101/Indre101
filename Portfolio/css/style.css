@@ -2,68 +2,91 @@
 
 
 body {
-  width: 100%;
-  height: 100vh;
+  margin: 0;
+
   font-family: 'Ubuntu', sans-serif;
 
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3vh;
+}
+
 .navigation {
+  grid-area: 1/ 1/ span 1/ span 3;
+  background-color: rgba(6, 44, 56, 0.1);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 5vh;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5vh;
+
 }
 
 .navigation a {
-
   width: 7em;
   height: 5em;
-  color: blue;
+  color: black;
   text-decoration: none;
-  background-color: #062C38;
-  margin: 5vh;
+  background-color: rgba(6, 44, 56, 0.1);
   transform: rotate(-30deg) skewX(25deg) translate(0, 0);
-  transform: 0.5s;
+  transition: 0.5s;
   display: flex;
   justify-content: space-around;
+  box-shadow: -2em 2em rgba(6, 44, 56, 0.3);
+  margin: 2vh 10vh;
+
 }
 
 
-.navigation a:hover {
-  transform: rotate(-30deg) skewX(25deg) translateY(-5vh);
+.navigation a:hover,
+.navigation:hover::before,
+.navigation:hover::after {
+  transform: rotate(-30deg) skewX(25deg) translate(-1vw, -3vh);
+  box-shadow: -2em 2em #062C38;
+  background-color: #062C38;
+
+
 }
 
-.navigation a::before {
+
+
+.navigation a::before,
+.navigation a::after {
+  transition: 0.5s;
   border: 0.1vh solid #062C38;
   box-sizing: border-box;
-
   content: "";
   position: absolute;
   background-color: rgba(6, 44, 56, 0.3);
+}
+
+
+
+.navigation a::before {
   width: 2em;
   height: 100%;
   transform: skewY(-45deg) translate(0, 0);
   left: -2em;
   top: 1em;
-  margin: 0vh;
 }
 
 .navigation a::after {
-  border: 0.1vh solid #062C38;
-  box-sizing: border-box;
-  content: "";
-  position: absolute;
-  background-color: rgba(6, 44, 56, 0.3);
+
   width: 100%;
   height: 2em;
   transform: skewX(-45deg) translate(0, 0);
   bottom: -2em;
   right: 1em;
-  margin: 0vh;
 
 }
+
+
+
+
 
 .navImage {
   height: 4vh;
@@ -75,8 +98,7 @@ body {
 li {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  color: white;
+  justify-content: space-around;
   align-items: center;
   list-style: none;
 }
@@ -84,4 +106,45 @@ li {
 h2 {
   font-size: 1.5vh;
   padding: 1vh;
+  color: white;
+
+}
+
+/* information on front page */
+.introContainer {
+  grid-area: 2/1/ span 1/span 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* background-color: rgba(6, 44, 56, 0.1); */
+  font-size: 2vh;
+  line-height: 4vh;
+  text-align: justify;
+  background-color: white;
+  padding: 3vh;
+  grid-gap: 3%;
+  grid-auto-rows: minmax(500px, auto);
+}
+
+.intro {
+  grid-area: 2/2/ span 1/ span 1;
+  font-size: 2vh;
+  line-height: 4vh;
+  text-align: justify;
+  background-color: white;
+  padding: 3vh;
+  /* box-shadow: inset 1vh 1vh 1vh black; */
+  /* -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000; */
+
+}
+
+.Aboutme1 {
+  grid-area: 1/1/span 1/span 1;
+}
+
+
+h1 {
+  font-size: 6vh;
+  margin-bottom: 3vh;
 }
