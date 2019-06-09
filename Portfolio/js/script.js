@@ -5,9 +5,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = canvas.scrollWidth;
 canvas.height = canvas.scrollHeight;
 
-let bicycle = new Image(1, 2);
-bicycle.src = "../Images_and_icons/1x/Asset 5.png";
-// bicycle.classList.add("navImage");
+
 
 
 
