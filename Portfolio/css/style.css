@@ -12,7 +12,8 @@ body {
 }
 
 .container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -186,10 +187,11 @@ h1 {
   position: absolute;
 }
 
-footer {
-  grid-area: 3/1 / span 1 / span 3;
+.filler {
   background-color: rgba(6, 44, 56, 0.1);
+  background-size: cover;
   width: 100%;
+  height: 5vh;
   text-align: center;
   font-size: 1.5vh;
 }
@@ -197,7 +199,7 @@ footer {
 /* portfolio */
 
 .aboutMeContainer {
-  grid-area: 4/1 / span 3 / span 3;
+  grid-area: 3/1 / span 3 / span 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4vh;
@@ -213,7 +215,7 @@ footer {
 
 .textAboutme {
   width: 90%;
-  text-al
+  text-align: justify;
 }
 
 p {
