@@ -198,24 +198,26 @@ footer {
 
 .aboutMeContainer {
   grid-area: 4/1 / span 3 / span 3;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4vh;
 }
 
 .portfolio {
-  width: 10%;
-  height: 10%;
+  width: 60%;
+  height: 60%;
   object-fit: contain;
-  grid-area: ;
+  align-self: center;
+  justify-self: flex-end;
 }
 
 .textAboutme {
-  display: flex;
-  justify-items: center;
-  width: 50%;
+  width: 90%;
+  text-al
 }
 
 p {
   font-size: 2vh;
   line-height: 4vh;
-  text-align: justify;
+  /* text-align: justify; */
 }
