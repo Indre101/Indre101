@@ -48,12 +48,14 @@ saulBassIMG.forEach((e) => {
     imageDisplay.innerHTML = "";
     var cln = this.cloneNode(true);
     cln.style.transform = "translate(0,0)"
-    cln.style.height = "90%";
+    cln.style.height = "50vh";
+    cln.style.width = "50vw";
+
     cln.style.objectFit = "contain";
-    cln.style.boxShadow = " 2vh 2vh 2vh black";
+    // cln.style.boxShadow = " 2vh 2vh 2vh black";
     imageDisplay.appendChild(cln);
 
-    // imageDisplay.classList.add("displayImagesSaulBass");
+    imageDisplay.classList.add("displayImagesSaulBass");
 
   }
 

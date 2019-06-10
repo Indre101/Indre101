@@ -280,18 +280,20 @@ p {
 
 .saulBassContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   grid-gap: 3vh;
-  display: grid;
-  grid-template-columns: 2fr 3fr;
+  align-items: center;
+  /* display: grid;
+  grid-template-columns: 2fr 3fr; */
   /* height: 100%; */
 }
 
 .styleTileBass {
-  position: absolute;
-  width: 30%;
-  height: 60vh;
+  /* position: absolute; */
+  display: flex;
+  height: 10vh;
+  width: 50vw;
   margin-top: 5%;
   overflow: hidden;
   grid-area: 1/1 / span 1 / span 1;
@@ -299,12 +301,11 @@ p {
 }
 
 .saulBassIMG {
-  margin: 0 auto;
+  width: 10vw;
   display: flex;
-  height: 50%;
   padding: 0.5vh;
   transition: 0.5s;
-  /* object-fit: cover; */
+  object-fit: contain;
   /* box-shadow: 1vh 1vh 1vh grey; */
 }
 
@@ -314,7 +315,8 @@ p {
 
 .circle {
   box-shadow: inset 0vh -1vh 1vh grey;
-  position: absolute;
+  display: inline
+  /* position: absolute; */
   grid-area: 1/1 / span 1 / span 1;
   background-image: url("../Images_and_icons/25223.svg");
   background-size: contain;
@@ -341,6 +343,7 @@ p {
 }
 
 h3 {
+  margin-top: 6%;
   font-size: 3vh;
   text-align: center;
   transition: 0.5s;
@@ -351,11 +354,14 @@ h3:hover {
 }
 
 .displayImagesSaulBassContainer {
-  margin-top: 9%;
-  margin-left: -10%;
+  align-self: center;
+  justify-self: center;
+  align-self: center;
+
   display: flex;
   /* height: -webkit-fill-available; */
   height: 60vh;
+  width: 50vw;
   justify-content: center;
   align-items: center;
   grid-area: 1/2 / span 1 / span 1;
@@ -363,6 +369,7 @@ h3:hover {
 }
 
 .displayImagesSaulBassContainer h2 {
+
   font-size: 2.5vh;
   /* background-color: black; */
   color: white;
@@ -373,7 +380,7 @@ h3:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
   width: 50%;
   height: 60vh;
   background-color: white;
