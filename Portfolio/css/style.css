@@ -34,13 +34,14 @@ ul {
   padding-bottom: 4%;
 
   grid-area: 1/ 1 / span 1 / span 3;
-  background: repeating-linear-gradient(
+  background-color:  #062c38;
+  /* background: repeating-linear-gradient(
     -55deg,
     #062c38,
     black 1%,
     #062c38 4%,
     #062c38 4%
-  );
+  ); */
   justify-content: flex-start;
   align-items: center;
   position: fixed;
@@ -53,15 +54,15 @@ ul {
   width: 7em;
   height: 5em;
   text-decoration: none;
-  background: repeating-linear-gradient(
+  /* background: repeating-linear-gradient(
     55deg,
     #062c38,
     black 1%,
     #062c38 4%,
     #062c38 4%
-  );
+  ); */
 
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0);
   transform: rotate(-30deg) skewX(25deg) translate(0, 0);
   transition: 0.5s;
 
@@ -220,18 +221,33 @@ h1 {
 }
 
 .filler {
-  background: repeating-linear-gradient(
+  background-color:  #062c38;
+
+  /* background: repeating-linear-gradient(
     -55deg,
     #062c38,
     black 1%,
     #062c38 4%,
     #062c38 4%
-  );
+  ); */
   width: 100%;
   font-size: 1.5vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+
+.everySecond{
+ 
+  
+    background: repeating-linear-gradient(
+      -55deg,
+      #062c38,
+      black 1%,
+      #062c38 4%,
+      #062c38 4%
+    );
 }
 
 .filler h1 {
@@ -379,9 +395,10 @@ h3:hover {
   content: "";
   display: flex;
   justify-content: center;
-  align-items: center;
+
   /* position: absolute; */
-  width: 50%;
+  width: 20vw;
+  align-self: flex-start;
   height: 60vh;
   background-color: white;
   opacity: 0.5;

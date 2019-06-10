@@ -45,11 +45,15 @@ saulBassIMG.forEach((e) => {
 
   e.onclick = function () {
 
+    this.style.opacity = "0.5";
     imageDisplay.innerHTML = "";
     var cln = this.cloneNode(true);
+
     cln.style.transform = "translate(0,0)"
     cln.style.height = "50vh";
     cln.style.width = "50vw";
+    cln.style.opacity = "1";
+
 
     cln.style.objectFit = "contain";
     // cln.style.boxShadow = " 2vh 2vh 2vh black";
