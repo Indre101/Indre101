@@ -41,7 +41,6 @@ const imageDisplay = document.getElementById("displayImagesSaulBassContainer")
 let i = -1;
 let a = 0;
 
-
 saulBassIMG.forEach((e) => {
 
   e.onclick = function () {
@@ -51,17 +50,13 @@ saulBassIMG.forEach((e) => {
     cln.style.transform = "translate(0,0)"
     cln.style.height = "90%";
     cln.style.objectFit = "contain";
-
-
+    cln.style.boxShadow = " 2vh 2vh 2vh black";
     imageDisplay.appendChild(cln);
 
-
-
-    console.log("hljkæ")
-  }
-  e.onmouseout = function () {
+    // imageDisplay.classList.add("displayImagesSaulBass");
 
   }
+
 
 })
 

@@ -358,7 +358,47 @@ h3:hover {
   height: 60vh;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
   grid-area: 1/2 / span 1 / span 1;
-  background-color: rgba(71, 5, 6);
+  background-color: rgba(71, 5, 6, 0.5);
+}
+
+.displayImagesSaulBassContainer h2 {
+  font-size: 2.5vh;
+  /* background-color: black; */
+  color: white;
+}
+
+.displayImagesSaulBassContainer::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 50%;
+  height: 60vh;
+  background-color: white;
+  opacity: 0.5;
+  /* transition: 0.5s ease-in; */
+
+  background: repeating-linear-gradient(
+    -55deg,
+    rgba(71, 5, 6, 0.5),
+    black 1%,
+    rgba(71, 5, 6, 0.5) 4%,
+    rgba(71, 5, 6, 0.5) 4%
+  );
+}
+
+.displayImagesSaulBassContainer:hover::before {
+  background: repeating-linear-gradient(
+    55deg,
+    rgba(71, 5, 6, 0.5),
+    black 1%,
+    rgba(71, 5, 6, 0.5) 4%,
+    rgba(71, 5, 6, 0.5) 4%
+  );
+}
+
+.displayImagesSaulBass::before {
+  display: none;
 }
