@@ -236,3 +236,13 @@ p {
   line-height: 4vh;
   /* text-align: justify; */
 }
+
+/* portfolio  */
+
+/* saul bass */
+
+.saulBassIMG {
+  width: 20%;
+  height: 20%;
+  object-fit: contain;
+}

@@ -28,4 +28,4 @@ drawStarts()
 setInterval(() => {
   ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
   drawStarts()
-}, 4000);
+}, 3000);
