@@ -29,3 +29,48 @@ setInterval(() => {
   ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
   drawStarts()
 }, 3000);
+
+// soul Bass
+
+const arrow = document.getElementById("arrow");
+const styleTileBass = document.getElementById("styleTileBass");
+const saulBassIMG = document.querySelectorAll(".saulBassIMG")
+
+let i = -1;
+let a = 0;
+
+arrow.onclick = increase;
+
+function increase() {
+
+  a = a + 100
+  console.log(a);
+  saulBassIMG.forEach((e) => {
+
+    moveUp(e, a)
+
+    if (a === 600) {
+      a = 0;
+      e.style.transform = `translateY(-${a}%) `;
+
+    }
+
+
+  })
+
+}
+
+
+
+
+
+function moveUp(b, c) {
+
+  b.style.transition = "0.5s";
+  b.style.transform = `translateY(-${c}%) `;
+
+
+
+
+
+}
