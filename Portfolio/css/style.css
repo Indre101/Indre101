@@ -301,9 +301,9 @@ p {
 }
 
 .saulBassIMG {
-  width: 10vw;
+  width: 7vw;
   display: flex;
-  padding: 0.5vh;
+  padding: 0.3vh;
   transition: 0.5s;
   object-fit: contain;
   /* box-shadow: 1vh 1vh 1vh grey; */
