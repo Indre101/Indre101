@@ -32,6 +32,7 @@ setInterval(() => {
 
 // soul Bass
 
+// slder effect
 const arrow = document.getElementById("arrow");
 const styleTileBass = document.getElementById("styleTileBass");
 const saulBassIMG = document.querySelectorAll(".saulBassIMG")
@@ -44,7 +45,8 @@ arrow.onclick = increase;
 function increase() {
 
   a = a + 100
-  console.log(a);
+
+
   saulBassIMG.forEach((e) => {
 
     moveUp(e, a)
@@ -60,17 +62,38 @@ function increase() {
 
 }
 
-
-
-
-
 function moveUp(b, c) {
 
   b.style.transition = "0.5s";
   b.style.transform = `translateY(-${c}%) `;
 
+}
+
+// slider 
+
+// arrow button behaviour
+
+arrow.onmousedown = function () {
+
+  buttonDown(arrow)
+
+}
+
+arrow.onmouseup = function () {
+  buttonUp(arrow)
+}
+
+// function to move a button down
 
 
+function buttonDown(btn) {
 
+  btn.classList.add("moveUp")
+
+}
+
+function buttonUp(btn) {
+
+  btn.classList.remove("moveUp")
 
 }
