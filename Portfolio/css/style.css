@@ -1,13 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
 body {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
+
   font-family: "Ubuntu", sans-serif;
 }
 
 ul {
-  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
 }
 
 .displayFlex {
@@ -24,13 +31,19 @@ ul {
 
 .navigation {
   width: 100%;
+  padding-bottom: 4%;
+
   grid-area: 1/ 1 / span 1 / span 3;
-  background-color: rgba(6, 44, 56);
+  background: repeating-linear-gradient(
+    -55deg,
+    #062c38,
+    black 1%,
+    #062c38 4%,
+    #062c38 4%
+  );
   justify-content: flex-start;
   align-items: center;
   position: fixed;
-  padding-bottom: 0.5%;
-  margin-bottom: 1vh;
   z-index: 1000;
 }
 
@@ -40,7 +53,13 @@ ul {
   width: 7em;
   height: 5em;
   text-decoration: none;
-  background-color: black;
+  background: repeating-linear-gradient(
+    55deg,
+    #062c38,
+    black 1%,
+    #062c38 4%,
+    #062c38 4%
+  );
 
   /* background-color: rgba(0, 0, 0, 0.5); */
   transform: rotate(-30deg) skewX(25deg) translate(0, 0);
@@ -48,16 +67,23 @@ ul {
 
   justify-content: space-around;
   box-shadow: -2em 2em white;
-  margin: 6vh;
+  margin: 4% 6%;
 }
 
 .navigation a:hover,
 .navigation:hover::before,
 .navigation:hover::after {
-  transform: rotate(-30deg) skewX(25deg) translate(-0.5vw, 2vh);
-  box-shadow: -2em 2em rgb(22, 0, 0);
-  background-color: white;
-  color: black;
+  transform: rotate(-30deg) skewX(25deg) translate(-0.8vw, -1vh);
+  box-shadow: -2em 2em transparent;
+
+  background: repeating-linear-gradient(
+    55deg,
+    #dbc009,
+    #250b52 3%,
+    #dbc009 9%,
+    #062c38 9%
+  );
+  /* background-color: white; */
 }
 
 .navigation a::before,
@@ -158,7 +184,6 @@ h2 {
 .Aboutme3 {
   display: flex;
   grid-area: 1/ 3 / span 1 / span 1;
-  height: 100%;
   align-items: flex-end;
   flex-direction: column;
   justify-content: flex-end;
@@ -195,23 +220,28 @@ h1 {
 }
 
 .filler {
-  background-color: rgba(6, 44, 56);
+  background: repeating-linear-gradient(
+    -55deg,
+    #062c38,
+    black 1%,
+    #062c38 4%,
+    #062c38 4%
+  );
   width: 100%;
-  height: 8vh;
   font-size: 1.5vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 2%;
-  z-index: -2;
 }
 
 .filler h1 {
   color: white;
+  padding-left: 3vh;
 }
 /* portfolio */
 
 .aboutMeContainer {
+  margin: 3% 0;
   grid-area: 3/1 / span 3 / span 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -245,21 +275,24 @@ p {
 
 /* saul bass */
 .portfolioContainer {
-  margin-top: 5%;
+  margin: 5% 2%;
 }
+
 .saulBassContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   grid-gap: 3vh;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  height: 100%;
+  grid-template-columns: 2fr 3fr;
+  /* height: 100%; */
 }
 
 .styleTileBass {
-  margin-top: 15%;
-  width: 100%;
-  height: 10%;
-  /* display: flex; */
-  /* flex-direction: row; */
+  position: absolute;
+  width: 30%;
+  height: 60vh;
+  margin-top: 5%;
   overflow: hidden;
   grid-area: 1/1 / span 1 / span 1;
   box-shadow: inset 1vh 1vh 1vh 1vh grey;
@@ -270,31 +303,27 @@ p {
   display: flex;
   height: 50%;
   padding: 0.5vh;
+  transition: 0.5s;
   /* object-fit: cover; */
   /* box-shadow: 1vh 1vh 1vh grey; */
 }
 
-.saulBassIMG:hover {
-  opacity: 0.5;
-}
-
-.saulBassIMG:hover::after {
-  display: block;
-}
+/* .saulBassIMG:hover {
+  height: 70%;
+} */
 
 .circle {
   box-shadow: inset 0vh -1vh 1vh grey;
-
-  margin: 0 auto;
+  position: absolute;
   grid-area: 1/1 / span 1 / span 1;
   background-image: url("../Images_and_icons/25223.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 10%;
-  height: 1%;
-  display: block;
-  position: relative;
-  top: 0%;
+  background-position: center;
+  width: 5%;
+  height: 5%;
+  left: 15%;
+  /* transform: translate(-50%, 0); */
 }
 
 .moveUp {
@@ -309,19 +338,27 @@ p {
 
 .projectName {
   color: black;
-
-  background: repeating-linear-gradient(
-    -55deg,
-    white,
-    #222 1%,
-    #222 4%,
-    white 4%
-  );
 }
 
 h3 {
-  padding: 1% 0;
-  height: 100%;
   font-size: 3vh;
   text-align: center;
+  transition: 0.5s;
+}
+
+h3:hover {
+  transform: skew(-30deg);
+}
+
+.displayImagesSaulBassContainer {
+  margin-top: 9%;
+  margin-left: -10%;
+  display: flex;
+  /* height: -webkit-fill-available; */
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  grid-area: 1/2 / span 1 / span 1;
+  background-color: rgba(71, 5, 6);
 }

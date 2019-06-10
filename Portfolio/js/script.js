@@ -36,9 +36,36 @@ setInterval(() => {
 const arrow = document.getElementById("arrow");
 const styleTileBass = document.getElementById("styleTileBass");
 const saulBassIMG = document.querySelectorAll(".saulBassIMG")
+const imageDisplay = document.getElementById("displayImagesSaulBassContainer")
 
 let i = -1;
 let a = 0;
+
+
+saulBassIMG.forEach((e) => {
+
+  e.onclick = function () {
+
+    imageDisplay.innerHTML = "";
+    var cln = this.cloneNode(true);
+    cln.style.transform = "translate(0,0)"
+    cln.style.height = "90%";
+    cln.style.objectFit = "contain";
+
+
+    imageDisplay.appendChild(cln);
+
+
+
+    console.log("hljkæ")
+  }
+  e.onmouseout = function () {
+
+  }
+
+})
+
+
 
 arrow.onclick = increase;
 
@@ -51,12 +78,11 @@ function increase() {
 
     moveUp(e, a)
 
-    if (a === 600) {
+    if (a === 500) {
       a = 0;
       e.style.transform = `translateY(-${a}%) `;
 
     }
-
 
   })
 
