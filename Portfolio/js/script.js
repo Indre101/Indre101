@@ -61,13 +61,119 @@ const imageDisplay = document.getElementById("displayImagesSaulBassContainer")
 let i = -1;
 let a = 0;
 
+// function to generate images to display in displayImagesSaulBassContainer
+
+
 saulBassIMG.forEach((e) => {
 
-  e.onclick = function () {
+  showImages(e)
 
-    this.style.opacity = "0.5";
+
+
+})
+// function to generate images to display in displayImagesSaulBassContainer
+
+const textConatainer = document.getElementById("textConatainer");
+const project1 = document.getElementById("textProject1");
+const project2 = document.getElementById("textProject2");
+
+
+
+let imageAraySoulBass = ["../Images_and_icons/portfolio_images/soul_bass/style_tile.png", "../Images_and_icons/portfolio_images/soul_bass/moodboard.png", "../Images_and_icons/portfolio_images/soul_bass/home_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/ipad_soul_bass.png", "../Images_and_icons/portfolio_images/soul_bass/mobile_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/soul_bass-burger.png"]
+let spongebobImageArray = ["../Images_and_icons/spongebob/sponge1.png", "../Images_and_icons/spongebob/sponge2.png", "../Images_and_icons/spongebob/sponge3.png", "../Images_and_icons/spongebob/sponge4.png", "../Images_and_icons/spongebob/sponge5.png"]
+
+
+
+
+document.getElementById("project1").onclick = function () {
+
+  takeImages(imageAraySoulBass)
+  textConatainer.insertAdjacentElement("afterbegin", project1)
+  project1.classList.add("textAnimation");
+  project2.style.display = "none";
+
+
+
+}
+
+document.getElementById("project_1").onclick = function () {
+  takeImages(imageAraySoulBass)
+  textConatainer.insertAdjacentElement("afterbegin", project1)
+  project1.classList.add("textAnimation");
+
+  project2.style.display = "none";
+}
+
+document.getElementById("project2").onclick = function () {
+
+
+  takeImages(spongebobImageArray)
+  textConatainer.insertAdjacentElement("afterbegin", project2)
+  project2.classList.add("textAnimation");
+
+  project1.style.display = "none";
+}
+
+document.getElementById("project_2").onclick = function () {
+
+
+  takeImages(spongebobImageArray)
+  textConatainer.insertAdjacentElement("afterbegin", project2)
+  project2.classList.add("textAnimation");
+
+
+  project1.style.display = "none";
+
+}
+
+
+
+// function to display generated images to in displayImagesSaulBassContainer
+
+function takeImages(a) {
+
+  styleTileBass.innerHTML = "";
+
+
+  for (let m = 0; m < a.length; m++) {
+    let newImage = new Image();
+    newImage.src = a[m];
+    newImage.classList.add("saulBassIMG");
+    styleTileBass.appendChild(newImage);
+
+    showImages(newImage)
+
+
+  }
+}
+
+// function to display generated images to in displayImagesSaulBassContainer
+
+
+
+// function to make images functioonal
+function showImages(anImage) {
+
+
+  anImage.onmouseover = function () {
+    anImage.style.opacity = "0.5";
+
+  }
+
+  anImage.onmouseout = function () {
+    anImage.style.opacity = "1";
+
+  }
+
+
+
+  anImage.onclick = function name() {
+
+
+    anImage.style.opacity = "0.5";
+
     imageDisplay.innerHTML = "";
-    var cln = this.cloneNode(true);
+    var cln = anImage.cloneNode(true);
 
     cln.style.transform = "translate(0,0)"
     cln.style.height = "50vh";
@@ -80,51 +186,11 @@ saulBassIMG.forEach((e) => {
 
     imageDisplay.classList.add("displayImagesSaulBass");
 
-
   }
-
-  e.onmouseout = function () {
-    this.style.opacity = "1";
-
-  }
-
-
-})
-
-
-
-
-let imageAraySoulBass = ["../Images_and_icons/portfolio_images/soul_bass/style_tile.png", "../Images_and_icons/portfolio_images/soul_bass/moodboard.png", "../Images_and_icons/portfolio_images/soul_bass/home_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/ipad_soul_bass.png", "../Images_and_icons/portfolio_images/soul_bass/mobile_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/soul_bass-burger.png"]
-let spongebobImageArray = ["../Images_and_icons/spongebob/sponge1.png", "../Images_and_icons/spongebob/sponge2.png"]
-
-
-
-document.getElementById("project1").onclick = function () {
-
-  takeImages(imageAraySoulBass)
-
 }
 
-document.getElementById("project_1").onclick = function () {
-  takeImages(imageAraySoulBass)
 
-}
-
-function takeImages(a) {
-
-  styleTileBass.innerHTML = "";
-
-
-  for (let m = 0; m < a.length; m++) {
-    let newImage = new Image();
-    newImage.src = a[m];
-    newImage.classList.add("saulBassIMG");
-    styleTileBass.appendChild(newImage);
-    console.log("imgae")
-  }
-
-}
-
+// function to make images functioonal
 
 
 

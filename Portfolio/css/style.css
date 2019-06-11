@@ -371,7 +371,7 @@ p {
 }
 
 .saulBassIMG_1{
-  width: 40vw;
+  width: 30vw;
   display: flex;
   padding: 0.3vh;
   transition: 0.5s;
@@ -556,3 +556,16 @@ justify-content: flex-end;
   margin-right: 3vh;
 }
 /* portfolio menu */
+
+
+.textAnimation{
+  animation: textAnimation 1s 0.2s linear forwards;
+}
+
+@keyframes textAnimation{
+  0%{
+    transform: translateY(-100%);
+
+  }
+  
+}
