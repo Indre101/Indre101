@@ -68,7 +68,7 @@ ul {
 
   justify-content: space-around;
   box-shadow: -2em 2em white;
-  margin: 4% 6%;
+  margin: 4% 5%;
 }
 
 .navigation a:hover,
@@ -210,7 +210,7 @@ h2 {
 } */
 
 h1 {
-  margin-left: 10%;
+  margin-left: 5%;
   font-size: 5vh;
   /* margin: 3% 1%;
   -moz-box-sizing: border-box; 
@@ -219,12 +219,10 @@ h1 {
   color: black;
 }
 
-/* .hiThere::before {
-  content: "";
-  width: 100%;
-  height: 10%;
-  position: absolute;
-} */
+.hiThere {
+margin-left: 0;
+
+}
 
 .filler {
   /* background-color:  #062c38; */
@@ -473,4 +471,18 @@ a{
 .linkImg{
   width: 4%;
   object-fit: contain;
+}
+
+footer{
+  font-size: 1.5vh;
+  color: white;
+  padding: 1%;
+  padding-left: 5%;
+  background: repeating-linear-gradient(
+    -55deg,
+    #062c38,
+    black 1%,
+    #062c38 4%,
+    #062c38 4%
+  );
 }
