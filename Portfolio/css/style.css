@@ -498,14 +498,6 @@ ol li{
 }
 
 
-ol li:nth-child(even):hover{
-font-size: 2.5vh;
-}
-
-ol li:nth-child(odd):hover{
-  font-size: 2.5vh;
-  }
-
 ol li:nth-child(odd) {
   background-color: rgba(71, 5, 6, 0.1) ;
 }
@@ -576,5 +568,4 @@ justify-content: flex-end;
 }
 
 .displayNone{
-  display: none;
 }
