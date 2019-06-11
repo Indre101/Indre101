@@ -10,7 +10,7 @@ window.onload = function () {
   })
 }
 
-
+// drawing starts
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -45,10 +45,15 @@ setInterval(() => {
   drawStarts()
 }, 3000);
 
+// drawing starts
+
+
+
+
 // soul Bass
 
 // slder effect
-const arrow = document.getElementById("arrow");
+// const arrow = document.getElementById("arrow");
 const styleTileBass = document.getElementById("styleTileBass");
 const saulBassIMG = document.querySelectorAll(".saulBassIMG")
 const imageDisplay = document.getElementById("displayImagesSaulBassContainer")
@@ -75,6 +80,7 @@ saulBassIMG.forEach((e) => {
 
     imageDisplay.classList.add("displayImagesSaulBass");
 
+
   }
 
   e.onmouseout = function () {
@@ -86,6 +92,38 @@ saulBassIMG.forEach((e) => {
 })
 
 
+
+
+let imageAraySoulBass = ["../Images_and_icons/portfolio_images/soul_bass/style_tile.png", "../Images_and_icons/portfolio_images/soul_bass/moodboard.png", "../Images_and_icons/portfolio_images/soul_bass/home_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/ipad_soul_bass.png", "../Images_and_icons/portfolio_images/soul_bass/mobile_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/soul_bass-burger.png"]
+let spongebobImageArray = ["../Images_and_icons/spongebob/sponge1.png", "../Images_and_icons/spongebob/sponge2.png"]
+
+
+
+document.getElementById("project1").onclick = function () {
+
+  takeImages(imageAraySoulBass)
+
+}
+
+document.getElementById("project_1").onclick = function () {
+  takeImages(imageAraySoulBass)
+
+}
+
+function takeImages(a) {
+
+  styleTileBass.innerHTML = "";
+
+
+  for (let m = 0; m < a.length; m++) {
+    let newImage = new Image();
+    newImage.src = a[m];
+    newImage.classList.add("saulBassIMG");
+    styleTileBass.appendChild(newImage);
+    console.log("imgae")
+  }
+
+}
 
 
 

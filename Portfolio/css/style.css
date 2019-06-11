@@ -370,6 +370,14 @@ p {
   /* box-shadow: 1vh 1vh 1vh grey; */
 }
 
+.saulBassIMG_1{
+  width: 40vw;
+  display: flex;
+  padding: 0.3vh;
+  transition: 0.5s;
+  object-fit: contain;
+}
+
 /* .saulBassIMG:hover {
   height: 70%;
 } */
@@ -426,28 +434,26 @@ h3:hover {
   justify-content: center;
   align-items: center;
   grid-area: 1/2 / span 1 / span 1;
-  background-color: rgba(71, 5, 6, 0.5);
+  /* background-color: rgba(71, 5, 6, 0.5); */
+  box-shadow: 1vh 1vh 1vh 1vh grey;
 }
 
 .displayImagesSaulBassContainer h2 {
 
   font-size: 2.5vh;
-  /* background-color: black; */
-  color: white;
+  color: black;
 }
 
-.displayImagesSaulBassContainer::before {
+/* .displayImagesSaulBassContainer::before {
   content: "";
   display: flex;
   justify-content: center;
 
-  /* position: absolute; */
   width: 20vw;
   align-self: flex-start;
   height: 60vh;
   background-color: white;
   opacity: 0.5;
-  /* transition: 0.5s ease-in; */
 
   background: repeating-linear-gradient(
     -55deg,
@@ -456,7 +462,7 @@ h3:hover {
     rgba(71, 5, 6) 4%,
     rgba(71, 5, 6) 4%
   );
-}
+} */
 
 .displayImagesSaulBassContainer:hover::before {
   background: repeating-linear-gradient(
