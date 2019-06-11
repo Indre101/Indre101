@@ -6,6 +6,12 @@ canvas.width = canvas.scrollWidth;
 canvas.height = canvas.scrollHeight;
 
 
+window.onload = function () {
+  menuItem.forEach((e) => {
+    e.style.display = "none";
+
+  })
+}
 
 
 
@@ -71,6 +77,39 @@ saulBassIMG.forEach((e) => {
 })
 
 
+
+
+const menuItem3 = document.getElementById("menuItemPortfolio");
+const menuItem = document.querySelectorAll(".projectItem");
+
+menuItem3.onmouseover = function () {
+
+  menuItem3.style.transition = "0.1s";
+  menuItem3.style.transform = "rotate(0deg) skewX(0deg) translate(0,0)";
+  menuItem3.style.transformOrigin = "left";
+  menuItem3.style.perspective = "10000px";
+
+  menuItem.forEach((e) => {
+    e.style.display = "block";
+    e.classList.add("projectItem1")
+
+  })
+
+
+
+}
+
+
+
+menuItemPortfolio.onmouseout = function () {
+  menuItem3.style.transform = "rotate(-30deg) skewX(25deg) translate(0, 0)";
+
+  menuItem.forEach((e) => {
+    e.style.display = "none";
+
+  })
+
+}
 
 // arrow.onclick = increase;
 

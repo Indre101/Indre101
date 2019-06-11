@@ -50,7 +50,7 @@ ul {
 
 .navigation a {
   color: white;
-
+  transform-origin: left;
   width: 7em;
   height: 5em;
   text-decoration: none;
@@ -64,7 +64,7 @@ ul {
 
   background-color: rgba(0, 0, 0);
   transform: rotate(-30deg) skewX(25deg) translate(0, 0);
-  transition: 0.5s;
+  transition: 1s;
 
   justify-content: space-around;
   box-shadow: -2em 2em white;
@@ -76,17 +76,57 @@ ul {
 .navigation:hover::after {
   transform: rotate(-30deg) skewX(25deg) translate(-0.8vw, -1vh);
   box-shadow: -2em 2em transparent;
+  background: white;
+  color: black;
 
-  background: repeating-linear-gradient(
+
+  /* background: repeating-linear-gradient(
  55deg,
     #470506,
     #222 3%,
     #470506 9%,
    #470506 9%
-  );
+  ); */
   
   /* background-color: white; */
 }
+
+
+
+
+.navLi{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectItem1{
+  /* animation: appearItem 1s  0.1s linear forwards 1; */
+}
+
+
+.projectItem{
+  width: 100%;
+  padding: 1vh 0;
+  background-color: black;
+  transition: 2s;
+  z-index: 2000;
+  color: white;
+  text-align: center;
+  transition-delay: 0.5s;
+
+}
+
+@keyframes appearItem{
+  100%{
+    position: relative;
+
+  }
+ 
+
+}
+
 
 .navigation a::before,
 .navigation a::after {
@@ -486,3 +526,4 @@ footer{
     #062c38 4%
   );
 }
+
