@@ -1,10 +1,7 @@
 // canvas 
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
 
-canvas.width = canvas.scrollWidth;
-canvas.height = canvas.scrollHeight;
-
+const menuItem3 = document.getElementById("menuItemPortfolio");
+const menuItem = document.querySelectorAll(".projectItem");
 
 window.onload = function () {
   menuItem.forEach((e) => {
@@ -12,6 +9,16 @@ window.onload = function () {
 
   })
 }
+
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = canvas.scrollWidth;
+canvas.height = canvas.scrollHeight;
+
+
+
 
 
 
@@ -30,6 +37,8 @@ function drawStarts() {
   }
 }
 drawStarts()
+
+
 
 setInterval(() => {
   ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
@@ -79,8 +88,7 @@ saulBassIMG.forEach((e) => {
 
 
 
-const menuItem3 = document.getElementById("menuItemPortfolio");
-const menuItem = document.querySelectorAll(".projectItem");
+
 
 menuItem3.onmouseover = function () {
 
@@ -89,7 +97,6 @@ menuItem3.onmouseover = function () {
   menuItem3.style.transform = "rotate(0deg) skewX(0deg) translate(0,0)";
   menuItem3.style.transformOrigin = "left";
   menuItem3.style.perspective = "10000px";
-
 
   menuItem.forEach((e) => {
     e.style.transition = "3s";

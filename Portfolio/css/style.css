@@ -117,18 +117,17 @@ ul {
   padding: 1.5vh 0;
   background-color: black;
   text-align: center;
-  transition-delay: 0.5s;
-
 }
 
-@keyframes appearItem{
-  100%{
-    position: relative;
 
-  }
- 
 
+.projectItem:hover{
+  background-color: white;
+  color: black;
+  transform: translate(1vh, 1vh)
 }
+
+
 
 
 .navigation a::before,
@@ -530,3 +529,24 @@ footer{
   );
 }
 
+/* portfolio menu */
+
+
+.portfolioList{
+width: 100%;
+justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white; 
+  font-size: 2vh;
+  cursor: pointer;
+  margin: 0;
+
+
+}
+
+.portfolioList li{
+  margin-right: 3vh;
+}
+/* portfolio menu */
