@@ -78,12 +78,13 @@ ul {
   box-shadow: -2em 2em transparent;
 
   background: repeating-linear-gradient(
-    55deg,
-    #dbc009,
-    #250b52 3%,
-    #dbc009 9%,
-    #062c38 9%
+ 55deg,
+    #470506,
+    #222 3%,
+    #470506 9%,
+   #470506 9%
   );
+  
   /* background-color: white; */
 }
 
@@ -410,20 +411,20 @@ h3:hover {
 
   background: repeating-linear-gradient(
     -55deg,
-    rgba(71, 5, 6, 0.5),
+    rgba(71, 5, 6),
     black 1%,
-    rgba(71, 5, 6, 0.5) 4%,
-    rgba(71, 5, 6, 0.5) 4%
+    rgba(71, 5, 6) 4%,
+    rgba(71, 5, 6) 4%
   );
 }
 
 .displayImagesSaulBassContainer:hover::before {
   background: repeating-linear-gradient(
     55deg,
-    rgba(71, 5, 6, 0.5),
+    rgba(71, 5, 6),
     black 1%,
-    rgba(71, 5, 6, 0.5) 4%,
-    rgba(71, 5, 6, 0.5) 4%
+    rgba(71, 5, 6) 4%,
+    rgba(71, 5, 6) 4%
   );
 }
 
@@ -436,6 +437,7 @@ ol{
   /* font-size: 1.5vh; */
   line-height: 2.5vh;
   margin-top: 0;
+  margin-bottom: 4vh;
 
 }
 
@@ -444,12 +446,17 @@ h4{
    margin: 0;
 }
 
+ol li{
+  margin-left: 5%;
+}
+
+
 ol li:nth-child(even):hover{
-font-size: 3vh;
+font-size: 2.5vh;
 }
 
 ol li:nth-child(odd):hover{
-  font-size: 3vh;
+  font-size: 2.5vh;
   }
 
 ol li:nth-child(odd) {
@@ -457,3 +464,13 @@ ol li:nth-child(odd) {
 }
 
 
+a{
+  color: black;
+  text-decoration: none;
+
+}
+
+.linkImg{
+  width: 4%;
+  object-fit: contain;
+}
