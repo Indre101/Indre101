@@ -105,14 +105,17 @@ ul {
   /* animation: appearItem 1s  0.1s linear forwards 1; */
 }
 
-
-.projectItem{
+.projectItemContainer{
   width: 100%;
-  padding: 1vh 0;
-  background-color: black;
-  transition: 2s;
   z-index: 2000;
   color: white;
+
+
+}
+
+.projectItem{
+  padding: 1.5vh 0;
+  background-color: black;
   text-align: center;
   transition-delay: 0.5s;
 

@@ -84,16 +84,20 @@ const menuItem = document.querySelectorAll(".projectItem");
 
 menuItem3.onmouseover = function () {
 
-  menuItem3.style.transition = "0.1s";
+
+  menuItem3.style.transition = "1s";
   menuItem3.style.transform = "rotate(0deg) skewX(0deg) translate(0,0)";
   menuItem3.style.transformOrigin = "left";
   menuItem3.style.perspective = "10000px";
 
+
   menuItem.forEach((e) => {
+    e.style.transition = "3s";
     e.style.display = "block";
     e.classList.add("projectItem1")
 
   })
+
 
 
 
@@ -102,6 +106,7 @@ menuItem3.onmouseover = function () {
 
 
 menuItemPortfolio.onmouseout = function () {
+
   menuItem3.style.transform = "rotate(-30deg) skewX(25deg) translate(0, 0)";
 
   menuItem.forEach((e) => {
