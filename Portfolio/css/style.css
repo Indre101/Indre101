@@ -353,6 +353,7 @@ p {
 
 .styleTileBass {
   /* position: absolute; */
+  justify-content: center;
   display: flex;
   height: 10vh;
   width: 50vw;
@@ -559,6 +560,7 @@ justify-content: flex-end;
 
 
 .textAnimation{
+  opacity: 0;
   animation: textAnimation 1s 0.2s linear forwards;
 }
 
@@ -567,5 +569,12 @@ justify-content: flex-end;
     transform: translateY(-100%);
 
   }
+  100%{
+    opacity: 1;
+  }
   
+}
+
+.displayNone{
+  display: none;
 }

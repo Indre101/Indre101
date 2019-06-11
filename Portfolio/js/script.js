@@ -76,50 +76,89 @@ saulBassIMG.forEach((e) => {
 const textConatainer = document.getElementById("textConatainer");
 const project1 = document.getElementById("textProject1");
 const project2 = document.getElementById("textProject2");
-
+const projectName = document.getElementById("projectName");
 
 
 let imageAraySoulBass = ["../Images_and_icons/portfolio_images/soul_bass/style_tile.png", "../Images_and_icons/portfolio_images/soul_bass/moodboard.png", "../Images_and_icons/portfolio_images/soul_bass/home_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/ipad_soul_bass.png", "../Images_and_icons/portfolio_images/soul_bass/mobile_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/soul_bass-burger.png"]
 let spongebobImageArray = ["../Images_and_icons/spongebob/sponge1.png", "../Images_and_icons/spongebob/sponge2.png", "../Images_and_icons/spongebob/sponge3.png", "../Images_and_icons/spongebob/sponge4.png", "../Images_and_icons/spongebob/sponge5.png"]
+let biking = ["../Images_and_icons/bicycle/biking1.png", "../Images_and_icons/bicycle/bikng2.png", "../Images_and_icons/bicycle/biking3.png", "../Images_and_icons/bicycle/biking4.png"]
 
 
-
-
-document.getElementById("project1").onclick = function () {
+document.getElementById("projectBTN1").onclick = function () {
 
   takeImages(imageAraySoulBass)
   textConatainer.insertAdjacentElement("afterbegin", project1)
   project1.classList.add("textAnimation");
+  project1.style.display = "block";
+  projectName.textContent = "Saul Bass responsive website"
   project2.style.display = "none";
 
 
 
 }
 
-document.getElementById("project_1").onclick = function () {
+document.getElementById("projectBTN_1").onclick = function () {
   takeImages(imageAraySoulBass)
+  textConatainer.removeChild("div")
+
   textConatainer.insertAdjacentElement("afterbegin", project1)
   project1.classList.add("textAnimation");
+  project1.style.display = "block";
+  projectName.textContent = "Saul Bass responsive website"
 
-  project2.style.display = "none";
+  // project2.style.display = "none";
 }
 
-document.getElementById("project2").onclick = function () {
+document.getElementById("projectBTN2").onclick = function () {
 
 
   takeImages(spongebobImageArray)
   textConatainer.insertAdjacentElement("afterbegin", project2)
   project2.classList.add("textAnimation");
+  project2.style.display = "block";
+  projectName.textContent = "Simple animation"
 
   project1.style.display = "none";
 }
 
-document.getElementById("project_2").onclick = function () {
+document.getElementById("projectBTN_2").onclick = function () {
 
 
   takeImages(spongebobImageArray)
   textConatainer.insertAdjacentElement("afterbegin", project2)
+
   project2.classList.add("textAnimation");
+  project2.style.display = "block";
+  projectName.textContent = "Simple animation"
+
+
+  project1.style.display = "none";
+
+}
+// 
+
+
+document.getElementById("projectBTN3").onclick = function () {
+
+
+  takeImages(biking)
+  textConatainer.insertAdjacentElement("afterbegin", project2)
+  project2.classList.add("textAnimation");
+  project2.style.display = "block";
+  projectName.textContent = "Simple animation"
+
+  project1.style.display = "none";
+}
+
+document.getElementById("projectBTN_2").onclick = function () {
+
+
+  takeImages(biking)
+  textConatainer.insertAdjacentElement("afterbegin", project2)
+
+  project2.classList.add("textAnimation");
+  project2.style.display = "block";
+  projectName.textContent = "Simple animation"
 
 
   project1.style.display = "none";
