@@ -353,11 +353,11 @@ p {
 
 .styleTileBass {
   /* position: absolute; */
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
   height: 10vh;
   width: 50vw;
-  overflow: hidden;
+  overflow: scroll;
   grid-area: 1/1 / span 1 / span 1;
   box-shadow: inset 1vh 1vh 1vh 1vh grey;
 }
