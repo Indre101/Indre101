@@ -54,7 +54,6 @@ saulBassIMG.forEach((e) => {
     cln.style.width = "50vw";
     cln.style.opacity = "1";
 
-
     cln.style.objectFit = "contain";
     // cln.style.boxShadow = " 2vh 2vh 2vh black";
     imageDisplay.appendChild(cln);
@@ -63,64 +62,69 @@ saulBassIMG.forEach((e) => {
 
   }
 
+  e.onmouseout = function () {
+    this.style.opacity = "1";
+
+  }
+
 
 })
 
 
 
-arrow.onclick = increase;
+// arrow.onclick = increase;
 
-function increase() {
+// function increase() {
 
-  a = a + 100
-
-
-  saulBassIMG.forEach((e) => {
-
-    moveUp(e, a)
-
-    if (a === 500) {
-      a = 0;
-      e.style.transform = `translateY(-${a}%) `;
-
-    }
-
-  })
-
-}
-
-function moveUp(b, c) {
-
-  b.style.transition = "0.5s";
-  b.style.transform = `translateY(-${c}%) `;
-
-}
-
-// slider 
-
-// arrow button behaviour
-
-arrow.onmousedown = function () {
-
-  buttonDown(arrow)
-
-}
-
-arrow.onmouseup = function () {
-  buttonUp(arrow)
-}
-
-// function to move a button down
+//   a = a + 100
 
 
-function buttonDown(btn) {
+//   saulBassIMG.forEach((e) => {
 
-  btn.classList.add("moveUp")
+//     moveUp(e, a)
 
-}
+//     if (a === 500) {
+//       a = 0;
+//       e.style.transform = `translateY(-${a}%) `;
 
-function buttonUp(btn) {
+//     }
 
-  btn.classList.remove("moveUp")
+//   })
 
-}
+// }
+
+// function moveUp(b, c) {
+
+//   b.style.transition = "0.5s";
+//   b.style.transform = `translateY(-${c}%) `;
+
+// }
+
+// // slider 
+
+// // arrow button behaviour
+
+// arrow.onmousedown = function () {
+
+//   buttonDown(arrow)
+
+// }
+
+// arrow.onmouseup = function () {
+//   buttonUp(arrow)
+// }
+
+// // function to move a button down
+
+
+// function buttonDown(btn) {
+
+//   btn.classList.add("moveUp")
+
+// }
+
+// function buttonUp(btn) {
+
+//   btn.classList.remove("moveUp")
+
+// }

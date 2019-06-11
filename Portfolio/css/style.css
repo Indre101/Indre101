@@ -300,9 +300,9 @@ p {
   justify-content: space-around;
   grid-gap: 3vh;
   align-items: center;
-  /* display: grid;
-  grid-template-columns: 2fr 3fr; */
-  /* height: 100%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  /* height: 100%;*/
 }
 
 .styleTileBass {
@@ -310,7 +310,6 @@ p {
   display: flex;
   height: 10vh;
   width: 50vw;
-  margin-top: 5%;
   overflow: hidden;
   grid-area: 1/1 / span 1 / span 1;
   box-shadow: inset 1vh 1vh 1vh 1vh grey;
@@ -359,7 +358,7 @@ p {
 }
 
 h3 {
-  margin-top: 6%;
+  margin-top: 3%;
   font-size: 3vh;
   text-align: center;
   transition: 0.5s;
