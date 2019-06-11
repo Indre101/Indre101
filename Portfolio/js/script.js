@@ -8,6 +8,7 @@ window.onload = function () {
     e.style.display = "none";
 
   })
+
 }
 
 // drawing starts
@@ -76,13 +77,13 @@ saulBassIMG.forEach((e) => {
 const textConatainer = document.getElementById("textConatainer");
 const project1 = document.getElementById("textProject1");
 const project2 = document.getElementById("textProject2");
+const project3 = document.getElementById("textProject3");
 const projectName = document.getElementById("projectName");
-let textFieldsProject = document.querySelectorAll(".displayNone");
+let textFieldsProject = document.querySelectorAll(".textAboutSoulBass");
 
-let imageAraySoulBass = ["../Images_and_icons/portfolio_images/soul_bass/style_tile.png", "../Images_and_icons/portfolio_images/soul_bass/moodboard.png", "../Images_and_icons/portfolio_images/soul_bass/home_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/ipad_soul_bass.png", "../Images_and_icons/portfolio_images/soul_bass/mobile_soulbass.png", "../Images_and_icons/portfolio_images/soul_bass/soul_bass-burger.png"]
+let imageAraySoulBass = ["../Images_and_icons/saul_bass/bass1.png", "../Images_and_icons/saul_bass/style_tile.png", "../Images_and_icons/saul_bass/bass3.png", "../Images_and_icons/saul_bass/bass4.png", "../Images_and_icons/saul_bass/bass5.png", "../Images_and_icons/saul_bass/bass6.png", "../Images_and_icons/saul_bass/bass7.png", "../Images_and_icons/saul_bass/bass8.png"]
 let spongebobImageArray = ["../Images_and_icons/spongebob/sponge1.png", "../Images_and_icons/spongebob/sponge2.png", "../Images_and_icons/spongebob/sponge3.png", "../Images_and_icons/spongebob/sponge4.png", "../Images_and_icons/spongebob/sponge5.png"]
 let biking = ["../Images_and_icons/bicycle/biking1.png", "../Images_and_icons/bicycle/bikng2.png", "../Images_and_icons/bicycle/biking3.png", "../Images_and_icons/bicycle/biking4.png"]
-
 
 
 
@@ -115,7 +116,7 @@ document.getElementById("projectBTN_3").onclick = function () {
 
 
   takeImages(biking)
-  clickedProjectName(project2, biking);
+  clickedProjectName(project3, biking);
 
 
 }

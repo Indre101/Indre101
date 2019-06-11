@@ -568,4 +568,5 @@ justify-content: flex-end;
 }
 
 .displayNone{
+  display: none;
 }
