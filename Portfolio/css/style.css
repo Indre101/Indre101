@@ -158,6 +158,7 @@ h2 {
   background-color: white;
   justify-self: center;
   opacity: 0;
+  margin: 10%;
   animation: movefromLeft 0.5s linear forwards 1;
 }
 
@@ -208,6 +209,7 @@ h2 {
 } */
 
 h1 {
+  margin-left: 10%;
   font-size: 5vh;
   /* margin: 3% 1%;
   -moz-box-sizing: border-box; 
@@ -216,12 +218,12 @@ h1 {
   color: black;
 }
 
-.hiThere::before {
+/* .hiThere::before {
   content: "";
   width: 100%;
   height: 10%;
   position: absolute;
-}
+} */
 
 .filler {
   /* background-color:  #062c38; */
