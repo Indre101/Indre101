@@ -80,6 +80,11 @@ const project2 = document.getElementById("textProject2");
 const project3 = document.getElementById("textProject3");
 const project4 = document.getElementById("textProject4");
 const project5 = document.getElementById("textProject5");
+const project6 = document.getElementById("textProject6");
+const project7 = document.getElementById("textProject7");
+
+
+
 
 
 const projectName = document.getElementById("projectName");
@@ -90,6 +95,9 @@ let spongebobImageArray = ["../Images_and_icons/spongebob/sponge1.png", "../Imag
 let biking = ["../Images_and_icons/bicycle/biking1_0.png", "../Images_and_icons/bicycle/biking1.png", "../Images_and_icons/bicycle/biking2.png", "../Images_and_icons/bicycle/biking3.png", "../Images_and_icons/bicycle/biking4.png", "../Images_and_icons/bicycle/biking5.png", "../Images_and_icons/bicycle/biking6.png", "../Images_and_icons/bicycle/biking7.png", "../Images_and_icons/bicycle/biking8.png", "../Images_and_icons/bicycle/biking9.png", "../Images_and_icons/bicycle/biking10.png", "../Images_and_icons/bicycle/biking11.png", "../Images_and_icons/bicycle/biking12.png"]
 let chad = ["../Images_and_icons/chad/chad1.png", "../Images_and_icons/chad/chad2.png", "../Images_and_icons/chad/chad3.png", "../Images_and_icons/chad/chad4.png", "../Images_and_icons/chad/chad5.png", "../Images_and_icons/chad/chad6.png", "../Images_and_icons/chad/chad7.png", "../Images_and_icons/chad/chad8.png", "../Images_and_icons/chad/chad9.png", "../Images_and_icons/chad/chad10.png", "../Images_and_icons/chad/chad11.png", "../Images_and_icons/chad/chad12.png", "../Images_and_icons/chad/chad13.png", "../Images_and_icons/chad/chad14.png"]
 let shining = ["../Images_and_icons/shining/shine1.png", "../Images_and_icons/shining/shine2.png", "../Images_and_icons/shining/shine3.png", "../Images_and_icons/shining/shine4.png", "../Images_and_icons/shining/shine5.png", "../Images_and_icons/shining/shine6.png", "../Images_and_icons/shining/shine7.png", "../Images_and_icons/shining/shine8.png", "../Images_and_icons/shining/shine9.png", "../Images_and_icons/shining/shine10.png", "../Images_and_icons/shining/shine10.png"]
+let sprint = ["../Images_and_icons/sprint_1/sprint1.png", "../Images_and_icons/sprint_1/sprint2.png", "../Images_and_icons/sprint_1/sprint3.png", "../Images_and_icons/sprint_1/sprint4.png", "../Images_and_icons/sprint_1/sprint5.png", "../Images_and_icons/sprint_1/sprint6.png"]
+let webPrototype = ["../Images_and_icons/web_prototype/sprint1_1.png", "../Images_and_icons/web_prototype/sprint1_2.png", "../Images_and_icons/web_prototype/sprint1_3.png", "../Images_and_icons/web_prototype/sprint1_4.png", "../Images_and_icons/web_prototype/sprint1_5.png", "../Images_and_icons/web_prototype/sprint1_6.png", "../Images_and_icons/web_prototype/sprint2_1.png", "../Images_and_icons/web_prototype/sprint2_2.png"]
+
 
 document.getElementById("projectBTN_1").onclick = function () {
 
@@ -148,6 +156,34 @@ document.getElementById("projectBTN_5").onclick = function () {
 
 
 }
+
+document.getElementById("projectBTN_6").onclick = function () {
+
+
+  takeImages(sprint)
+  projectName.textContent = "Fronter improved prototype"
+
+  clickedProjectName(project6, sprint);
+
+
+}
+
+
+document.getElementById("projectBTN_7").onclick = function () {
+
+
+  takeImages(webPrototype)
+  projectName.textContent = "Fronter improved prototype"
+
+  clickedProjectName(project7, webPrototype);
+
+
+}
+
+
+
+
+
 
 // function to add event once the project name is pressed
 
