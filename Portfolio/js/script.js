@@ -85,10 +85,10 @@ const project5 = document.getElementById("textProject5");
 const projectName = document.getElementById("projectName");
 let textFieldsProject = document.querySelectorAll(".textAboutSoulBass");
 
-let imageAraySoulBass = ["../Images_and_icons/saul_bass/bass1.png", "../Images_and_icons/saul_bass/style_tile.png", "../Images_and_icons/saul_bass/bass3.png", "../Images_and_icons/saul_bass/bass4.png", "../Images_and_icons/saul_bass/bass5.png", "../Images_and_icons/saul_bass/bass6.png", "../Images_and_icons/saul_bass/bass7.png", "../Images_and_icons/saul_bass/bass2.png"]
+let imageAraySoulBass = ["../Images_and_icons/saul_bass/bass1.png", "../Images_and_icons/saul_bass/style_tile.png", "../Images_and_icons/saul_bass/bass2_1.png", "../Images_and_icons/saul_bass/bass3.png", "../Images_and_icons/saul_bass/bass5.png", "../Images_and_icons/saul_bass/bass6.png", "../Images_and_icons/saul_bass/bass4.png", "../Images_and_icons/saul_bass/bass7.png", "../Images_and_icons/saul_bass/bass2.png", "../Images_and_icons/saul_bass/bass8.png", "../Images_and_icons/saul_bass/bass9.png"]
 let spongebobImageArray = ["../Images_and_icons/spongebob/sponge1.png", "../Images_and_icons/spongebob/sponge4.png", "../Images_and_icons/spongebob/sponge2.png", "../Images_and_icons/spongebob/sponge3.png", "../Images_and_icons/spongebob/sponge5.png"]
-let biking = ["../Images_and_icons/bicycle/biking1.png", "../Images_and_icons/bicycle/biking2.png", "../Images_and_icons/bicycle/biking3.png", "../Images_and_icons/bicycle/biking4.png"]
-let chad = ["../Images_and_icons/chad/chad2.png", "../Images_and_icons/chad/chad1.png", "../Images_and_icons/chad/chad3.png", "../Images_and_icons/chad/chad9.png", "../Images_and_icons/chad/chad10.png", "../Images_and_icons/chad/chad5.png", "../Images_and_icons/chad/chad6.png", "../Images_and_icons/chad/chad7.png", "../Images_and_icons/chad/chad8.png"]
+let biking = ["../Images_and_icons/bicycle/biking1_0.png", "../Images_and_icons/bicycle/biking1.png", "../Images_and_icons/bicycle/biking2.png", "../Images_and_icons/bicycle/biking3.png", "../Images_and_icons/bicycle/biking4.png", "../Images_and_icons/bicycle/biking5.png", "../Images_and_icons/bicycle/biking6.png", "../Images_and_icons/bicycle/biking7.png", "../Images_and_icons/bicycle/biking8.png", "../Images_and_icons/bicycle/biking9.png", "../Images_and_icons/bicycle/biking10.png", "../Images_and_icons/bicycle/biking11.png", "../Images_and_icons/bicycle/biking12.png"]
+let chad = ["../Images_and_icons/chad/chad1.png", "../Images_and_icons/chad/chad2.png", "../Images_and_icons/chad/chad3.png", "../Images_and_icons/chad/chad4.png", "../Images_and_icons/chad/chad5.png", "../Images_and_icons/chad/chad6.png", "../Images_and_icons/chad/chad7.png", "../Images_and_icons/chad/chad8.png", "../Images_and_icons/chad/chad9.png", "../Images_and_icons/chad/chad10.png", "../Images_and_icons/chad/chad11.png", "../Images_and_icons/chad/chad12.png", "../Images_and_icons/chad/chad13.png", "../Images_and_icons/chad/chad14.png"]
 let shining = ["../Images_and_icons/shining/shine1.png", "../Images_and_icons/shining/shine2.png", "../Images_and_icons/shining/shine3.png", "../Images_and_icons/shining/shine4.png", "../Images_and_icons/shining/shine5.png", "../Images_and_icons/shining/shine6.png", "../Images_and_icons/shining/shine7.png", "../Images_and_icons/shining/shine8.png", "../Images_and_icons/shining/shine9.png", "../Images_and_icons/shining/shine10.png", "../Images_and_icons/shining/shine10.png"]
 
 document.getElementById("projectBTN_1").onclick = function () {
@@ -120,6 +120,8 @@ document.getElementById("projectBTN_3").onclick = function () {
 
 
   takeImages(biking)
+  projectName.textContent = "Biking 101"
+
   clickedProjectName(project3, biking);
 
 
@@ -129,6 +131,8 @@ document.getElementById("projectBTN_4").onclick = function () {
 
 
   takeImages(chad)
+  projectName.textContent = "The adventures of Chad"
+
   clickedProjectName(project4, chad);
 
 
@@ -138,6 +142,8 @@ document.getElementById("projectBTN_5").onclick = function () {
 
 
   takeImages(shining)
+  projectName.textContent = "Interactive The Shining poster"
+
   clickedProjectName(project5, shining);
 
 

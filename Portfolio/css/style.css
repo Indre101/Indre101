@@ -253,7 +253,7 @@ h2 {
 
 h1 {
   margin-left: 5%;
-  font-size: 3vh
+  font-size: 3vh;
   /* margin: 3% 1%;
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
@@ -515,7 +515,7 @@ a{
 }
 
 footer{
-  width: 100vw;
+  /* width: 100vw; */
   font-size: 1.5vh;
   color: white;
   padding: 1%;
@@ -529,6 +529,9 @@ footer{
   );
 }
 
+footer h4{
+  margin-left: 5%;
+}
 /* portfolio menu */
 
 
