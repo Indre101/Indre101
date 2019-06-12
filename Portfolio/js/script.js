@@ -86,7 +86,7 @@ let textFieldsProject = document.querySelectorAll(".textAboutSoulBass");
 let imageAraySoulBass = ["../Images_and_icons/saul_bass/bass1.png", "../Images_and_icons/saul_bass/style_tile.png", "../Images_and_icons/saul_bass/bass3.png", "../Images_and_icons/saul_bass/bass4.png", "../Images_and_icons/saul_bass/bass5.png", "../Images_and_icons/saul_bass/bass6.png", "../Images_and_icons/saul_bass/bass7.png", "../Images_and_icons/saul_bass/bass2.png", "../Images_and_icons/saul_bass/bass8.png"]
 let spongebobImageArray = ["../Images_and_icons/spongebob/sponge1.png", "../Images_and_icons/spongebob/sponge4.png", "../Images_and_icons/spongebob/sponge2.png", "../Images_and_icons/spongebob/sponge3.png", "../Images_and_icons/spongebob/sponge5.png"]
 let biking = ["../Images_and_icons/bicycle/biking1.png", "../Images_and_icons/bicycle/biking2.png", "../Images_and_icons/bicycle/biking3.png", "../Images_and_icons/bicycle/biking4.png"]
-let chad = ["../Images_and_icons/chad/chad2.png", "../Images_and_icons/chad/chad1.png", "../Images_and_icons/chad/chad3.png", "../Images_and_icons/chad/chad4.png", "../Images_and_icons/chad/chad5.png", "../Images_and_icons/chad/chad6.png", "../Images_and_icons/chad/chad7.png", "../Images_and_icons/chad/chad8.png"]
+let chad = ["../Images_and_icons/chad/chad2.png", "../Images_and_icons/chad/chad1.png", "../Images_and_icons/chad/chad3.png", "../Images_and_icons/chad/chad9.png", "../Images_and_icons/chad/chad10.png", "../Images_and_icons/chad/chad5.png", "../Images_and_icons/chad/chad6.png", "../Images_and_icons/chad/chad7.png", "../Images_and_icons/chad/chad8.png"]
 
 
 document.getElementById("projectBTN_1").onclick = function () {
