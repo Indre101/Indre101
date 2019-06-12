@@ -79,6 +79,8 @@ const project1 = document.getElementById("textProject1");
 const project2 = document.getElementById("textProject2");
 const project3 = document.getElementById("textProject3");
 const project4 = document.getElementById("textProject4");
+const project5 = document.getElementById("textProject5");
+
 
 const projectName = document.getElementById("projectName");
 let textFieldsProject = document.querySelectorAll(".textAboutSoulBass");
@@ -87,7 +89,7 @@ let imageAraySoulBass = ["../Images_and_icons/saul_bass/bass1.png", "../Images_a
 let spongebobImageArray = ["../Images_and_icons/spongebob/sponge1.png", "../Images_and_icons/spongebob/sponge4.png", "../Images_and_icons/spongebob/sponge2.png", "../Images_and_icons/spongebob/sponge3.png", "../Images_and_icons/spongebob/sponge5.png"]
 let biking = ["../Images_and_icons/bicycle/biking1.png", "../Images_and_icons/bicycle/biking2.png", "../Images_and_icons/bicycle/biking3.png", "../Images_and_icons/bicycle/biking4.png"]
 let chad = ["../Images_and_icons/chad/chad2.png", "../Images_and_icons/chad/chad1.png", "../Images_and_icons/chad/chad3.png", "../Images_and_icons/chad/chad9.png", "../Images_and_icons/chad/chad10.png", "../Images_and_icons/chad/chad5.png", "../Images_and_icons/chad/chad6.png", "../Images_and_icons/chad/chad7.png", "../Images_and_icons/chad/chad8.png"]
-
+let shining = ["../Images_and_icons/shining/shine1.png", "../Images_and_icons/shining/shine2.png", "../Images_and_icons/shining/shine3.png", "../Images_and_icons/shining/shine4.png", "../Images_and_icons/shining/shine5.png", "../Images_and_icons/shining/shine6.png", "../Images_and_icons/shining/shine7.png", "../Images_and_icons/shining/shine8.png", "../Images_and_icons/shining/shine9.png", "../Images_and_icons/shining/shine10.png", "../Images_and_icons/shining/shine10.png"]
 
 document.getElementById("projectBTN_1").onclick = function () {
 
@@ -128,6 +130,15 @@ document.getElementById("projectBTN_4").onclick = function () {
 
   takeImages(chad)
   clickedProjectName(project4, chad);
+
+
+}
+
+document.getElementById("projectBTN_5").onclick = function () {
+
+
+  takeImages(shining)
+  clickedProjectName(project5, shining);
 
 
 }
