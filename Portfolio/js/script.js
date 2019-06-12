@@ -76,7 +76,7 @@ saulBassIMG.forEach((e) => {
 
 const textConatainer = document.getElementById("textConatainer");
 const project1 = document.getElementById("textProject1");
-const project2 = document.getElementById("textProject2");
+// const project2 = document.getElementById("textProject2");
 const project3 = document.getElementById("textProject3");
 const project4 = document.getElementById("textProject4");
 const project5 = document.getElementById("textProject5");
@@ -112,16 +112,16 @@ document.getElementById("projectBTN_1").onclick = function () {
 }
 
 
-document.getElementById("projectBTN_2").onclick = function () {
+// document.getElementById("projectBTN_2").onclick = function () {
 
 
-  takeImages(spongebobImageArray)
+//   takeImages(spongebobImageArray)
 
-  projectName.textContent = "Simple animation"
+//   projectName.textContent = "Simple animation"
 
-  clickedProjectName(project2, spongebobImageArray);
+//   clickedProjectName(project2, spongebobImageArray);
 
-}
+// }
 // 
 
 document.getElementById("projectBTN_3").onclick = function () {
