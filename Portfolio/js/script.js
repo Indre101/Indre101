@@ -82,6 +82,8 @@ const project4 = document.getElementById("textProject4");
 const project5 = document.getElementById("textProject5");
 const project6 = document.getElementById("textProject6");
 const project7 = document.getElementById("textProject7");
+const btnPortfolio = document.getElementById("btnPortfolio");
+
 
 
 
@@ -98,15 +100,64 @@ let shining = ["../Images_and_icons/shining/shine1.png", "../Images_and_icons/sh
 let sprint = ["../Images_and_icons/sprint_1/sprint1.png", "../Images_and_icons/sprint_1/sprint2.png", "../Images_and_icons/sprint_1/sprint3.png", "../Images_and_icons/sprint_1/sprint4.png", "../Images_and_icons/sprint_1/sprint5.png", "../Images_and_icons/sprint_1/sprint6.png"]
 let webPrototype = ["../Images_and_icons/web_prototype/sprint1_1.png", "../Images_and_icons/web_prototype/sprint1_2.png", "../Images_and_icons/web_prototype/sprint1_3.png", "../Images_and_icons/web_prototype/sprint1_4.png", "../Images_and_icons/web_prototype/sprint1_5.png", "../Images_and_icons/web_prototype/sprint1_6.png", "../Images_and_icons/web_prototype/sprint2_1.png", "../Images_and_icons/web_prototype/sprint2_2.png"]
 
+let j = 0;
+
+
+btnPortfolio.onclick = function () {
+
+  j++
+  if (j == 0) {
+    takeImages(imageAraySoulBass)
+    console.log(j)
+
+
+    projectName.textContent = "Saul Bass responsive website"
+    clickedProjectName(project1, imageAraySoulBass);
+  } else if (j == 1) {
+    console.log(j)
+
+    takeImages(biking)
+    projectName.textContent = "Biking 101"
+
+    clickedProjectName(project3, biking);
+
+  } else if (j == 2) {
+
+    takeImages(chad)
+    projectName.textContent = "The adventures of Chad"
+
+    clickedProjectName(project4, chad);
+  } else if (j == 3) {
+    takeImages(shining)
+    projectName.textContent = "Interactive The Shining poster"
+
+    clickedProjectName(project5, shining);
+  } else if (j == 4) {
+    takeImages(sprint)
+    projectName.textContent = "Fronter fix"
+
+    clickedProjectName(project6, sprint);
+  } else if (j == 5) {
+    j = -1;
+    takeImages(webPrototype)
+    projectName.textContent = "Fronter fix web prototype"
+
+    clickedProjectName(project7, webPrototype);
+  }
+
+
+
+}
+
 
 document.getElementById("projectBTN_1").onclick = function () {
-
 
 
   takeImages(imageAraySoulBass)
 
   projectName.textContent = "Saul Bass responsive website"
   clickedProjectName(project1, imageAraySoulBass);
+
 
 
 }
