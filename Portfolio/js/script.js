@@ -83,6 +83,7 @@ const project5 = document.getElementById("textProject5");
 const project6 = document.getElementById("textProject6");
 const project7 = document.getElementById("textProject7");
 const btnPortfolio = document.getElementById("btnPortfolio");
+const btnPortfolioBack = document.getElementById("btnPortfolioBack");
 
 
 
@@ -103,52 +104,134 @@ let webPrototype = ["../Images_and_icons/web_prototype/sprint1_1.png", "../Image
 let j = 0;
 
 
+let arrayOfpages = [{
+    "projecName": "Saul Bass responsive website",
+    "functionToCall": takeImages(imageAraySoulBass),
+    "functionTochangeText": clickedProjectName(project1, imageAraySoulBass)
+  }, {
+    "projecName": "The adventures of Chad",
+    "functionToCall": takeImages(chad),
+    "functionTochangeText": clickedProjectName(project4, chad)
+  },
+  {
+    "projecName": "Interactive The Shining poster",
+    "functionToCall": takeImages(shining),
+    "functionTochangeText": clickedProjectName(project5, shining)
+  }, {
+    "projecName": "Biking 101",
+    "functionToCall": takeImages(biking),
+    "functionTochangeText": clickedProjectName(project3, biking)
+  },
+  {
+    "projecName": "Fronter fix",
+    "functionToCall": takeImages(sprint),
+    "functionTochangeText": clickedProjectName(project6, sprint)
+  }, {
+    "projecName": "Fronter fix web prototype",
+    "functionToCall": takeImages(webPrototype),
+    "functionTochangeText": clickedProjectName(project7, webPrototype)
+  }
+]
+
+
+
+
 btnPortfolio.onclick = function () {
 
   j++
-  if (j == 0) {
-    takeImages(imageAraySoulBass)
-    console.log(j)
+
+  if (j < 0) {
+    return false;
+  } else if (j > arrayOfpages.length - 1) {
+    return false;
+  }
+  moveThePage(j)
+
+  arrayOfpages[j]["functionToCall"];
+  arrayOfpages[j]["functionTochangeText"];
+}
 
 
-    projectName.textContent = "Saul Bass responsive website"
-    clickedProjectName(project1, imageAraySoulBass);
-  } else if (j == 1) {
-    console.log(j)
+btnPortfolioBack.onclick = function () {
+  j--
 
-    takeImages(biking)
-    projectName.textContent = "Biking 101"
-
-    clickedProjectName(project3, biking);
-
-  } else if (j == 2) {
-
-    takeImages(chad)
-    projectName.textContent = "The adventures of Chad"
-
-    clickedProjectName(project4, chad);
-  } else if (j == 3) {
-    takeImages(shining)
-    projectName.textContent = "Interactive The Shining poster"
-
-    clickedProjectName(project5, shining);
-  } else if (j == 4) {
-    takeImages(sprint)
-    projectName.textContent = "Fronter fix"
-
-    clickedProjectName(project6, sprint);
-  } else if (j == 5) {
-    j = -1;
-    takeImages(webPrototype)
-    projectName.textContent = "Fronter fix web prototype"
-
-    clickedProjectName(project7, webPrototype);
+  if (j < 0) {
+    return false;
+  } else if (j > arrayOfpages.length - 1) {
+    return false;
   }
 
+
+  moveThePage(j)
+  // arrayOfpages[j]["functionToCall"];
+  // arrayOfpages[j]["functionTochangeText"];
+
+}
+
+
+
+function moveThePage(k) {
+
+
+
+  projectName.textContent = arrayOfpages[k]["projecName"];
+  // arrayOfpages[k]["functionToCall"];
+  // arrayOfpages[k]["functionTochangeText"];
 
 
 }
 
+
+// btnPortfolio.onclick = function () {
+
+//   j++
+//   if (j == 0) {
+//     takeImages(imageAraySoulBass)
+//     projectName.textContent = "Saul Bass responsive website"
+//     clickedProjectName(project1, imageAraySoulBass);
+//   } else if (j == 1) {
+
+//     takeImages(biking)
+//     projectName.textContent = "Biking 101"
+
+//     clickedProjectName(project3, biking);
+
+//   } else if (j == 2) {
+
+//     takeImages(chad)
+//     projectName.textContent = "The adventures of Chad"
+
+//     clickedProjectName(project4, chad);
+//   } else if (j == 3) {
+//     takeImages(shining)
+//     projectName.textContent = "Interactive The Shining poster"
+
+//     clickedProjectName(project5, shining);
+//   } else if (j == 4) {
+//     takeImages(sprint)
+//     projectName.textContent = "Fronter fix"
+
+//     clickedProjectName(project6, sprint);
+//   } else if (j == 5) {
+//     j = -1;
+//     takeImages(webPrototype)
+//     projectName.textContent = "Fronter fix web prototype"
+
+//     clickedProjectName(project7, webPrototype);
+//   }
+//   return j;
+// }
+
+// btnPortfolioBack.onclick = function () {
+
+//   j--;
+//   if (j < -2) {
+//     return false;
+//   }
+//   console.log(j);
+//   return j;
+
+// }
 
 document.getElementById("projectBTN_1").onclick = function () {
 
