@@ -112,17 +112,6 @@ document.getElementById("projectBTN_1").onclick = function () {
 }
 
 
-// document.getElementById("projectBTN_2").onclick = function () {
-
-
-//   takeImages(spongebobImageArray)
-
-//   projectName.textContent = "Simple animation"
-
-//   clickedProjectName(project2, spongebobImageArray);
-
-// }
-// 
 
 document.getElementById("projectBTN_3").onclick = function () {
 
@@ -161,7 +150,7 @@ document.getElementById("projectBTN_6").onclick = function () {
 
 
   takeImages(sprint)
-  projectName.textContent = "Fronter improved prototype"
+  projectName.textContent = "Fronter fix"
 
   clickedProjectName(project6, sprint);
 
@@ -173,7 +162,7 @@ document.getElementById("projectBTN_7").onclick = function () {
 
 
   takeImages(webPrototype)
-  projectName.textContent = "Fronter improved prototype"
+  projectName.textContent = "Fronter fix web prototype"
 
   clickedProjectName(project7, webPrototype);
 
@@ -275,7 +264,7 @@ function showImages(anImage) {
 
 
 // function to make images functioonal
-
+const ulPortoflioListContainer = document.getElementById("protfolioList");
 
 
 menuItem3.onmouseover = function () {
@@ -283,12 +272,15 @@ menuItem3.onmouseover = function () {
 
   menuItem3.style.transition = "1s";
   menuItem3.style.transform = "rotate(0deg) skewX(0deg) translate(0,0)";
+  menuItem3.style.width = "50%";
+
   menuItem3.style.transformOrigin = "left";
   menuItem3.style.perspective = "10000px";
+  ulPortoflioListContainer.classList.remove("displayNone");
 
   menuItem.forEach((e) => {
     e.style.transition = "3s";
-    e.style.display = "block";
+    e.style.display = "inline";
     e.classList.add("projectItem1")
 
   })
@@ -303,9 +295,12 @@ menuItem3.onmouseover = function () {
 menuItemPortfolio.onmouseout = function () {
 
   menuItem3.style.transform = "rotate(-30deg) skewX(25deg) translate(0, 0)";
+  ulPortoflioListContainer.classList.add("displayNone");
+  menuItem3.style.width = "";
+
 
   menuItem.forEach((e) => {
-    e.style.display = "none";
+    // e.style.display = "none";
 
   })
 
