@@ -104,32 +104,51 @@ let webPrototype = ["../Images_and_icons/web_prototype/sprint1_1.png", "../Image
 let j = 0;
 
 
+
+
+
 let arrayOfpages = [{
     "projecName": "Saul Bass responsive website",
     "functionToCall": takeImages(imageAraySoulBass),
-    "functionTochangeText": clickedProjectName(project1, imageAraySoulBass)
-  }, {
+    functionTochangeText: function () {
+      clickedProjectName(project1, imageAraySoulBass)
+
+    }
+  },
+  {
     "projecName": "The adventures of Chad",
     "functionToCall": takeImages(chad),
-    "functionTochangeText": clickedProjectName(project4, chad)
+    functionTochangeText: function () {
+      clickedProjectName(project4, chad)
+    }
   },
   {
     "projecName": "Interactive The Shining poster",
     "functionToCall": takeImages(shining),
-    "functionTochangeText": clickedProjectName(project5, shining)
-  }, {
+    functionTochangeText: function () {
+      clickedProjectName(project5, shining)
+    }
+  },
+  {
     "projecName": "Biking 101",
     "functionToCall": takeImages(biking),
-    "functionTochangeText": clickedProjectName(project3, biking)
+    functionTochangeText: function () {
+      clickedProjectName(project3, biking)
+    }
   },
   {
     "projecName": "Fronter fix",
     "functionToCall": takeImages(sprint),
-    "functionTochangeText": clickedProjectName(project6, sprint)
-  }, {
+    functionTochangeText: function () {
+      clickedProjectName(project6, sprint)
+    }
+  },
+  {
     "projecName": "Fronter fix web prototype",
     "functionToCall": takeImages(webPrototype),
-    "functionTochangeText": clickedProjectName(project7, webPrototype)
+    functionTochangeText: function () {
+      clickedProjectName(project7, webPrototype)
+    }
   }
 ]
 
@@ -147,8 +166,7 @@ btnPortfolio.onclick = function () {
   }
   moveThePage(j)
 
-  arrayOfpages[j]["functionToCall"];
-  arrayOfpages[j]["functionTochangeText"];
+
 }
 
 
@@ -163,8 +181,7 @@ btnPortfolioBack.onclick = function () {
 
 
   moveThePage(j)
-  // arrayOfpages[j]["functionToCall"];
-  // arrayOfpages[j]["functionTochangeText"];
+
 
 }
 
@@ -175,9 +192,8 @@ function moveThePage(k) {
 
 
   projectName.textContent = arrayOfpages[k]["projecName"];
-  // arrayOfpages[k]["functionToCall"];
-  // arrayOfpages[k]["functionTochangeText"];
-
+  arrayOfpages[k]["functionToCall"];
+  arrayOfpages[k].functionTochangeText();
 
 }
 
