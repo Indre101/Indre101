@@ -429,7 +429,7 @@ menuItem3.onmouseover = function () {
   ulPortoflioListContainer.classList.remove("displayNone");
 
   menuItem.forEach((e) => {
-    e.style.transition = "3s";
+    e.style.transition = "0.5s";
     e.style.display = "inline";
     e.classList.add("projectItem1")
 

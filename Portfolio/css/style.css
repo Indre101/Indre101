@@ -30,6 +30,7 @@ ul {
 }
 
 .navigation {
+  height: 18%;
   width: 100%;
   padding-bottom: 4%;
 
@@ -38,7 +39,7 @@ ul {
   background: repeating-linear-gradient(
     -55deg,
     #062c38,
-    black 1%,
+    white 1%,
     #062c38 4%,
     #062c38 4%
   );
@@ -49,10 +50,11 @@ ul {
 }
 
 .navigation a {
+  border-radius: 8px;
   color: white;
   transform-origin: left;
   width: 7em;
-  height: 5em;
+  height: 4em;
   text-decoration: none;
   /* background: repeating-linear-gradient(
     55deg,
@@ -64,20 +66,19 @@ ul {
 
   background-color: rgba(0, 0, 0);
   transform: rotate(-30deg) skewX(25deg) translate(0, 0);
-  transition: 1s;
+  transition: 0.5s;
 
   justify-content: space-around;
-  box-shadow: -2em 2em white;
-  margin: 4% 5%;
+  /* box-shadow: -2em 2em white; */
+  margin: 0% 5%;
 }
 
-.navigation a:hover,
-.navigation:hover::before,
-.navigation:hover::after {
+.navigation a:hover
+ {
   transform: rotate(-30deg) skewX(25deg) translate(-0.8vw, -1vh);
-  box-shadow: -2em 2em transparent;
-  background: white;
-  color: black;
+  box-shadow: -2em 2em #5E1006;
+  /* background: transparent; */
+  /* color: black; */
 
 
   /* background: repeating-linear-gradient(
@@ -91,7 +92,11 @@ ul {
   /* background-color: white; */
 }
 
+.navigation a:hover::before,
+.navigation a:hover::after{
 
+  background-color: transparent;
+}
 
 
 .navLi{
@@ -102,6 +107,9 @@ ul {
 }
 
 .projectItem1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* animation: appearItem 1s  0.1s linear forwards 1; */
 }
 
@@ -118,11 +126,16 @@ ul {
 }
 
 .projectItem{
+  border-radius: 8px;
   padding: 1.5vh 0;
   background-color: black;
   text-align: center;
+  width: 8vw;
 }
 
+h5{
+  margin: 0;
+}
 
 
 .projectItem:hover{
@@ -136,12 +149,16 @@ ul {
 
 .navigation a::before,
 .navigation a::after {
+
+  border-radius: 8px;
   transition: 0.5s;
   border: 0.1vh solid black;
   box-sizing: border-box;
   content: "";
   position: absolute;
-  background-color: rgba(95, 93, 93, 0.5);
+  /* background-color: rgba(95, 93, 93, 0.5); */
+  background-color: white;
+  
 }
 
 .navigation a::before {
@@ -240,6 +257,7 @@ h2 {
 }
 
 .canvas {
+  border-radius: 8px;
   border: 1px solid black;
   width: 100%;
   height: 30%;
@@ -256,7 +274,9 @@ h2 {
 } */
 
 h1 {
-  margin-left: 5%;
+  padding-left: 5%;
+  background-color: black;
+  width: 100%;
   font-size: 3vh;
   /* margin: 3% 1%;
   -moz-box-sizing: border-box; 
@@ -267,6 +287,7 @@ h1 {
 
 .hiThere {
 margin-left: 0;
+background: none;
 
 }
 
@@ -276,7 +297,7 @@ margin-left: 0;
   background: repeating-linear-gradient(
     -55deg,
     #062c38,
-    black 1%,
+    white 1%,
     #062c38 4%,
     #062c38 4%
   );
@@ -315,15 +336,25 @@ margin-left: 0;
 
 .photoContainer {
   display: flex;
+  justify-content: flex-end
 }
 
 .portfolio {
   width: 60%;
-  height: 60%;
+  border-radius: 8px;
   object-fit: contain;
   align-self: center;
   justify-self: flex-end;
 }
+
+.portfolio:hover{
+  -webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);
+
+}
+
+
+/*  */
+
 
 .textAboutme {
   width: 90%;
@@ -561,7 +592,7 @@ justify-content: flex-end;
 
 .textAnimation{
   opacity: 0;
-  animation: textAnimation 1s 0.2s linear forwards;
+  animation: textAnimation 0.5s 0.2s linear forwards;
 }
 
 @keyframes textAnimation{
