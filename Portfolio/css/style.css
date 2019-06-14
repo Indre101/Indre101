@@ -134,14 +134,16 @@ ul {
 }
 
 h5{
-  margin: 0;
+
 }
 
 
 .projectItem:hover{
   background-color: white;
   color: black;
-  transform: translate(1vh, 1vh)
+  transform: translate(1vh, 1vh);
+  border: 1px black solid;
+
 }
 
 
@@ -528,6 +530,9 @@ ol{
 h4{
    font-size: 2vh;
    margin: 0;
+   margin: 0;
+   margin-block-start:0;
+   margin-block-end: 0;
 }
 
 ol li{
@@ -553,12 +558,11 @@ a{
   object-fit: contain;
 }
 
-footer{
+.footer{
   /* width: 100vw; */
   font-size: 1.5vh;
   color: white;
-  padding: 1%;
-  padding-left: 5%;
+  padding: 1% 0;
   background: repeating-linear-gradient(
     -55deg,
     #062c38,
@@ -568,11 +572,16 @@ footer{
   );
 }
 
-footer h4{
-  margin-left: 5%;
-}
+
 /* portfolio menu */
 
+.footer h6{
+  padding-left: 5%;
+  background: black;
+  padding-left: 5%;
+  font-size: 1.8vh;
+  margin: 0;
+}
 
 .portfolioList{
 width: 100%;
