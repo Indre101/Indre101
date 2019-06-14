@@ -320,16 +320,7 @@ h1 {
 
 }
 
-.filler {
-  grid-area: 1/1/span 1/span 4;
 
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-size: 1.5vh;
-  justify-content: flex-start;
-  align-items: center;
-}
 
 
 .everySecond {}
@@ -346,28 +337,52 @@ h1 {
   padding: 0;
   height: 100vh;
   /* grid-area: 3/1 / span 3 / span 3; */
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(auto, 30vh); */
+ /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  /* grid-auto-rows: minmax(auto, 30vh); */ */
   
   /* grid-gap: 4vh; */
 
 
 }
 
+.filler {
+  grid-area: 1/1/span 1/span 3;
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1.5vh;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 
 .textAboutme {
-  width: 90%;
-  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
+}
+
+.albumPosition{
+  grid-area: 2/2/span 1/ span 1;
+
 }
 
 .firstP {
-  grid-area: 2/1/ span 2/ span 2;
-  position:
+  position: absolute;
+  width: 35%;
+  z-index: -1;
+  border: 1px solid black;
+  background-color: white;
+
 }
 
+
 .photoContainer {
-  grid-area: 3/2/span 2/ span 1;
+  position: absolute;
   background-color: darkgray;
   height: 80%;
   margin: 0 auto;
@@ -375,8 +390,22 @@ h1 {
   flex-direction: column;
   justify-content: center;
   width: 35%;
+  transform-origin: left;
+
 
 }
+
+.flipPage{
+  animation: flipPage 2s linear forwards 1;
+}
+
+
+@keyframes flipPage{
+  100%{
+    transform: rotateY(-180%);
+  }
+}
+
 
 .portfolio {
   width: 80%;
@@ -403,8 +432,7 @@ h1 {
 }
 
 .lastP {
-
-  grid-area:
+z-index: -2;
 }
 
 

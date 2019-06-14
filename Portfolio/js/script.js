@@ -423,3 +423,54 @@ menuItemPortfolio.onmouseout = function () {
   })
 
 }
+
+// THE BOOK PART
+
+const bookCover = document.getElementById("bookCover");
+const firstStoryPart = document.getElementById("firstStoryPart");
+const lastPage = document.getElementById("lastPage");
+
+function flipPage(p) {
+
+  p.style.transform = "rotateY(-180deg)"
+  p.style.transition = "1s";
+  p.style.transformOrigin = "left";
+}
+
+function closeBook(p) {
+
+  p.style.transform = ""
+  p.style.transition = "1s";
+  p.style.transformOrigin = "right";
+
+}
+
+
+bookCover.onclick = function () {
+  flipPage(bookCover)
+  setTimeout(() => {
+    firstStoryPart.style.zIndex = 1;
+  }, 1000);
+}
+
+firstStoryPart.onclick = function () {
+  flipPage(firstStoryPart)
+  setTimeout(() => {
+    lastPage.style.zIndex = 1;
+  }, 1000);
+
+}
+
+lastPage.onclick = function () {
+  flipPage(lastPage)
+  setTimeout(() => {
+
+    closeBook(lastPage)
+    closeBook(firstStoryPart)
+    closeBook(bookCover)
+
+
+
+  }, 1000);
+
+}
