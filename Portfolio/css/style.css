@@ -293,7 +293,7 @@ background: none;
 
 .filler {
   /* background-color:  #062c38; */
-
+margin-top: 2%;
   background: repeating-linear-gradient(
     -55deg,
     #062c38,
@@ -348,7 +348,7 @@ background: none;
 }
 
 .portfolio:hover{
-  -webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);
+  /* -webkit-filter: contrast(180%);filter: contrast(180%); */
 
 }
 
@@ -388,6 +388,7 @@ p {
 
 .styleTileBass {
   /* position: absolute; */
+  border-radius: 8px;
   justify-content: flex-start;
   display: flex;
   height: 10vh;
@@ -459,6 +460,7 @@ h3:hover {
 }
 
 .displayImagesSaulBassContainer {
+  border-radius: 8px;
   align-self: center;
   justify-self: center;
   align-self: center;
@@ -530,11 +532,13 @@ h4{
 
 ol li{
   margin-left: 5%;
+  border-radius: 8px;
 }
 
 
 ol li:nth-child(odd) {
   background-color: rgba(71, 5, 6, 0.1) ;
+  
 }
 
 
@@ -558,7 +562,7 @@ footer{
   background: repeating-linear-gradient(
     -55deg,
     #062c38,
-    black 1%,
+    white 1%,
     #062c38 4%,
     #062c38 4%
   );
