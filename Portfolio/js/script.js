@@ -69,9 +69,9 @@ saulBassIMG.forEach((e) => {
 
   showImages(e)
 
-
-
 })
+
+
 // function to generate images to display in displayImagesSaulBassContainer
 
 const textConatainer = document.getElementById("textConatainer");
@@ -109,7 +109,9 @@ let j = 0;
 
 let arrayOfpages = [{
     "projecName": "Saul Bass responsive website",
-    "functionToCall": takeImages(imageAraySoulBass),
+    functionToCall: function () {
+      takeImages(imageAraySoulBass)
+    },
     functionTochangeText: function () {
       clickedProjectName(project1, imageAraySoulBass)
 
@@ -117,35 +119,45 @@ let arrayOfpages = [{
   },
   {
     "projecName": "The adventures of Chad",
-    "functionToCall": takeImages(chad),
+    functionToCall: function () {
+      takeImages(chad)
+    },
     functionTochangeText: function () {
       clickedProjectName(project4, chad)
     }
   },
   {
     "projecName": "Interactive The Shining poster",
-    "functionToCall": takeImages(shining),
+    functionToCall: function () {
+      takeImages(shining)
+    },
     functionTochangeText: function () {
       clickedProjectName(project5, shining)
     }
   },
   {
     "projecName": "Biking 101",
-    "functionToCall": takeImages(biking),
+    functionToCall: function () {
+      takeImages(biking)
+    },
     functionTochangeText: function () {
       clickedProjectName(project3, biking)
     }
   },
   {
     "projecName": "Fronter fix",
-    "functionToCall": takeImages(sprint),
+    functionToCall: function () {
+      takeImages(sprint)
+    },
     functionTochangeText: function () {
       clickedProjectName(project6, sprint)
     }
   },
   {
     "projecName": "Fronter fix web prototype",
-    "functionToCall": takeImages(webPrototype),
+    functionToCall: function () {
+      takeImages(webPrototype)
+    },
     functionTochangeText: function () {
       clickedProjectName(project7, webPrototype)
     }
@@ -158,10 +170,13 @@ let arrayOfpages = [{
 btnPortfolio.onclick = function () {
 
   j++
+  console.log(j);
 
   if (j < 0) {
+    j = 0;
     return false;
   } else if (j > arrayOfpages.length - 1) {
+    j = arrayOfpages.length - 1;
     return false;
   }
   moveThePage(j)
@@ -172,11 +187,12 @@ btnPortfolio.onclick = function () {
 
 btnPortfolioBack.onclick = function () {
   j--
-
+  console.log(j);
   if (j < 0) {
-    return false;
+    j = 0
   } else if (j > arrayOfpages.length - 1) {
-    return false;
+    j = arrayOfpages.length - 1;
+    return false
   }
 
 
@@ -192,62 +208,13 @@ function moveThePage(k) {
 
 
   projectName.textContent = arrayOfpages[k]["projecName"];
-  arrayOfpages[k]["functionToCall"];
+  arrayOfpages[k].functionToCall();
   arrayOfpages[k].functionTochangeText();
 
 }
 
 
-// btnPortfolio.onclick = function () {
-
-//   j++
-//   if (j == 0) {
-//     takeImages(imageAraySoulBass)
-//     projectName.textContent = "Saul Bass responsive website"
-//     clickedProjectName(project1, imageAraySoulBass);
-//   } else if (j == 1) {
-
-//     takeImages(biking)
-//     projectName.textContent = "Biking 101"
-
-//     clickedProjectName(project3, biking);
-
-//   } else if (j == 2) {
-
-//     takeImages(chad)
-//     projectName.textContent = "The adventures of Chad"
-
-//     clickedProjectName(project4, chad);
-//   } else if (j == 3) {
-//     takeImages(shining)
-//     projectName.textContent = "Interactive The Shining poster"
-
-//     clickedProjectName(project5, shining);
-//   } else if (j == 4) {
-//     takeImages(sprint)
-//     projectName.textContent = "Fronter fix"
-
-//     clickedProjectName(project6, sprint);
-//   } else if (j == 5) {
-//     j = -1;
-//     takeImages(webPrototype)
-//     projectName.textContent = "Fronter fix web prototype"
-
-//     clickedProjectName(project7, webPrototype);
-//   }
-//   return j;
-// }
-
-// btnPortfolioBack.onclick = function () {
-
-//   j--;
-//   if (j < -2) {
-//     return false;
-//   }
-//   console.log(j);
-//   return j;
-
-// }
+// menu buttons
 
 document.getElementById("projectBTN_1").onclick = function () {
 
@@ -413,8 +380,9 @@ function showImages(anImage) {
 }
 
 
-// function to make images functioonal
+// portfolio button menu pop up
 const ulPortoflioListContainer = document.getElementById("protfolioList");
+
 
 
 menuItem3.onmouseover = function () {
@@ -455,60 +423,3 @@ menuItemPortfolio.onmouseout = function () {
   })
 
 }
-
-// arrow.onclick = increase;
-
-// function increase() {
-
-//   a = a + 100
-
-
-//   saulBassIMG.forEach((e) => {
-
-//     moveUp(e, a)
-
-//     if (a === 500) {
-//       a = 0;
-//       e.style.transform = `translateY(-${a}%) `;
-
-//     }
-
-//   })
-
-// }
-
-// function moveUp(b, c) {
-
-//   b.style.transition = "0.5s";
-//   b.style.transform = `translateY(-${c}%) `;
-
-// }
-
-// // slider 
-
-// // arrow button behaviour
-
-// arrow.onmousedown = function () {
-
-//   buttonDown(arrow)
-
-// }
-
-// arrow.onmouseup = function () {
-//   buttonUp(arrow)
-// }
-
-// // function to move a button down
-
-
-// function buttonDown(btn) {
-
-//   btn.classList.add("moveUp")
-
-// }
-
-// function buttonUp(btn) {
-
-//   btn.classList.remove("moveUp")
-
-// }
