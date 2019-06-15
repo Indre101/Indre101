@@ -443,7 +443,6 @@ function flipPage(p) {
   p.style.transform = "rotateY(-180deg)"
   p.style.transition = "1s";
   p.style.transformOrigin = " left";
-  // p.style.zIndex = "-1";
 
 }
 
@@ -453,9 +452,6 @@ function closeBook(p) {
   p.style.transform = ""
   p.style.transition = "1s";
   p.style.transformOrigin = "left";
-
-
-
 }
 
 function nextPage(nextPage) {
@@ -466,86 +462,100 @@ function nextPage(nextPage) {
 
 }
 
+
 let pageNumber = 0;
 
+pages.forEach(p => {
 
-pages.forEach((p) => {
-
-  p.onclick = function () {
-    pageNumber++
-
-    if (pageNumber < pages.length) {
-      console.log(pageNumber)
-      flipPage(this)
-      nextPage(pages[pageNumber])
-
-    } else if (pageNumber === 3) {
-      pageNumber = 0;
-
-
-
-
-
-      setTimeout(() => {
-        pagesGoBack.forEach(element => {
-          element.style.opacity = "0";
-          element.style.display = "block";
-
-        });
-
-        pageBack.forEach(b => {
-          b.style.display = "none";
-        })
-      }, 1000);
-
-
-
-
-      setTimeout(() => {
-
-        pagesGoBack.forEach(element_1 => {
-          element_1.style.opacity = "1";
-        })
-
-
-        for (let index = pages.length - 1; index >= 0; index--) {
-          closeBook(pages[index])
-
-        }
-
-      }, 2000);
-
-
-
-
-
-    }
-
-  }
+  p.addEventListener("click", flip)
 })
 
 
-
-
-
-
-
-bookCover.onclick = function () {
-
-  bookCover.style.display = "none";
-
+function flip() {
+  flipPage(this)
 
 }
 
-firstStoryPart.onclick = function () {
-  firstStoryPart.style.display = "none";
+// let pageNumber = 0;
+
+
+// pages.forEach((p) => {
+
+//   p.onclick = function () {
+//     pageNumber++
+
+//     if (pageNumber < pages.length) {
+//       console.log(pageNumber)
+//       flipPage(this)
+//       nextPage(pages[pageNumber])
+
+//     } else if (pageNumber === 3) {
+//       pageNumber = 0;
 
 
 
-}
 
-lastPage.onclick = function () {
 
-  lastPage.style.display = "none";
+//       setTimeout(() => {
+//         pagesGoBack.forEach(element => {
+//           element.style.opacity = "0";
+//           element.style.display = "block";
 
-}
+//         });
+
+//         pageBack.forEach(b => {
+//           b.style.display = "none";
+//         })
+//       }, 1000);
+
+
+
+
+//       setTimeout(() => {
+
+//         pagesGoBack.forEach(element_1 => {
+//           element_1.style.opacity = "1";
+//         })
+
+
+//         for (let index = pages.length - 1; index >= 0; index--) {
+//           closeBook(pages[index])
+
+//         }
+
+//       }, 2000);
+
+
+
+
+
+//     }
+
+//   }
+// })
+
+
+
+
+
+
+
+// bookCover.onclick = function () {
+
+//   bookCover.style.display = "none";
+
+
+// }
+
+// firstStoryPart.onclick = function () {
+//   firstStoryPart.style.display = "none";
+
+
+
+// }
+
+// lastPage.onclick = function () {
+
+//   lastPage.style.display = "none";
+
+// }

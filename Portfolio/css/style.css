@@ -353,17 +353,15 @@ h1 {
 
 
 .commonBookRules{
-  position: absolute;
   margin-left: auto;
   margin-right: auto;
   width: 30vw;
-
   left: 0;
   right: 0;
   height: 70vh;
 transform-origin: left;
 transform-style: preserve-3d;
-perspective: 10000;
+/* perspective: 10000; */
 perspective-origin: left;
 transition: 1s;
 cursor: pointer;
@@ -384,18 +382,24 @@ cursor: pointer;
 
 
 .bookCover{
-  z-index: 60;
+  z-index: 5;
+  position: absolute;
+
   background: grey;
 }
 
 .firstP {
-  z-index: -3;
+  z-index:3;
+  position: absolute;
+  /* z-index: -2; */
   /* display: none; */
   border: 1px solid black;
 
 }
 
 .lastP{
+z-index: 1;
+  position: absolute;
   z-index: -8;
 }
 
@@ -407,6 +411,7 @@ cursor: pointer;
 
 
 .pageBack{
+  position: absolute;
 background-color: white;
 color: black;
 /* display: none; */
@@ -450,13 +455,6 @@ border: 2px solid blue;
 
 }
 
-.secondP {
-  grid-area: 4/2/ span 2/ span 2;
-}
-
-.thirdP {
-  grid-area: 5/1/ span 2/pan 2;
-}
 
 
 p {
