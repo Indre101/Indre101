@@ -469,52 +469,44 @@ function nextPage(nextPage) {
 
 pages.forEach((p) => {
 
+
   p.onclick = function () {
+    console.log(pageNumber)
+
     pageNumber++
-    flipPage(this)
-    nextPage(pages[pageNumber]);
+
+
+    if (pageNumber <= pages.length - 1) {
+      flipPage(this)
+      nextPage(pages[pageNumber])
+    } else if (pageNumber > pages.length - 1) {
+
+      pageNumber = 0;
+
+    }
   }
 })
 
 
 
-// bookCover.onclick = function () {
+
+bookCover.onclick = function () {
 
 
-//   flipPage(bookCover)
-//   firstPageBack.style.opacity = "1";
-//   firstPageBack.style.zIndex = "1";
-//   flipPage(firstPageBack)
-
-//   setTimeout(() => {
-
-//     firstStoryPart.style.zIndex = 1;
-
-//   }, 500);
+  bookCover.style.display = "none";
 
 
-// }
+}
 
-// firstStoryPart.onclick = function () {
-//   flipPage(firstStoryPart)
-//   setTimeout(() => {
-//     lastPage.style.zIndex = 1;
-//   }, 1000);
-
-//   secondPageBack.style.display = "block";
+firstStoryPart.onclick = function () {
+  firstStoryPart.style.display = "none";
 
 
-// }
 
-// lastPage.onclick = function () {
-//   flipPage(lastPage)
-//   setTimeout(() => {
+}
 
-//     closeBook(lastPage)
-//     closeBook(firstStoryPart)
-//     closeBook(bookCover)
+lastPage.onclick = function () {
 
-//   }, 1000);
+  lastPage.style.display = "none";
 
-//   thirdpageBack.style.display = "block";
-// }
+}

@@ -332,7 +332,9 @@ h1 {
 
 /* About me */
 
-
+.pageContainer{
+  cursor: pointer;
+}
 
 .aboutMeContainer {
   margin: 0;
@@ -348,14 +350,17 @@ h1 {
 
 }
 
+
+
 .commonBookRules{
   position: absolute;
   margin-left: auto;
   margin-right: auto;
+  width: 30vw;
+
   left: 0;
   right: 0;
-width: 30%;
-height: 70vh;
+  height: 70vh;
 transform-origin: left;
 transform-style: preserve-3d;
 transition: 1s;
@@ -390,7 +395,7 @@ cursor: pointer;
 }
 
 .lastP{
-  z-index: -5;
+  z-index: -8;
 }
 
 
@@ -403,7 +408,7 @@ cursor: pointer;
 .pageBack{
 background-color: white;
 /* display: none; */
-z-index: -15;
+z-index: -10;
 border: 2px solid blue;
 
 }
