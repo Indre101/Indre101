@@ -270,10 +270,10 @@ h1 {
   -moz-perspective: 10000;
   -webkit-perspective: 10000;
   -moz-perspective: 10000;
-  perspective-origin: left;
-  -webkit-perspective-origin: left;
-  -moz-perspective-origin: left;
-  -ms-perspective-origin: left;
+  perspective-origin: left bottom;
+  -webkit-perspective-origin: left bottom;
+  -moz-perspective-origin: left bottom;
+  -ms-perspective-origin: left bottom;
 }
 
 .filler {
@@ -284,17 +284,27 @@ h1 {
   align-items: center;
 }
 
+.pagesGoBack {
+  position: absolute;
+  width: 100%;
+}
+
 .bookCover {
+  z-index: 10;
   background: grey;
 }
 
+#bookCover {
+  height: 100%;
+}
+
 .firstP {
-  /* z-index: 5; */
+  z-index: 5;
   border: 1px solid black;
 }
 
 .lastP {
-  /* z-index: 1; */
+  z-index: 1;
   position: absolute;
 }
 
@@ -303,10 +313,13 @@ h1 {
 }
 
 .pageBack {
+  position: absolute;
   background-color: white;
   color: black;
-  z-index: -10;
+  z-index: 9;
   border: 2px solid blue;
+  width: 100%;
+  height: 100%;
 }
 
 .displayNone {
