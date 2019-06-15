@@ -354,8 +354,10 @@ h1 {
 }
 
 p {
-  font-size: 2vh;
+  font-size: 1.5vh;
   line-height: 4vh;
+  text-align: justify;
+  padding: 0.7vh;
 }
 
 .opacity {
