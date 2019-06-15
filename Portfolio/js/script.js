@@ -433,6 +433,8 @@ const firstPageBack = document.getElementById("firstPageBack");
 const secondPageBack = document.getElementById("secondPageBack");
 const thirdpageBack = document.getElementById("thirdpageBack");
 const pages = document.querySelectorAll(".pageContainer");
+const pagesGoBack = document.querySelectorAll(".pagesGoBack");
+const pageBack = document.querySelectorAll(".pageBack");
 
 
 
@@ -445,13 +447,12 @@ function flipPage(p) {
 
 }
 
-let pageNumber = 0;
 
 
 function closeBook(p) {
   p.style.transform = ""
   p.style.transition = "1s";
-  p.style.transformOrigin = " right";
+  p.style.transformOrigin = "left";
 
 
 
@@ -459,39 +460,77 @@ function closeBook(p) {
 
 function nextPage(nextPage) {
   setTimeout(() => {
-    console.log("jklæ")
+    nextPage.style.zIndex = "10";
 
-    nextPage.style.zIndex = "1";
   }, 500);
 
 }
 
+let pageNumber = 0;
+
 
 pages.forEach((p) => {
 
-
   p.onclick = function () {
-    console.log(pageNumber)
-
     pageNumber++
 
-
-    if (pageNumber <= pages.length - 1) {
+    if (pageNumber < pages.length) {
+      console.log(pageNumber)
       flipPage(this)
       nextPage(pages[pageNumber])
-    } else if (pageNumber > pages.length - 1) {
 
+    } else if (pageNumber === 3) {
       pageNumber = 0;
 
+
+
+
+
+      setTimeout(() => {
+        pagesGoBack.forEach(element => {
+          element.style.opacity = "0";
+          element.style.display = "block";
+
+        });
+
+        pageBack.forEach(b => {
+          b.style.display = "none";
+        })
+      }, 1000);
+
+
+
+
+      setTimeout(() => {
+
+        pagesGoBack.forEach(element_1 => {
+          element_1.style.opacity = "1";
+        })
+
+
+        for (let index = pages.length - 1; index >= 0; index--) {
+          closeBook(pages[index])
+
+        }
+
+      }, 2000);
+
+
+
+
+
     }
+
   }
 })
 
 
 
 
-bookCover.onclick = function () {
 
+
+
+bookCover.onclick = function () {
 
   bookCover.style.display = "none";
 
