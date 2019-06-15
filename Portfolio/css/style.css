@@ -330,7 +330,9 @@ h1 {
   padding-left: 5%;
 }
 
-/* portfolio */
+/* About me */
+
+
 
 .aboutMeContainer {
   margin: 0;
@@ -346,8 +348,24 @@ h1 {
 
 }
 
+.commonBookRules{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+width: 30%;
+height: 70vh;
+transform-origin: left;
+transform-style: preserve-3d;
+transition: 1s;
+cursor: pointer;
+
+
+}
+
+
 .filler {
-  grid-area: 1/1/span 1/span 3;
 
   margin: 0;
   padding: 0;
@@ -358,44 +376,44 @@ h1 {
 }
 
 
-.textAboutme {
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-
-}
-
-.albumPosition{
-  grid-area: 2/2/span 1/ span 1;
-
+.bookCover{
+  z-index: 60;
+  background: grey;
 }
 
 .firstP {
-  transform-origin: left;
-  transform-style: preserve-3d;
-  position: absolute;
-  width: 35%;
-  z-index: -1;
+  z-index: -3;
+  /* display: none; */
   border: 1px solid black;
-  background-color: white;
+  background-color: blue;
 
 }
+
+.lastP{
+  z-index: -5;
+}
+
 
 
 .photoContainer {
-  position: absolute;
   background-color: darkgray;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 35%;
-  transform-origin: left;
-  transform-style: preserve-3d;
+}
 
+
+.pageBack{
+background-color: white;
+/* display: none; */
+z-index: -15;
+border: 2px solid blue;
 
 }
+
+
+.displayNone {
+  display: none;
+}
+
+
 
 .flipPage{
   animation: flipPage 2s linear forwards 1;
@@ -432,11 +450,6 @@ h1 {
 .thirdP {
   grid-area: 5/1/ span 2/pan 2;
 }
-
-.lastP {
-z-index: -2;
-}
-
 
 
 p {
@@ -699,9 +712,6 @@ a {
 
 }
 
-.displayNone {
-  display: none;
-}
 
 #btnPortfolio {
   margin-left: 15%;

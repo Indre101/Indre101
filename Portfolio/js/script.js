@@ -429,48 +429,92 @@ menuItemPortfolio.onmouseout = function () {
 const bookCover = document.getElementById("bookCover");
 const firstStoryPart = document.getElementById("firstStoryPart");
 const lastPage = document.getElementById("lastPage");
+const firstPageBack = document.getElementById("firstPageBack");
+const secondPageBack = document.getElementById("secondPageBack");
+const thirdpageBack = document.getElementById("thirdpageBack");
+const pages = document.querySelectorAll(".pageContainer");
+
+
 
 function flipPage(p) {
 
   p.style.transform = "rotateY(-180deg)"
   p.style.transition = "1s";
   p.style.transformOrigin = " left";
+  // p.style.zIndex = "-1";
+
 }
 
-function closeBook(p) {
+let pageNumber = 0;
 
+
+function closeBook(p) {
   p.style.transform = ""
   p.style.transition = "1s";
   p.style.transformOrigin = " right";
 
+
+
 }
 
-
-bookCover.onclick = function () {
-  flipPage(bookCover)
+function nextPage(nextPage) {
   setTimeout(() => {
-    firstStoryPart.style.zIndex = 1;
-  }, 1000);
-}
+    console.log("jklæ")
 
-firstStoryPart.onclick = function () {
-  flipPage(firstStoryPart)
-  setTimeout(() => {
-    lastPage.style.zIndex = 1;
-  }, 1000);
+    nextPage.style.zIndex = "1";
+  }, 500);
 
 }
 
-lastPage.onclick = function () {
-  flipPage(lastPage)
-  setTimeout(() => {
 
-    closeBook(lastPage)
-    closeBook(firstStoryPart)
-    closeBook(bookCover)
+pages.forEach((p) => {
+
+  p.onclick = function () {
+    pageNumber++
+    flipPage(this)
+    nextPage(pages[pageNumber]);
+  }
+})
 
 
 
-  }, 1000);
+// bookCover.onclick = function () {
 
-}
+
+//   flipPage(bookCover)
+//   firstPageBack.style.opacity = "1";
+//   firstPageBack.style.zIndex = "1";
+//   flipPage(firstPageBack)
+
+//   setTimeout(() => {
+
+//     firstStoryPart.style.zIndex = 1;
+
+//   }, 500);
+
+
+// }
+
+// firstStoryPart.onclick = function () {
+//   flipPage(firstStoryPart)
+//   setTimeout(() => {
+//     lastPage.style.zIndex = 1;
+//   }, 1000);
+
+//   secondPageBack.style.display = "block";
+
+
+// }
+
+// lastPage.onclick = function () {
+//   flipPage(lastPage)
+//   setTimeout(() => {
+
+//     closeBook(lastPage)
+//     closeBook(firstStoryPart)
+//     closeBook(bookCover)
+
+//   }, 1000);
+
+//   thirdpageBack.style.display = "block";
+// }
