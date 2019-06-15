@@ -265,7 +265,9 @@ h1 {
   right: 0;
   height: 70vh;
   cursor: pointer;
+  transform-origin: left bottom;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   perspective: 10000;
   -moz-perspective: 10000;
   -webkit-perspective: 10000;
@@ -298,14 +300,26 @@ h1 {
   height: 100%;
 }
 
+.pageBack1 {
+  z-index: 8;
+}
+
 .firstP {
   z-index: 5;
   border: 1px solid black;
 }
 
+.pageBack2 {
+  z-index: -1;
+}
+
 .lastP {
   z-index: 1;
   position: absolute;
+}
+
+.pageBack3 {
+  z-index: -1;
 }
 
 .photoContainer {
@@ -316,7 +330,6 @@ h1 {
   position: absolute;
   background-color: white;
   color: black;
-  z-index: 9;
   border: 2px solid blue;
   width: 100%;
   height: 100%;

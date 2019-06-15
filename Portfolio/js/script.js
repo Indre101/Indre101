@@ -402,7 +402,6 @@ const pageBack = document.querySelectorAll(".pageBack");
 function flipPage(p) {
   p.style.transform = "rotateY(-180deg)";
   p.style.transition = "1s";
-  p.style.transformOrigin = " left";
 }
 
 // function closeBook(p) {
