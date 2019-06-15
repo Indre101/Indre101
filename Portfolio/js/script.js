@@ -404,84 +404,37 @@ function flipPage(p) {
   p.style.transition = "1s";
 }
 
-// function closeBook(p) {
-//   p.style.transform = ""
-//   p.style.transition = "1s";
-//   p.style.transformOrigin = "left";
-// }
+function closeBook(p) {
+  p.style.transform = "";
+}
 
-// function nextPage(nextPage) {
-//   setTimeout(() => {
-//     nextPage.style.zIndex = "10";
+let pageNumber = -1;
 
-//   }, 500);
-
-// }
+function displayNone(d) {
+  d.classList.add("opacity");
+  // d.style.opacity = "0";
+}
 
 pages.forEach(a => {
   a.onclick = function() {
+    pageNumber++;
     flipPage(this);
+    displayNone(pagesGoBack[pageNumber]);
+
+    console.log(pageNumber);
+    if (pageNumber === 2) {
+      setTimeout(() => {
+        pageNumber = -1;
+        pages.forEach(a => {
+          closeBook(a);
+        });
+
+        pagesGoBack.forEach(s => {
+          s.classList.remove("opacity");
+        });
+      }, 2000);
+    }
   };
 });
 
-// let pageNumber = 0;
-
-// pages.forEach((p) => {
-
-//   p.onclick = function () {
-//     pageNumber++
-
-//     if (pageNumber < pages.length) {
-//       console.log(pageNumber)
-//       flipPage(this)
-//       nextPage(pages[pageNumber])
-
-//     } else if (pageNumber === 3) {
-//       pageNumber = 0;
-
-//       setTimeout(() => {
-//         pagesGoBack.forEach(element => {
-//           element.style.opacity = "0";
-//           element.style.display = "block";
-
-//         });
-
-//         pageBack.forEach(b => {
-//           b.style.display = "none";
-//         })
-//       }, 1000);
-
-//       setTimeout(() => {
-
-//         pagesGoBack.forEach(element_1 => {
-//           element_1.style.opacity = "1";
-//         })
-
-//         for (let index = pages.length - 1; index >= 0; index--) {
-//           closeBook(pages[index])
-
-//         }
-
-//       }, 2000);
-
-//     }
-
-//   }
-// })
-
-// bookCover.onclick = function () {
-
-//   bookCover.style.display = "none";
-
-// }
-
-// firstStoryPart.onclick = function () {
-//   firstStoryPart.style.display = "none";
-
-// }
-
-// lastPage.onclick = function () {
-
-//   lastPage.style.display = "none";
-
-// }
+// lastPage.onclick = function() {};

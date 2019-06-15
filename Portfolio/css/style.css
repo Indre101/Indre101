@@ -354,6 +354,15 @@ p {
   line-height: 4vh;
 }
 
+.opacity {
+  animation: opacity 1s linear forwards 1;
+}
+
+@keyframes opacity {
+  100% {
+    opacity: 0;
+  }
+}
 /* portfolio  */
 
 /* saul bass */
