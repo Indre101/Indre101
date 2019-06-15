@@ -434,14 +434,14 @@ function flipPage(p) {
 
   p.style.transform = "rotateY(-180deg)"
   p.style.transition = "1s";
-  p.style.transformOrigin = "left";
+  p.style.transformOrigin = " left";
 }
 
 function closeBook(p) {
 
   p.style.transform = ""
   p.style.transition = "1s";
-  p.style.transformOrigin = "right";
+  p.style.transformOrigin = " right";
 
 }
 

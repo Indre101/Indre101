@@ -372,6 +372,8 @@ h1 {
 }
 
 .firstP {
+  transform-origin: left;
+  transform-style: preserve-3d;
   position: absolute;
   width: 35%;
   z-index: -1;
@@ -385,12 +387,12 @@ h1 {
   position: absolute;
   background-color: darkgray;
   height: 80%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 35%;
   transform-origin: left;
+  transform-style: preserve-3d;
 
 
 }
