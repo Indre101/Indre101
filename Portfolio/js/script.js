@@ -1,5 +1,4 @@
 // canvas
-
 const menuItem3 = document.getElementById("menuItemPortfolio");
 const menuItem = document.querySelectorAll(".projectItem");
 
