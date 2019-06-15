@@ -357,7 +357,9 @@ p {
   font-size: 1.5vh;
   line-height: 4vh;
   text-align: justify;
-  padding: 0.7vh;
+  padding-left: 0.7vh;
+  padding-right: 0.7vh;
+  margin: 0;
 }
 
 .opacity {
@@ -369,6 +371,37 @@ p {
     opacity: 0;
   }
 }
+
+.pageFooter {
+  opacity: 0.5;
+  font-size: 0.8vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.bookSpanRed {
+  /* color: #ff1e00; */
+  transition: 0.5s;
+}
+
+.bookSpanRed::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1%;
+  background-color: #ff1e00;
+  transition: 0.5s;
+}
+
+.bookSpanRed:hover {
+  color: #ff1e00;
+}
+
+.bookSpanRed:hover::before {
+  width: 12%;
+}
+
 /* portfolio  */
 
 /* saul bass */
