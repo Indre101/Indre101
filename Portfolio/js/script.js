@@ -432,7 +432,7 @@ pages.forEach(a => {
         pagesGoBack.forEach(s => {
           s.classList.remove("opacity");
         });
-      }, 2000);
+      }, 1000);
     }
   };
 });

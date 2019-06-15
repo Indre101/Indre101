@@ -292,6 +292,10 @@ h1 {
 }
 
 .bookCover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   z-index: 10;
   background: grey;
 }
