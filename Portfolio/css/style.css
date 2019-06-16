@@ -642,7 +642,15 @@ a {
 
 /* media queries */
 
-@media screen and (max-width: 1024px) and (max-height: 1366px) {
+@media screen and (max-width: 1024px) {
+
+  .navigation {
+    justify-content: flex-end;
+  }
+
+  #menuItemPortfolio {
+    width: 7em;
+  }
 
   h1 {
     font-size: 4vh;
@@ -669,6 +677,30 @@ a {
   .navLi h2 {
     display: none;
   }
+
+  .projectItemContainer {
+    display: none;
+  }
+
 }
 
-@media screen and (max-width:768px) and (max-height:1024px) {}
+@media screen and (max-width:768px) {
+  .navigation a {
+
+    width: 6em;
+    height: 3em;
+  }
+
+  .canvas {
+    width: 80%;
+  }
+
+
+  .commonBookRules {
+    width: 50%;
+    margin-top: 15%;
+    height: 80vh;
+    margin-right: 2%;
+  }
+
+}

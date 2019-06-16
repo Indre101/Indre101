@@ -2,6 +2,8 @@
 const menuItem3 = document.getElementById("menuItemPortfolio");
 const menuItem = document.querySelectorAll(".projectItem");
 
+
+
 window.onload = function () {
   menuItem.forEach(e => {
     e.style.display = "none";
@@ -434,3 +436,37 @@ pages.forEach(a => {
     }
   };
 });
+
+
+// media querie
+
+
+
+function media_q() {
+
+  if (window.innerWidth <= 1024) {
+
+    menuItem3.style.transition = "";
+    menuItem3.style.transform = "rotate(-30deg) skewX(25deg) translate(0, 0)";
+    menuItem3.style.width = "";
+
+    menuItem3.style.transformOrigin = "left";
+    menuItem3.style.perspective = "";
+    // ulPortoflioListContainer.classList.add("displayNone");
+
+    menuItem3.onclick = function () {
+
+      menuItem3.style.transform = "rotate(-30deg) skewX(25deg) translate(-0.8vw, -1vh)";
+      menuItem3.boxShadow = "-2em 2em #5e1006"
+      menuItem3.style.width = "";
+
+    }
+    console.log("true")
+
+  } else {
+    console.log("this does not apply");
+  }
+
+}
+
+media_q()
