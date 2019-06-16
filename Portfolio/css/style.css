@@ -743,8 +743,8 @@ a {
   }
 
   .navigation {
-    height: 100vh;
     align-items: flex-end;
+    bottom: 5%;
   }
 
 
@@ -764,5 +764,24 @@ a {
 
   .Aboutme3 p {
     display: none;
+  }
+
+  .commonBookRules {
+    width: 85%;
+    height: 70vh;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+
+  .saulBassContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .displayImagesSaulBassContainer {
+    width: 80%;
+  }
+
+  .styleTileBass {
+    width: 80%;
   }
 }
