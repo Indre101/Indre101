@@ -829,3 +829,29 @@ a {
     margin: 5% 0;
   }
 }
+
+
+/* iphone 5s */
+
+@media screen and (max-width:340px) {
+  .navigation a {
+    width: 4em;
+  }
+
+  .navigation a::before,
+  .navigation a::after {
+    font-size: 0.8em;
+  }
+
+  h4 {
+    font-size: 3vh;
+  }
+
+  ol li {
+    padding: 2%;
+    margin: 5% 0;
+    line-height: 4vh;
+  }
+
+
+}
