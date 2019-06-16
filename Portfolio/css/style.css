@@ -640,17 +640,19 @@ a {
   grid-template-columns: repeat(3, 1fr);
 }
 
+
+
+
 /* media queries */
 
 @media screen and (max-width: 1024px) {
 
   .navigation {
+    height: 12%;
     justify-content: flex-end;
   }
 
-  #menuItemPortfolio {
-    width: 7em;
-  }
+
 
   h1 {
     font-size: 4vh;
