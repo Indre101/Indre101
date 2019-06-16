@@ -645,14 +645,34 @@ a {
 
 /* media queries */
 
-@media screen and (max-width: 1024px) {
+
+/* for Ipad pro */
+
+@media screen and (max-width: 1025px) {
 
   .navigation {
     height: 12%;
     justify-content: flex-end;
   }
 
+  #home::after {
+    content: "Home";
+    text-align: center;
+    color: black;
+  }
 
+
+  #about::after {
+    content: "About";
+    text-align: center;
+    color: black;
+  }
+
+  #menuItemPortfolio::after {
+    content: "Portfolio";
+    text-align: center;
+    color: black;
+  }
 
   h1 {
     font-size: 4vh;
@@ -684,8 +704,15 @@ a {
     display: none;
   }
 
+  h3 {
+    font-size: 2vh;
+  }
+
 }
 
+
+
+/* for Ipad  */
 @media screen and (max-width:768px) {
   .navigation a {
 
@@ -700,9 +727,42 @@ a {
 
   .commonBookRules {
     width: 50%;
-    margin-top: 15%;
     height: 80vh;
     margin-right: 2%;
   }
 
+}
+
+
+/* for Iphone 6/7/8 plus */
+
+@media screen and (max-width:414px) {
+
+  .firtPageBG {
+    background-image: url(../Images_and_icons/coffe_3.png);
+  }
+
+  .navigation {
+    height: 100vh;
+    align-items: flex-end;
+  }
+
+
+  .navigation a {
+    margin-bottom: 10%;
+  }
+
+
+  .canvas {
+    width: 90%;
+  }
+
+  .Aboutme3 {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .Aboutme3 p {
+    display: none;
+  }
 }

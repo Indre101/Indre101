@@ -444,7 +444,7 @@ pages.forEach(a => {
 
 function media_q() {
 
-  if (window.innerWidth <= 1024) {
+  if (window.innerWidth <= 1025) {
 
     menuItem3.style.transition = "";
     menuItem3.style.transform = "rotate(-30deg) skewX(25deg) translate(0, 0)";
