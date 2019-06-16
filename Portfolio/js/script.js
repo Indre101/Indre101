@@ -306,7 +306,7 @@ function clickedProjectName(pNToShow, ar) {
 
   //
 
-  textConatainer.insertAdjacentElement("afterbegin", pNToShow);
+  textConatainer.insertAdjacentElement("beforeend", pNToShow);
 
   pNToShow.classList.add("textAnimation");
   pNToShow.style.display = "block";
@@ -348,6 +348,12 @@ function showImages(anImage) {
     cln.style.transform = "translate(0,0)";
     cln.style.height = "50vh";
     cln.style.width = "50vw";
+
+    if (window.innerWidth <= 416) {
+
+      cln.style.width = "80vw";
+    }
+
     cln.style.opacity = "1";
 
     cln.style.objectFit = "contain";
@@ -421,7 +427,6 @@ pages.forEach(a => {
     flipPage(this);
     displayNone(pagesGoBack[pageNumber]);
 
-    console.log(pageNumber);
     if (pageNumber === 2) {
       setTimeout(() => {
         pageNumber = -1;
@@ -461,7 +466,6 @@ function media_q() {
       menuItem3.style.width = "";
 
     }
-    console.log("true")
 
   } else {
     console.log("this does not apply");
