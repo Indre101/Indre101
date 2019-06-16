@@ -10,11 +10,7 @@ body {
 ul {
   margin: 0 !important;
   padding: 0 !important;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 0;
+
 }
 
 .displayFlex {
@@ -266,10 +262,10 @@ h1 {
   transform-origin: left bottom;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  perspective: 10000;
-  -moz-perspective: 10000;
-  -webkit-perspective: 10000;
-  -moz-perspective: 10000;
+  perspective: 10000px;
+  -moz-perspective: 10000px;
+  -webkit-perspective: 10000px;
+  -moz-perspective: 10000px;
   perspective-origin: left bottom;
   -webkit-perspective-origin: left bottom;
   -moz-perspective-origin: left bottom;
@@ -534,10 +530,11 @@ ol {
 
 h4 {
   font-size: 2vh;
-  margin: 0;
+  margin-left: 1vh;
+  /* margin: 0;
   margin: 0;
   margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block-end: 0; */
 }
 
 ol li {
