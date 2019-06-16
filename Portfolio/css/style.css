@@ -289,7 +289,7 @@ h1 {
 }
 
 .bookCover {
-  /* background-image: url("../Images_and_icons/Untitled-1.png"); */
+  background-image: url("../Images_and_icons/book_cover_1.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -362,9 +362,9 @@ h1 {
   border-radius: 8px;
   object-fit: contain;
   margin: 0;
-  margin-top: 10%;
-  padding: 2%;
   background-color: white;
+
+
 }
 
 p {
