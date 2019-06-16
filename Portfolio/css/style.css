@@ -743,13 +743,15 @@ a {
   }
 
   .navigation {
-    align-items: flex-end;
-    bottom: 5%;
+    /* bottom: 20%; */
+    align-items: center;
+    justify-content: flex-start;
   }
 
 
   .navigation a {
-    margin-bottom: 10%;
+    margin-bottom: 0;
+    width: 5em;
   }
 
 
@@ -783,5 +785,24 @@ a {
 
   .styleTileBass {
     width: 80%;
+  }
+
+
+
+  .photoGaleryContainer {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .styleTileBass {
+    align-self: center;
+    width: 85%;
+  }
+
+  .saulBassIMG {
+    padding: 0;
+    width: 10vw;
+    margin: 0;
   }
 }
