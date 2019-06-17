@@ -443,10 +443,11 @@ pages.forEach(a => {
         pages.forEach(a => {
           closeBook(a);
         });
-
-        pagesGoBack.forEach(s => {
-          s.classList.remove("opacity");
-        });
+        setTimeout(() => {
+          pagesGoBack.forEach(s => {
+            s.classList.remove("opacity");
+          });
+        }, 300);
       }, 1000);
     }
   };
