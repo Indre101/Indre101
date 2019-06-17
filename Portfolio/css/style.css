@@ -32,14 +32,14 @@ ul {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   position: fixed;
   z-index: 1000;
 }
 
 .navigation a {
-  margin: 5% 5% 0 5%;
+  margin: 3% 5% 0 5%;
 
   border-radius: 8px;
   color: white;
@@ -242,6 +242,7 @@ h2 {
 .canvas {
   border-radius: 50%;
   width: 60%;
+  height: 23%;
 }
 
 .hi {
@@ -760,11 +761,16 @@ a {
     color: black;
   }
 
+
+
   #menuItemPortfolio::after {
     content: "Portfolio";
     text-align: center;
     color: black;
   }
+
+
+
 
   h1 {
     font-size: 4vh;
@@ -783,6 +789,10 @@ a {
   }
 
   .navLi h2 {
+    display: none;
+  }
+
+  #menuItemPortfolio h2 {
     display: none;
   }
 
@@ -824,7 +834,7 @@ a {
 
 /* for Iphone 6/7/8 plus */
 
-@media screen and (max-width:416px) {
+@media screen and (max-width:616px) {
 
   .firtPageBG {
     background-image: url(../Images_and_icons/coffe_0.jpg);
