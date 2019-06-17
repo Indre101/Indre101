@@ -214,6 +214,7 @@ let arrayOfpages = [
 btnPortfolio.onclick = function() {
   j++;
 
+  btnPortfolioBack.src = "../Images_and_icons/25223.svg";
   if (j < 0) {
     j = 0;
     return false;
@@ -221,11 +222,14 @@ btnPortfolio.onclick = function() {
     j = arrayOfpages.length - 1;
     return false;
   }
+
   moveThePage(j);
 };
 
 btnPortfolioBack.onclick = function() {
-  if (j > 0) {
+  if (j === 0) {
+    btnPortfolioBack.src = "../Images_and_icons/25223.svg";
+  } else if (j > 0) {
     j--;
     moveThePage(j);
   } else if (j > arrayOfpages.length - 1) {
@@ -233,7 +237,6 @@ btnPortfolioBack.onclick = function() {
     return false;
   } else if (j < 0) {
     j = 0;
-    btnPortfolioBack.style.pointerEvents = "none";
   }
 };
 

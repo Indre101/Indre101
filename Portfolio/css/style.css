@@ -166,6 +166,13 @@ h2 {
   background-position: center;
 }
 
+.linkImg1 {
+  width: 4%;
+  margin-right: 1%;
+  object-fit: contain;
+  align-self: flex-end;
+}
+
 .animationAbout {
   opacity: 0;
   animation: movefromLeft 2.5s ease-in-out forwards 1;
@@ -215,7 +222,8 @@ h2 {
 }
 
 .hi {
-  color: #5a0423;
+  color: #810423;
+
 }
 
 h1 {
@@ -324,7 +332,9 @@ h1 {
 }
 
 .bookTitle {
-  color: white;
+  border-radius: 8px;
+  background-color: white;
+  padding: 1vh;
 }
 
 #bookCover {
@@ -435,6 +445,10 @@ p {
 
 .bookSpanRed:hover::before {
   width: 12%;
+}
+
+.linkedin1 {
+  color: #810423;
 }
 
 /* portfolio  */
@@ -644,21 +658,23 @@ a {
 
 #btnPortfolio {
   margin-left: 15%;
-  height: 80%;
+  height: 60%;
   object-fit: contain;
   transform: rotate(90deg);
   box-shadow: 0.7vh 0.7vh 0.7vh;
   border-radius: 8px;
+  padding: 2%;
 }
 
 #btnPortfolioBack {
   margin-right: 15%;
-  height: 80%;
+  height: 60%;
   object-fit: contain;
   transform: rotate(-90deg);
   justify-self: flex-end;
   box-shadow: 0.7vh 0.7vh 0.7vh;
   border-radius: 8px;
+  padding: 2%;
 }
 
 .projectNamesContainer {
