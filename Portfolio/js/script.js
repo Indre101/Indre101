@@ -2,9 +2,7 @@
 const menuItem3 = document.getElementById("menuItemPortfolio");
 const menuItem = document.querySelectorAll(".projectItem");
 
-
-
-window.onload = function () {
+window.onload = function() {
   menuItem.forEach(e => {
     e.style.display = "none";
   });
@@ -156,65 +154,65 @@ let webPrototype = [
 
 let j = 0;
 
-let arrayOfpages = [{
+let arrayOfpages = [
+  {
     projecName: "Saul Bass responsive website",
-    functionToCall: function () {
+    functionToCall: function() {
       takeImages(imageAraySoulBass);
     },
-    functionTochangeText: function () {
+    functionTochangeText: function() {
       clickedProjectName(project1, imageAraySoulBass);
     }
   },
   {
     projecName: "The adventures of Chad",
-    functionToCall: function () {
+    functionToCall: function() {
       takeImages(chad);
     },
-    functionTochangeText: function () {
+    functionTochangeText: function() {
       clickedProjectName(project4, chad);
     }
   },
   {
     projecName: "Interactive The Shining poster",
-    functionToCall: function () {
+    functionToCall: function() {
       takeImages(shining);
     },
-    functionTochangeText: function () {
+    functionTochangeText: function() {
       clickedProjectName(project5, shining);
     }
   },
   {
     projecName: "Biking 101",
-    functionToCall: function () {
+    functionToCall: function() {
       takeImages(biking);
     },
-    functionTochangeText: function () {
+    functionTochangeText: function() {
       clickedProjectName(project3, biking);
     }
   },
   {
     projecName: "Fronter fix",
-    functionToCall: function () {
+    functionToCall: function() {
       takeImages(sprint);
     },
-    functionTochangeText: function () {
+    functionTochangeText: function() {
       clickedProjectName(project6, sprint);
     }
   },
   {
     projecName: "Fronter fix web prototype",
-    functionToCall: function () {
+    functionToCall: function() {
       takeImages(webPrototype);
     },
-    functionTochangeText: function () {
+    functionTochangeText: function() {
       clickedProjectName(project7, webPrototype);
     }
   }
 ];
 
-btnPortfolio.onclick = function () {
+btnPortfolio.onclick = function() {
   j++;
-  console.log(j);
 
   if (j < 0) {
     j = 0;
@@ -226,17 +224,17 @@ btnPortfolio.onclick = function () {
   moveThePage(j);
 };
 
-btnPortfolioBack.onclick = function () {
-  j--;
-  console.log(j);
-  if (j < 0) {
-    j = 0;
+btnPortfolioBack.onclick = function() {
+  if (j > 0) {
+    j--;
+    moveThePage(j);
   } else if (j > arrayOfpages.length - 1) {
     j = arrayOfpages.length - 1;
     return false;
+  } else if (j < 0) {
+    j = 0;
+    btnPortfolioBack.style.pointerEvents = "none";
   }
-
-  moveThePage(j);
 };
 
 function moveThePage(k) {
@@ -247,42 +245,42 @@ function moveThePage(k) {
 
 // menu buttons
 
-document.getElementById("projectBTN_1").onclick = function () {
+document.getElementById("projectBTN_1").onclick = function() {
   takeImages(imageAraySoulBass);
 
   projectName.textContent = "Saul Bass responsive website";
   clickedProjectName(project1, imageAraySoulBass);
 };
 
-document.getElementById("projectBTN_3").onclick = function () {
+document.getElementById("projectBTN_3").onclick = function() {
   takeImages(biking);
   projectName.textContent = "Biking 101";
 
   clickedProjectName(project3, biking);
 };
 
-document.getElementById("projectBTN_4").onclick = function () {
+document.getElementById("projectBTN_4").onclick = function() {
   takeImages(chad);
   projectName.textContent = "The adventures of Chad";
 
   clickedProjectName(project4, chad);
 };
 
-document.getElementById("projectBTN_5").onclick = function () {
+document.getElementById("projectBTN_5").onclick = function() {
   takeImages(shining);
   projectName.textContent = "Interactive The Shining poster";
 
   clickedProjectName(project5, shining);
 };
 
-document.getElementById("projectBTN_6").onclick = function () {
+document.getElementById("projectBTN_6").onclick = function() {
   takeImages(sprint);
   projectName.textContent = "Fronter fix";
 
   clickedProjectName(project6, sprint);
 };
 
-document.getElementById("projectBTN_7").onclick = function () {
+document.getElementById("projectBTN_7").onclick = function() {
   takeImages(webPrototype);
   projectName.textContent = "Fronter fix web prototype";
 
@@ -331,11 +329,11 @@ function takeImages(a) {
 
 // function to make images functioonal
 function showImages(anImage) {
-  anImage.onmouseover = function () {
+  anImage.onmouseover = function() {
     anImage.style.opacity = "0.5";
   };
 
-  anImage.onmouseout = function () {
+  anImage.onmouseout = function() {
     anImage.style.opacity = "1";
   };
 
@@ -350,7 +348,6 @@ function showImages(anImage) {
     cln.style.width = "50vw";
 
     if (window.innerWidth <= 416) {
-
       cln.style.width = "80vw";
     }
 
@@ -367,7 +364,7 @@ function showImages(anImage) {
 // portfolio button menu pop up
 const ulPortoflioListContainer = document.getElementById("protfolioList");
 
-menuItem3.onmouseover = function () {
+menuItem3.onmouseover = function() {
   menuItem3.style.transition = "1s";
   menuItem3.style.transform = "rotate(0deg) skewX(0deg) translate(0,0)";
   menuItem3.style.width = "50%";
@@ -383,7 +380,7 @@ menuItem3.onmouseover = function () {
   });
 };
 
-menuItemPortfolio.onmouseout = function () {
+menuItemPortfolio.onmouseout = function() {
   menuItem3.style.transform = "rotate(-30deg) skewX(25deg) translate(0, 0)";
   ulPortoflioListContainer.classList.add("displayNone");
   menuItem3.style.width = "";
@@ -422,7 +419,7 @@ function displayNone(d) {
 }
 
 pages.forEach(a => {
-  a.onclick = function () {
+  a.onclick = function() {
     pageNumber++;
     flipPage(this);
     displayNone(pagesGoBack[pageNumber]);
@@ -442,15 +439,10 @@ pages.forEach(a => {
   };
 });
 
-
 // media querie
 
-
-
 function media_q() {
-
   if (window.innerWidth <= 1025) {
-
     menuItem3.style.transition = "";
     menuItem3.style.transform = "rotate(-30deg) skewX(25deg) translate(0, 0)";
     menuItem3.style.width = "";
@@ -459,18 +451,15 @@ function media_q() {
     menuItem3.style.perspective = "";
     // ulPortoflioListContainer.classList.add("displayNone");
 
-    menuItem3.onclick = function () {
-
-      menuItem3.style.transform = "rotate(-30deg) skewX(25deg) translate(-0.8vw, -1vh)";
-      menuItem3.boxShadow = "-2em 2em #5e1006"
+    menuItem3.onclick = function() {
+      menuItem3.style.transform =
+        "rotate(-30deg) skewX(25deg) translate(-0.8vw, -1vh)";
+      menuItem3.boxShadow = "-2em 2em #5e1006";
       menuItem3.style.width = "";
-
-    }
-
+    };
   } else {
     console.log("this does not apply");
   }
-
 }
 
-media_q()
+media_q();
