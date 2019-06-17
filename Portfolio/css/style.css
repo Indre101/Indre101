@@ -42,13 +42,13 @@ ul {
   margin: 5% 5% 0 5%;
 
   border-radius: 8px;
-  color: black;
+  color: white;
   transform-origin: left;
   width: 7em;
   height: 4em;
   text-decoration: none;
 
-  background-color: white;
+  background-color: black;
   transform: rotate(-30deg) skewX(25deg) translate(0, 0);
   transition: 0.5s;
 

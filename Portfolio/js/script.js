@@ -447,7 +447,7 @@ pages.forEach(a => {
           pagesGoBack.forEach(s => {
             s.classList.remove("opacity");
           });
-        }, 300);
+        }, 400);
       }, 1000);
     }
   };
