@@ -227,16 +227,16 @@ btnPortfolio.onclick = function() {
 };
 
 btnPortfolioBack.onclick = function() {
-  if (j === 0) {
-    btnPortfolioBack.src = "../Images_and_icons/25223.svg";
+  console.log(j);
+  if (j <= 0) {
+    j = 0;
+    btnPortfolioBack.src = "../Images_and_icons/grey.png";
   } else if (j > 0) {
     j--;
     moveThePage(j);
   } else if (j > arrayOfpages.length - 1) {
     j = arrayOfpages.length - 1;
     return false;
-  } else if (j < 0) {
-    j = 0;
   }
 };
 
