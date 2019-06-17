@@ -212,16 +212,25 @@ let arrayOfpages = [
 ];
 
 btnPortfolio.onclick = function() {
-  j++;
-
   btnPortfolioBack.src = "../Images_and_icons/25223.svg";
-  if (j < 0) {
-    j = 0;
-    return false;
+  if (j === arrayOfpages.length - 1) {
+    console.log("j lygu ");
+    btnPortfolio.src = "../Images_and_icons/grey.png";
+  } else if (j >= 0) {
+    j++;
+
+    moveThePage(j);
   } else if (j > arrayOfpages.length - 1) {
     j = arrayOfpages.length - 1;
-    return false;
   }
+
+  // if (j < 0) {
+  //   j = 0;
+  //   return false;
+  // } else if (j > arrayOfpages.length - 1) {
+  //   j = arrayOfpages.length - 1;
+  //   return false;
+  // }
 
   moveThePage(j);
 };
@@ -234,6 +243,7 @@ btnPortfolioBack.onclick = function() {
   } else if (j > 0) {
     j--;
     moveThePage(j);
+    btnPortfolio.src = "../Images_and_icons/25223.svg";
   } else if (j > arrayOfpages.length - 1) {
     j = arrayOfpages.length - 1;
     return false;
