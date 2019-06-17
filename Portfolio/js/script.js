@@ -212,7 +212,7 @@ let arrayOfpages = [
 ];
 
 btnPortfolio.onclick = function() {
-  btnPortfolioBack.src = "../Images_and_icons/25223.svg";
+  btnPortfolioBack.src = "../Images_and_icons/black.png";
   if (j === arrayOfpages.length - 1) {
     console.log("j lygu ");
     btnPortfolio.src = "../Images_and_icons/grey.png";
@@ -243,7 +243,7 @@ btnPortfolioBack.onclick = function() {
   } else if (j > 0) {
     j--;
     moveThePage(j);
-    btnPortfolio.src = "../Images_and_icons/25223.svg";
+    btnPortfolio.src = "../Images_and_icons/black.png";
   } else if (j > arrayOfpages.length - 1) {
     j = arrayOfpages.length - 1;
     return false;

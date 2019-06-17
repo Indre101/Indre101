@@ -42,13 +42,13 @@ ul {
   margin: 5% 5% 0 5%;
 
   border-radius: 8px;
-  color: white;
+  color: black;
   transform-origin: left;
   width: 7em;
   height: 4em;
   text-decoration: none;
 
-  background-color: rgba(0, 0, 0);
+  background-color: white;
   transform: rotate(-30deg) skewX(25deg) translate(0, 0);
   transition: 0.5s;
 
@@ -198,7 +198,7 @@ h2 {
 
 .animationAbout {
   opacity: 0;
-  animation: movefromLeft 2.5s ease-in-out forwards 1;
+  animation: movefromLeft 2s 0.4s ease-in-out forwards 1;
   /* -webkit-animation: movefromLeft 2.5s ease-in-out forwards 1;
   -moz-animation: movefromLeft 2.5s ease-in-out forwards 1;
   -o-animation: movefromLeft 2.5s ease-in-out forwards 1; */
