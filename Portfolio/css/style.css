@@ -24,6 +24,7 @@ ul {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  width: 100vw;
   /* grid-template-columns: repeat(3, 1fr); */
 }
 
