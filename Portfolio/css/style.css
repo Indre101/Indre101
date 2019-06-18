@@ -871,6 +871,18 @@ a {
     line-height: 3.5vh;
   }
 
+
+
+  #btnPortfolio {
+    height: 25%;
+
+  }
+
+  #btnPortfolioBack {
+    height: 25%;
+    ¨
+  }
+
   .Aboutme3 {
     justify-content: flex-start;
   }
