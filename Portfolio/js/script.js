@@ -131,7 +131,11 @@ let shining = [
   "../Images_and_icons/shining/shine8.png",
   "../Images_and_icons/shining/shine9.png",
   "../Images_and_icons/shining/shine10.png",
-  "../Images_and_icons/shining/shine10.png"
+  "../Images_and_icons/shining/shine11.png",
+  "../Images_and_icons/shining/shine12.png",
+  "../Images_and_icons/shining/shine13.png",
+  "../Images_and_icons/shining/shine14.png",
+  "../Images_and_icons/shining/here's_johnny.gif"
 ];
 let sprint = [
   "../Images_and_icons/sprint_1/sprint1.png",

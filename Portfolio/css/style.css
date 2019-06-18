@@ -368,6 +368,7 @@ h1 {
 
 .pageBack1 {
   z-index: 8;
+
 }
 
 .firstP {
@@ -525,6 +526,31 @@ p {
   object-fit: contain;
 }
 
+
+
+.sprite {
+  display: block;
+  background-image: url("../Images_and_icons/chad/sprite.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 99px;
+  height: 90px;
+
+  animation: sprite 2s steps(10) infinite;
+
+}
+
+
+@keyframes sprite {
+  100% {
+    background-position: -992px;
+    ;
+  }
+
+}
+
+
 /* .saulBassIMG:hover {
   height: 70%;
 } */
@@ -665,10 +691,10 @@ a {
 
 .textAnimation {
   opacity: 0;
-  animation: textAnimation 0.5s 0.2s linear forwards;
-  -webkit-animation: movefromLeft 2.5s ease-in-out forwards 1;
-  -moz-animation: movefromLeft 2.5s ease-in-out forwards 1;
-  -o-animation: movefromLeft 2.5s ease-in-out forwards 1;
+  animation: textAnimation 1s 0.2s linear forwards;
+  -webkit-animation: movefromLeft 1s 0.2s ease-in-out forwards 1;
+  -moz-animation: movefromLeft 1s 0.2s ease-in-out forwards 1;
+  -o-animation: movefromLeft 1s 0.2s ease-in-out forwards 1;
 }
 
 @keyframes textAnimation {
@@ -825,6 +851,7 @@ a {
     width: 50%;
     height: 80vh;
     margin-right: 2%;
+    margin-top: 3%;
   }
 
 }
