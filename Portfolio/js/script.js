@@ -91,10 +91,11 @@ let spongebobImageArray = [
 ];
 let biking = [
   "../Images_and_icons/bicycle/biking1_0.png",
-  "../Images_and_icons/bicycle/biking1.png",
-  "../Images_and_icons/bicycle/biking2.png",
-  "../Images_and_icons/bicycle/biking3.png",
   "../Images_and_icons/bicycle/biking4.png",
+  "../Images_and_icons/bicycle/biking3.png",
+  "../Images_and_icons/bicycle/biking2.png",
+  "../Images_and_icons/bicycle/biking1.png",
+
   "../Images_and_icons/bicycle/biking5.png",
   "../Images_and_icons/bicycle/biking6.png",
   "../Images_and_icons/bicycle/biking7.png",
@@ -102,7 +103,8 @@ let biking = [
   "../Images_and_icons/bicycle/biking9.png",
   "../Images_and_icons/bicycle/biking10.png",
   "../Images_and_icons/bicycle/biking11.png",
-  "../Images_and_icons/bicycle/biking12.png"
+  "../Images_and_icons/bicycle/biking12.png",
+  "../Images_and_icons/bicycle/biking13.png"
 ];
 let chad = [
   "../Images_and_icons/chad/chad1.png",
@@ -121,6 +123,7 @@ let chad = [
   "../Images_and_icons/chad/chad14.png"
 ];
 let shining = [
+  "../Images_and_icons/shining/here's_johnny.gif",
   "../Images_and_icons/shining/shine1.png",
   "../Images_and_icons/shining/shine2.png",
   "../Images_and_icons/shining/shine3.png",
@@ -134,8 +137,7 @@ let shining = [
   "../Images_and_icons/shining/shine11.png",
   "../Images_and_icons/shining/shine12.png",
   "../Images_and_icons/shining/shine13.png",
-  "../Images_and_icons/shining/shine14.png",
-  "../Images_and_icons/shining/here's_johnny.gif"
+  "../Images_and_icons/shining/shine14.png"
 ];
 let sprint = [
   "../Images_and_icons/sprint_1/sprint1.png",
