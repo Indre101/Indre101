@@ -14,6 +14,15 @@
     .container-fluid {
       border: 1px solid black;
     }
+
+    .border1 {
+      border: 1px solid blue;
+
+    }
+
+    .row {
+      height: 200px;
+    }
   </style>
 
 
@@ -21,12 +30,32 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">Row 1 col 1</div>
-      <div class="col">Row 2 col 2</div>
+  <!-- two equal columns -->
+  <div class="container-fluid ">
+    <div class="row align-content-center justify-content-around">
+      <div class="col-4 border1">Row 1 col 1</div>
+      <div class="col-4 border1">Row 2 col 2</div>
     </div>
   </div>
+
+
+  <!-- diffrent size coumns -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4 border1">Row 1 column 1</div>
+      <div class="col-4 border1">Row 1 column 2</div>
+      <div class="col-4 border1">Row 1 column 3</div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
