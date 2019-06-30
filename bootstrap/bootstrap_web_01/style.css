@@ -25,7 +25,8 @@
 
 .navbars-collapse {
   position: absolute;
-  animation: showMenuOptions 0.3s ease-in-out 1 forwards;
+  animation: showMenuOptions 0.4s ease-in-out 1 forwards;
+  perspective: 1000px;
   height: 100%;
   width: 30%;
   background-color: rgba(40, 60, 200, 0.7);
@@ -49,6 +50,16 @@
 
 @keyframes showMenuOptions {
   0% {
+    transform: translateX(-100vw);
+  }
+}
+
+.dissapeartoLeft {
+  animation: dissapeartoLeft 0.3s ease-in-out 1 forwards;
+}
+
+@keyframes dissapeartoLeft {
+  100% {
     transform: translateX(-100vw);
   }
 }
