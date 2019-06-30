@@ -7,7 +7,7 @@ let menuClick = 0;
 menuButtonIcon.onclick = function () {
 
   menuClick++
-  landingPagePart.style.backgroundImage = "linear-gradient(rgba(40, 60, 200, 0.3), rgba(40, 60, 200, 0.3)), url(./img/landing-page-bg.jpg)"
+  landingPagePart.classList.add("after");
 
   menuButtonIcon.style.backgroundImage = "none";
   menuButtonIcon.innerHTML = "&times;"
@@ -18,7 +18,7 @@ menuButtonIcon.onclick = function () {
     menuClick = 0;
     menuButtonIcon.style.backgroundImage = "";
     menuButtonIcon.innerHTML = ""
-    landingPagePart.style.backgroundImage = ""
+    landingPagePart.classList.remove("after")
     navbarSupportedContent.classList.add("dissapeartoLeft");
   }
 
