@@ -18,3 +18,6 @@ menuButtonIcon.onclick = function () {
 
 
 }
+
+// content: "\f00d";
+// content: "\f0c9";

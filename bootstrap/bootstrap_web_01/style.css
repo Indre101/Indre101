@@ -1,0 +1,53 @@
+.landingPageBg {
+  /* background-image: url(./img/landing-page-bg.jpg); */
+  height: 100vh;
+  background-size: cover;
+  padding: 0;
+  background-image:
+    /* top, transparent red */
+    linear-gradient(rgba(255, 0, 0, 0.45),
+      rgba(255, 0, 0, 0.45)), url(./img/landing-page-bg.jpg);
+  /* your image */
+
+}
+
+.navbar {
+  width: 100%;
+
+}
+
+.menuButtonMobile {
+  z-index: 1000;
+}
+
+.navbars-collapse {
+  position: absolute;
+  animation: showMenuOptions 0.5s ease-in-out 1 forwards;
+  height: 100%;
+  width: 100%;
+  /* background-color: rgba(40, 60, 200, 0.4); */
+  color: black;
+  z-index: 3;
+
+}
+
+.navbars-collapse::before {
+  content: "";
+  width: 20%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(40, 60, 200, 1);
+}
+
+
+
+
+
+
+
+
+@keyframes showMenuOptions {
+  0% {
+    transform: translateX(-100vw);
+  }
+}
