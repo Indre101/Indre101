@@ -1,3 +1,14 @@
+img {
+  padding: 0;
+  margin: 0;
+
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
 .landinPageBg {
   background-image: url(./img/landing-page-bg.jpg);
   height: 100vh;
@@ -50,6 +61,10 @@
   padding: 1em;
 }
 
+.nav-link:hover {
+  color: orange;
+}
+
 #menuButton {
   z-index: 1000;
 }
@@ -70,6 +85,16 @@
   object-fit: contain;
 }
 
+
+.imgTick {
+  width: 5vw;
+  object-fit: contain;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
 
 /* headers */
 
