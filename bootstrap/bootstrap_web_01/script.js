@@ -1,5 +1,5 @@
 const menuButtonIcon = document.getElementById("menuButtonIcon");
-const landingPagePart = document.getElementById("landingPagePart");
+const landingPagePart = document.getElementById("landingPageText");
 const navbarSupportedContent = document.getElementById("navbarSupportedContent");
 
 let menuClick = 0;
