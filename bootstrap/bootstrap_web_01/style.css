@@ -1,7 +1,7 @@
 img {
-  padding: 0;
+  padding: 1rem 0;
   margin: 0;
-
+  object-fit: contain;
 }
 
 
@@ -137,7 +137,11 @@ img {
   background-color: rgba(200, 10, 100, 0.4)
 }
 
+/* Portfolio */
 
+.portfolio {
+  background-color: rgba(100, 100, 100, 0.5);
+}
 
 /* headers */
 
