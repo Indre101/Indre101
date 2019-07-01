@@ -5,12 +5,16 @@
 
 }
 
+.bg-light {
+  z-index: 3;
+}
+
 .h-100vh {
   height: 100vh;
 }
 
 .after {
-  position: absolute;
+  /* position: absolute; */
 }
 
 .after::before {
@@ -34,6 +38,13 @@
 
 }
 
+.show {
+  margin: 0;
+  padding: 0;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+
 .nav-link {
   color: wheat;
   padding: 1em;
@@ -47,6 +58,30 @@
   height: 5vw;
 }
 
+.dropdown-item {
+  padding: 0.2rem;
+}
+
+
+/* About us */
+
+.imgAboutUs {
+  width: 90%;
+  object-fit: contain;
+}
+
+
+/* headers */
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+}
+
+/*  */
 
 #menuButtonIcon {
   height: 5vw;
@@ -54,6 +89,8 @@
   transition: 2s;
 }
 
+
+/* animations */
 .dissapeartoLeft {
   animation: dissapeartoLeft 0.3s 0.1s ease-in-out 1 forwards;
 
@@ -83,3 +120,5 @@
     opacity: 1;
   }
 }
+
+/*  */

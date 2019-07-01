@@ -15,9 +15,9 @@
 
 <body>
 
-  <div id="page1" class="container-fluid landinPageBg p-0">
+  <div id="page1" class="container-fluid landinPageBg p-0 h-100vh">
 
-    <div class="position-fixed d-flex justify-content-between w-100 bg-light">
+    <div class="position-fixed d-flex justify-content-between w-100 bg-light  ">
       <a class="navbar-brand mx-3" href="#"><img class="logo-width" src="./img/logo.svg" alt=""></a>
       <div class="nav navbar-expand-xs d-flex justify-content-end mx-3">
         <button id="menuButton" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -48,13 +48,19 @@
       <div class="dropdown ">
         <a class="dropdown-toggle  nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          <h4>Dropdown link</h4>
+          <h4 class="d-inline">Dropdown link</h4>
         </a>
 
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <div id="dropDownMenu" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">
+            <h5>Action</h5>
+          </a>
+          <a class="dropdown-item" href="#">
+            <h5>Another action</h5>
+          </a>
+          <a class="dropdown-item" href="#">
+            <h5>Something else here</h5>
+          </a>
         </div>
       </div>
       </a>
@@ -72,20 +78,24 @@
           <h3 class="text-black">Lorem, ipsum <span class="text-primary">dolor</span>!</h3>
           <button class="btn btn-success">More info</button>
         </div>
-
         <div class="container-fluid  col-xs-1 col-md-6 order-1 order-md-12 d-flex  justify-content-around">
           <img class="img1" src="./img/shirt.svg" alt="" width="50">
           <img class="img1" src="./img/sun.svg" alt="" width="50">
           <img class="img1" src="./img/tree.svg" alt="" width="50">
-
         </div>
-
       </div>
     </div>
-
-
   </div>
 
+
+  <!-- text about us -->
+
+  <div id="Aboutus" class="container-fluid h-100vh">
+    <div class="col-12 col-md-6">
+      <img class="imgAboutUs" src="./img/compass.jpg" alt="">
+    </div>
+
+  </div>
 
 
 
