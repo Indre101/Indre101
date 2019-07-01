@@ -104,8 +104,9 @@ img {
 }
 
 .card {
-  width: 18rem;
-  margin-bottom: 1.5rem;
+  width: 17rem;
+  margin: 1rem;
+  padding: 0.6rem;
 }
 
 
