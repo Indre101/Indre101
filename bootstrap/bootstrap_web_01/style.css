@@ -43,6 +43,17 @@
   z-index: 1000;
 }
 
+.logo-width {
+  height: 5vw;
+}
+
+
+#menuButtonIcon {
+  height: 5vw;
+  object-fit: contain;
+  transition: 2s;
+}
+
 .dissapeartoLeft {
   animation: dissapeartoLeft 0.3s 0.1s ease-in-out 1 forwards;
 

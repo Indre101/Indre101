@@ -1,26 +1,29 @@
+const menuButton = document.getElementById("menuButton");
 const menuButtonIcon = document.getElementById("menuButtonIcon");
 const landingPagePart = document.getElementById("page1");
 const navbarSupportedContent = document.getElementById("navbarToggler01");
 
 let menuClick = 0;
 
-menuButtonIcon.onclick = function () {
+menuButton.onclick = function () {
 
   menuClick++
 
   landingPagePart.classList.add("after");
   menuButtonIcon.style.backgroundImage = "none";
-  menuButtonIcon.innerHTML = "&times;"
   navbarSupportedContent.style.display = "block";
+  menuButtonIcon.src = "./img/anX.svg";
+
+
 
   navbarSupportedContent.classList.remove("dissapeartoLeft");
 
 
   if (menuClick === 2) {
+
     menuClick = 0;
-    menuButtonIcon.style.backgroundImage = "";
     navbarSupportedContent.classList.add("dissapeartoLeft");
-    menuButtonIcon.innerHTML = ""
+    menuButtonIcon.src = "./img/burger.svg";
 
     landingPagePart.classList.remove("after")
   }
