@@ -127,7 +127,12 @@ img {
   object-fit: contain;
 }
 
+/* call to action */
 
+.cta {
+  color: white;
+  background-color: rgba(200, 10, 100, 0.4)
+}
 
 
 
