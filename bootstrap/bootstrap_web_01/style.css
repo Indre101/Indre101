@@ -70,7 +70,8 @@ img {
 }
 
 .logo-width {
-  height: 5vw;
+  height: 1.5rem;
+
 }
 
 .dropdown-item {
@@ -109,7 +110,7 @@ h5 {
 /*  */
 
 #menuButtonIcon {
-  height: 5vw;
+  height: 1.5rem;
   object-fit: contain;
   transition: 2s;
 }
