@@ -114,11 +114,26 @@ img {
   width: 3.5em;
 }
 
+
+
+/* why US */
+
+.whyusimg {
+  width: 18rem;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
 /* headers */
 
 h1 {
-  margin: 1em 0;
-  padding: 0;
+  margin: 0;
+  padding: 1rem 0;
 }
 
 h4 {
@@ -136,6 +151,7 @@ h5 {
   object-fit: contain;
   transition: 2s;
 }
+
 
 
 /* animations */
