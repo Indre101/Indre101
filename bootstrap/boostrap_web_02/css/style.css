@@ -31,3 +31,29 @@ button:focus {
 .bg-menu {
   background-color: rgba(100, 200, 100, 0.3);
 }
+
+/* menu items */
+
+.form_width {
+  width: 40%;
+  background-color: antiquewhite;
+  border-radius: 8px;
+}
+
+.btn-login {
+  background-color: rgba(91, 62, 129, 1);
+  color: white;
+}
+
+.option1 {
+  background-image: url(../img/icons/uk.svg);
+  background-size: contain;
+
+}
+
+/* headers */
+
+h5 {
+  padding: 0;
+  margin: 0;
+}
