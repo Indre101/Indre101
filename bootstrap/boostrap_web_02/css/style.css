@@ -10,14 +10,24 @@
 
 }
 
+.navbar-brand {
+  color: white;
+  font-style: italic;
+}
+
 .navbar-toggler {
   padding: 0;
   background-color: "none";
   border: none;
   border-radius: none;
 
+
 }
 
 button:focus {
   outline: none;
+}
+
+.bg-menu {
+  background-color: rgba(100, 200, 100, 0.3);
 }
