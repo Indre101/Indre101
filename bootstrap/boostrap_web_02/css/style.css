@@ -1,0 +1,23 @@
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.landingPage {
+  background-image: url(../img/photos/cover.jpeg);
+  background-size: cover;
+  height: 100vh;
+
+}
+
+.navbar-toggler {
+  padding: 0;
+  background-color: "none";
+  border: none;
+  border-radius: none;
+
+}
+
+button:focus {
+  outline: none;
+}
