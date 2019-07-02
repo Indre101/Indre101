@@ -168,6 +168,14 @@ nav {
   transition: 2s;
 }
 
+.gi {
+  cursor: pointer;
+}
+
+.gi:hover {
+  background-color: #fff;
+}
+
 
 /* headers */
 
