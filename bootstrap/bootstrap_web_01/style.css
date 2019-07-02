@@ -123,6 +123,10 @@ nav {
 
 /* why US */
 
+#whyus {
+  padding: 1rem;
+}
+
 .whyusimg {
   width: 18rem;
   object-fit: contain;
