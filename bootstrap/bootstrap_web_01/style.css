@@ -240,4 +240,13 @@ h5 {
   .card {
     padding: 2rem;
   }
+
+  #textAbout .row div .img-fluid {
+    max-width: 50%;
+  }
+
+  .imgWhyUs {
+    max-width: 80%;
+
+  }
 }
