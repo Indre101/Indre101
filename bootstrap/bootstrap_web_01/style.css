@@ -4,7 +4,9 @@ img {
   object-fit: contain;
 }
 
-
+nav {
+  z-index: 5;
+}
 
 .container-fluid {
   margin: 0;
@@ -71,7 +73,7 @@ img {
 }
 
 .logo-width {
-  height: 1.5rem;
+  height: 3.5rem;
 
 }
 
@@ -161,7 +163,7 @@ h5 {
 /*  */
 
 #menuButtonIcon {
-  height: 1.5rem;
+  height: 3.5rem;
   object-fit: contain;
   transition: 2s;
 }
