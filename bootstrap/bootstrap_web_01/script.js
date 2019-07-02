@@ -30,5 +30,12 @@ menuButton.onclick = function () {
 
 
 }
+
+
+window.onscroll = function () {
+
+  document.getElementById("nav").classList.add("bg-nav");
+
+}
 // content: "\f00d";
 // content: "\f0c9";

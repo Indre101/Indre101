@@ -17,7 +17,7 @@
 
   <nav id="page1" class="container-fluid landinPageBg p-0 h-100vh">
 
-    <nav class="position-fixed d-flex justify-content-between w-100  ">
+    <nav id="nav" class="position-fixed d-flex justify-content-between w-100">
       <a class="navbar-brand mx-3" href="#"><img class="logo-width" src="./img/logo.svg" alt=""></a>
       <div class="nav navbar-expand-xs d-flex justify-content-end mx-3">
         <button id="menuButton" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -90,14 +90,14 @@
 
     <div id="AboutUs" class="container-fluid">
       <div class="row">
-        <div class="col-12 col-md-4 mt-5 ">
-          <img class="imgAboutUs d-block mx-auto" src="./img/compass.jpg" alt="">
+        <div class="col-12 col-md-4 mt-5 d-flex ">
+          <img class="img-fluid align-self-center justify-self-center " src="./img/compass.jpg" alt="">
         </div>
 
         <div class="col-12 col-md-8 my-3">
 
           <h1>About us</h1>
-          <p class="lead font-italic text-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere,
+          <p class="lead font-italic text-about-us">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere,
             facilis!</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ratione, cum voluptatibus saepe
             voluptas
@@ -128,19 +128,19 @@
       <h1>Services</h1>
       <p>Lorem ipsum dolor sit amet.</p>
 
-      <div class="row d-flex flex-column align-items-center">
+      <div class="row d-flex flex-column flex-sm-row align-items-center">
 
-        <div class="card col-12 col-md-4">
+        <div class="card col-12 col-sm-4">
           <div>
             <img class="serviceImg" src="./img/1.svg" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis in accusamus
-              perspiciatis.</p>
+            </p>
           </div>
         </div>
 
-        <div class="card col-12 col-md-4">
+        <div class="card col-12 col-sm-4">
           <div>
             <img class="serviceImg" src="./img/2.svg" class="card-img-top" alt="...">
           </div>
@@ -150,40 +150,37 @@
           </div>
         </div>
 
-        <div class="card col-12 col-md-4">
+        <div class="card col-12 col-sm-4">
           <div>
             <img class="serviceImg" src="./img/3.svg" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quisquam explicabo
-              expedita!
             </p>
           </div>
         </div>
 
-        <div class="card col-12 col-md-4">
+        <div class="card col-12 col-sm-4">
           <div>
             <img class="serviceImg" src="./img/4.svg" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum temporibus cupiditate
-              nam!
             </p>
           </div>
         </div>
 
-        <div class="card col-12 col-md-4">
+        <div class="card col-12 col-sm-4">
           <div>
             <img class="serviceImg" src="./img/5.svg" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae maxime facilis
-              vitae.
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae maxime
             </p>
           </div>
         </div>
 
-        <div class="card col-12 col-md-4">
+        <div class="card col-12 col-sm-4">
           <div>
             <img class="serviceImg" src="./img/6.svg" class="card-img-top" alt="...">
           </div>
@@ -289,10 +286,10 @@
       <div class="row">
 
 
-        <div class="col-12 pt-5">
-          <img class="imgAboutUs" src="./img/sunnybeach.svg" alt="">
+        <div class="col-12 pt-5 col-sm-6">
+          <img class="img-fluid" src="./img/sunnybeach.svg" alt="">
         </div>
-        <div class="col-12">
+        <div class="col-12 pt-5 col-sm-6">
           <p class="lead font-weight-bold pt-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, impedit
             quam.Quasi. Lorem, ipsum dolor.</p>
           <p class="pt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ut et ea!</p>
@@ -300,10 +297,10 @@
           </p>
         </div>
 
-        <div class="col-12 pt-5">
+        <div class="col-12 pt-5 col-sm-6 order-sm-12">
           <img class="img-fluid" src="./img/boat.svg" alt="">
         </div>
-        <div class="col-12">
+        <div class="col-12 col-sm-6 order-sm-1 pt-5">
           <p class="lead font-weight-bold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, impedit
             quam.Quasi. Lorem, ipsum dolor.</p>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ut et ea!</p>
@@ -371,15 +368,20 @@
           </form>
         </div>
 
-        <div class="card pt-5 border-0" style="width: 18rem;">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4133.877248785452!2d13.208875339484473!3d52.638675951528434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8fff0d414a581%3A0xfcc541237ce0f114!2sBerliner+Str.+41-42%2C+16761+Hennigsdorf!5e0!3m2!1sen!2sde!4v1562060543512!5m2!1sen!2sde"
-            class="card-img-top" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-          <div class="card-body">
-            <h3 class="card-title text-center">Visit us</h3>
-            <p class="card-text">Lorem, ipsum dolor. <br>
-              Lorem ipsum dolor sit. <br>
-              Lorem ipsum dolor sit. <br> </p>
+        <div class="card pt-5 border-0 w-100 ">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4133.877248785452!2d13.208875339484473!3d52.638675951528434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8fff0d414a581%3A0xfcc541237ce0f114!2sBerliner+Str.+41-42%2C+16761+Hennigsdorf!5e0!3m2!1sen!2sde!4v1562060543512!5m2!1sen!2sde"
+                class="card-img-top" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class=" col-12 col-sm-6 card-body d-flex flex-column justify-content-center aling-items-center">
+              <h3 class="card-title text-center text-sm-left">Visit us</h3>
+              <p class="card-text">Lorem, ipsum dolor. <br>
+                Lorem ipsum dolor sit. <br>
+                Lorem ipsum dolor sit. <br> </p>
+
+            </div>
           </div>
         </div>
 

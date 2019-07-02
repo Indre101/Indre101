@@ -80,15 +80,14 @@ nav {
 
 /* About us */
 
-.imgAboutUs {
-  width: 90%;
-  object-fit: contain;
-}
-
 
 .imgTick {
   width: 5vw;
   object-fit: contain;
+}
+
+.text-about-us {
+  color: rgba(40, 60, 200, 0.5);
 }
 
 .row {
@@ -115,6 +114,10 @@ nav {
   width: 3.5em;
 }
 
+.bg-nav {
+  background-color: rgba(40, 30, 200, 0.3);
+
+}
 
 
 /* why US */
