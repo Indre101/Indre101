@@ -144,11 +144,18 @@ nav {
 /* Portfolio */
 
 .portfolio {
-  background-color: rgba(100, 130, 160, 0.2);
+  background-color: rgba(100, 200, 200, 0.1);
 }
 
 .carousel-inner {
   height: 80vh;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 5rem;
+  height: 5rem;
 }
 
 #menuButtonIcon {
@@ -163,6 +170,7 @@ nav {
 h1 {
   margin: 0;
   padding: 1rem 0;
+  color: #1A1B6B;
 }
 
 h4 {
