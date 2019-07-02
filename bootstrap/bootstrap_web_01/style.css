@@ -32,6 +32,10 @@ nav {
   /* position: absolute; */
 }
 
+.btn1 {
+  width: 17rem;
+}
+
 .after::before {
   content: "";
   position: absolute;
