@@ -44,7 +44,6 @@ nav {
 
 .nav-bar-items {
   animation: appearFromLeft 0.3s ease-in-out 1 forwards;
-  width: 50%;
   background-color: rgba(40, 60, 200, 0.7);
   background-color: ;
   position: fixed;
@@ -52,11 +51,8 @@ nav {
   z-index: 5;
 }
 
-.show {
-  margin: 0;
-  padding: 0;
-  transform: translate3d(0px, 0px, 0px);
-}
+
+
 
 
 .nav-link {
