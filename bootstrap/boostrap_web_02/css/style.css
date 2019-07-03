@@ -43,6 +43,21 @@ button:focus {
 }
 
 /* menu items */
+.menu-expand-button {
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}
+
+.menu-expand-button:hover {
+  transform: rotate(90deg);
+  transition: 0.5s;
+
+}
+
+.menu-expand-button-clicked {
+  transform: rotate(180deg);
+
+}
 
 .form_width {
   width: 40%;
