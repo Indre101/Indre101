@@ -1,3 +1,8 @@
+.row {
+  margin: 0;
+  padding: 0;
+}
+
 .container-fluid {
   margin: 0;
   padding: 0;
@@ -30,6 +35,11 @@ button:focus {
 
 .bg-menu {
   background-color: rgba(100, 200, 100, 0.3);
+}
+
+
+.border-secondary {
+  border: 1px solid black;
 }
 
 /* menu items */
