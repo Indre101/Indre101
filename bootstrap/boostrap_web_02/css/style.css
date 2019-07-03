@@ -3,6 +3,8 @@
   padding: 0;
 }
 
+
+
 .container-fluid {
   margin: 0;
   padding: 0;
@@ -44,15 +46,14 @@ button:focus {
 
 /* menu items */
 .menu-expand-button {
-  transform: rotate(-90deg);
-  transition: 0.5s;
+  object-fit: contain;
 }
 
-.menu-expand-button:hover {
+/* .menu-expand-button:hover {
   transform: rotate(90deg);
   transition: 0.5s;
 
-}
+} */
 
 .menu-expand-button-clicked {
   transform: rotate(180deg);
