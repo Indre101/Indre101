@@ -47,16 +47,17 @@ button:focus {
 /* menu items */
 .menu-expand-button {
   object-fit: contain;
+  transition: 0.5s;
+  background-color: grey;
+  box-shadow: inset 1px 1px 1px black;
+
 }
 
-/* .menu-expand-button:hover {
-  transform: rotate(90deg);
-  transition: 0.5s;
-
-} */
 
 .menu-expand-button-clicked {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
+  transition: 0.5s;
+  background-color: #c736c2;
 
 }
 
@@ -67,7 +68,7 @@ button:focus {
 }
 
 .btn-login {
-  background-color: rgba(91, 62, 129, 1);
+  background-color: #c736c2;
   color: white;
 }
 

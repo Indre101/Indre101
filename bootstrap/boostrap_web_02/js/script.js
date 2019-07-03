@@ -1,14 +1,6 @@
-const menuBtn = document.getElementById("menuBtn");
-const searchBtn = document.getElementById("searchBtn");
+// menu button to rotate
 
-function displayNone(e) {
-
-  // e.style.display = "none";
-  e.style.classList.toggle("d-block");
+const menuExpandButton = document.getElementById("menuExpandButton");
 
 
-  console.log("kl")
-}
-
-menuBtn.onclick = () => displayNone(document.getElementById("navbarSupportedContent_2"))
-searchBtn.onclick = () => displayNone(document.getElementById("navbarSupportedContent"))
+menuExpandButton.onclick = () => menuExpandButton.classList.toggle("menu-expand-button-clicked");
