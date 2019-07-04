@@ -17,8 +17,8 @@
   <div class="container-fluid landingPage vh-100 p-0 m-0">
 
     <!--  -->
-    <div class="container">
-      <nav class="vw-100 navbar bg-dark navbar-dark navbar-expand-lg no-gutters position-fixed">
+    <div class="container position-fixed">
+      <nav class="vw-100 navbar bg-dark navbar-dark navbar-expand-lg no-gutters ">
         <div class="container">
           <a class="brand" href="">Brand</a>
 
@@ -39,6 +39,24 @@
           </div>
         </div>
       </nav>
+
+      <!-- search menu -->
+      <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#search" aria-controls="search"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../img/icons/search_w.svg" alt="" width="30">
+        </button>
+
+        <div id="search" class="collapse navbar-collapse">
+          <div class="nav-item">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
       <!--  -->
     </div> <!-- menu buttons container-end -->
 
