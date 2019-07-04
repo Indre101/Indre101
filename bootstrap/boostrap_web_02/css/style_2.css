@@ -1,0 +1,9 @@
+.landingPage {
+  background-image: url(../img/photos/cover.jpeg);
+  background-size: cover;
+
+}
+
+.h-100vh {
+  height: 100vh;
+}
