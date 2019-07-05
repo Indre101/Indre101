@@ -4,6 +4,10 @@
 
 }
 
+.container {
+  margin: 0;
+  padding: 0;
+}
 
 .menu-expand-button-clicked {
   transform: rotate(-180deg);
@@ -16,6 +20,16 @@
 .btn-login {
   background-color: #c736c2;
   color: white;
+}
+
+
+
+.navbar-toggler {
+  background-color: "none";
+  border: none;
+  border-radius: none;
+
+
 }
 
 /* headers */
