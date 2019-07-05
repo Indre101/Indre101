@@ -10,11 +10,17 @@
   padding: 0;
 }
 
+
+.menuExpandButton {
+  box-shadow: inset 1px 1px 1px black;
+  transition: 0.5s;
+}
+
 .menu-expand-button-clicked {
   transform: rotate(-180deg);
   transition: 0.5s;
   background-color: #c736c2;
-
+  box-shadow: 3px 3px 3px black;
 }
 
 

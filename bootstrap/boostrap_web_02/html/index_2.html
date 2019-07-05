@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style_2.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-  <link rel="stylesheet" href="../css/style_2.css">
+    <title>Verson 2</title>
+  </head>
 
-  <title>Verson 2</title>
-</head>
+  <body>
+    <div class="container landingPage vh-100  ">
+      <nav class="navbar bg-dark navbar-dark w-100">
+        <a class="nabar-brand">
+          <img src="../img/icons/mouse_w.svg" width="20" alt="" />
+        </a>
 
-<body>
+        <button class="navbar-toggler ml-auto" type="button">
+          <img src="../img/icons/burgermenu_w.svg" alt="" width="40" />
+        </button>
 
-  <div class="container landingPage vh-100  ">
+        <button class="navbar-toggler" type="button">
+          <img src="../img/icons/search_w.svg" width="40" alt="" />
+        </button>
+      </nav>
 
-    <nav class="navbar bg-dark navbar-dark w-100">
-      <a class="nabar-brand">
-        <img src="../img/icons/mouse_w.svg" width="20" alt="">
-      </a>
-
-      <button class="navbar-toggler ml-auto" type="button">
-        <img src="../img/icons/burgermenu_w.svg" alt="" width="40">
-
-      </button>
-
-
-
-      <button class="navbar-toggler" type="button">
-        <img src="../img/icons/search_w.svg" width="40" alt="">
-      </button>
-
-    </nav>
-
-
-    <div class="accordion" id="accordionExample">
-
-
-      <div class="card ">
-
-        <div class="card-body">
-          <div class="row w-100 m-0">
-            <div class="col-10 border-right">
-              <h5 class="p-3">Home</h5>
-            </div>
-            <div class="col-2 d-flex align-items-center justify-content-center">
-              <button id="menuExpandButton" class="btn btn-link border rounded-circle p-0 m-0 shadow-sm" type="button"
-                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <img src="../img/icons/arrow.svg" width="15" height="15" class="m-2 " alt="">
-              </button>
+      <div class="accordion" id="accordionExample">
+        <div class="card ">
+          <div class="card-body">
+            <div class="row w-100 m-0">
+              <div class="col-10 border-right">
+                <h5 class="p-3">Home</h5>
+              </div>
+              <div
+                class="col-2 d-flex align-items-center justify-content-center"
+              >
+                <button
+                  id="menuExpandButton"
+                  class="menuExpandButton border rounded-circle p-0 m-0 "
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <img
+                    src="../img/icons/arrow.svg"
+                    width="15"
+                    height="15"
+                    class="m-2 "
+                    alt=""
+                  />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
 
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
+          <div
+            id="collapseOne"
+            class="collapse "
+            aria-labelledby="headingOne"
+            data-parent="#accordionExample"
+          >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
 
-
-
-
-
-
-
-
-  <!--  -->
-  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="../js/script.js"></script>
-</body>
-
+    <!--  -->
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
 </html>
