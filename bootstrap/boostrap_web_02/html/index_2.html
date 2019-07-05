@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
   <link rel="stylesheet" href="../css/style_2.css">
 
-  <title>Page 2</title>
+  <title>Verson 2</title>
 </head>
 
 <body>
@@ -19,8 +19,8 @@
     <!--  -->
     <nav class="navbar w-100  navbar-dark bg-dark navbar-expand-lg no-gutters position-fixed">
 
-      <div class="container ">
-        <a class="brand d-inline" href="">Brand</a>
+      <div class="container-fluid">
+        <a class="brand d-inline" href=""><img src="../img/icons/mouse_w.svg" alt="" width="30"></a>
         <!-- menu button -->
         <button class="navbar-toggler ml-auto mr-2" type="button" data-toggle="collapse" data-target="#menuExpand"
           aria-controls="menuExpand" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,21 +46,25 @@
 
 
         <!--  -->
-        <!-- search menu form-->
-        <div id="search" class="collapse navbar-collapse">
-          <div class="nav-item">
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-
-
-
 
     </nav>
 
+    <!-- search menu form-->
+    <div id="search" class="collapse navbar-collapse position-fixed bg-dark navbar-dark w-100 p-2">
+      <div class="navrbar-nav ">
+
+        <div class="nav-item">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <div class="d-flex justify-content-between w-100">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">X</button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
 
     <!--  -->
