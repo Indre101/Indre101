@@ -17,59 +17,57 @@
   <div class="container-fluid landingPage vh-100 p-0 m-0">
 
     <!--  -->
-    <div class="container position-fixed bg-dark d-flex">
-      <nav class="navbar  navbar-dark navbar-expand-lg no-gutters ">
+    <nav class="navbar  navbar-dark navbar-expand-lg no-gutters position-fixed">
 
-        <div class="container">
+      <div class="container ">
+
+        <a class="brand d-inline" href="">Brand</a>
+
+        <!-- menu button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuExpand"
+          aria-controls="menuExpand" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
 
-          <a class="brand" href="">Brand</a>
-          <!-- menu button -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuExpand"
-            aria-controls="menuExpand" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <!-- search menu button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#search" aria-controls="search"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../img/icons/search_w.svg" alt="" width="30">
+        </button>
 
-
-          <!-- search menu button -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#search"
-            aria-controls="search" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="../img/icons/search_w.svg" alt="" width="30">
-          </button>
-
-          <!-- menu expandable items -->
-          <div id="menuExpand" class="collapse navbar-collapse ">
-            <div class="navrbar-nav  d-md-flex w-100 justify-content-end">
-              <a class="nav-item nav-link" href="">Home</a>
-              <a class="nav-item nav-link" href="">Home</a>
-              <a class="nav-item nav-link" href="">Home</a>
-              <a class="nav-item nav-link" href="">Home</a>
-              <a class="nav-item nav-link" href="">Home</a>
-            </div>
+        <!-- menu expandable items -->
+        <div id="menuExpand" class="collapse navbar-collapse ">
+          <div class="navrbar-nav  d-md-flex w-100 justify-content-end">
+            <a class="nav-item nav-link" href="">Home</a>
+            <a class="nav-item nav-link" href="">Home</a>
+            <a class="nav-item nav-link" href="">Home</a>
+            <a class="nav-item nav-link" href="">Home</a>
+            <a class="nav-item nav-link" href="">Home</a>
           </div>
-
-
-          <!--  -->
-          <!-- search menu form-->
-          <div id="search" class="collapse navbar-collapse">
-            <div class="nav-item">
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-            </div>
-          </div>
-
-
         </div>
 
 
-      </nav>
+        <!--  -->
+        <!-- search menu form-->
+        <div id="search" class="collapse navbar-collapse">
+          <div class="nav-item">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
 
 
 
-      <!--  -->
-    </div> <!-- menu buttons container-end -->
+
+    </nav>
+
+
+
+    <!--  -->
+  </div> <!-- menu buttons container-end -->
 
   </div><!-- main container end tag -->
   <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"> </script>
