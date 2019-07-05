@@ -4,6 +4,17 @@
 
 }
 
-.h-100vh {
-  height: 100vh;
+
+.menu-expand-button-clicked {
+  transform: rotate(-180deg);
+  transition: 0.5s;
+  background-color: #c736c2;
+
+}
+
+
+/* headers */
+h5 {
+  margin: 0;
+  padding: 0;
 }
