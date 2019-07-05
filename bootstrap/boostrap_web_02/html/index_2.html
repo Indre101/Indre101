@@ -33,21 +33,26 @@
           aria-expanded="false" aria-label="Toggle navigation">
           <img src="../img/icons/search_w.svg" alt="" width="30">
         </button>
-        <!-- menu expandable items -->
-        <div id="menuExpand" class="collapse navbar-collapse ">
-          <div class="navrbar-nav  d-md-flex w-100 justify-content-end">
-            <a class="nav-item nav-link" href="">Home</a>
-            <a class="nav-item nav-link" href="">Home</a>
-            <a class="nav-item nav-link" href="">Home</a>
-            <a class="nav-item nav-link" href="">Home</a>
-            <a class="nav-item nav-link" href="">Home</a>
-          </div>
-        </div>
-
-
-        <!--  -->
 
     </nav>
+
+
+    <!-- menu expandable items -->
+    <div id="menuExpand" class="collapse navbar-collapse position-fixed bg-dark navbar-dark w-100">
+      <div class="navrbar-nav  d-md-flex w-100 justify-content-end">
+
+
+
+        <a class="nav-item nav-link" href="">Home</a>
+        <a class="nav-item nav-link" href="">Home</a>
+        <a class="nav-item nav-link" href="">Home</a>
+        <a class="nav-item nav-link" href="">Home</a>
+        <a class="nav-item nav-link" href="">Home</a>
+        <div class="container d-flex justify-content-end">
+          <button class="nav-item btn btn-outline-danger my-2 my-sm-0 ml-auto" type="submit">X</button>
+        </div>
+      </div>
+    </div><!-- expandable items-end -->
 
     <!-- search menu form-->
     <div id="search" class="collapse navbar-collapse position-fixed bg-dark navbar-dark w-100 p-2">
@@ -65,9 +70,10 @@
         </div>
       </div>
     </div>
+    <!--search menu end  -->
 
 
-    <!--  -->
+
   </div> <!-- menu buttons container-end -->
 
   </div><!-- main container end tag -->
