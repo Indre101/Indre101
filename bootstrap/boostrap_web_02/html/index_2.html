@@ -1,126 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../css/style_2.css" />
 
-    <title>Verson 2</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style_2.css" />
 
-  <body>
-    <div class="container landingPage vh-100  ">
-      <nav class="navbar bg-dark navbar-dark w-100">
-        <a class="nabar-brand">
-          <img src="../img/icons/mouse_w.svg" width="20" alt="" />
-        </a>
+  <title>Verson 2</title>
+</head>
 
-        <button class="navbar-toggler ml-auto" type="button">
-          <img src="../img/icons/burgermenu_w.svg" alt="" width="40" />
-        </button>
+<body>
+  <div class="container landingPage vh-100  ">
+    <nav class="navbar bg-dark navbar-dark w-100">
+      <a class="nabar-brand">
+        <img src="../img/icons/mouse_w.svg" width="20" alt="" />
+      </a>
 
-        <button class="navbar-toggler" type="button">
-          <img src="../img/icons/search_w.svg" width="40" alt="" />
-        </button>
-      </nav>
+      <button class="navbar-toggler ml-auto" type="button">
+        <img src="../img/icons/burgermenu_w.svg" alt="" width="40" />
+      </button>
 
-      <div class="container bg-light">
-        <div class="row p-2">
-          <div class="col">
-            <button class="btn btn-primary">Language</button>
-          </div>
-          <div class="col">
-            <button class="btn btn-secondary">Log in</button>
-          </div>
+      <button class="navbar-toggler" type="button">
+        <img src="../img/icons/search_w.svg" width="40" alt="" />
+      </button>
+    </nav>
+
+    <div class="container bg-light">
+      <div class="row p-2">
+        <div class="col form-group form_width d-flex justify-content-center align-items-center">
+          <select class="form-control text-center" id="exampleFormControlSelect1">
+            <option class="option1">
+              <h5>English </h5>
+            </option>
+            <option>French</option>
+            <option>Spanish</option>
+            <option>Lithuanian</option>
+            <option>Russian</option>
+          </select>
         </div>
-        <div class="accordion " id="accordionExample">
-          <div class="card ">
-            <div class="card-body">
-              <div class="row w-100 m-0 border-bottom">
-                <div class="col-10 border-right">
-                  <h5 class="p-3">Home</h5>
-                </div>
-                <div
-                  class="col-2 d-flex align-items-center justify-content-center"
-                >
-                  <button
-                    id="menuExpandButton"
-                    class="menuExpandButton border-0 rounded-circle p-0 m-0"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
-                    <img
-                      src="../img/icons/arrow.svg"
-                      width="15"
-                      height="15"
-                      class="m-2 "
-                      alt=""
-                    />
-                  </button>
-                </div>
+        <div class="col">
+          <button class="btn btn-secondary">Log in</button>
+        </div>
+      </div>
+      <div class="accordion " id="accordionExample">
+        <div class="card ">
+          <div class="card-body">
+            <div class="row w-100 m-0 border-bottom">
+              <div class="col-10 border-right">
+                <h5 class="p-3">Home</h5>
+              </div>
+              <div class="col-2 d-flex align-items-center justify-content-center">
+                <button id="menuExpandButton" class="menuExpandButton border-0 rounded-circle p-0 m-0" type="button"
+                  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <img src="../img/icons/arrow.svg" width="15" height="15" class="m-2 " alt="" />
+                </button>
               </div>
             </div>
+          </div>
 
-            <div
-              id="collapseOne"
-              class="collapse "
-              aria-labelledby="headingOne"
-              data-parent="#accordionExample"
-            >
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item ">
-                  <a class="row" href="">
-                    <div class="col-2 d-flex justify-content-end ">
-                      <img src="../img/icons/portfolio.svg" width="20" alt="" />
-                    </div>
-                    <div class="col-10 p-0">
-                      <h6>Portfolio</h6>
-                    </div>
-                  </a>
-                </li>
-                <li class="list-group-item">
-                  <div class="row">
-                    <div class="offset-2 col-10 p-0">
-                      <a href=""><h6>About</h6></a>
-                    </div>
+          <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item ">
+                <a class="row" href="">
+                  <div class="col-2 d-flex justify-content-end ">
+                    <img src="../img/icons/portfolio.svg" width="20" alt="" />
                   </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="row">
-                    <div class="col-2 d-flex justify-content-end">
-                      <img src="../img/icons/phone.svg" width="20" alt="" />
-                    </div>
-                    <div class="col-10 p-0">
-                      <a href=""><h6>Contacts</h6></a>
-                    </div>
+                  <div class="col-10 p-0">
+                    <h6>Portfolio</h6>
                   </div>
-                </li>
-              </ul>
-            </div>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="offset-2 col-10 p-0">
+                    <a href="">
+                      <h6>About</h6>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col-2 d-flex justify-content-end">
+                    <img src="../img/icons/phone.svg" width="20" alt="" />
+                  </div>
+                  <div class="col-10 p-0">
+                    <a href="">
+                      <h6>Contacts</h6>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- accordion -->
       </div>
-      <!-- navigation menu -->
+      <!-- accordion -->
     </div>
-    <!-- landing page container -->
+    <!-- navigation menu -->
+  </div>
+  <!-- landing page container -->
 
-    <!--  -->
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="../js/script.js"></script>
-  </body>
+  <!--  -->
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
 </html>
