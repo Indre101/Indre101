@@ -12,7 +12,7 @@
 
 
 .menuExpandButton {
-  box-shadow: inset 1px 1px 1px black;
+  box-shadow: inset 4px 4px 4px 1px darkgrey;
   transition: 0.5s;
 }
 
