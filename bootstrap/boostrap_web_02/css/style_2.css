@@ -19,7 +19,7 @@
 .menu-expand-button-clicked {
   transform: rotate(-180deg);
   transition: 0.5s;
-  background-color: #c736c2;
+  background-color: #ef89eb;
   box-shadow: 3px 3px 3px black;
 }
 
