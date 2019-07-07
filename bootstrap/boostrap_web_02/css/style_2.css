@@ -39,6 +39,16 @@
 
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  background-color: darkgrey;
+  text-decoration: none;
+  color: grey;
+}
+
 /* headers */
 h5,
 h6 {
