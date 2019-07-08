@@ -14,7 +14,7 @@ menuExpandButton.forEach((e) => {
 
     })
 
-    this.classList.toggle("menu-expand-button-clicked");
+    this.classList.add("menu-expand-button-clicked");
 
 
   }
