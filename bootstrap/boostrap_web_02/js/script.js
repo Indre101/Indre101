@@ -15,15 +15,9 @@ menuExpandButton.forEach(e => {
       .getPropertyValue("background-color");
 
     if (colorBG === "#c736c2") {
-      console.log("hjk");
-
-      this.onclick = function() {
-        this.classList.remove("menu-expand-button-clicked");
-      };
-    } else {
-      this.onclick = function() {
-        this.classList.add("menu-expand-button-clicked");
-      };
+      this.classList.remove("menu-expand-button-clicked");
+    } else if (colorBG === "") {
+      this.classList.add("menu-expand-button-clicked");
     }
   };
 });
