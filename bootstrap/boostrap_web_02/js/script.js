@@ -9,5 +9,11 @@ menuExpandButton.forEach(e => {
     });
 
     this.classList.add("menu-expand-button-clicked");
+
+    if (this.getElementsByClassName.backgroundColor != "") {
+      this.onclick = function() {
+        this.classList.remove("menu-expand-button-clicked");
+      };
+    }
   };
 });
