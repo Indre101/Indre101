@@ -14,10 +14,10 @@ menuExpandButton.forEach(e => {
       .getComputedStyle(this, null)
       .getPropertyValue("background-color");
 
-    if (colorBG === "#c736c2") {
+    this.classList.add("menu-expand-button-clicked");
+
+    if (colorBG === "rgb(239, 137, 235)") {
       this.classList.remove("menu-expand-button-clicked");
-    } else if (colorBG === "") {
-      this.classList.add("menu-expand-button-clicked");
     }
   };
 });
