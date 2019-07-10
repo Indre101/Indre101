@@ -29,6 +29,10 @@
   color: white;
 }
 
+img {
+  object-fit: contain;
+}
+
 
 
 .navbar-toggler {
