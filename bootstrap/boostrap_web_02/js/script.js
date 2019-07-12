@@ -5,7 +5,7 @@ const menuExpandButton = document.querySelectorAll(".buttonExpand");
 let clickCount = 0;
 
 menuExpandButton.forEach(e => {
-  e.onclick = function() {
+  e.onclick = function () {
     menuExpandButton.forEach(m => {
       m.classList.remove("menu-expand-button-clicked");
     });

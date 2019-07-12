@@ -24,7 +24,7 @@
           <img src="../img/icons/mouse_w.svg" width="35" alt="" />
         </a>
 
-        <button class="navbar-toggler ml-auto" type="button">
+        <button id="burgerMenu" class="navbar-toggler ml-auto" type="button">
           <img src="../img/icons/burgermenu_w.svg" alt="" width="40" />
         </button>
 
@@ -33,7 +33,11 @@
         </button>
       </nav>
 
-      <div class="container-fluid bg-light navbar-light p-4">
+      <!-- expandable menu -->
+      <div
+        id="menuBlock"
+        class="container-fluid bg-light navbar-light p-4 d-none"
+      >
         <div class="row p-2">
           <div
             class="col  form_width d-flex  justify-content-center align-items-center"
