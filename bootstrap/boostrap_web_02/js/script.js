@@ -2,7 +2,6 @@
 
 const menuExpandButton = document.querySelectorAll(".buttonExpand");
 
-let clickCount = 0;
 
 menuExpandButton.forEach(e => {
   e.onclick = function () {
@@ -28,7 +27,22 @@ menuExpandButton.forEach(e => {
 const menuBlock = document.getElementById("menuBlock");
 const burgerMenu = document.getElementById("burgerMenu");
 
+let clickCount = 0;
 
 burgerMenu.onclick = function () {
-  menuBlock.classList.toggle("d-none");
+
+  clickCount++;
+  menuBlock.classList.add("transitionFromleft");
+  menuBlock.classList.remove("transitionToLeft");
+
+
+  if (clickCount === 2) {
+    clickCount = 0;
+    menuBlock.classList.remove("transitionFromleft");
+    menuBlock.classList.add("transitionToLeft");
+
+
+
+  }
+
 }

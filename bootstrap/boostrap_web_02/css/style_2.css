@@ -54,7 +54,9 @@ a:hover {
 }
 
 .transitionFromleft {
+  display: block;
   animation: appearFromLeft 0.3s linear forwards 1;
+  transition: 0.5s;
 }
 
 @keyframes appearFromLeft {
@@ -64,6 +66,7 @@ a:hover {
 }
 
 .transitionToLeft {
+  display: none;
   animation: transitionToLeft 0.3s linear forwards 1;
 }
 
