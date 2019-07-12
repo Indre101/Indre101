@@ -53,6 +53,17 @@ a:hover {
   color: grey;
 }
 
+.transition {
+  animation: appearFromTop 0.3s linear forwards 1;
+}
+
+
+@keyframes appearFromTop {
+  0% {
+    transform: translateX(-100vw);
+  }
+}
+
 /* headers */
 h5,
 h6 {

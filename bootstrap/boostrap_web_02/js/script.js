@@ -21,3 +21,14 @@ menuExpandButton.forEach(e => {
     }
   };
 });
+
+// burger menu functionality
+
+
+const menuBlock = document.getElementById("menuBlock");
+const burgerMenu = document.getElementById("burgerMenu");
+
+
+burgerMenu.onclick = function () {
+  menuBlock.classList.toggle("d-none");
+}
