@@ -21,6 +21,8 @@ menuExpandButton.forEach(e => {
   };
 });
 
+
+
 // burger menu functionality
 
 
@@ -34,12 +36,16 @@ burgerMenu.onclick = function () {
   clickCount++;
   menuBlock.classList.add("transitionFromleft");
   menuBlock.classList.remove("transitionToLeft");
+  menuBlock.classList.remove("d-none");
+
 
 
   if (clickCount === 2) {
     clickCount = 0;
     menuBlock.classList.remove("transitionFromleft");
     menuBlock.classList.add("transitionToLeft");
+    menuBlock.classList.add("d-none");
+
 
 
 
