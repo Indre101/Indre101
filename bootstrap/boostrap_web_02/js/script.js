@@ -38,13 +38,16 @@ burgerMenu.onclick = function () {
   menuBlock.classList.remove("transitionToLeft");
   menuBlock.classList.remove("d-none");
 
-
+  console.log(clickCount)
 
   if (clickCount === 2) {
     clickCount = 0;
     menuBlock.classList.remove("transitionFromleft");
     menuBlock.classList.add("transitionToLeft");
-    menuBlock.classList.add("d-none");
+
+    setTimeout(() => {
+      menuBlock.classList.add("d-none");
+    }, 300);
 
 
 
