@@ -38,7 +38,6 @@ burgerMenu.onclick = function () {
   menuBlock.classList.remove("transitionToLeft");
   menuBlock.classList.remove("d-none");
 
-  console.log(clickCount)
 
   if (clickCount === 2) {
     clickCount = 0;
