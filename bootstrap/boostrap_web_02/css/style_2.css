@@ -53,6 +53,24 @@ a:hover {
   color: grey;
 }
 
+
+
+
+.list-header::after {
+
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  height: 0.1em;
+
+  background-image: linear-gradient(-90deg, #6e226c, #c736c2);
+
+  margin-left: -4px;
+}
+
+
 .transitionFromleft {
   animation: appearFromLeft 0.3s linear forwards 1;
   transition: 0.5s;
