@@ -24,16 +24,21 @@
 }
 
 
-.btn-login {
-  background-color: #c736c2;
-  color: white;
-}
+
 
 img {
   object-fit: contain;
 }
 
 
+.form-width {
+  height: 70px;
+
+}
+
+.h-70 {
+  height: 70%;
+}
 
 .navbar-toggler {
   background-color: "none";
