@@ -19,13 +19,15 @@
 
   <body>
     <div class="container-fluid landingPage vh-100 p-0 ">
-      <nav class="navbar bg-dark navbar-dark">
+      <nav class="navbar bg-dark navbar-dark b-0 position-fixed w-100 z-10">
         <a class="nabar-brand">
           <img src="../img/icons/mouse_w.svg" width="35" alt="" />
         </a>
 
-        <button id="burgerMenu" class="navbar-toggler ml-auto" type="button">
-          <img src="../img/icons/burgermenu_w.svg" alt="" width="40" />
+        <button id="burgerMenu" class="navbar-toggler ml-auto transition-2s" type="button">
+          <img id="burgerMenuImage" class="p-absolute" src="../img/icons/burgermenu_w.svg" alt="" width="40" />
+          <img  class="p-absolute" src="../img/icons/anx_w.svg" alt="" width="40" />
+
         </button>
 
         <button class="navbar-toggler" type="button">

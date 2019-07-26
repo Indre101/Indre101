@@ -23,17 +23,18 @@ menuExpandButton.forEach(e => {
 
 
 
-// burger menu functionality
+// Mobile menu to appear and close
 
 
 const menuBlock = document.getElementById("menuBlock");
 const burgerMenu = document.getElementById("burgerMenu");
-
+const burgerMenuImage = document.getElementById("burgerMenuImage");
 let clickCount = 0;
 
 burgerMenu.onclick = function () {
 
   clickCount++;
+  // burgerMenuImage.src = "../img/icons/anx_w.svg"
   menuBlock.classList.add("transitionFromleft");
   menuBlock.classList.remove("transitionToLeft");
   menuBlock.classList.remove("d-none");
@@ -43,6 +44,8 @@ burgerMenu.onclick = function () {
     clickCount = 0;
     menuBlock.classList.remove("transitionFromleft");
     menuBlock.classList.add("transitionToLeft");
+    // burgerMenuImage.src = "../img/icons/burgermenu_w.svg"
+
 
     setTimeout(() => {
       menuBlock.classList.add("d-none");
