@@ -29,31 +29,36 @@ menuExpandButton.forEach(e => {
 const menuBlock = document.getElementById("menuBlock");
 const burgerMenu = document.getElementById("burgerMenu");
 const burgerMenuImage = document.getElementById("burgerMenuImage");
+const burgerMenuImage_2 = document.getElementById("burgerMenuImage_2");
+
 let clickCount = 0;
 
 burgerMenu.onclick = function () {
 
   clickCount++;
-  // burgerMenuImage.src = "../img/icons/anx_w.svg"
+
+  // burger menu image changes
+  burgerMenuImage_2.classList.toggle("opacity-0");
+  burgerMenuImage.classList.toggle("opacity-0");
+  // 
+
+
+  // menu block appears
   menuBlock.classList.add("transitionFromleft");
   menuBlock.classList.remove("transitionToLeft");
   menuBlock.classList.remove("d-none");
 
 
+  // menu block dissapears
   if (clickCount === 2) {
     clickCount = 0;
     menuBlock.classList.remove("transitionFromleft");
     menuBlock.classList.add("transitionToLeft");
-    // burgerMenuImage.src = "../img/icons/burgermenu_w.svg"
 
 
     setTimeout(() => {
       menuBlock.classList.add("d-none");
     }, 300);
-
-
-
-
   }
 
 }
