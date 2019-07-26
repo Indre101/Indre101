@@ -48,12 +48,20 @@ img {
   z-index: 10;
 }
 
+.mb-15 {
+  margin-bottom: 15%
+}
+
 .transition-2s {
   transition: 0.5s;
 }
 
 .opacity-0 {
   opacity: 0;
+}
+
+.transform-rotate {
+  transform: rotate(360deg);
 }
 
 .opacity-1 {

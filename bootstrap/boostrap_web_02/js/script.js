@@ -40,6 +40,8 @@ burgerMenu.onclick = function () {
   // burger menu image changes
   burgerMenuImage_2.classList.toggle("opacity-0");
   burgerMenuImage.classList.toggle("opacity-0");
+  burgerMenuImage.classList.toggle("transform-rotate");
+
   // 
 
 
