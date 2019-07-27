@@ -1,7 +1,7 @@
 .landingPage {
   background-image: url(../img/photos/cover.jpeg);
   background-size: cover;
-
+  height: 100vh;
 }
 
 .container,
@@ -48,8 +48,8 @@ img {
   z-index: 10;
 }
 
-.mb-15 {
-  margin-bottom: 15%
+.pb-15 {
+  padding-bottom: 25%
 }
 
 .transition-2s {
