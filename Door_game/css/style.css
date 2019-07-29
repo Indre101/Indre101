@@ -7,3 +7,27 @@
   font-family: 'Roboto';
   src: url('./font/Roboto-Regular.ttf');
 }
+
+
+.no-gutters {
+  margin: 0;
+  padding: 0;
+}
+
+.color {
+  color: blue;
+}
+
+.h-100 {
+  height: 100vh;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.container {
+  background-image: url(../images/images/bg_horror_v_1.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
