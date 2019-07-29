@@ -10,7 +10,7 @@
 
 
 body {
-  font-family: "Indre Flower", cursive;
+  font-family: "Indie Flower", cursive;
 
 }
 
@@ -22,6 +22,11 @@ body {
 
 h3 {
   text-align: left;
+}
+
+h2 {
+  font-size: 6rem;
+  color: white;
 }
 
 
@@ -43,20 +48,32 @@ h3 {
   width: 100%;
 }
 
-.container {
-  background-image: url(../images/images/bg_horror_v_1.jpg);
-  background-size: cover;
-  overflow: hidden;
-  text-align: center;
+.d-flex-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.container {
+  background-image: url(../images/images/bg_horror_v_1.jpg);
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
+
+}
+
 .startButton {
-  width: 200px;
-  height: 200px;
-  border-radius: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   background-color: #208667;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.m-40 {
+  margin-top: 40%;
 }
