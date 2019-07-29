@@ -1,18 +1,44 @@
 const landingPageContainer = document.getElementById("landingPageContainer");
 const startGamePage = document.getElementById("startGamePage");
-const
+const startButton = document.getElementById("startButton");
 
-  console.log("hjæk")
+
+
+console.log("hjæk")
 
 // chaning background image 
 // url('../images/images/bg_horror_v_2.jpg')
 function changeBackground(x, u) {
 
-  u = "";
   x.style.backgroundImage = u;
 
 }
 
 
+// function to display none
 
-changeBackground(startGamePage, "url('./images/images/bg_2.jpg')");
+function displayNone(x) {
+  x.style.display = "none"
+
+}
+
+
+// function to display block
+function displayBlock(x) {
+
+  x.style.display = "block"
+}
+
+
+
+// 
+startButton.onclick = function () {
+
+  let url1 = "url('./images/images/bg_2.jpg')"
+
+  console.log("jikæ")
+  changeBackground(startGamePage, url1);
+
+
+
+}
