@@ -77,3 +77,13 @@ h2 {
 .m-40 {
   margin-top: 40%;
 }
+
+.d-none {
+  display: none;
+}
+
+/* animations   */
+
+.opacity-animation {
+  animation: opacity_1 1s linear
+}

@@ -34,11 +34,11 @@ function displayBlock(x) {
 // 
 startButton.onclick = function () {
 
+
+
   let url1 = "url('./images/images/bg_2.jpg')"
-
-  console.log("jikæ")
   changeBackground(startGamePage, url1);
-
-
+  displayNone(landingPageContainer)
+  displayBlock(startGamePage)
 
 }
