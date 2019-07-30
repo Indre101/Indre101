@@ -14,6 +14,16 @@ body {
 
 }
 
+
+.container-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
 .no-gutters {
   margin: 0;
   padding: 0;
@@ -66,7 +76,7 @@ h2 {
   height: 100px;
   display: flex;
   align-items: center;
-  margin: 3rem;
+  margin: 2.5rem;
   width: 100px;
   justify-content: center;
 }
@@ -88,6 +98,18 @@ h2 {
   background-color: #23B19B;
   width: 50px;
   height: 50px;
+}
+
+.popUpInstructionsContainer {
+  background-color: bisque;
+  padding: 3rem;
+  border-radius: 15%;
+  font-size: 20px;
+}
+
+.popUpInstructionsContainer h2 {
+  padding: 1rem;
+  margin: 0;
 }
 
 .p-absolute {
