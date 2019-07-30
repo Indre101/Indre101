@@ -110,7 +110,7 @@ h2 {
 
 .popUpInstructionsContainer {
   background-color: bisque;
-  padding: 3rem;
+  padding: 6rem;
   border-radius: 15%;
   font-size: 20px;
 }
@@ -130,6 +130,10 @@ h2 {
 
 .m-40 {
   margin-top: 40%;
+}
+
+.mt-9 {
+  margin-top: 9rem;
 }
 
 .d-none {
