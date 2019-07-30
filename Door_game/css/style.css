@@ -37,6 +37,11 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-three-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .container-row {
   display: flex;
   align-items: center;
@@ -59,24 +64,38 @@ body {
 }
 
 .entrance {
-  background-image: url(../images/images/door_frame.jpg);
+  /* background-image: url(../images/images/door-frame_v_2.png);
+  background-position: center;
+
   width: 20vw;
   background-size: contain;
   background-repeat: no-repeat;
   /* height: 60vh; */
-  margin: 0 auto;
+  /* margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem;  */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.door-w {
+  width: 13%;
 
 }
 
 
+.frame-w {
+  width: 20%;
+}
+
 .doors {
   /* background-image: url(../images/images/doors.png); */
-  width: 78.5%;
-  position: relative;
+  position: absolute;
   margin: 0;
   padding: 0;
   /* background-size: contain; */
@@ -95,10 +114,10 @@ body {
   transform-origin: left bottom;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  perspective: 10000px;
-  -moz-perspective: 10000px;
-  -webkit-perspective: 10000px;
-  -moz-perspective: 10000px;
+  perspective: 100000px;
+  -moz-perspective: 100000px;
+  -webkit-perspective: 100000px;
+  -moz-perspective: 100000px;
   perspective-origin: left bottom;
   -webkit-perspective-origin: left bottom;
   -moz-perspective-origin: left bottom;
