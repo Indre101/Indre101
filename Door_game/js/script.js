@@ -1,6 +1,14 @@
 const landingPageContainer = document.getElementById("landingPageContainer");
 const startGamePage = document.getElementById("startGamePage");
+const popUpInstructionsContainer = document.getElementById("popUpInstructionsContainer");
+
+
 const startButton = document.getElementById("startButton");
+const infoButtonContainer = document.getElementById("infoButtonContainer");
+const returnButtonContainer = document.getElementById("returnButtonContainer");
+
+
+
 
 
 
@@ -39,5 +47,19 @@ startButton.onclick = function () {
   toggleClasses(startGamePage, dNone);
   // 
 
+
+}
+
+// instruction button 
+
+infoButtonContainer.onclick = function () {
+  toggleClasses(popUpInstructionsContainer, dNone);
+
+}
+
+// return button inside  pup up instructions 
+
+returnButtonContainer.onclick = function () {
+  toggleClasses(popUpInstructionsContainer, dNone);
 
 }
