@@ -73,11 +73,11 @@ h2 {
 }
 
 .infoButtonContainer {
-  height: 100px;
+  height: 5rem;
   display: flex;
   align-items: center;
   margin: 2.5rem;
-  width: 100px;
+  width: 5rem;
   justify-content: center;
 }
 
@@ -87,8 +87,8 @@ h2 {
 }
 
 .startButton {
-  width: 150px;
-  height: 150px;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   background-color: #208667;
 }
@@ -96,8 +96,16 @@ h2 {
 .infoButton {
   border-radius: 50%;
   background-color: #23B19B;
-  width: 50px;
-  height: 50px;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+
+.returnButton {
+  background-color: #A00B0B;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
 }
 
 .popUpInstructionsContainer {
@@ -110,6 +118,10 @@ h2 {
 .popUpInstructionsContainer h2 {
   padding: 1rem;
   margin: 0;
+}
+
+#returnButtonContainer h2 {
+  font-size: 4rem;
 }
 
 .p-absolute {
