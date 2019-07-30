@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Doors</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Doors</title>
-</head>
+  <body class="no-gutters">
+    <!-- landing page -->
+    <div
+      id="landingPageContainer"
+      class="container  text-center h-100 w-100  no-gutters d-flex-column "
+    >
+      <h1 class="pb-1">Escape the not so scary monster</h1>
 
-<body class="no-gutters">
+      <div id="instructions" class="instructions">
+        <h3 class="pb-2">
+          1. Click on the doors to reveal what is behind them
+        </h3>
+        <h3 class="pb-2">
+          2. Your goal is to open all the doors without running into a not so
+          scary.
+        </h3>
+        <h3 class="pb-2">3. Press start button to start</h3>
 
-  <!-- landing page -->
-  <div id="landingPageContainer" class="container h-100 w-100  no-gutters d-flex-column ">
-    <h1 class="pb-1">Escape the not so scary monster</h1>
-
-    <div id="instructions" class="instructions">
-
-      <h3 class="pb-2">1. Click on the doors to reveal what is behind them
-      </h3>
-      <h3 class="pb-2">2. Your goal is to open all the doors without running into a not so scary.
-      </h3>
-      <h3 class="pb-2">3. Press start button to start</h3>
-
-      <div id="startButton" class="d-flex-column m-40 pointer">
-        <div class="startButton p-absolute"></div>
-        <h2 class="p-absolute no-gutters">Start</h2>
+        <div id="startButton" class="d-flex-column m-40 pointer">
+          <div class="startButton p-absolute"></div>
+          <h2 class="p-absolute no-gutters">Start</h2>
+        </div>
       </div>
     </div>
-  </div>
-  <!--  -->
-  <!-- starting game page -->
-  <div id="startGamePage" class="container h-100 w-100  no-gutters d-none opacity-animation">
+    <!--  -->
+    <!-- starting game page -->
+    <div
+      id="startGamePage"
+      class="container h-100 w-100  no-gutters d-none opacity-animation"
+    >
+      <div id="" class="infoButtonContainer">
+        <div class="infoButton p-absolute"></div>
+        <h2 class="no-gutters p-absolute">i</h2>
+      </div>
+    </div>
+    <!--  -->
 
-  </div>
-  <!--  -->
-
-
-
-  <script src="./js/script.js"></script>
-</body>
-
+    <script src="./js/script.js"></script>
+  </body>
 </html>

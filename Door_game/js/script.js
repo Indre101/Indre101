@@ -30,11 +30,14 @@ let dNone = "d-none";
 // 
 startButton.onclick = function () {
 
+
+  // start page changes to the game beginng
   let url1 = "url('./images/images/bg_2.jpg')"
   changeBackground(startGamePage, url1);
   toggleClasses(landingPageContainer, dNone);
   toggleClasses(startGamePage, dBlock);
   toggleClasses(startGamePage, dNone);
+  // 
 
 
 }
