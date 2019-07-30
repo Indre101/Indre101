@@ -34,14 +34,10 @@ function removeClasses(x, c) {
 // 
 startButton.onclick = function () {
 
-
-
   let url1 = "url('./images/images/bg_2.jpg')"
   changeBackground(startGamePage, url1);
   addClasses(landingPageContainer, "d-none");
   addClasses(startGamePage, "d-block");
-
-
   removeClasses(startGamePage, "d-none");
 
 
