@@ -7,7 +7,6 @@ const startButton = document.getElementById("startButton");
 console.log("hjæk")
 
 // chaning background image 
-// url('../images/images/bg_horror_v_2.jpg')
 function changeBackground(x, u) {
 
   x.style.backgroundImage = u;
@@ -15,18 +14,19 @@ function changeBackground(x, u) {
 }
 
 
-// function to display none
+// function add class
 
-function displayNone(x) {
-  x.style.display = "none"
+function addClasses(x, c) {
+  x.classList.add(c);
 
 }
 
 
-// function to display block
-function displayBlock(x) {
+// function to remove class 
+function removeClasses(x, c) {
 
-  x.style.display = "block"
+  x.classList.remove(c);
+
 }
 
 
@@ -38,7 +38,11 @@ startButton.onclick = function () {
 
   let url1 = "url('./images/images/bg_2.jpg')"
   changeBackground(startGamePage, url1);
-  displayNone(landingPageContainer)
-  displayBlock(startGamePage)
+  addClasses(landingPageContainer, "d-none");
+  addClasses(startGamePage, "d-block");
+
+
+  removeClasses(startGamePage, "d-none");
+
 
 }

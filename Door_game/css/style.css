@@ -82,18 +82,23 @@ h2 {
   display: none;
 }
 
+.d-block {
+  animation: opacityToOne 2s linear forwards 1;
+  transition: 2s;
+}
+
 
 .opacity-0 {
   opacity: 0;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* animations   */
 
-.opacity-animation {
-  animation: opacityToOne 3s linear forwards 1;
-  transition: 2s;
-
-}
+.opacity-animation {}
 
 @keyframes opacityToOne {
 
