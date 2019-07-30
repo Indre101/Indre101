@@ -14,21 +14,17 @@ function changeBackground(x, u) {
 }
 
 
-// function add class
+// function to toggle classes
 
 function toggleClasses(x, c) {
   x.classList.toggle(c)
 
 }
 
+// class variables
 
-// function to remove class 
-// function removeClasses(x, c) {
-
-//   x.classList.remove(c);
-
-// }
-
+let dBlock = "d-block";
+let dNone = "d-none";
 
 
 // 
@@ -36,9 +32,9 @@ startButton.onclick = function () {
 
   let url1 = "url('./images/images/bg_2.jpg')"
   changeBackground(startGamePage, url1);
-  toggleClasses(landingPageContainer, "d-none");
-  toggleClasses(startGamePage, "d-block");
-  toggleClasses(startGamePage, "d-none");
+  toggleClasses(landingPageContainer, dNone);
+  toggleClasses(startGamePage, dBlock);
+  toggleClasses(startGamePage, dNone);
 
 
 }
