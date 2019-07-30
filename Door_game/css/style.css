@@ -24,6 +24,28 @@ body {
 
 }
 
+.container-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.container-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+}
+
+
+.img-icon-1 {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
 .no-gutters {
   margin: 0;
   padding: 0;
@@ -138,11 +160,13 @@ h2 {
 
 .d-none {
   display: none;
+  transition: 2s;
+
 }
 
 .d-block {
   animation: opacityToOne 1s linear forwards 1;
-  transition: 1s;
+  transition: 2s;
   opacity: 0;
 }
 
