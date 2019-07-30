@@ -32,6 +32,11 @@ body {
 
 }
 
+.grid-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .container-row {
   display: flex;
   align-items: center;
@@ -45,8 +50,12 @@ body {
 .number {
   background-color: white;
   padding: 0 1rem;
-  margin: 1rem;
+  margin: 0 1rem;
   border-radius: 15%;
+}
+
+.z-5 {
+  z-index: 5;
 }
 
 .entrance {
