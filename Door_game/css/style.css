@@ -15,6 +15,20 @@ body {
 }
 
 
+:root {
+  --colNum: 2;
+}
+
+
+
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(var(--colNum), auto);
+}
+
+
 .container-column-center {
   display: flex;
   flex-direction: column;
