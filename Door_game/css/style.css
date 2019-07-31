@@ -28,6 +28,9 @@ body {
   grid-template-columns: repeat(var(--colNum), auto);
 }
 
+.justify-self-end {
+  justify-self: flex-end;
+}
 
 .container-column-center {
   display: flex;
