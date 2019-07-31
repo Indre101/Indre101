@@ -69,8 +69,22 @@ body {
 .number {
   background-color: white;
   padding: 0 1rem;
+}
+
+.number-lives {
   margin: 0 1rem;
   border-radius: 15%;
+}
+
+
+.number_score {
+  border-radius: 15% 0 0 15%;
+  border-right: 1px solid black;
+}
+
+.number_score_2 {
+  border-radius: 0 15% 15% 0;
+
 }
 
 .z-5 {
@@ -113,6 +127,22 @@ body {
   -webkit-perspective-origin: left bottom;
   -moz-perspective-origin: left bottom;
   -ms-perspective-origin: left bottom;
+}
+
+.inf {
+  animation: scare 1s linear 2 forwards;
+  perspective-origin: center;
+  -webkit-perspective-origin: center;
+  -moz-perspective-origin: center;
+  -ms-perspective-origin: center;
+
+
+}
+
+@keyframes scare {
+  100% {
+    transform: scale(-1, 1);
+  }
 }
 
 
@@ -226,8 +256,8 @@ h2 {
   height: 5rem;
   display: flex;
   align-items: center;
-  margin: 2.5rem;
   width: 5rem;
+  padding: 2rem;
   justify-content: center;
 }
 
@@ -248,6 +278,7 @@ h2 {
   background-color: #23B19B;
   width: 3.5rem;
   height: 3.5rem;
+
 }
 
 
