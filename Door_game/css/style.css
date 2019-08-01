@@ -219,6 +219,7 @@ h3 {
 h2 {
   font-size: 6rem;
   color: white;
+  z-index: 1000;
 }
 
 
