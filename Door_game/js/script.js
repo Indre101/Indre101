@@ -67,15 +67,22 @@ returnButtonContainer.onclick = function () {
 
 // test for adding the doors function
 
+// test button
 const addDoorTest = document.getElementById("addDoorTest");
 
 
+// declared variables for function to add another column once level up
 let styleOftheDoorContainer = window.getComputedStyle(document.querySelector("html"));
 let colNum = parseInt(styleOftheDoorContainer.getPropertyValue("--colNum"));
+let columnNumber = colNum
 
 
 
+// function to add another grid column
 addDoorTest.onclick = function () {
-  document.documentElement.style.setProperty("--rowNum", 6);
+
+  columnNumber++
+  console.log("gkhl")
+  document.documentElement.style.setProperty("--colNum", columnNumber);
 
 }
