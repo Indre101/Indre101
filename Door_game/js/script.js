@@ -72,8 +72,8 @@ const addDoorTest = document.getElementById("addDoorTest");
 
 
 // declared variables for function to add another column once level up
-let styleOftheDoorContainer = window.getComputedStyle(document.querySelector("html"));
-let colNum = parseInt(styleOftheDoorContainer.getPropertyValue("--colNum"));
+const htmlColumn = window.getComputedStyle(document.querySelector("html"));
+const colNum = parseInt(htmlColumn.getPropertyValue("--colNum"));
 let columnNumber = colNum
 
 
