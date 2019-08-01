@@ -63,3 +63,19 @@ returnButtonContainer.onclick = function () {
   toggleClasses(popUpInstructionsContainer, dNone);
 
 }
+
+
+// test for adding the doors function
+
+const addDoorTest = document.getElementById("addDoorTest");
+
+
+let styleOftheDoorContainer = window.getComputedStyle(document.querySelector("html"));
+let colNum = parseInt(styleOftheDoorContainer.getPropertyValue("--colNum"));
+
+
+
+addDoorTest.onclick = function () {
+  document.documentElement.style.setProperty("--rowNum", 6);
+
+}

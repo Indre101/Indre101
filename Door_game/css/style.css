@@ -11,7 +11,7 @@
 
 body {
   font-family: "Indie Flower", cursive;
-
+  /* owerflow */
 }
 
 
@@ -90,6 +90,14 @@ body {
 
 }
 
+/* 
+.score_before::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} */
+
 .z-5 {
   z-index: 5;
 }
@@ -119,33 +127,7 @@ body {
   transition: all;
   transition: 3s;
 
-  transform-origin: left bottom;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  perspective: 100000px;
-  -moz-perspective: 100000px;
-  -webkit-perspective: 100000px;
-  -moz-perspective: 100000px;
-  perspective-origin: left bottom;
-  -webkit-perspective-origin: left bottom;
-  -moz-perspective-origin: left bottom;
-  -ms-perspective-origin: left bottom;
-}
 
-.inf {
-  animation: scare 1s linear 2 forwards;
-  perspective-origin: center;
-  -webkit-perspective-origin: center;
-  -moz-perspective-origin: center;
-  -ms-perspective-origin: center;
-
-
-}
-
-@keyframes scare {
-  100% {
-    transform: scale(-1, 1);
-  }
 }
 
 
@@ -172,11 +154,44 @@ body {
 
 }
 
+.door-animation {
+  transform-origin: left bottom;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 100000px;
+  -moz-perspective: 100000px;
+  -webkit-perspective: 100000px;
+  -moz-perspective: 100000px;
+  perspective-origin: left bottom;
+  -webkit-perspective-origin: left bottom;
+  -moz-perspective-origin: left bottom;
+  -ms-perspective-origin: left bottom;
+}
 
-.door-w:hover {
+.door-animation:hover {
   transform: rotateY(-180deg);
 
 }
+
+
+
+
+.inf {
+  animation: scare 1s linear 2 forwards;
+  perspective-origin: center;
+  -webkit-perspective-origin: center;
+  -moz-perspective-origin: center;
+  -ms-perspective-origin: center;
+
+
+}
+
+@keyframes scare {
+  100% {
+    transform: scale(1.5);
+  }
+}
+
 
 
 
