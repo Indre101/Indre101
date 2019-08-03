@@ -24,6 +24,7 @@ body {
 
 
 .grid-two-column {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(var(--colNum), auto);
 }
@@ -119,7 +120,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
 
 }
 
@@ -175,14 +176,20 @@ body {
   -moz-perspective: 10000px;
   -webkit-perspective: 10000px;
   -moz-perspective: 10000px;
-
-  animation: openDoors 1s linear forwards;
+  /* transform: rotateY(-180deg); */
+  transition: all;
+  animation: openDoors 1s linear forwards 1;
 
 }
 
-.door-animation:hover {
+/* .door-animation:hover {
 
-  transform: rotateY(-180deg);
+} */
+
+@keyframes openDoors {
+  to {
+    transform: rotateY(-180deg);
+  }
 }
 
 
