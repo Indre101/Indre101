@@ -65,7 +65,7 @@ returnButtonContainer.onclick = function () {
 }
 
 
-// test for adding the doors function
+//TEST TO ADD THE DOORS 
 
 // test button
 const addDoorTest = document.getElementById("addDoorTest");
@@ -105,9 +105,7 @@ addDoorTest.onclick = function () {
   doorContainer.appendChild(cln);
 
 
-  // let newDoor = document.createElement("<div class=" + "entrance" + "><img  class=" + "doors  frame-w " + " src=" + "./images/images/door-frame_v_3.png" + " alt=" + "><img  class=" + "doors door-w door-animation" + " src=" + "./images/images/door_2_1.png" + "><h2 class=" + "testWord" + "></h2></div>");
 
-  // doorContainer.appendChild(newDoor);
 
   let testWordsElements = document.querySelectorAll(".testWord")
 
@@ -119,18 +117,30 @@ addDoorTest.onclick = function () {
     e.innerHTML = testWords[randomNumber];
   })
 
+}
 
-  // gameDoor.forEach((e) => {
-  //   let randomNumber = Math.floor(Math.random() * testWords.length);
+// DOOR FLIPPING FUNCTION
 
+let doorsOpening = document.querySelectorAll(".open");
 
-  //   let testWord = document.createElement("p");
+console.log(doorsOpening)
 
+function addClass(x, a) {
 
-  //   testWord.textContent = testWords[randomNumber];
-  //   cln.appendChild(testWord);
-  //   e.appendChild(testWord);
-  // })
-
+  x.classList.add(a)
 
 }
+
+function removeClass(x, a) {
+
+  x.classList.remove(a);
+
+}
+
+doorsOpening.forEach((f) => {
+
+  // f.onclick = function () {
+
+  addClass(f, "door-animation")
+  // 
+})

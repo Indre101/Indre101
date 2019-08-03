@@ -155,6 +155,8 @@ body {
 }
 
 .door-animation {
+  transform: rotateY(-180deg);
+
   transform-origin: left bottom;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
@@ -166,12 +168,10 @@ body {
   -webkit-perspective-origin: left bottom;
   -moz-perspective-origin: left bottom;
   -ms-perspective-origin: left bottom;
-}
-
-.door-animation:hover {
-  transform: rotateY(-180deg);
+  animation: openDoors 1s linear forwards;
 
 }
+
 
 
 
