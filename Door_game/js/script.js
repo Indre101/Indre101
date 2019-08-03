@@ -139,8 +139,11 @@ function removeClass(x, a) {
 
 doorsOpening.forEach((f) => {
 
-  // f.onclick = function () {
+  f.onclick = function () {
 
-  addClass(f, "door-animation")
+    addClass(f, "door-animation")
+
+  }
+
   // 
 })

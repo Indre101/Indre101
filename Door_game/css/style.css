@@ -174,11 +174,16 @@ body {
   -moz-perspective: 10000px;
   -webkit-perspective: 10000px;
   -moz-perspective: 10000px;
-  transform: rotateY(-180deg);
 
   animation: openDoors 1s linear forwards;
 
 }
+
+.door-animation:hover {
+
+  transform: rotateY(-180deg);
+}
+
 
 
 
