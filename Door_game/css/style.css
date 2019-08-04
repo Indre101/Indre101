@@ -23,7 +23,7 @@ body {
 
 
 
-.grid-two-column {
+.grid-flex-column {
   position: relative;
   display: grid;
   grid-template-columns: repeat(var(--colNum), auto);
@@ -216,9 +216,7 @@ body {
 
 }
 
-/* .door-animation:hover {
 
-} */
 
 @keyframes openDoors {
   to {

@@ -74,15 +74,25 @@ const addDoorTest = document.getElementById("addDoorTest");
 // declared variables for function to add another column once level up
 const htmlColumn = window.getComputedStyle(document.querySelector("html"));
 const doorContainer = document.getElementById("styleOftheDoorContainer");
+
+
 const colNum = parseInt(htmlColumn.getPropertyValue("--colNum"));
 let columnNumber = colNum
 
-let gameDoor = document.querySelectorAll(".entrance")
+// let gameDoor = document.querySelectorAll(".entrance")
+
+
+let imgSrc1 = "./images/images/bunny_1.png"
+let imgSrc2 = "./images/images/bunny_2.png"
+let imgSrc3 = "./images/images/puppy_1.png"
+
+let inf1 = "./images/images/in_1.png";
+let inf2 = "./images/images/in_2.png";
 
 
 
 
-let testWords = ["khg", "sad", "ojkæ", "kjhm", "jæk", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+let testImg = [imgSrc1, imgSrc2, imgSrc3, inf1, inf2];
 
 
 
@@ -107,14 +117,14 @@ addDoorTest.onclick = function () {
 
 
 
-  let testWordsElements = document.querySelectorAll(".testWord")
+  let testWordsElements = document.querySelectorAll(".inf")
 
 
   testWordsElements.forEach((e) => {
-    let randomNumber = Math.floor(Math.random() * testWords.length);
+    let randomNumber = Math.floor(Math.random() * testImg.length);
 
 
-    e.innerHTML = testWords[randomNumber];
+    e.src = testImg[randomNumber];
   })
 
 }
