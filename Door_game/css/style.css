@@ -140,6 +140,20 @@ body {
 
 .message {
   z-index: 6;
+  align-self: baseline;
+  margin-top: 4rem;
+  margin-left: 17rem;
+  width: 12vw;
+  animation: zoomIn 1s linear backwards 3;
+  -webkit-animation: zoomIn 1s linear backwards 3;
+  -moz-animation: zoomIn 1s linear backwards 3;
+
+}
+
+@keyframes zoomIn {
+  100% {
+    transform: scale(1.5);
+  }
 }
 
 .inf {
@@ -194,6 +208,8 @@ body {
   /* transform: rotateY(-180deg); */
   transition: all;
   animation: openDoors 1s linear forwards 1;
+  -webkit-animation: openDoors 1s linear forwards 1;
+  -moz-animation: openDoors 1s linear forwards 1;
 
 }
 
