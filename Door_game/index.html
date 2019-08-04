@@ -38,7 +38,10 @@
       id="startGamePage"
       class="container h-100 w-100  no-gutters  opacity-animation"
     >
-      <div id="infoButtonContainer" class="infoButtonContainer pointer no-gutters">
+      <div
+        id="infoButtonContainer"
+        class="infoButtonContainer pointer no-gutters"
+      >
         <div class="infoButton p-absolute"></div>
         <h2 class="no-gutters p-absolute">i</h2>
       </div>
@@ -79,12 +82,10 @@
 
       <div class="container-column-center ">
         <div class="grid-two-column w-40 justify-evenly">
-          
           <div class="score container-row ">
             <!-- <h4 >Scores</h4> -->
-            <div class="number number_score score_before"><h4 >0</h4></div>
-            <div class="number number_score_2 score_before"><h4 >0</h4></div>
-
+            <div class="number number_score score_before"><h4>0</h4></div>
+            <div class="number number_score_2 score_before"><h4>0</h4></div>
           </div>
           <div class="lives container-row justify-self-end">
             <div class="number number-lives">
@@ -100,36 +101,49 @@
       </div>
       <!-- the end of the scores and the game -->
 
-
       <button id="addDoorTest">add door</button>
 
-<!-- door  game container -->
-<div id="styleOftheDoorContainer" class="w-100 mt-4 
-grid-flex-column  h-60">
+      <!-- door  game container -->
+      <div
+        id="styleOftheDoorContainer"
+        class="w-100 mt-4 
+grid-flex-column  h-60"
+      >
+        <div class="entrance ">
+          <img
+            class="doors frame-w "
+            src="./images/images/door-frame_v_3_1.png"
+            alt=""
+          />
+          <img class="doors door-w imgBehidDoors" alt="" />
+          <img class=" door-w message " alt="" />
+          <img
+            class="open doors door-w "
+            src="./images/images/door_2_1.png"
+            alt=""
+          />
+          <!-- <img  class="doors door-w inf " src="./images/images/in_1.png" alt=""> -->
+        </div>
+        <div class="entrance">
+          <img
+            class="doors frame-w "
+            src="./images/images/door-frame_v_3_1.png"
+            alt=""
+          />
+          <img class="doors door-w imgBehidDoors" alt="" />
+          <img class=" door-w message " alt="" />
+          <img
+            class="open doors door-w "
+            src="./images/images/door_2_1.png"
+            alt=""
+          />
+        </div>
+      </div>
 
-  <div class="entrance ">
-    <img  class="doors frame-w " src="./images/images/door-frame_v_3_1.png" alt="">
-    <img  class="doors door-w imgBehidDoors" alt="">
-    <img  class=" door-w message " alt="">
-    <img  class="open doors door-w " src="./images/images/door_2_1.png" alt="">
-    <!-- <img  class="doors door-w inf " src="./images/images/in_1.png" alt=""> -->
+      <!--End of door  game container -->
 
-
-  </div>
-  <div class="entrance">
-      <img  class="doors frame-w " src="./images/images/door-frame_v_3_1.png" alt="">
-      <img  class="doors door-w imgBehidDoors" alt="">
-      <img  class=" door-w message " alt="">
-      <img  class="open doors door-w " src="./images/images/door_2_1.png" alt="">
-    </div>
-
-
-</div>
-
-<!--End of door  game container -->
-
-  <!-- high score container -->
-  <div class="container-row-center">
+      <!-- high score container -->
+      <div class="container-row-center">
     <div class="score container-row ">
       
       <h4 >High score</h4>
@@ -139,9 +153,7 @@ grid-flex-column  h-60">
     </div>
   </div>
 
-    <!-- high score end -->
-
-
+      <!-- high score end -->
     </div>
 
     <!--  -->
