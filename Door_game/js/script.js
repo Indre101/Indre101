@@ -45,6 +45,7 @@ startButton.onclick = function () {
   toggleClasses(landingPageContainer, dNone);
   toggleClasses(startGamePage, dBlock);
   toggleClasses(startGamePage, dNone);
+  assignImage();
   // 
 
 
