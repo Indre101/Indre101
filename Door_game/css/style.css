@@ -157,32 +157,35 @@ body {
 }
 
 .inf {
-  animation: scare 1s linear 2 forwards;
+  animation: scare 0.8s linear forwards 5;
   perspective-origin: center;
   -webkit-perspective-origin: center;
   -moz-perspective-origin: center;
   -ms-perspective-origin: center;
   z-index: 3;
 
+
+
+}
+
+
+
+@keyframes scare {
+  0% {
+    transform: rotate(-10deg) scale(0.4);
+  }
+
+  100% {
+    transform: rotate(10deg) scale(1);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+
+  }
 }
 
 .doors {
-  /* background-image: url(../images/images/doors.png); */
   position: absolute;
   margin: 0;
   padding: 0;
-  /* background-size: contain; */
-  /* height: 80%; */
-  /* background-repeat: no-repeat; */
-  /* position: absolute; */
-  /* animation: openDoor 1s linear forwards 1; */
-
-
-
-  /* transform */
-
-
-
 }
 
 .door-animation {
@@ -230,11 +233,7 @@ body {
 
 
 
-@keyframes scare {
-  100% {
-    transform: scale(1.5);
-  }
-}
+
 
 
 
