@@ -83,32 +83,7 @@ let columnNumber = colNum
 // let gameDoor = document.querySelectorAll(".entrance")
 
 
-let imgSrc1 = "./images/images/bunny_1.png"
-let imgSrc2 = "./images/images/bunny_2.png"
-let imgSrc3 = "./images/images/puppy_1.png"
 
-let inf1 = "./images/images/in_1.png";
-let inf2 = "./images/images/in_2.png";
-
-
-
-
-let testImg = [imgSrc1, imgSrc2, imgSrc3, inf1, inf2];
-
-
-// function to assign images
-function assignImage() {
-
-  let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
-
-
-  imgBehidDoors.forEach((e) => {
-    let randomNumber = Math.floor(Math.random() * testImg.length);
-
-
-    e.src = testImg[randomNumber];
-  })
-}
 
 
 
@@ -157,9 +132,56 @@ doorsOpening.forEach((f) => {
   f.onclick = function () {
 
     addClass(f, "door-animation")
-
+    imgBehidDoors.forEach((x) => {
+      x.classList.add("inf")
+    })
 
   }
 
   // 
 })
+
+
+
+
+
+// function to assign images
+
+
+let imgSrc1 = "./images/images/bunny_1.png"
+let imgSrc2 = "./images/images/bunny_2.png"
+let imgSrc3 = "./images/images/puppy_1.png"
+
+let inf1 = "./images/images/in_1.png";
+let inf2 = "./images/images/in_2.png";
+
+
+
+
+let goodImg = [imgSrc1, imgSrc2, imgSrc3];
+let looseImg = [inf1, inf2];
+
+
+
+
+function assignImage() {
+
+  let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
+  let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
+
+
+
+  imgBehidDoors[behidDoorsNumber].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+
+  imgBehidDoors.forEach((e) => {
+    // e.src = testImg[randomNumber];
+
+    if (e.src === "") {
+
+      e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
+    }
+
+  })
+}
+
+assignImage()
