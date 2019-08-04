@@ -27,6 +27,7 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: repeat(var(--colNum), auto);
+  grid-gap: 3rem;
 }
 
 .justify-self-end {
@@ -223,14 +224,6 @@ body {
     transform: rotateY(-180deg);
   }
 }
-
-
-
-
-
-
-
-
 
 
 

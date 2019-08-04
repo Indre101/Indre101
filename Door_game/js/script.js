@@ -95,7 +95,19 @@ let inf2 = "./images/images/in_2.png";
 let testImg = [imgSrc1, imgSrc2, imgSrc3, inf1, inf2];
 
 
+// function to assign images
+function assignImage() {
 
+  let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
+
+
+  imgBehidDoors.forEach((e) => {
+    let randomNumber = Math.floor(Math.random() * testImg.length);
+
+
+    e.src = testImg[randomNumber];
+  })
+}
 
 
 
@@ -114,23 +126,12 @@ addDoorTest.onclick = function () {
   let cln = elmnt.cloneNode(true);
   doorContainer.appendChild(cln);
 
-
-
-
-  let testWordsElements = document.querySelectorAll(".inf")
-
-
-  testWordsElements.forEach((e) => {
-    let randomNumber = Math.floor(Math.random() * testImg.length);
-
-
-    e.src = testImg[randomNumber];
-  })
-
 }
 
 // DOOR FLIPPING FUNCTION
 
+
+let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
 let doorsOpening = document.querySelectorAll(".open");
 
 console.log(doorsOpening)
@@ -147,11 +148,15 @@ function removeClass(x, a) {
 
 }
 
+
+
+
 doorsOpening.forEach((f) => {
 
   f.onclick = function () {
 
     addClass(f, "door-animation")
+
 
   }
 
