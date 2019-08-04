@@ -128,13 +128,28 @@ body {
   width: 15vw;
   transition: all;
   transition: 3s;
-
+  z-index: 6;
 
 }
 
 
 .frame-w {
   width: 22vw;
+  z-index: 2;
+}
+
+.message {
+  z-index: 6;
+}
+
+.inf {
+  animation: scare 1s linear 2 forwards;
+  perspective-origin: center;
+  -webkit-perspective-origin: center;
+  -moz-perspective-origin: center;
+  -ms-perspective-origin: center;
+  z-index: 3;
+
 }
 
 .doors {
@@ -197,15 +212,7 @@ body {
 
 
 
-.inf {
-  animation: scare 1s linear 2 forwards;
-  perspective-origin: center;
-  -webkit-perspective-origin: center;
-  -moz-perspective-origin: center;
-  -ms-perspective-origin: center;
 
-
-}
 
 @keyframes scare {
   100% {
