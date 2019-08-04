@@ -12,6 +12,16 @@
 body {
   font-family: "Indie Flower", cursive;
   /* owerflow */
+  background-image: url(../images/images/bg_horror_v_1.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+
 }
 
 
@@ -21,10 +31,28 @@ body {
 
 
 
+#bg {
+  position: fixed;
+  z-index: -1;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
 
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
 
 .grid-flex-column {
-  position: relative;
+  /* position: relative; */
   display: grid;
   grid-template-columns: repeat(var(--colNum), 1fr);
   grid-gap: 2rem;
@@ -40,7 +68,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 
 }
 
@@ -48,7 +75,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
 
 }
 
@@ -129,8 +156,8 @@ body {
 .message {
   z-index: 6;
   align-self: baseline;
-  margin-top: 4rem;
-  margin-left: 17rem;
+  /* margin-top: 4rem;
+  margin-left: 17rem; */
   width: 12vw;
   animation: zoomIn 1s linear backwards 3;
   -webkit-animation: zoomIn 1s linear backwards 3;
@@ -155,8 +182,6 @@ body {
 
 
 }
-
-
 
 @keyframes scare {
   0% {
@@ -259,7 +284,7 @@ h2 {
 }
 
 .w-100 {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .w-40 {
@@ -286,7 +311,7 @@ h2 {
 }
 
 .container {
-  background-image: url(../images/images/bg_horror_v_1.jpg);
+  /* background-image: url(../images/images/bg_horror_v_1.jpg); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

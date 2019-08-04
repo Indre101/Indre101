@@ -1,0 +1,38 @@
+body {
+  font-family: "Indie Flower", cursive;
+  /* owerflow */
+  background-image: url(../images/images/bg_horror_v_1.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+
+:root {
+  --colNum: 2;
+}
+
+.grid-flex-column {
+  display: grid;
+  grid-template-columns: repeat(var(--colNum), 1fr);
+  grid-gap: 2rem;
+
+}
+
+.entrance_1 {
+  position: absolute;
+}
+
+.door-w {
+  width: 15%;
+
+}
+
+.frame-w {
+  width: 20%;
+}

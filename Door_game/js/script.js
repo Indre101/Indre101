@@ -41,7 +41,7 @@ startButton.onclick = function () {
 
   // start page changes to the game beginng
   let url1 = "url('./images/images/bg_2.jpg')"
-  changeBackground(startGamePage, url1);
+  changeBackground(document.querySelector("body"), url1);
   toggleClasses(landingPageContainer, dNone);
   toggleClasses(startGamePage, dBlock);
   toggleClasses(startGamePage, dNone);
@@ -92,6 +92,7 @@ let columnNumber = colNum
 addDoorTest.onclick = function () {
 
 
+  let doorsOpening = document.querySelectorAll(".open");
 
 
   columnNumber++
@@ -101,6 +102,7 @@ addDoorTest.onclick = function () {
   let elmnt = document.querySelector(".entrance");
   let cln = elmnt.cloneNode(true);
   doorContainer.appendChild(cln);
+  console.log(doorsOpening)
 
 }
 
@@ -109,8 +111,8 @@ addDoorTest.onclick = function () {
 
 let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
 let doorsOpening = document.querySelectorAll(".open");
+let doorsOpeningArr = Array.prototype.slice.call(doorsOpening);
 
-console.log(doorsOpening)
 
 function addClass(x, a) {
 
@@ -129,11 +131,24 @@ function removeClass(x, a) {
 
 doorsOpening.forEach((f) => {
 
+
+
+
+
   f.onclick = function () {
 
-    addClass(f, "door-animation")
+    let a = doorsOpeningArr.indexOf(this)
+    console.log(a)
+
+    addClass(this, "door-animation")
+
+
     imgBehidDoors.forEach((x) => {
-      x.classList.add("inf")
+
+
+      imgBehidDoors[a].classList.add("inf")
+
+      // x.classList.toggle("inf")
     })
 
   }
@@ -168,6 +183,8 @@ function assignImage() {
 
   let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
   let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
+
+
 
 
 
