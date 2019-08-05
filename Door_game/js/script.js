@@ -200,6 +200,8 @@ function doorsOpeningFunction(w) {
 
     f.onclick = function () {
 
+
+
       addClass(this, "door-animation")
 
       openDoorsCount++;
@@ -238,11 +240,9 @@ function doorsOpeningFunction(w) {
 
 
         state = "loose"
-       
 
-
+        countLives()
       }
-
 
 
     }
@@ -253,8 +253,6 @@ function doorsOpeningFunction(w) {
 
   
 
-  // return state;
-
 
 }
 
@@ -264,22 +262,25 @@ let livesCount = document.getElementById("liveCount");
 let scoreCount = document.getElementById("scoreCount");
 
 
+
 let state = "";
 let openDoorsCount = 0;
-let lives = 1;
+let lives = 3;
 let score = 0;
+
+livesCount.textContent = lives;
+
 
 
 function countLives() {
 
 
 
-  if (state === "loose") {
     lives--;
-  }
+
   if (lives === 0) {
-    score = 0;
-    gameOver();
+    // score = 0;
+    // gameOver();
 
   }
 
@@ -287,6 +288,8 @@ function countLives() {
 
 
 }
+
+
 
 function calculateScore() {
 
