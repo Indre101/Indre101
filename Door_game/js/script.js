@@ -125,7 +125,7 @@ function winScenario() {
   let elmnt = document.querySelector(".entrance");
   let cln = elmnt.cloneNode(true);
   doorContainer.appendChild(cln);
-  cln.querySelectorAll('img')[3].classList.remove("door-animation")
+  cln.querySelectorAll('img')[3].classList.remove("door-animation");
 
   // let doorsOpeningNew = document.querySelectorAll(".open")
   // console.log(doorsOpeningNew)
@@ -183,9 +183,9 @@ function assignImage() {
   })
 }
 
+
+
 assignImage()
-
-
 
 
 
@@ -213,9 +213,8 @@ function doorsOpeningFunction(w) {
 
         state = "win"
 
-        countLives()
+        calculateScore()
 
-        // winScenario();
 
         // console.log("next phase")
 
@@ -239,7 +238,7 @@ function doorsOpeningFunction(w) {
 
 
         state = "loose"
-        countLives()
+       
 
 
       }
@@ -252,7 +251,7 @@ function doorsOpeningFunction(w) {
 
   })
 
-  countLives()
+  
 
   // return state;
 
@@ -260,13 +259,15 @@ function doorsOpeningFunction(w) {
 }
 
 
-// numer to follow win count and lives
+// number to follow win count and lives
 let livesCount = document.getElementById("liveCount");
+let scoreCount = document.getElementById("scoreCount");
+
 
 let state = "";
 let openDoorsCount = 0;
 let lives = 1;
-
+let score = 0;
 
 
 function countLives() {
@@ -277,7 +278,9 @@ function countLives() {
     lives--;
   }
   if (lives === 0) {
-    newGame();
+    score = 0;
+    gameOver();
+
   }
 
   livesCount.textContent = lives;
@@ -285,27 +288,43 @@ function countLives() {
 
 }
 
+function calculateScore() {
 
-function newGame() {
-  columnNumber = colNum;
+  score++;
+scoreCount.textContent= score;
+  
+}
+
+
+
+function startNewLevel() {
   assignImage();
 
   doorsOpening.forEach((f) => {
 
 
     setTimeout(() => {
-    removeClass(f, "door-animation");
+      removeClass(f, "door-animation");
       // missing animation to display for loose
     }, 3000);
 
   })
+}
 
-  
+function gameOver() {
+  // columnNumber = colNum;
+  columnNumber = 2;
+  startNewLevel();
+
+  if (doorContainer.querySelectorAll('div').length === 2) {
+    console.log("true")
+
+  }
+  // console.log(doorContainer.querySelectorAll('div').length)
+
 
 
 }
 
 
-
-console.log(doorsOpening)
 doorsOpeningFunction(doorsOpening);
