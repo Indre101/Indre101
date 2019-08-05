@@ -104,10 +104,18 @@ let columnNumber = colNum
 
 
 
+function recountDoors() {
+  let doorsOpening = document.querySelectorAll(".open");
+  return doorsOpening;
+
+}
+
+
+
+
 // function to add another grid and another column and frame-door element 
 function winScenario() {
 
-  let doorsOpening = document.querySelectorAll(".open");
 
 
   columnNumber++
@@ -119,20 +127,16 @@ function winScenario() {
   doorContainer.appendChild(cln);
   cln.querySelectorAll('img')[3].classList.remove("door-animation")
 
+  // let doorsOpeningNew = document.querySelectorAll(".open")
+  // console.log(doorsOpeningNew)
 
+  // doorsOpeningFunction(doorsOpeningNew)
 
-
-
-}
-
-
-function recountDoors() {
-  let doorsOpening = document.querySelectorAll(".open");
-  return doorsOpening;
 
 }
 
 let doorsOpening = recountDoors();
+
 
 
 
@@ -182,48 +186,111 @@ function assignImage() {
 assignImage()
 
 
-// numer to follow win count
-let state = "";
-let openDoorsCount = 0;
 
 
 
 // doors clicked adds a animation class to the img behid doors
-function doorsOpeningFunction() {
+function doorsOpeningFunction(w) {
 
-
-  recountDoors()
 
   doorsOpening.forEach((f) => {
 
+    openDoorsCount++
+
 
     f.onclick = function () {
+
+      addClass(this, "door-animation")
+
       openDoorsCount++;
 
       let a = doorsOpeningArr.indexOf(this)
-      addClass(this, "door-animation")
       imgBehidDoors[a].classList.add("inf")
 
 
       // win or loose
       if (goodImg.includes(imgBehidDoors[a].getAttribute('src'))) {
 
+        state = "win"
 
-        winScenario();
+        countLives()
 
-        console.log("next phase")
+        // winScenario();
 
+        // console.log("next phase")
+
+
+        // let doorsOpeningNew = recountDoors()
+        // console.log(doorsOpeningNew)
+
+        // doorsOpeningNew.forEach(e => {
+        //   e.onclick = function () {
+        //     addClass(this, "door-animation")
+        //   }
+        // })
+
+        // doorsOpeningFunction(doorsOpeningNew)
+
+        // doorsOpeningFunction(doorsOpeningNew);
 
 
 
       } else if (looseImg.includes(imgBehidDoors[a].getAttribute('src'))) {
-        console.log("flase")
+
+
+        state = "loose"
+        countLives()
+
+
       }
+
+
 
     }
 
+
+
   })
+
+  countLives()
+
+  // return state;
+
+
 }
 
 
-doorsOpeningFunction();
+// numer to follow win count and lives
+let livesCount = document.getElementById("liveCount");
+
+let state = "";
+let openDoorsCount = 0;
+let lives = 1;
+
+
+
+function countLives() {
+
+
+
+  if (state === "loose") {
+    lives--;
+  }
+  if (lives === 0) {
+
+  }
+
+  livesCount.textContent = lives;
+
+
+}
+
+
+function newGame() {
+  columnNumber = colNum;
+}
+
+
+
+console.log(doorsOpening)
+doorsOpeningFunction(doorsOpening);
