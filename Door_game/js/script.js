@@ -138,40 +138,12 @@ function clearImgSrc(x) {
 
 
 
-doorsOpening.forEach((f) => {
-
-
-  f.onclick = function () {
-
-    let a = doorsOpeningArr.indexOf(this)
-    console.log(a)
-
-    addClass(this, "door-animation")
-
-
-    imgBehidDoors.forEach((x) => {
-
-
-      imgBehidDoors[a].classList.add("inf")
-
-      // x.classList.toggle("inf")
-    })
-
-  }
-
-  // 
-})
-
-
-
-
-
 // function to assign images
 
 
-let imgSrc1 = "./images/images/bunny_1.png"
-let imgSrc2 = "./images/images/bunny_2.png"
-let imgSrc3 = "./images/images/puppy_1.png"
+// let imgSrc1 = 
+// let imgSrc2 = 
+// let imgSrc3 = 
 
 let inf1 = "./images/images/in_1.png";
 let inf2 = "./images/images/in_2.png";
@@ -179,32 +151,57 @@ let inf2 = "./images/images/in_2.png";
 
 
 
-let goodImg = [imgSrc1, imgSrc2, imgSrc3];
+let goodImg = ["./images/images/bunny_1.png", "./images/images/bunny_2.png", "./images/images/puppy_1.png"];
 let looseImg = [inf1, inf2];
 
-
-
-
 function assignImage() {
-
   let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
   let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
-
-
-
-
-
   imgBehidDoors[behidDoorsNumber].src = goodImg[Math.floor(Math.random() * goodImg.length)]
 
   imgBehidDoors.forEach((e) => {
-    // e.src = testImg[randomNumber];
 
     if (e.src === "") {
 
       e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
+      // console.log(e.src)
     }
 
   })
 }
 
 assignImage()
+
+
+// numer to follow win count
+let winCount = 0;
+let openDoorsCount = 0;
+
+
+
+// doors clicked adds a animation class to the img behid doors
+doorsOpening.forEach((f) => {
+
+
+  f.onclick = function () {
+    openDoorsCount++;
+
+    let a = doorsOpeningArr.indexOf(this)
+    addClass(this, "door-animation")
+    imgBehidDoors[a].classList.add("inf")
+    // console.log(imgBehidDoors[a].src);
+
+
+    // let b = imgBehidDoors[a].getAttribute('src');
+
+    // console.log(b);
+
+
+    if (goodImg.includes(imgBehidDoors[a].getAttribute('src'))) {
+      console.log("true");
+
+    } else if
+
+  }
+
+})
