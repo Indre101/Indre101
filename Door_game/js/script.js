@@ -277,7 +277,7 @@ function countLives() {
     lives--;
   }
   if (lives === 0) {
-
+    newGame();
   }
 
   livesCount.textContent = lives;
@@ -288,6 +288,21 @@ function countLives() {
 
 function newGame() {
   columnNumber = colNum;
+  assignImage();
+
+  doorsOpening.forEach((f) => {
+
+
+    setTimeout(() => {
+    removeClass(f, "door-animation");
+      // missing animation to display for loose
+    }, 3000);
+
+  })
+
+  
+
+
 }
 
 
