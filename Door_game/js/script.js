@@ -126,13 +126,19 @@ function removeClass(x, a) {
 
 }
 
+// function to clear img src;
+
+function clearImgSrc(x) {
+  x.src = "";
+
+}
+
+
+
 
 
 
 doorsOpening.forEach((f) => {
-
-
-
 
 
   f.onclick = function () {
