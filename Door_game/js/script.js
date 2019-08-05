@@ -29,6 +29,26 @@ function toggleClasses(x, c) {
 
 }
 
+
+function addClass(x, a) {
+
+  x.classList.add(a)
+
+}
+
+function removeClass(x, a) {
+
+  x.classList.remove(a);
+
+}
+
+// function to clear img src;
+
+function clearImgSrc(x) {
+  x.src = "";
+
+}
+
 // class variables
 
 let dBlock = "d-block";
@@ -45,6 +65,8 @@ startButton.onclick = function () {
   toggleClasses(landingPageContainer, dNone);
   toggleClasses(startGamePage, dBlock);
   toggleClasses(startGamePage, dNone);
+
+  // assigns first level img
   assignImage();
   // 
 
@@ -80,17 +102,10 @@ const doorContainer = document.getElementById("styleOftheDoorContainer");
 const colNum = parseInt(htmlColumn.getPropertyValue("--colNum"));
 let columnNumber = colNum
 
-// let gameDoor = document.querySelectorAll(".entrance")
 
 
-
-
-
-
-
-// function to add another grid column
-addDoorTest.onclick = function () {
-
+// function to add another grid and another column and frame-door element 
+function winScenario() {
 
   let doorsOpening = document.querySelectorAll(".open");
 
@@ -102,36 +117,30 @@ addDoorTest.onclick = function () {
   let elmnt = document.querySelector(".entrance");
   let cln = elmnt.cloneNode(true);
   doorContainer.appendChild(cln);
-  console.log(doorsOpening)
+  cln.querySelectorAll('img')[3].classList.remove("door-animation")
+
+
+
+
 
 }
 
-// DOOR FLIPPING FUNCTION
+
+function recountDoors() {
+  let doorsOpening = document.querySelectorAll(".open");
+  return doorsOpening;
+
+}
+
+let doorsOpening = recountDoors();
+
 
 
 let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
-let doorsOpening = document.querySelectorAll(".open");
 let doorsOpeningArr = Array.prototype.slice.call(doorsOpening);
 
 
-function addClass(x, a) {
 
-  x.classList.add(a)
-
-}
-
-function removeClass(x, a) {
-
-  x.classList.remove(a);
-
-}
-
-// function to clear img src;
-
-function clearImgSrc(x) {
-  x.src = "";
-
-}
 
 
 
@@ -174,34 +183,47 @@ assignImage()
 
 
 // numer to follow win count
-let winCount = 0;
+let state = "";
 let openDoorsCount = 0;
 
 
 
 // doors clicked adds a animation class to the img behid doors
-doorsOpening.forEach((f) => {
+function doorsOpeningFunction() {
 
 
-  f.onclick = function () {
-    openDoorsCount++;
+  recountDoors()
 
-    let a = doorsOpeningArr.indexOf(this)
-    addClass(this, "door-animation")
-    imgBehidDoors[a].classList.add("inf")
-    // console.log(imgBehidDoors[a].src);
+  doorsOpening.forEach((f) => {
 
 
-    // let b = imgBehidDoors[a].getAttribute('src');
+    f.onclick = function () {
+      openDoorsCount++;
 
-    // console.log(b);
+      let a = doorsOpeningArr.indexOf(this)
+      addClass(this, "door-animation")
+      imgBehidDoors[a].classList.add("inf")
 
 
-    if (goodImg.includes(imgBehidDoors[a].getAttribute('src'))) {
-      console.log("true");
+      // win or loose
+      if (goodImg.includes(imgBehidDoors[a].getAttribute('src'))) {
 
-    } else if
 
-  }
+        winScenario();
 
-})
+        console.log("next phase")
+
+
+
+
+      } else if (looseImg.includes(imgBehidDoors[a].getAttribute('src'))) {
+        console.log("flase")
+      }
+
+    }
+
+  })
+}
+
+
+doorsOpeningFunction();
