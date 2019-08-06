@@ -168,19 +168,32 @@ let goodImg = ["./images/images/bunny_1.png", "./images/images/bunny_2.png", "./
 let looseImg = [inf1, inf2];
 
 function assignImage() {
+
   let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
   let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
   imgBehidDoors[behidDoorsNumber].src = goodImg[Math.floor(Math.random() * goodImg.length)]
 
   imgBehidDoors.forEach((e) => {
 
+
+    e.src === ""
+
     if (e.src === "") {
 
       e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
-      // console.log(e.src)
     }
 
+
   })
+
+ 
+
+  // imgBehidDoors.forEach((e) => {
+
+
+
+
+  // })
 }
 
 
@@ -217,22 +230,22 @@ function doorsOpeningFunction(w) {
 
         calculateScore()
 
+        let doorsOpeningNew = recountDoors()      
+        doorsOpeningNew.forEach(e => {
+          e.onclick = function () {
+            addClass(this, "door-animation")
+          }
+        })
 
-        // console.log("next phase")
 
 
-        // let doorsOpeningNew = recountDoors()
-        // console.log(doorsOpeningNew)
 
-        // doorsOpeningNew.forEach(e => {
-        //   e.onclick = function () {
-        //     addClass(this, "door-animation")
-        //   }
-        // })
 
-        // doorsOpeningFunction(doorsOpeningNew)
 
-        // doorsOpeningFunction(doorsOpeningNew);
+
+
+
+
 
 
 
@@ -251,7 +264,7 @@ function doorsOpeningFunction(w) {
 
   })
 
-  
+
 
 
 }
@@ -267,6 +280,8 @@ let state = "";
 let openDoorsCount = 0;
 let lives = 3;
 let score = 0;
+let levelCount = 0;
+
 
 livesCount.textContent = lives;
 
@@ -276,7 +291,7 @@ function countLives() {
 
 
 
-    lives--;
+  lives--;
 
   if (lives === 0) {
     // score = 0;
@@ -294,13 +309,16 @@ function countLives() {
 function calculateScore() {
 
   score++;
-scoreCount.textContent= score;
-  
+  scoreCount.textContent = score;
+
 }
 
 
 
 function startNewLevel() {
+
+  levelCount++;
+
   assignImage();
 
   doorsOpening.forEach((f) => {
@@ -312,6 +330,17 @@ function startNewLevel() {
     }, 3000);
 
   })
+
+
+
+        if (levelCount === 3) {
+
+
+          winScenario();
+
+        
+        }
+
 }
 
 function gameOver() {
