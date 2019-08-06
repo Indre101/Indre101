@@ -12,7 +12,6 @@ const returnButtonContainer = document.getElementById("returnButtonContainer");
 
 
 
-console.log("hjæk")
 
 // chaning background image 
 function changeBackground(x, u) {
@@ -67,7 +66,7 @@ startButton.onclick = function () {
   toggleClasses(startGamePage, dNone);
 
   // assigns first level img
-  assignImage();
+  assignImage(imgBehidDoors);
   // 
 
 
@@ -127,10 +126,11 @@ function winScenario() {
   doorContainer.appendChild(cln);
   cln.querySelectorAll('img')[3].classList.remove("door-animation");
 
-  // let doorsOpeningNew = document.querySelectorAll(".open")
-  // console.log(doorsOpeningNew)
 
-  // doorsOpeningFunction(doorsOpeningNew)
+  let doorsOpeningNew = recountDoors()   
+let doorsOpeningArr = Array.prototype.slice.call(doorsOpeningNew);
+  doorsOpeningFunction(doorsOpeningNew, doorsOpeningArr, imgBehidDoors)
+  assignImage(imgBehidDoors)
 
 
 }
@@ -141,6 +141,7 @@ let doorsOpening = recountDoors();
 
 
 let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
+
 let doorsOpeningArr = Array.prototype.slice.call(doorsOpening);
 
 
@@ -167,9 +168,9 @@ let inf2 = "./images/images/in_2.png";
 let goodImg = ["./images/images/bunny_1.png", "./images/images/bunny_2.png", "./images/images/puppy_1.png"];
 let looseImg = [inf1, inf2];
 
-function assignImage() {
+function assignImage(i) {
 
-  let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
+  // let i = document.querySelectorAll(".imgBehidDoors")
   let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
   imgBehidDoors[behidDoorsNumber].src = goodImg[Math.floor(Math.random() * goodImg.length)]
 
@@ -187,69 +188,41 @@ function assignImage() {
   })
 
  
-
-  // imgBehidDoors.forEach((e) => {
-
-
-
-
-  // })
 }
 
 
-
-assignImage()
+// will be once the start button is clicked
+assignImage(imgBehidDoors)
 
 
 
 // doors clicked adds a animation class to the img behid doors
-function doorsOpeningFunction(w) {
+function doorsOpeningFunction(arrDoor,doorConvertedArray, arrImgBehindDoor) {
 
 
-  doorsOpening.forEach((f) => {
+  arrDoor.forEach((f) => {
 
-    openDoorsCount++
 
 
     f.onclick = function () {
 
-
-
       addClass(this, "door-animation")
 
-      openDoorsCount++;
 
-      let a = doorsOpeningArr.indexOf(this)
-      imgBehidDoors[a].classList.add("inf")
+      let a = doorConvertedArray.indexOf(this)
 
+      arrImgBehindDoor[a].classList.add("inf")
 
       // win or loose
-      if (goodImg.includes(imgBehidDoors[a].getAttribute('src'))) {
+      if (goodImg.includes(arrImgBehindDoor[a].getAttribute('src'))) {
 
         state = "win"
 
         calculateScore()
 
-        let doorsOpeningNew = recountDoors()      
-        doorsOpeningNew.forEach(e => {
-          e.onclick = function () {
-            addClass(this, "door-animation")
-          }
-        })
 
 
-
-
-
-
-
-
-
-
-
-
-
-      } else if (looseImg.includes(imgBehidDoors[a].getAttribute('src'))) {
+      } else if (looseImg.includes(arrImgBehindDoor[a].getAttribute('src'))) {
 
 
         state = "loose"
@@ -319,7 +292,7 @@ function startNewLevel() {
 
   levelCount++;
 
-  assignImage();
+  assignImage(imgBehidDoors);
 
   doorsOpening.forEach((f) => {
 
@@ -359,4 +332,4 @@ function gameOver() {
 }
 
 
-doorsOpeningFunction(doorsOpening);
+doorsOpeningFunction(doorsOpening, doorsOpeningArr,imgBehidDoors);
