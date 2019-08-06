@@ -8,6 +8,11 @@ const infoButtonContainer = document.getElementById("infoButtonContainer");
 const returnButtonContainer = document.getElementById("returnButtonContainer");
 
 
+let state = "";
+let openDoorsCount = 0;
+let lives = 3;
+let score = 0;
+let levelCount = 0;
 
 
 
@@ -178,7 +183,7 @@ function assignImage() {
 
   i.forEach((e) => {
 
-    console.log(e);
+    // console.log(e);
     // e.src === "#"
     e.removeAttribute('src')
   })
@@ -191,6 +196,7 @@ function assignImage() {
     if (e.src === "") {
 
       e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
+
     }
 
 
@@ -200,11 +206,6 @@ function assignImage() {
 }
 
 
-let state = "";
-let openDoorsCount = 0;
-let lives = 3;
-let score = 0;
-let levelCount = 0;
 
 // will be once the start button is clicked
 assignImage()
@@ -217,14 +218,14 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
   let i = selectAll(".imgBehidDoors");
 
+
   arrDoor.forEach((f) => {
 
-
-
-
     f.onclick = function () {
-
       openDoorsCount++
+
+      
+      // console.log(openDoorsCount)
 
       if (arrDoor.length === 3 && openDoorsCount === 1) {
         arrDoor.forEach(d => {
@@ -251,14 +252,16 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
       // win or loose
       if (goodImg.includes(i[a].getAttribute('src'))) {
 
-        state = "win"
-        startNewLevel(arrDoor, i)
-
-        return state;
-
         // openDoorsCount = 0;
 
-        // calculateScore()
+        state = "win"
+        startNewLevel(arrDoor, i)
+        calculateScore()
+
+
+
+
+
 
 
 
@@ -268,23 +271,32 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
         state = "loose"
         startNewLevel(arrDoor, i)
+        countLives()
 
 
-        return state;
 
-        // countLives()
+
+
 
 
       }
+  
+console.log()
+    
+      return openDoorsCount
 
     }
+   
 
-  })
-
+     })
 
 
 
 }
+
+
+console.log(openDoorsCount);
+
 
 
 function state1() {
@@ -339,7 +351,6 @@ function calculateScore() {
 function startNewLevel(arr, imgBehinddor) {
 
 
-  console.log("læk")
   levelCount++;
 
   assignImage();
