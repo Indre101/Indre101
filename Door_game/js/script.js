@@ -204,7 +204,28 @@ function doorsOpeningFunction(arrDoor,doorConvertedArray, arrImgBehindDoor) {
 
 
 
+
     f.onclick = function () {
+
+      openDoorsCount++
+      if (arrDoor.length ===2 && openDoorsCount ===1) {
+
+        arrDoor.forEach(d=>{
+          d.style.pointerEvents = "none";
+        })
+
+        openDoorsCount= 0;
+      }else if ( arrDoor.length ===3 && openDoorsCount ===1 ){
+        arrDoor.forEach(d=>{
+          d.style.pointerEvents = "none";
+        })
+
+        openDoorsCount= 0;
+      }
+
+
+      console.log(openDoorsCount)
+
 
       addClass(this, "door-animation")
 
@@ -220,6 +241,7 @@ function doorsOpeningFunction(arrDoor,doorConvertedArray, arrImgBehindDoor) {
 
         calculateScore()
 
+        startNewLevel(arrDoor, arrImgBehindDoor )
 
 
       } else if (looseImg.includes(arrImgBehindDoor[a].getAttribute('src'))) {
@@ -288,13 +310,13 @@ function calculateScore() {
 
 
 
-function startNewLevel() {
+function startNewLevel(arr,imgBehinddor) {
 
   levelCount++;
 
-  assignImage(imgBehidDoors);
+  assignImage(imgBehinddor);
 
-  doorsOpening.forEach((f) => {
+  arr.forEach((f) => {
 
 
     setTimeout(() => {
@@ -306,13 +328,13 @@ function startNewLevel() {
 
 
 
-        if (levelCount === 3) {
+        // if (levelCount === 3) {
 
 
-          winScenario();
+        //   winScenario();
 
         
-        }
+        // }
 
 }
 
