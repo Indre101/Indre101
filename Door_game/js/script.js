@@ -178,8 +178,8 @@ function selectAll(h) {
 let goodImg = ["./images/images/bunny_1.png", "./images/images/bunny_2.png", "./images/images/puppy_1.png"];
 let looseImg = [inf1, inf2];
 
-function randomNumberImg() {
-  let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
+function randomNumberImg(i) {
+  let behidDoorsNumber = Math.floor(Math.random() * i.length);
   return behidDoorsNumber
 
 }
@@ -195,7 +195,7 @@ function assignImage() {
     e.removeAttribute('src')
   })
 
-  i[randomNumberImg()].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+  i[randomNumberImg(i)].src = goodImg[Math.floor(Math.random() * goodImg.length)]
 
   let behidDoorsNumber_2 = Math.floor(Math.random() * imgBehidDoors.length);
 
@@ -242,8 +242,8 @@ function assignImageIfTwoCilckableImg() {
   })
 
 
-  let behidDoorsNumber_2 = randomNumberImg()
-  let behidDoorsNumber = randomNumberImg();
+  let behidDoorsNumber_2 = randomNumberImg(i)
+  let behidDoorsNumber = randomNumberImg(i);
   console.log(behidDoorsNumber_2, behidDoorsNumber)
 
 
@@ -260,7 +260,8 @@ function assignImageIfTwoCilckableImg() {
 
     do {
       console.log("saukia while loop")
-      behidDoorsNumber_2 = randomNumberImg();
+      console.log(i, "Duru array")
+      behidDoorsNumber_2 = randomNumberImg(i);
     } while (behidDoorsNumber_2 === behidDoorsNumber)
 
 
