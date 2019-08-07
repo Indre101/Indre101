@@ -13,7 +13,7 @@ let openDoorsCount = 0;
 let lives = 3;
 let score = 0;
 let levelCount = 0;
-
+let stateWinCount = 0;
 
 
 
@@ -180,8 +180,8 @@ let looseImg = [inf1, inf2];
 
 function randomNumberImg() {
   let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
-return behidDoorsNumber
-  
+  return behidDoorsNumber
+
 }
 
 function assignImage() {
@@ -230,7 +230,6 @@ function assignImage() {
 
 }
 
-assignImageIfTwoCilckableImg()
 function assignImageIfTwoCilckableImg() {
 
   let i = selectAll(".imgBehidDoors");
@@ -242,39 +241,55 @@ function assignImageIfTwoCilckableImg() {
     e.removeAttribute('src')
   })
 
-  i[randomNumberImg()].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+
   let behidDoorsNumber_2 = randomNumberImg()
-  let behidDoorsNumber= randomNumberImg();
-  console.log(behidDoorsNumber_2,behidDoorsNumber )
+  let behidDoorsNumber = randomNumberImg();
+  console.log(behidDoorsNumber_2, behidDoorsNumber)
 
 
-  if (behidDoorsNumber_2 !=randomNumberImg()){
+  //  if(behidDoorsNumber_2 === behidDoorsNumber) {
+  //   console.log("same number")
 
-    i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
-    console.log( behidDoorsNumber_2)
-   }
-     else if(behidDoorsNumber_2 === randomNumberImg()){
-       console.log("same number")
 
+  //     randomNumberImg();
+
+
+
+  // } else 
+
+
+    do {
+      console.log("saukia while loop")
       behidDoorsNumber_2 = randomNumberImg();
-      return  behidDoorsNumber_2;
-
-     } 
-
-     i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+    } while (behidDoorsNumber_2 === behidDoorsNumber)
 
 
+    if (behidDoorsNumber_2 != behidDoorsNumber) {
 
-  i.forEach((e) => {
+      i.forEach((e) => {
+  
+        if (e.src === "") {
+  
+          e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
+  
+        }
+  
+  
+      })
 
-    if (e.src === "") {
-
-      e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
-
-    }
+    i[behidDoorsNumber].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+    i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
 
 
-  })
+    // console.log(behidDoorsNumber_2)
+
+  }
+
+  // i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+
+
+
+
 
 
 }
@@ -291,42 +306,54 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
   let i = selectAll(".imgBehidDoors");
 
 
+
+
+
   arrDoor.forEach((f) => {
 
+    // if (score < 2) {
+    //   assignImage()
+    //   startNewLevel(arrDoor, i)
 
+    // } else if (score >= 2) {
+    //   assignImageIfTwoCilckableImg()
+    //   console.log("two doors")
+    //   startNewLevel(arrDoor, i)
+
+
+    // }
 
     f.onclick = function () {
+
       openDoorsCount++
 
 
-      if(score <2){
-        assignImage()
-
-      }else if( score>=2){
-        assignImageIfTwoCilckableImg()
-        console.log("two doors")
-      }
 
 
 
       // console.log(openDoorsCount)
+      if (arrDoor.length >= 4) {
 
-      if (arrDoor.length === 4 && openDoorsCount === 2) {
+        // openDoorsCount = 0;
+        console.log("keturios durys")
+        console.log(openDoorsCount)
 
-        arrDoor.forEach(d => {
-          d.style.pointerEvents = "none";
-        })
-
-      } else if (arrDoor.length === 3 && openDoorsCount === 1) {
-        arrDoor.forEach(d => {
-          d.style.pointerEvents = "none";
-        })
-
-      } else if (arrDoor.length === 2 && openDoorsCount === 1) {
 
         arrDoor.forEach(d => {
           d.style.pointerEvents = "none";
         })
+        assignImageIfTwoCilckableImg();
+        startNewLevel(arrDoor, i)
+
+      }
+      if (arrDoor.length <= 3 && openDoorsCount === 1) {
+        console.log(arrDoor)
+        arrDoor.forEach(d => {
+          d.style.pointerEvents = "none";
+        })
+        assignImage()
+        startNewLevel(arrDoor, i)
+
 
       }
 
@@ -345,7 +372,26 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
         openDoorsCount = 0;
 
         state = "win"
-        startNewLevel(arrDoor, i)
+
+        // if (arrDoor.length >= 4 ) {
+        // openDoorsCount = 2;
+
+        //   // state = "win"
+        //   arrDoor.forEach(d => {
+        //     d.style.pointerEvents = "none";
+
+
+        //   })
+        // } 
+        // else {
+        //   state = "loose"
+        //   countLives()
+
+        // }
+
+
+
+
         calculateScore()
 
 
@@ -360,7 +406,19 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
         openDoorsCount = 0;
 
         state = "loose"
-        startNewLevel(arrDoor, i)
+
+
+        // if (arrDoor.length >= 4 ) {
+        //   openDoorsCount = 2;
+
+        //     // state = "win"
+        //     arrDoor.forEach(d => {
+        //       d.style.pointerEvents = "none";
+
+
+        //     })
+        //   } 
+
         countLives()
 
 
@@ -431,8 +489,7 @@ function calculateScore() {
       winScenario()
     }, 3000);
 
-  }
-  else if (score === 2) {
+  } else if (score === 2) {
     setTimeout(() => {
       winScenario()
     }, 2000);
@@ -446,7 +503,7 @@ function startNewLevel(arr, imgBehinddor) {
 
 
 
-
+  console.log("new level")
   arr.forEach((f) => {
 
 
