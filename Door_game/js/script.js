@@ -178,6 +178,12 @@ function selectAll(h) {
 let goodImg = ["./images/images/bunny_1.png", "./images/images/bunny_2.png", "./images/images/puppy_1.png"];
 let looseImg = [inf1, inf2];
 
+function randomNumberImg() {
+  let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
+return behidDoorsNumber
+  
+}
+
 function assignImage() {
 
   let i = selectAll(".imgBehidDoors");
@@ -189,21 +195,24 @@ function assignImage() {
     e.removeAttribute('src')
   })
 
-  let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
-  i[behidDoorsNumber].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+  i[randomNumberImg()].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+
+  let behidDoorsNumber_2 = Math.floor(Math.random() * imgBehidDoors.length);
 
 
-// if (score===2){
+  // if (score===2){
 
-//   console.log("two door available to click")
-//   let behidDoorsNumber_2 = Math.floor(Math.random() * imgBehidDoors.length);
-//    if(behidDoorsNumber_2 === behidDoorsNumber){
-//     behidDoorsNumber_2 = Math.floor(Math.random() * imgBehidDoors.length);
-//    } else if (behidDoorsNumber_2 !=behidDoorsNumber){
-//     i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
-//    }
+  //   console.log("two door available to click")
+  //   let behidDoorsNumber_2 = Math.floor(Math.random() * imgBehidDoors.length);
+  //    if(behidDoorsNumber_2 === randomNumberImg()){
 
-// }
+  //     behidDoorsNumber_2 = Math.floor(Math.random() * imgBehidDoors.length);
+  //    } else if (behidDoorsNumber_2 !=randomNumberImg()){
+
+  //     i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+  //    }
+
+  // }
 
 
 
@@ -221,6 +230,54 @@ function assignImage() {
 
 }
 
+assignImageIfTwoCilckableImg()
+function assignImageIfTwoCilckableImg() {
+
+  let i = selectAll(".imgBehidDoors");
+
+  i.forEach((e) => {
+    console.log(e);
+
+    // e.src === "#"
+    e.removeAttribute('src')
+  })
+
+  i[randomNumberImg()].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+  let behidDoorsNumber_2 = randomNumberImg()
+  let behidDoorsNumber= randomNumberImg();
+  console.log(behidDoorsNumber_2,behidDoorsNumber )
+
+
+  if (behidDoorsNumber_2 !=randomNumberImg()){
+
+    i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+    console.log( behidDoorsNumber_2)
+   }
+     else if(behidDoorsNumber_2 === randomNumberImg()){
+       console.log("same number")
+
+      behidDoorsNumber_2 = randomNumberImg();
+      return  behidDoorsNumber_2;
+
+     } 
+
+     i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+
+
+
+  i.forEach((e) => {
+
+    if (e.src === "") {
+
+      e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
+
+    }
+
+
+  })
+
+
+}
 
 
 // will be once the start button is clicked
@@ -241,7 +298,16 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
     f.onclick = function () {
       openDoorsCount++
 
-      assignImage()
+
+      if(score <2){
+        assignImage()
+
+      }else if( score>=2){
+        assignImageIfTwoCilckableImg()
+        console.log("two doors")
+      }
+
+
 
       // console.log(openDoorsCount)
 
@@ -365,12 +431,12 @@ function calculateScore() {
       winScenario()
     }, 3000);
 
-  } 
-  // else if (score === 2) {
-  //   setTimeout(() => {
-  //     winScenario()
-  //   }, 2000);
-  // }
+  }
+  else if (score === 2) {
+    setTimeout(() => {
+      winScenario()
+    }, 2000);
+  }
 
 }
 
