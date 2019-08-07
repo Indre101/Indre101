@@ -363,7 +363,7 @@ function calculateScore() {
 
     setTimeout(() => {
       winScenario()
-    }, 2000);
+    }, 3000);
 
   } 
   // else if (score === 2) {
