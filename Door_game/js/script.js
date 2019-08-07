@@ -130,12 +130,13 @@ function winScenario() {
   let cln = elmnt.cloneNode(true);
   doorContainer.appendChild(cln);
   cln.querySelectorAll('img')[3].classList.remove("door-animation");
+  cln.querySelectorAll('img')[3].style.pointerEvents = "auto";
+
 
 
   let doorsOpeningNew = recountDoors()
   let doorsOpeningArr = Array.prototype.slice.call(doorsOpeningNew);
   doorsOpeningFunction(doorsOpeningNew, doorsOpeningArr)
-  assignImage()
 
 
 }
@@ -182,14 +183,29 @@ function assignImage() {
   let i = selectAll(".imgBehidDoors");
 
   i.forEach((e) => {
-
     console.log(e);
+
     // e.src === "#"
     e.removeAttribute('src')
   })
 
   let behidDoorsNumber = Math.floor(Math.random() * imgBehidDoors.length);
   i[behidDoorsNumber].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+
+
+// if (score===2){
+
+//   console.log("two door available to click")
+//   let behidDoorsNumber_2 = Math.floor(Math.random() * imgBehidDoors.length);
+//    if(behidDoorsNumber_2 === behidDoorsNumber){
+//     behidDoorsNumber_2 = Math.floor(Math.random() * imgBehidDoors.length);
+//    } else if (behidDoorsNumber_2 !=behidDoorsNumber){
+//     i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+//    }
+
+// }
+
+
 
   i.forEach((e) => {
 
@@ -226,10 +242,16 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
       openDoorsCount++
 
       assignImage()
-      
+
       // console.log(openDoorsCount)
 
-      if (arrDoor.length === 3 && openDoorsCount === 1) {
+      if (arrDoor.length === 4 && openDoorsCount === 2) {
+
+        arrDoor.forEach(d => {
+          d.style.pointerEvents = "none";
+        })
+
+      } else if (arrDoor.length === 3 && openDoorsCount === 1) {
         arrDoor.forEach(d => {
           d.style.pointerEvents = "none";
         })
@@ -283,28 +305,19 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
       }
       // return openDoorsCount
-  
+
 
 
     }
-    
 
-     })
+
+  })
 
 
 
 }
 
 
-console.log(openDoorsCount);
-
-
-
-function state1() {
-
-  console.log(state)
-
-}
 
 
 
@@ -345,6 +358,20 @@ function calculateScore() {
   score++;
   scoreCount.textContent = score;
 
+
+  if (score === 1) {
+
+    setTimeout(() => {
+      winScenario()
+    }, 2000);
+
+  } 
+  // else if (score === 2) {
+  //   setTimeout(() => {
+  //     winScenario()
+  //   }, 2000);
+  // }
+
 }
 
 
@@ -352,9 +379,7 @@ function calculateScore() {
 function startNewLevel(arr, imgBehinddor) {
 
 
-  levelCount++;
 
-  // assignImage();
 
   arr.forEach((f) => {
 
@@ -389,7 +414,6 @@ function gameOver() {
     console.log("true")
 
   }
-  // console.log(doorContainer.querySelectorAll('div').length)
 
 
 
