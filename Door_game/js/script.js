@@ -183,7 +183,7 @@ function assignImage() {
 
   i.forEach((e) => {
 
-    // console.log(e);
+    console.log(e);
     // e.src === "#"
     e.removeAttribute('src')
   })
@@ -208,7 +208,6 @@ function assignImage() {
 
 
 // will be once the start button is clicked
-assignImage()
 
 
 
@@ -221,9 +220,12 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
   arrDoor.forEach((f) => {
 
+
+
     f.onclick = function () {
       openDoorsCount++
 
+      assignImage()
       
       // console.log(openDoorsCount)
 
@@ -252,7 +254,7 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
       // win or loose
       if (goodImg.includes(i[a].getAttribute('src'))) {
 
-        // openDoorsCount = 0;
+        openDoorsCount = 0;
 
         state = "win"
         startNewLevel(arrDoor, i)
@@ -267,7 +269,7 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
       } else if (looseImg.includes(i[a].getAttribute('src'))) {
 
-        // openDoorsCount = 0;
+        openDoorsCount = 0;
 
         state = "loose"
         startNewLevel(arrDoor, i)
@@ -280,13 +282,12 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
       }
+      // return openDoorsCount
   
-console.log()
-    
-      return openDoorsCount
+
 
     }
-   
+    
 
      })
 
@@ -353,7 +354,7 @@ function startNewLevel(arr, imgBehinddor) {
 
   levelCount++;
 
-  assignImage();
+  // assignImage();
 
   arr.forEach((f) => {
 
