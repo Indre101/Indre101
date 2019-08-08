@@ -267,6 +267,124 @@ function assignImageIfTwoCilckableImg() {
 
 
 // doors clicked adds a animation class to the img behid doors
+// function doorsOpeningFunction(arrDoor, doorConvertedArray) {
+
+
+//   let i = selectAll(".imgBehidDoors");
+
+
+
+
+
+//   arrDoor.forEach((f) => {
+
+
+//     f.onclick = function () {
+
+
+
+//       addClass(this, "door-animation")
+
+
+//       let a = doorConvertedArray.indexOf(this)
+
+//       i[a].classList.add("inf")
+
+
+//       if (arrDoor.length >= 4) {
+//         openDoorsCount++
+
+
+//         if (openDoorsCount === 2) {
+//           openDoorsCount++
+
+
+
+
+//           arrDoor.forEach(d => {
+//             d.style.pointerEvents = "none";
+//           })
+//           startNewLevel(arrDoor, i)
+
+
+
+//         } else if (openDoorsCount === 1 ) {
+
+//           assignImageIfTwoCilckableImg();
+
+//         }
+
+
+
+
+
+
+//       } else if (arrDoor.length <= 3) {
+//         openDoorsCount++
+
+
+
+//         arrDoor.forEach(d => {
+//           d.style.pointerEvents = "none";
+//         })
+//         startNewLevel(arrDoor, i)
+//         assignImage()
+
+
+
+//       }
+
+
+
+
+
+//       // win or loose
+//       if (goodImg.includes(i[a].getAttribute('src'))) {
+
+//         // openDoorsCount = 0;
+
+//         state = "win"
+
+//         stateWinCount++;
+
+//         calculateScore()
+
+
+
+
+
+
+
+
+//       } else if (looseImg.includes(i[a].getAttribute('src'))) {
+
+//         // openDoorsCount = 0;
+
+//         state = "loose"
+
+
+//         // startNewLevel(arrDoor, i)
+//         // assignImageIfTwoCilckableImg();
+
+//         countLives()
+
+//       }
+
+
+//     }
+
+
+//   })
+
+
+
+// }
+
+
+
+// TEST
+
+
 function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
@@ -282,57 +400,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
     f.onclick = function () {
 
 
-      if (arrDoor.length >= 4) {
-        openDoorsCount++
-
-
-
-        if (openDoorsCount === 2) {
-        openDoorsCount++
-
-          console.log(state)         
-
-          // stateWinCount=0;
-          arrDoor.forEach(d => {
-            d.style.pointerEvents = "none";
-          })
-          startNewLevel(arrDoor, i)
-          // assignImageIfTwoCilckableImg();
-
-        } 
-
-
-
-
-        if (openDoorsCount === 3) {
-          console.log(state)         
-
-        
-          assignImageIfTwoCilckableImg();
-
-        } 
-
-
-
-
-
-
-      } else if (arrDoor.length <= 3) {
-        openDoorsCount++
-
-
-
-        arrDoor.forEach(d => {
-          d.style.pointerEvents = "none";
-        })
-        startNewLevel(arrDoor, i)
-        assignImage()
-
-
-
-      }
-
-
 
       addClass(this, "door-animation")
 
@@ -341,37 +408,159 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
       i[a].classList.add("inf")
 
-      // win or loose
-      if (goodImg.includes(i[a].getAttribute('src'))) {
-
-        // openDoorsCount = 0;
-
-        state = "win"
-
-        stateWinCount++;
+      openDoorsCount++
 
 
+      if (arrDoor.length >= 4 && openDoorsCount === 1) {
 
-        calculateScore()
-
-
-
+        assignImageIfTwoCilckableImg();
 
 
+        if (looseImg.includes(i[a].getAttribute('src'))) {
+
+          console.log("loooosing")
+          state = "loose"
+
+          arrDoor.forEach(d => {
+            d.style.pointerEvents = "none";
+          })
+
+
+          startNewLevel(arrDoor, i)
+          countLives()
+
+        } else if (goodImg.includes(i[a].getAttribute('src'))) {
+
+
+          state = "win"
+          openDoorsCount++
 
 
 
-      } else if (looseImg.includes(i[a].getAttribute('src'))) {
 
-        // openDoorsCount = 0;
 
-        state = "loose"
+          // }
 
-      
-        // startNewLevel(arrDoor, i)
-        // assignImageIfTwoCilckableImg();
 
-        countLives()
+
+        }
+
+
+      }
+
+
+      if (arrDoor.length >= 4 && openDoorsCount === 3) {
+
+
+
+        if (looseImg.includes(i[a].getAttribute('src'))) {
+
+          console.log("loose")
+
+          arrDoor.forEach(d => {
+            d.style.pointerEvents = "none";
+          })
+
+
+          startNewLevel(arrDoor, i)
+          countLives()
+        }
+
+
+        else if (state === "win") {
+
+          console.log("win")
+
+
+          arrDoor.forEach(d => {
+            d.style.pointerEvents = "none";
+          })
+
+
+          startNewLevel(arrDoor, i)
+          calculateScore()
+        } 
+        
+    
+
+      }
+
+
+
+
+
+      //         if () {
+      //           openDoorsCount++
+
+      //           console.log(state, "antras if")
+
+
+      //         } else if (goodImg.includes(i[a].getAttribute('src')) && openDoorsCount === 1) {
+
+      //           // openDoorsCount = 0;
+
+      //           state = "win"
+      //           assignImageIfTwoCilckableImg();
+      //           console.log("loooosing")
+      //           console.log("winning")
+
+
+      //           startNewLevel(arrDoor, i)
+      //           stateWinCount++;
+
+      //           calculateScore()
+
+      //         } else if (looseImg.includes(i[a].getAttribute('src'))) {
+
+      //           // openDoorsCount = 0;
+      // console.log("loooosing")
+      //           state = "loose"
+
+      //           arrDoor.forEach(d => {
+      //             d.style.pointerEvents = "none";
+      //           })
+
+
+      //           startNewLevel(arrDoor, i)
+      //           assignImageIfTwoCilckableImg();
+
+      //           countLives()
+
+      //         }
+
+
+
+
+
+
+      // win or loose for less or equal to three doors
+
+
+      if (arrDoor.length <= 3) {
+        openDoorsCount++
+
+        assignImage()
+        arrDoor.forEach(d => {
+          d.style.pointerEvents = "none";
+        })
+
+
+        if (goodImg.includes(i[a].getAttribute('src'))) {
+
+
+          state = "win"
+          startNewLevel(arrDoor, i)
+          stateWinCount++;
+          calculateScore()
+
+        } else if (looseImg.includes(i[a].getAttribute('src'))) {
+
+
+          startNewLevel(arrDoor, i)
+          state = "loose"
+          countLives()
+
+        }
 
       }
 
@@ -379,11 +568,20 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
     }
 
 
+
+
+
+
+
+
+
+
   })
-
-
-
 }
+
+
+
+// TEST
 
 
 
