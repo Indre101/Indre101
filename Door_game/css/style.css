@@ -172,7 +172,7 @@ body {
 }
 
 .inf {
-  animation: scare 0.8s linear forwards 5;
+  animation: scare 0.3s linear forwards 5;
   perspective-origin: center;
   -webkit-perspective-origin: center;
   -moz-perspective-origin: center;
@@ -223,9 +223,9 @@ body {
   -moz-perspective: 10000px;
   /* transform: rotateY(-180deg); */
   transition: all;
-  animation: openDoors 1s linear forwards 1;
-  -webkit-animation: openDoors 1s linear forwards 1;
-  -moz-animation: openDoors 1s linear forwards 1;
+  animation: openDoors 0.5s linear forwards 1;
+  -webkit-animation: openDoors 0.5s linear forwards 1;
+  -moz-animation: openDoors 0.5s linear forwards 1;
 
 }
 

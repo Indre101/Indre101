@@ -230,63 +230,46 @@ function assignImage() {
 
 }
 
+// function for the level when there is four doors
 function assignImageIfTwoCilckableImg() {
-
   let i = selectAll(".imgBehidDoors");
 
   i.forEach((e) => {
     console.log(e);
-
-    // e.src === "#"
     e.removeAttribute('src')
   })
 
 
   let behidDoorsNumber_2 = randomNumberImg(i)
   let behidDoorsNumber = randomNumberImg(i);
-  console.log(behidDoorsNumber_2, behidDoorsNumber)
 
 
-  //  if(behidDoorsNumber_2 === behidDoorsNumber) {
-  //   console.log("same number")
+  do {
+    behidDoorsNumber_2 = randomNumberImg(i);
+  } while (behidDoorsNumber_2 === behidDoorsNumber)
 
 
-  //     randomNumberImg();
+  if (behidDoorsNumber_2 != behidDoorsNumber) {
 
 
-
-  // } else 
-
-
-    do {
-      console.log("saukia while loop")
-      console.log(i, "Duru array")
-      behidDoorsNumber_2 = randomNumberImg(i);
-    } while (behidDoorsNumber_2 === behidDoorsNumber)
-
-
-    if (behidDoorsNumber_2 != behidDoorsNumber) {
-
-      i.forEach((e) => {
-  
-        if (e.src === "") {
-  
-          e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
-  
-        }
-  
-  
-      })
 
     i[behidDoorsNumber].src = goodImg[Math.floor(Math.random() * goodImg.length)]
     i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
 
+    i.forEach((e) => {
 
-    // console.log(behidDoorsNumber_2)
+      if (e.src === "") {
+
+        e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
+
+      }
+
+
+    })
+
 
   }
 
-  // i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
 
 
 
@@ -312,43 +295,34 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
   arrDoor.forEach((f) => {
 
-    // if (score < 2) {
-    //   assignImage()
-    //   startNewLevel(arrDoor, i)
-
-    // } else if (score >= 2) {
-    //   assignImageIfTwoCilckableImg()
-    //   console.log("two doors")
-    //   startNewLevel(arrDoor, i)
-
-
-    // }
 
     f.onclick = function () {
 
-      openDoorsCount++
 
 
 
-
-
-      // console.log(openDoorsCount)
       if (arrDoor.length >= 4) {
-
-        // openDoorsCount = 0;
-        console.log("keturios durys")
         console.log(openDoorsCount)
+        openDoorsCount++
+
+        if (openDoorsCount === 2) {
+          arrDoor.forEach(d => {
+            d.style.pointerEvents = "none";
+          })
+          assignImageIfTwoCilckableImg();
+          startNewLevel(arrDoor, i)
+        }
 
 
-        arrDoor.forEach(d => {
-          d.style.pointerEvents = "none";
-        })
-        assignImageIfTwoCilckableImg();
-        startNewLevel(arrDoor, i)
 
-      }
-      if (arrDoor.length <= 3 && openDoorsCount === 1) {
-        console.log(arrDoor)
+
+
+
+      } else if (arrDoor.length <= 3 ) {
+        openDoorsCount++
+
+
+
         arrDoor.forEach(d => {
           d.style.pointerEvents = "none";
         })
@@ -370,28 +344,9 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
       // win or loose
       if (goodImg.includes(i[a].getAttribute('src'))) {
 
-        openDoorsCount = 0;
+        // openDoorsCount = 0;
 
         state = "win"
-
-        // if (arrDoor.length >= 4 ) {
-        // openDoorsCount = 2;
-
-        //   // state = "win"
-        //   arrDoor.forEach(d => {
-        //     d.style.pointerEvents = "none";
-
-
-        //   })
-        // } 
-        // else {
-        //   state = "loose"
-        //   countLives()
-
-        // }
-
-
-
 
         calculateScore()
 
@@ -404,33 +359,15 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
       } else if (looseImg.includes(i[a].getAttribute('src'))) {
 
-        openDoorsCount = 0;
+        // openDoorsCount = 0;
 
         state = "loose"
 
 
-        // if (arrDoor.length >= 4 ) {
-        //   openDoorsCount = 2;
-
-        //     // state = "win"
-        //     arrDoor.forEach(d => {
-        //       d.style.pointerEvents = "none";
-
-
-        //     })
-        //   } 
-
         countLives()
 
 
-
-
-
-
-
       }
-      // return openDoorsCount
-
 
 
     }
@@ -488,7 +425,7 @@ function calculateScore() {
 
     setTimeout(() => {
       winScenario()
-    }, 3000);
+    }, 2000);
 
   } else if (score === 2) {
     setTimeout(() => {
@@ -503,6 +440,7 @@ function calculateScore() {
 function startNewLevel(arr, imgBehinddor) {
 
 
+  openDoorsCount=0;
 
   console.log("new level")
   arr.forEach((f) => {
@@ -513,7 +451,7 @@ function startNewLevel(arr, imgBehinddor) {
       f.style.pointerEvents = "auto";
 
       // missing animation to display for loose
-    }, 3000);
+    }, 2000);
 
   })
 
