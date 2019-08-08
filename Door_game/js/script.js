@@ -12,8 +12,8 @@ let state = "";
 let openDoorsCount = 0;
 let lives = 3;
 let score = 0;
-let levelCount = 0;
-let stateWinCount = 0;
+// let levelCount = 0;
+// let stateWinCount = 0;
 
 
 
@@ -92,10 +92,7 @@ returnButtonContainer.onclick = function () {
 }
 
 
-//TEST TO ADD THE DOORS 
-
-// test button
-const addDoorTest = document.getElementById("addDoorTest");
+//FUNCTION TO ADD THE DOORS 
 
 
 // declared variables for function to add another column once level up
@@ -191,6 +188,7 @@ function assignImage() {
   i.forEach((e) => {
 
     // e.src === "#"
+    console.log(e)
     e.removeAttribute('src')
   })
 
@@ -328,10 +326,7 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
           startNewLevel(arrDoor, i)
           countLives()
-        }
-
-
-        else if (state === "win") {
+        } else if (state === "win") {
 
 
 
@@ -342,9 +337,9 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
           startNewLevel(arrDoor, i)
           calculateScore()
-        } 
-        
-    
+        }
+
+
 
       }
 
@@ -365,7 +360,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
           state = "win"
           startNewLevel(arrDoor, i)
-          stateWinCount++;
           calculateScore()
 
         } else if (looseImg.includes(i[a].getAttribute('src'))) {
@@ -395,7 +389,7 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 // FUNCTIONS FOR LIVES AND SCORE NUMBERS
 let livesCount = document.getElementById("liveCount");
 let scoreCount = document.getElementById("scoreCount");
-let  heartIcon = document.querySelector(".img-icon-1");
+let heartIcon = document.querySelector(".img-icon-1");
 
 
 
@@ -410,17 +404,23 @@ function countLives() {
 
   lives--;
 
-  if(lives === 3){
-  removeClass(heartIcon, "heartPulse");
+  if (lives === 3) {
 
-  }
- else if (lives === 1) {
-   addClass(heartIcon, "heartPulse")
-   
+  } else if (lives === 1) {
+    addClass(heartIcon, "heartPulse")
+
     // score = 0;
     // gameOver();
 
+  } else if (lives === 0) {
+    removeClass(heartIcon, "heartPulse");
+
+    console.log("the end")
+    gameOver();
+
   }
+
+
 
   livesCount.textContent = lives;
 
@@ -481,14 +481,36 @@ function startNewLevel(arr, imgBehinddor) {
 }
 
 function gameOver() {
-  // columnNumber = colNum;
-  columnNumber = 2;
-  startNewLevel();
 
-  if (doorContainer.querySelectorAll('div').length === 2) {
-    console.log("true")
+  score = 0;
+  lives = 3;
+  columnNumber = colNum;
 
-  }
+
+  let elmnt = document.querySelectorAll(".entrance");
+  let select = document.getElementById('styleOftheDoorContainer');
+  let i = selectAll(".imgBehidDoors");
+  console.log(elmnt.length, "entrance")
+  console.log(select, "parent")
+  console.log(i, "img lenght")
+
+
+  let divs = select.querySelectorAll("div");
+
+
+  do {
+
+  let lastDiv = divs[divs.length - 1];
+
+    lastDiv.parentNode.removeChild(lastDiv);
+
+
+    // select.removeChild("div");
+
+  } while (divs.length != 2);
+
+
+  startNewLevel(doorsOpening, i);
 
 
 
