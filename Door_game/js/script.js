@@ -212,7 +212,8 @@ function assignImage() {
 
 }
 
-// function for the level when there is four doors
+// function for the imgBehindDoors when there is four doors
+
 function assignImageIfTwoCilckableImg() {
   let i = selectAll(".imgBehidDoors");
 
@@ -260,137 +261,12 @@ function assignImageIfTwoCilckableImg() {
 }
 
 
-// will be once the start button is clicked
 
-
-
-// doors clicked adds a animation class to the img behid doors
-// function doorsOpeningFunction(arrDoor, doorConvertedArray) {
-
-
-//   let i = selectAll(".imgBehidDoors");
-
-
-
-
-
-//   arrDoor.forEach((f) => {
-
-
-//     f.onclick = function () {
-
-
-
-//       addClass(this, "door-animation")
-
-
-//       let a = doorConvertedArray.indexOf(this)
-
-//       i[a].classList.add("inf")
-
-
-//       if (arrDoor.length >= 4) {
-//         openDoorsCount++
-
-
-//         if (openDoorsCount === 2) {
-//           openDoorsCount++
-
-
-
-
-//           arrDoor.forEach(d => {
-//             d.style.pointerEvents = "none";
-//           })
-//           startNewLevel(arrDoor, i)
-
-
-
-//         } else if (openDoorsCount === 1 ) {
-
-//           assignImageIfTwoCilckableImg();
-
-//         }
-
-
-
-
-
-
-//       } else if (arrDoor.length <= 3) {
-//         openDoorsCount++
-
-
-
-//         arrDoor.forEach(d => {
-//           d.style.pointerEvents = "none";
-//         })
-//         startNewLevel(arrDoor, i)
-//         assignImage()
-
-
-
-//       }
-
-
-
-
-
-//       // win or loose
-//       if (goodImg.includes(i[a].getAttribute('src'))) {
-
-//         // openDoorsCount = 0;
-
-//         state = "win"
-
-//         stateWinCount++;
-
-//         calculateScore()
-
-
-
-
-
-
-
-
-//       } else if (looseImg.includes(i[a].getAttribute('src'))) {
-
-//         // openDoorsCount = 0;
-
-//         state = "loose"
-
-
-//         // startNewLevel(arrDoor, i)
-//         // assignImageIfTwoCilckableImg();
-
-//         countLives()
-
-//       }
-
-
-//     }
-
-
-//   })
-
-
-
-// }
-
-
-
-// TEST
-
-
+// FUNCTION FOR BOTH THREE OR LESS AND FOUR OR MORE DOOR GAME 
 function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
   let i = selectAll(".imgBehidDoors");
-
-
-
-
 
   arrDoor.forEach((f) => {
 
@@ -431,14 +307,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
           state = "win"
           openDoorsCount++
-
-
-
-
-
-          // }
-
-
 
         }
 
@@ -514,36 +382,25 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
     }
 
-
-
-
-
-
-
-
-
-
   })
 }
 
 
 
-// TEST
 
 
 
 
 
-// number to follow win count and lives
+// FUNCTIONS FOR LIVES AND SCORE NUMBERS
 let livesCount = document.getElementById("liveCount");
 let scoreCount = document.getElementById("scoreCount");
+let  heartIcon = document.querySelector(".img-icon-1");
 
 
 
 
 
-
-livesCount.textContent = lives;
 
 
 
@@ -553,7 +410,13 @@ function countLives() {
 
   lives--;
 
-  if (lives === 0) {
+  if(lives === 3){
+  removeClass(heartIcon, "heartPulse");
+
+  }
+ else if (lives === 1) {
+   addClass(heartIcon, "heartPulse")
+   
     // score = 0;
     // gameOver();
 
