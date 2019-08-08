@@ -189,7 +189,6 @@ function assignImage() {
   let i = selectAll(".imgBehidDoors");
 
   i.forEach((e) => {
-    console.log(e);
 
     // e.src === "#"
     e.removeAttribute('src')
@@ -218,7 +217,6 @@ function assignImageIfTwoCilckableImg() {
   let i = selectAll(".imgBehidDoors");
 
   i.forEach((e) => {
-    console.log(e);
     e.removeAttribute('src')
   })
 
@@ -418,7 +416,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
         if (looseImg.includes(i[a].getAttribute('src'))) {
 
-          console.log("loooosing")
           state = "loose"
 
           arrDoor.forEach(d => {
@@ -455,7 +452,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
         if (looseImg.includes(i[a].getAttribute('src'))) {
 
-          console.log("loose")
 
           arrDoor.forEach(d => {
             d.style.pointerEvents = "none";
@@ -469,7 +465,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
         else if (state === "win") {
 
-          console.log("win")
 
 
           arrDoor.forEach(d => {
@@ -484,54 +479,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
     
 
       }
-
-
-
-
-
-      //         if () {
-      //           openDoorsCount++
-
-      //           console.log(state, "antras if")
-
-
-      //         } else if (goodImg.includes(i[a].getAttribute('src')) && openDoorsCount === 1) {
-
-      //           // openDoorsCount = 0;
-
-      //           state = "win"
-      //           assignImageIfTwoCilckableImg();
-      //           console.log("loooosing")
-      //           console.log("winning")
-
-
-      //           startNewLevel(arrDoor, i)
-      //           stateWinCount++;
-
-      //           calculateScore()
-
-      //         } else if (looseImg.includes(i[a].getAttribute('src'))) {
-
-      //           // openDoorsCount = 0;
-      // console.log("loooosing")
-      //           state = "loose"
-
-      //           arrDoor.forEach(d => {
-      //             d.style.pointerEvents = "none";
-      //           })
-
-
-      //           startNewLevel(arrDoor, i)
-      //           assignImageIfTwoCilckableImg();
-
-      //           countLives()
-
-      //         }
-
-
-
-
-
 
       // win or loose for less or equal to three doors
 
@@ -646,7 +593,6 @@ function startNewLevel(arr, imgBehinddor) {
 
   openDoorsCount = 0;
 
-  console.log("new level")
   arr.forEach((f) => {
 
 
