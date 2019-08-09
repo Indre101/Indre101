@@ -441,3 +441,21 @@ h2 {
   }
 
 }
+
+
+/* Notifications for next level */
+.nextLevelShoutOutContainer {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  /* margin: 0 auto; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  font-size: 6vw;
+}

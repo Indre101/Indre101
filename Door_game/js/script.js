@@ -414,7 +414,7 @@ function countLives() {
     removeClass(heartIcon, "heartPulse");
 
     console.log("the end")
-    // gameOver();
+    gameOver();
 
   }
 
@@ -506,22 +506,27 @@ function gameOver() {
 
 
       select.removeChild(child);
+  child = select.lastElementChild;
+
       select.removeChild(child);
 
     
     } else if( oorsOpening.length === 3){
+
+  child = select.lastElementChild;
+
       select.removeChild(child);
 
-    } else {
+    } 
 
-      startNewLevel(doorsOpening, i);
+
+    startNewLevel(doorsOpening, i);
       score = 0;
       lives = 3;
       columnNumber = colNum;
-
-    }
   
 
+      doorsOpeningFunction(doorsOpening, doorsOpeningArr);
 
 
 
