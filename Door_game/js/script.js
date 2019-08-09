@@ -111,13 +111,13 @@ let columnNumber = colNum
 
 
 
-// function recountDoors() {
+// function selectAllQuery() {
 //   let doorsOpening = document.querySelectorAll(".open");
 //   return doorsOpening;
 
 // }
 
-function recountDoors(c) {
+function selectAllQuery(c) {
   let nodeArray = document.querySelectorAll(c);
   return nodeArray;
 
@@ -141,7 +141,7 @@ function winScenario() {
 
 
 
-  let doorsOpeningNew = recountDoors(".open")
+  let doorsOpeningNew = selectAllQuery(".open")
   let doorsOpeningArr = Array.prototype.slice.call(doorsOpeningNew);
   doorsOpeningFunction(doorsOpeningNew, doorsOpeningArr)
 
@@ -150,9 +150,9 @@ function winScenario() {
 
 
 
-let doorsOpening = recountDoors(".open");
+let doorsOpening = selectAllQuery(".open");
 
-let imgBehidDoors = recountDoors(".imgBehidDoors")
+let imgBehidDoors = selectAllQuery(".imgBehidDoors")
 
 let doorsOpeningArr = Array.prototype.slice.call(doorsOpening);
 
@@ -187,7 +187,7 @@ let looseImg = [inf1, inf2];
 
 function assignImage() {
 
-  let i = recountDoors(".imgBehidDoors");
+  let i = selectAllQuery(".imgBehidDoors");
 
   i.forEach((e) => {
 
@@ -217,7 +217,7 @@ function assignImage() {
 // function for the imgBehindDoors when there is four doors
 
 function assignImageIfTwoCilckableImg() {
-  let i = recountDoors(".imgBehidDoors");
+  let i = selectAllQuery(".imgBehidDoors");
 
   i.forEach((e) => {
     e.removeAttribute('src')
@@ -268,7 +268,7 @@ function assignImageIfTwoCilckableImg() {
 function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
-  let i = recountDoors(".imgBehidDoors");
+  let i = selectAllQuery(".imgBehidDoors");
 
   arrDoor.forEach((f) => {
 
@@ -411,8 +411,6 @@ function countLives() {
   if (lives === 1) {
     addClass(heartIcon, "heartPulse")
 
-
-
   } else if (lives === 0) {
 
     removeClass(heartIcon, "heartPulse");
@@ -431,6 +429,8 @@ function countLives() {
 
 let highScore = [];
 
+// CALCULATE SCORE
+
 function calculateScore() {
 
   score++;
@@ -441,14 +441,41 @@ function calculateScore() {
 
   if (score === 1) {
 
+
+     let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
+     console.log(b);
+
+    setTimeout(() => {
+      b.classList.remove("d-none");
+
+
+    }, 1000);
+
     setTimeout(() => {
       winScenario()
-    }, 2000);
+      b.classList.add("d-none");
+      
+    }, 3500);
+
 
   } else if (score === 2) {
-    setTimeout(() => {
-      winScenario()
-    }, 2000);
+  
+    let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
+    console.log(b);
+
+   setTimeout(() => {
+     b.classList.remove("d-none");
+
+
+   }, 1000);
+
+   setTimeout(() => {
+     winScenario()
+     b.classList.add("d-none");
+     
+   }, 3500);
+
+
   }
 
 }
@@ -474,13 +501,7 @@ function startNewLevel(arr, imgBehinddor) {
 
 
 
-  // if (levelCount === 3) {
 
-
-  //   winScenario();
-
-
-  // }
 
 }
 
@@ -488,11 +509,11 @@ function gameOver() {
 
 
 
-  let i = recountDoors(".imgBehidDoors")
+  let i = selectAllQuery(".imgBehidDoors")
 
-  let doorsOpening = recountDoorsl(".open");
+  let doorsOpening = selectAllQueryl(".open");
 
-  let elmnt = recountDoors(".entrance");
+  let elmnt = selectAllQuery(".entrance");
 
   let select = document.querySelector('#styleOftheDoorContainer');
   let child = select.lastElementChild;

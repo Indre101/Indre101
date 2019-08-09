@@ -464,7 +464,6 @@ h2 {
   text-align: center;
 
   font-size: 5vw;
-  animation: pulseNextlvl 1s ease-in-out 3 alternate backwards;
 
 }
 
@@ -476,6 +475,8 @@ h2 {
 
 .containerImgShoutout {
   border-radius: 50px;
+  animation: pulseNextlvl 1s ease-in-out 3 alternate backwards;
+
 }
 
 
