@@ -16,7 +16,13 @@ let score = 0;
 // let stateWinCount = 0;
 
 
+function randomNumberGenerator(l) {
 
+  let n = Math.floor(Math.random() * l.length)
+
+  return n
+
+}
 
 // chaning background image 
 function changeBackground(x, u) {
@@ -105,13 +111,17 @@ let columnNumber = colNum
 
 
 
-function recountDoors() {
-  let doorsOpening = document.querySelectorAll(".open");
-  return doorsOpening;
+// function recountDoors() {
+//   let doorsOpening = document.querySelectorAll(".open");
+//   return doorsOpening;
+
+// }
+
+function recountDoors(c) {
+  let nodeArray = document.querySelectorAll(c);
+  return nodeArray;
 
 }
-
-
 
 
 // function to add another grid and another column and frame-door element 
@@ -131,19 +141,18 @@ function winScenario() {
 
 
 
-  let doorsOpeningNew = recountDoors()
+  let doorsOpeningNew = recountDoors(".open")
   let doorsOpeningArr = Array.prototype.slice.call(doorsOpeningNew);
   doorsOpeningFunction(doorsOpeningNew, doorsOpeningArr)
 
 
 }
 
-let doorsOpening = recountDoors();
 
 
+let doorsOpening = recountDoors(".open");
 
-
-let imgBehidDoors = document.querySelectorAll(".imgBehidDoors")
+let imgBehidDoors = recountDoors(".imgBehidDoors")
 
 let doorsOpeningArr = Array.prototype.slice.call(doorsOpening);
 
@@ -175,15 +184,10 @@ function selectAll(h) {
 let goodImg = ["./images/images/bunny_1.png", "./images/images/bunny_2.png", "./images/images/puppy_1.png"];
 let looseImg = [inf1, inf2];
 
-function randomNumberImg(i) {
-  let behidDoorsNumber = Math.floor(Math.random() * i.length);
-  return behidDoorsNumber
-
-}
 
 function assignImage() {
 
-  let i = selectAll(".imgBehidDoors");
+  let i = recountDoors(".imgBehidDoors");
 
   i.forEach((e) => {
 
@@ -192,15 +196,15 @@ function assignImage() {
     e.removeAttribute('src')
   })
 
-  i[randomNumberImg(i)].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+  i[randomNumberGenerator(i)].src = goodImg[randomNumberGenerator(goodImg)]
 
-  let behidDoorsNumber_2 = Math.floor(Math.random() * imgBehidDoors.length);
+  let behidDoorsNumber_2 = randomNumberGenerator(imgBehidDoors);
 
   i.forEach((e) => {
 
     if (e.src === "") {
 
-      e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
+      e.src = looseImg[randomNumberGenerator(looseImg)]
 
     }
 
@@ -213,19 +217,19 @@ function assignImage() {
 // function for the imgBehindDoors when there is four doors
 
 function assignImageIfTwoCilckableImg() {
-  let i = selectAll(".imgBehidDoors");
+  let i = recountDoors(".imgBehidDoors");
 
   i.forEach((e) => {
     e.removeAttribute('src')
   })
 
 
-  let behidDoorsNumber_2 = randomNumberImg(i)
-  let behidDoorsNumber = randomNumberImg(i);
+  let behidDoorsNumber_2 = randomNumberGenerator(i)
+  let behidDoorsNumber = randomNumberGenerator(i)
 
 
   do {
-    behidDoorsNumber_2 = randomNumberImg(i);
+    behidDoorsNumber_2 = randomNumberGenerator(i);
   } while (behidDoorsNumber_2 === behidDoorsNumber)
 
 
@@ -233,14 +237,14 @@ function assignImageIfTwoCilckableImg() {
 
 
 
-    i[behidDoorsNumber].src = goodImg[Math.floor(Math.random() * goodImg.length)]
-    i[behidDoorsNumber_2].src = goodImg[Math.floor(Math.random() * goodImg.length)]
+    i[behidDoorsNumber].src = goodImg[randomNumberGenerator(goodImg)]
+    i[behidDoorsNumber_2].src = goodImg[randomNumberGenerator(goodImg)]
 
     i.forEach((e) => {
 
       if (e.src === "") {
 
-        e.src = looseImg[Math.floor(Math.random() * looseImg.length)]
+        e.src = looseImg[randomNumberGenerator(looseImg)]
 
       }
 
@@ -264,7 +268,7 @@ function assignImageIfTwoCilckableImg() {
 function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
-  let i = selectAll(".imgBehidDoors");
+  let i = recountDoors(".imgBehidDoors");
 
   arrDoor.forEach((f) => {
 
@@ -414,7 +418,7 @@ function countLives() {
     removeClass(heartIcon, "heartPulse");
 
     console.log("the end")
-    gameOver();
+    // gameOver();
 
   }
 
@@ -431,7 +435,7 @@ function calculateScore() {
 
   score++;
   scoreCount.textContent = score;
-  
+
 
 
 
@@ -482,13 +486,13 @@ function startNewLevel(arr, imgBehinddor) {
 
 function gameOver() {
 
- 
 
-  let i = document.querySelectorAll(".imgBehidDoors")
 
-  let doorsOpening = document.querySelectorAll(".open");
+  let i = recountDoors(".imgBehidDoors")
 
-  let elmnt = document.querySelectorAll(".entrance");
+  let doorsOpening = recountDoorsl(".open");
+
+  let elmnt = recountDoors(".entrance");
 
   let select = document.querySelector('#styleOftheDoorContainer');
   let child = select.lastElementChild;
@@ -505,28 +509,28 @@ function gameOver() {
 
 
 
-      select.removeChild(child);
-  child = select.lastElementChild;
+    select.removeChild(child);
+    child = select.lastElementChild;
 
-      select.removeChild(child);
-
-    
-    } else if( oorsOpening.length === 3){
-
-  child = select.lastElementChild;
-
-      select.removeChild(child);
-
-    } 
+    select.removeChild(child);
 
 
-    startNewLevel(doorsOpening, i);
-      score = 0;
-      lives = 3;
-      columnNumber = colNum;
-  
+  } else if (oorsOpening.length === 3) {
 
-      doorsOpeningFunction(doorsOpening, doorsOpeningArr);
+    child = select.lastElementChild;
+
+    select.removeChild(child);
+
+  }
+
+
+  startNewLevel(doorsOpening, i);
+  score = 0;
+  lives = 3;
+  columnNumber = colNum;
+
+
+  doorsOpeningFunction(doorsOpening, doorsOpeningArr);
 
 
 
