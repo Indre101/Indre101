@@ -457,7 +457,9 @@ h2 {
   transform: translate(-50%, -50%);
   text-align: center;
 
-  font-size: 6vw;
+  font-size: 5vw;
+  animation: pulseNextlvl 1s ease-in-out 3 alternate backwards;
+
 }
 
 
@@ -467,8 +469,7 @@ h2 {
 }
 
 .containerImgShoutout {
-  border-radius: 15%;
-
+  border-radius: 50px;
 }
 
 
@@ -481,9 +482,12 @@ h2 {
 
 
 .containerImgShoutout h1 {
-  margin: 0.5rem;
+  margin: 0;
+  padding: 0;
+
+  padding: 4vw;
   /* transition: all; */
-  animation: pulseNextlvl 1s ease-in-out 3 alternate backwards;
+
 }
 
 
@@ -494,6 +498,6 @@ h2 {
 
   100% {
     opacity: 1;
-    font-size: 6vw;
+    font-size: 5vw;
   }
 }
