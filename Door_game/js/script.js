@@ -396,7 +396,8 @@ let scoreCount = document.getElementById("scoreCount");
 let heartIcon = document.querySelector(".img-icon-1");
 
 
-let highScore = [];
+// let highScore = [];
+
 
 let looseColor = document.querySelector(".looseColor")
 
@@ -418,17 +419,20 @@ function countLives() {
   } else if (lives === 0) {
 
     removeClass(heartIcon, "heartPulse");
-   removeClass( looseColor,"d-none");
-   highScore.push(score);
+    removeClass(looseColor, "d-none");
+    // console.log(highScore)
+    // highScore.push(score);
 
 
-   setTimeout(() => {
-   gameOver()     
-   doorsOpeningFunction(doorsOpening, doorsOpeningArr);
+    setTimeout(() => {
+      gameOver()
+      doorsOpeningFunction(doorsOpening, doorsOpeningArr);
+      // document.getElementById("highScore").textContent = Math.max(highScore);
 
 
-   }, 3000);
-    
+
+    }, 3000);
+
 
 
 
@@ -448,6 +452,7 @@ function countLives() {
 }
 
 
+
 // CALCULATE SCORE
 
 function calculateScore() {
@@ -455,7 +460,7 @@ function calculateScore() {
   score++;
 
 
-  if (score === 3) {
+  if (score === 4) {
 
 
 
@@ -471,6 +476,7 @@ function calculateScore() {
     setTimeout(() => {
       // winScenario()
       b.classList.add("d-none");
+      gameOver();
     }, 3500);
 
 
@@ -521,6 +527,7 @@ function calculateScore() {
 
 
 
+
 function startNewLevel(arr, imgBehinddor) {
 
 
@@ -546,7 +553,9 @@ function startNewLevel(arr, imgBehinddor) {
 
 function gameOver() {
 
-  document.getElementById("highScore").textContent = Math.max(highScore);
+
+
+  // document.getElementById("highScore").textContent = Math.max(highScore);
 
   addClass(looseColor, "d-none");
 
@@ -556,11 +565,11 @@ function gameOver() {
   columnNumber = 2;
   document.documentElement.style.setProperty("--colNum", columnNumber);
   score = 0;
-
-
-  scoreCount.textContent=score;
-
   lives = 3;
+
+  scoreCount.textContent = score;
+  livesCount.textContent = lives;
+
 
   // startNewLevel(doorsOpening, i);
 
@@ -578,15 +587,7 @@ function gameOver() {
 
 
 
-  console.log(child)
-  console.log(elmnt.length)
-  console.log(doorsOpening);
-
-
-
   if (doorsOpening.length === 4) {
-
-
 
     select.removeChild(child);
     child = select.lastElementChild;
@@ -601,16 +602,6 @@ function gameOver() {
     select.removeChild(child);
 
   }
-
-
-
-
-
-
-
-
-
-
 
 
 }
