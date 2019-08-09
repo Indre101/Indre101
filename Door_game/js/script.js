@@ -404,19 +404,17 @@ function countLives() {
 
   lives--;
 
-  if (lives === 3) {
-
-  } else if (lives === 1) {
+  if (lives === 1) {
     addClass(heartIcon, "heartPulse")
 
-    // score = 0;
-    // gameOver();
+
 
   } else if (lives === 0) {
+
     removeClass(heartIcon, "heartPulse");
 
     console.log("the end")
-    gameOver();
+    // gameOver();
 
   }
 
@@ -427,12 +425,14 @@ function countLives() {
 
 }
 
-
+let highScore = [];
 
 function calculateScore() {
 
   score++;
   scoreCount.textContent = score;
+  
+
 
 
   if (score === 1) {
@@ -482,35 +482,52 @@ function startNewLevel(arr, imgBehinddor) {
 
 function gameOver() {
 
-  score = 0;
-  lives = 3;
-  columnNumber = colNum;
+ 
 
+  let i = document.querySelectorAll(".imgBehidDoors")
+
+  let doorsOpening = document.querySelectorAll(".open");
 
   let elmnt = document.querySelectorAll(".entrance");
-  let select = document.getElementById('styleOftheDoorContainer');
-  let i = selectAll(".imgBehidDoors");
-  console.log(elmnt.length, "entrance")
-  console.log(select, "parent")
-  console.log(i, "img lenght")
+
+  let select = document.querySelector('#styleOftheDoorContainer');
+  let child = select.lastElementChild;
 
 
-  let divs = select.querySelectorAll("div");
+
+  console.log(child)
+  console.log(elmnt.length)
+  console.log(doorsOpening);
 
 
-  do {
 
-  let lastDiv = divs[divs.length - 1];
-
-    lastDiv.parentNode.removeChild(lastDiv);
+  if (doorsOpening.length === 4) {
 
 
-    // select.removeChild("div");
 
-  } while (divs.length != 2);
+      select.removeChild(child);
+      select.removeChild(child);
+
+    
+    } else if( oorsOpening.length === 3){
+      select.removeChild(child);
+
+    } else {
+
+      startNewLevel(doorsOpening, i);
+      score = 0;
+      lives = 3;
+      columnNumber = colNum;
+
+    }
+  
 
 
-  startNewLevel(doorsOpening, i);
+
+
+
+
+
 
 
 
