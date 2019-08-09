@@ -50,9 +50,15 @@
     </div>
 
 
-    <div class="nextLevelShoutOutContainer d-none">
-      <div class="containerImgShoutout winColor">
+    <div class="nextLevelShoutOutContainer d-flex">
+      <div class="containerImgShoutout winColor d-none">
         <h1>You won! Congrats </h1>
+      </div>
+    </div>
+
+    <div class="nextLevelShoutOutContainer d-flex">
+      <div class="containerImgShoutout looseColor d-none">
+        <h1>You LOOSER </h1>
       </div>
     </div>
 
@@ -148,7 +154,7 @@ grid-flex-column ">
         <h4>High score</h4>
         <div class="number number-lives">
 
-          <h4>0</h3>
+          <h4 id="highScore">0</h3>
         </div>
       </div>
     </div>

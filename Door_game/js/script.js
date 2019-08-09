@@ -396,12 +396,16 @@ let scoreCount = document.getElementById("scoreCount");
 let heartIcon = document.querySelector(".img-icon-1");
 
 
+let highScore = [];
+
+let looseColor = document.querySelector(".looseColor")
 
 
 
 
 
 
+// COUNT LIVES
 function countLives() {
 
 
@@ -414,6 +418,22 @@ function countLives() {
   } else if (lives === 0) {
 
     removeClass(heartIcon, "heartPulse");
+   removeClass( looseColor,"d-none");
+   highScore.push(score);
+
+
+   setTimeout(() => {
+   gameOver()     
+   doorsOpeningFunction(doorsOpening, doorsOpeningArr);
+
+
+   }, 3000);
+    
+
+
+
+
+
 
     console.log("the end")
     // gameOver();
@@ -427,23 +447,39 @@ function countLives() {
 
 }
 
-let highScore = [];
 
 // CALCULATE SCORE
 
 function calculateScore() {
 
   score++;
-  scoreCount.textContent = score;
+
+
+  if (score === 3) {
 
 
 
+    let b = document.querySelector(".winColor")
 
-  if (score === 1) {
+
+    setTimeout(() => {
+      b.classList.remove("d-none");
 
 
-     let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
-     console.log(b);
+    }, 1000);
+
+    setTimeout(() => {
+      // winScenario()
+      b.classList.add("d-none");
+    }, 3500);
+
+
+
+  } else if (score === 2) {
+
+
+    let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
+    console.log(b);
 
     setTimeout(() => {
       b.classList.remove("d-none");
@@ -454,29 +490,32 @@ function calculateScore() {
     setTimeout(() => {
       winScenario()
       b.classList.add("d-none");
-      
+
     }, 3500);
 
 
-  } else if (score === 2) {
-  
+  } else if (score === 1) {
+
     let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
     console.log(b);
 
-   setTimeout(() => {
-     b.classList.remove("d-none");
+    setTimeout(() => {
+      b.classList.remove("d-none");
 
 
-   }, 1000);
+    }, 1000);
 
-   setTimeout(() => {
-     winScenario()
-     b.classList.add("d-none");
-     
-   }, 3500);
+    setTimeout(() => {
+      winScenario()
+      b.classList.add("d-none");
+
+    }, 3500);
 
 
   }
+
+  scoreCount.textContent = score;
+
 
 }
 
@@ -507,11 +546,30 @@ function startNewLevel(arr, imgBehinddor) {
 
 function gameOver() {
 
+  document.getElementById("highScore").textContent = Math.max(highScore);
 
+  addClass(looseColor, "d-none");
+
+
+
+  openDoorsCount = 0;
+  columnNumber = 2;
+  document.documentElement.style.setProperty("--colNum", columnNumber);
+  score = 0;
+
+
+  scoreCount.textContent=score;
+
+  lives = 3;
+
+  // startNewLevel(doorsOpening, i);
+
+
+  // document.location.reload();
 
   let i = selectAllQuery(".imgBehidDoors")
 
-  let doorsOpening = selectAllQueryl(".open");
+  let doorsOpening = selectAllQuery(".open");
 
   let elmnt = selectAllQuery(".entrance");
 
@@ -536,7 +594,7 @@ function gameOver() {
     select.removeChild(child);
 
 
-  } else if (oorsOpening.length === 3) {
+  } else if (doorsOpening.length === 3) {
 
     child = select.lastElementChild;
 
@@ -545,13 +603,7 @@ function gameOver() {
   }
 
 
-  startNewLevel(doorsOpening, i);
-  score = 0;
-  lives = 3;
-  columnNumber = colNum;
 
-
-  doorsOpeningFunction(doorsOpening, doorsOpeningArr);
 
 
 
