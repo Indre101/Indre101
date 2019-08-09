@@ -459,3 +459,41 @@ h2 {
 
   font-size: 6vw;
 }
+
+
+.containerImgShoutout_bg_blue {
+  background-color: #07b6d2f0;
+
+}
+
+.containerImgShoutout {
+  border-radius: 15%;
+
+}
+
+
+.containerImgShoutout_bg_yellow {
+  background-color: #d25d07f0;
+}
+
+
+
+
+
+.containerImgShoutout h1 {
+  margin: 0.5rem;
+  /* transition: all; */
+  animation: pulseNextlvl 1s ease-in-out 3 alternate backwards;
+}
+
+
+@keyframes pulseNextlvl {
+  0% {
+    font-size: 1vw;
+  }
+
+  100% {
+    opacity: 1;
+    font-size: 6vw;
+  }
+}
