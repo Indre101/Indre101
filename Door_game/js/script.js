@@ -481,17 +481,21 @@ function calculateScore() {
   } else if (score === 2) {
 
 
-    let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
+    let c = document.querySelector(".third")
 
     setTimeout(() => {
-      b.classList.remove("d-none");
+      c.classList.remove("d-none");
 
 
     }, 1000);
 
     setTimeout(() => {
       winScenario()
-      b.classList.add("d-none");
+
+      document.getElementById("gotIt").onclick = function () {
+      c.classList.add("d-none");
+        
+      }
 
     }, 3500);
 
