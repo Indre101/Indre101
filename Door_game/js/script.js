@@ -192,7 +192,6 @@ function assignImage() {
   i.forEach((e) => {
 
     // e.src === "#"
-    console.log(e)
     e.removeAttribute('src')
   })
 
@@ -396,7 +395,7 @@ let scoreCount = document.getElementById("scoreCount");
 let heartIcon = document.querySelector(".img-icon-1");
 
 
-// let highScore = [];
+let highScore = [];
 
 
 let looseColor = document.querySelector(".looseColor")
@@ -420,14 +419,14 @@ function countLives() {
 
     removeClass(heartIcon, "heartPulse");
     removeClass(looseColor, "d-none");
-    // console.log(highScore)
-    // highScore.push(score);
+
+    highScore.push(score);
+ 
 
 
     setTimeout(() => {
       gameOver()
       doorsOpeningFunction(doorsOpening, doorsOpeningArr);
-      // document.getElementById("highScore").textContent = Math.max(highScore);
 
 
 
@@ -439,8 +438,6 @@ function countLives() {
 
 
 
-    console.log("the end")
-    // gameOver();
 
   }
 
@@ -485,7 +482,6 @@ function calculateScore() {
 
 
     let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
-    console.log(b);
 
     setTimeout(() => {
       b.classList.remove("d-none");
@@ -503,7 +499,6 @@ function calculateScore() {
   } else if (score === 1) {
 
     let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
-    console.log(b);
 
     setTimeout(() => {
       b.classList.remove("d-none");
@@ -556,6 +551,7 @@ function gameOver() {
 
 
   // document.getElementById("highScore").textContent = Math.max(highScore);
+  document.getElementById("highScore").textContent = Math.max.apply(null, highScore);
 
   addClass(looseColor, "d-none");
 
