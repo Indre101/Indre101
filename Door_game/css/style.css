@@ -490,10 +490,9 @@ h2 {
 
 
 
-.containerImgShoutout h1 {
+.p-4vw h1 {
   margin: 0;
   padding: 0;
-
   padding: 4vw;
   /* transition: all; */
 
@@ -513,17 +512,17 @@ h2 {
 
 
 .button {
-  margin: 2rem;
-  border: none;
-  width: 14vw;
+  width: 10vw;
   height: 10vh;
-  font-size: 3vw;
-  border-radius: 50px;
-  background-color: #66339980;
-  font-family: "Indie Flower", cursive;
-
 }
+
+.h2Third {
+  font-size: 6vw;
+}
+
+
 
 .third h1 {
   font-size: 3vw;
+
 }

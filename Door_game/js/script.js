@@ -11,7 +11,7 @@ const returnButtonContainer = document.getElementById("returnButtonContainer");
 let state = "";
 let openDoorsCount = 0;
 let lives = 3;
-let score = 0;
+let score = 1;
 // let levelCount = 0;
 // let stateWinCount = 0;
 
