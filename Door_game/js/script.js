@@ -11,7 +11,7 @@ const returnButtonContainer = document.getElementById("returnButtonContainer");
 let state = "";
 let openDoorsCount = 0;
 let lives = 3;
-let score = 1;
+let score = 0;
 // let levelCount = 0;
 // let stateWinCount = 0;
 
@@ -422,15 +422,18 @@ function countLives() {
 
     highScore.push(score);
  
+    document.getElementById("playAgain").onclick = function () {
+        gameOver()
+        doorsOpeningFunction(doorsOpening, doorsOpeningArr);
+  
+  
+  
+      
+    }
 
 
-    setTimeout(() => {
-      gameOver()
-      doorsOpeningFunction(doorsOpening, doorsOpeningArr);
 
-
-
-    }, 3000);
+  
 
 
 
@@ -552,12 +555,12 @@ function startNewLevel(arr, imgBehinddor) {
 
 function gameOver() {
 
+  addClass(looseColor, "d-none");
 
 
   // document.getElementById("highScore").textContent = Math.max(highScore);
   document.getElementById("highScore").textContent = Math.max.apply(null, highScore);
 
-  addClass(looseColor, "d-none");
 
 
 

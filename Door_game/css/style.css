@@ -526,3 +526,24 @@ h2 {
   font-size: 3vw;
 
 }
+
+.looseColor {
+  font-size: 3vw;
+  background-color: #1d0118de;
+  color: White;
+
+
+}
+
+.m-1rem {
+  margin: 1rem;
+}
+
+.v-h-11 {
+  width: 11vw;
+  height: 11vh;
+}
+
+.font-4 {
+  font-size: 4vw;
+}
