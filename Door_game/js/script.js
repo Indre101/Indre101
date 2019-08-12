@@ -90,6 +90,30 @@ infoButtonContainer.onclick = function () {
 
 }
 
+function mouseOverAndOut(triggerElement, changingElement, className) {
+  
+  triggerElement.onmouseover = function () {
+
+    addClass(changingElement, className)
+  
+  
+  }
+  
+  
+  
+  triggerElement.onmouseout = function () {
+  
+    removeClass(changingElement,className)
+  
+  
+  }
+}
+
+mouseOverAndOut(infoButtonContainer, document.getElementById("infoButtonBg"), "infoButtonHover")
+
+
+
+
 // return button inside  pup up instructions 
 
 returnButtonContainer.onclick = function () {
@@ -421,19 +445,19 @@ function countLives() {
     removeClass(looseColor, "d-none");
 
     highScore.push(score);
- 
+
     document.getElementById("playAgain").onclick = function () {
-        gameOver()
-        doorsOpeningFunction(doorsOpening, doorsOpeningArr);
-  
-  
-  
-      
+      gameOver()
+      doorsOpeningFunction(doorsOpening, doorsOpeningArr);
+
+
+
+
     }
 
 
 
-  
+
 
 
 
@@ -496,8 +520,8 @@ function calculateScore() {
       winScenario()
 
       document.getElementById("gotIt").onclick = function () {
-      c.classList.add("d-none");
-        
+        c.classList.add("d-none");
+
       }
 
     }, 3500);
