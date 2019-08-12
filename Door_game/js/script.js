@@ -12,8 +12,9 @@ let state = "";
 let openDoorsCount = 0;
 let lives = 3;
 let score = 0;
-// let levelCount = 0;
-// let stateWinCount = 0;
+
+// AUDIO
+const backgroundSound = new Audio("./audio/backgroundImg.mp3");
 
 
 function randomNumberGenerator(l) {
@@ -126,12 +127,12 @@ document.getElementById("soundContainer").onclick= function () {
   clickCount++;
 
   document.querySelector(".soundIcon").src = "./images/buttons_icons/sound_off.svg";
-
+  backgroundSound.play()
 
   if (clickCount=== 2) {
     clickCount=0;
   document.querySelector(".soundIcon").src ="./images/buttons_icons/sound_on.svg";
-    
+  backgroundSound.pause();
   }
 }
 
