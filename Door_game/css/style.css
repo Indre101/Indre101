@@ -270,6 +270,7 @@ h4 {
   object-fit: contain;
   align-self: center;
   justify-self: center;
+  z-index: 1;
 }
 
 .no-gutters {
@@ -350,6 +351,18 @@ h2 {
   justify-content: center;
 }
 
+
+.soundContainer {
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+
+
+
 .text-center {
   text-align: center;
 
@@ -381,8 +394,8 @@ h2 {
 
 .returnButton {
   background-color: #A00B0B;
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   transition: background-Color 1s, width 1s, height 1s;
 
@@ -390,8 +403,8 @@ h2 {
 
 .returnButtonHover {
   background-color: rgb(6, 138, 37);
-  width: 10.5rem;
-  height: 10.5rem;
+  width: 9rem;
+  height: 9rem;
 }
 
 
@@ -619,4 +632,17 @@ h2 {
 
 .z-8 {
   z-index: 8;
+}
+
+.soundBG {
+  background-color: #fff;
+  transition: background-Color 1s, width 1s, height 1s, background-Image 1s;
+
+}
+
+.soundBgHover {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(255, 132, 0, 0.893);
+
 }

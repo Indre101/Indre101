@@ -115,6 +115,25 @@ mouseOverAndOut(returnButtonContainer, document.querySelector(".returnButton"), 
 
 mouseOverAndOut(infoButtonContainer, document.getElementById("infoButtonBg"), "infoButtonHover")
 
+mouseOverAndOut(document.getElementById("soundContainer"), document.querySelector(".soundBG"), "soundBgHover")
+
+
+let clickCount =0
+
+
+document.getElementById("soundContainer").onclick= function () {
+
+  clickCount++;
+
+  document.querySelector(".soundIcon").src = "./images/buttons_icons/sound_off.svg";
+
+
+  if (clickCount=== 2) {
+    clickCount=0;
+  document.querySelector(".soundIcon").src ="./images/buttons_icons/sound_on.svg";
+    
+  }
+}
 
 
 // return button inside  pup up instructions 

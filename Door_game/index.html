@@ -17,8 +17,8 @@
       </div> -->
 
 
-  <div id="landingPageContainer" class="container  text-center h-100 w-100  no-gutters d-flex-column ">
-    <h1 class="pb-1 font-4">Escape the not so scary monster</h1>
+  <div id="landingPageContainer" class="container  text-center h-100 w-100  no-gutters d-flex-column d-none">
+    <h1 class="pb-1 font-4">Escape the Influencer</h1>
 
     <div id="instructions" class="instructions">
       <h3 class="pb-2">
@@ -37,7 +37,7 @@
   </div>
   <!--  -->
   <!-- STARTING GAME -->
-  <div id="startGamePage" class="container h-100 w-100  no-gutters  opacity-animation  d-none">
+  <div id="startGamePage" class="container h-100 w-100  no-gutters  opacity-animation ">
 
     <div class="nextLevelShoutOutContainer d-flex">
       <div class="containerImgShoutout  containerImgShoutout_bg_blue shout d-none">
@@ -85,11 +85,14 @@
 
     <div id="infoButtonContainer" class="infoButtonContainer pointer no-gutters">
       <div id="infoButtonBg" class="infoButton p-absolute"></div>
-      <h2 iclass="no-gutters p-absolute">i</h2>
+      <h2 class="no-gutters p-absolute">i</h2>
     </div>
+
+
 
     <!-- instruction pop up container -->
     <div id="popUpInstructionsContainer" class="container-column-center d-none p-absolute z-8   w-100">
+
       <div class="popUpInstructionsContainer">
         <div id="popUpInstructions">
           <h2 class="text-center">Instructions</h2>
@@ -99,12 +102,11 @@
             </li>
             <li>
               <h3>
-                Your goal is to open all the doors without running into a not
-                so scary.
+                Your goal is to avoid influencer trying to sell you things, So be careful!
               </h3>
             </li>
             <li>
-              <h3>Press return to go back to the game</h3>
+              <h3>Press close to go back to the game</h3>
             </li>
           </ol>
         </div>
@@ -115,6 +117,8 @@
           <h2 class="no-gutters p-absolute">close</h2>
         </div>
       </div>
+
+
     </div>
     <!-- end of instructions pop up -->
 
@@ -150,7 +154,7 @@ grid-flex-column ">
         <img class="doors door-w imgBehidDoors" alt="" />
         <img class="door-w  " alt="" />
         <img class="open doors door-w " src="./images/images/door_2_1.png" alt="" />
-        <!-- <img  class="doors door-w inf " src="./images/images/in_1.png" alt=""> -->
+        <img class="doors door-w inf " src="./images/images/message_1.png" alt="">
       </div>
       <div class="entrance">
         <img class="doors frame-w " src="./images/images/door-frame_v_3_1.png" alt="" />
@@ -181,6 +185,11 @@ grid-flex-column ">
     </div>
 
     <!-- high score end -->
+
+    <div id="soundContainer" class="soundContainer pointer  ">
+      <div class="infoButton p-absolute soundBG"></div>
+      <img class="img-icon-1 soundIcon" src="./images/buttons_icons/sound_on.svg" alt="">
+    </div>
   </div>
 
   <!--  -->
