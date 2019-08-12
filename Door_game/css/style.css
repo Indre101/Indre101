@@ -677,8 +677,8 @@ h2 {
 
 .soundSecondaryBgHover {
   background-color: #23B19B;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   transition: width 1s, height 1s;
 
 }
