@@ -668,3 +668,46 @@ h2 {
   grid-area: 2/1;
 
 }
+
+.soundOption {
+  animation: moveIn 0.5s linear forwards 1;
+  opacity: 0;
+  transition: background-color 0.5s;
+}
+
+
+.soundSecondaryBgHover {
+  background-color: #23B19B;
+  width: 4rem;
+  height: 4rem;
+  transition: width 1s, height 1s;
+
+}
+
+
+
+@keyframes moveIn {
+  0% {
+    transform: translate(-30px, 10px);
+
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.moveOut {
+  opacity: 1;
+  animation: moveOut 1s linear forwards 1;
+
+}
+
+@keyframes moveOut {
+  100% {
+    transform: translate(-30px, 10px);
+    opacity: 0;
+
+  }
+
+}
