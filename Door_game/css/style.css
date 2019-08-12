@@ -646,3 +646,25 @@ h2 {
   background-color: rgba(255, 132, 0, 0.893);
 
 }
+
+
+.grid-2X2-10 {
+  width: 10%;
+  display: grid;
+  grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+}
+
+
+.grid-area-2-2 {
+  grid-area: 2/2;
+}
+
+.grid-area-1-1 {
+  grid-area: 1/1;
+
+}
+
+.grid-area-2-1 {
+  grid-area: 2/1;
+
+}

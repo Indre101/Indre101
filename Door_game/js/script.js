@@ -94,20 +94,20 @@ infoButtonContainer.onclick = function () {
 
 // TRANSITION FUNCTION FOR BUTTONS ON HOVER
 function mouseOverAndOut(triggerElement, changingElement, className) {
-  
+
   triggerElement.onmouseover = function () {
 
     addClass(changingElement, className)
-  
+
   }
-  
-  
-  
+
+
+
   triggerElement.onmouseout = function () {
-  
-    removeClass(changingElement,className)
-  
-  
+
+    removeClass(changingElement, className)
+
+
   }
 }
 
@@ -116,23 +116,27 @@ mouseOverAndOut(returnButtonContainer, document.querySelector(".returnButton"), 
 
 mouseOverAndOut(infoButtonContainer, document.getElementById("infoButtonBg"), "infoButtonHover")
 
-mouseOverAndOut(document.getElementById("soundContainer"), document.querySelector(".soundBG"), "soundBgHover")
+mouseOverAndOut(document.getElementById("soundContainer"), document.querySelector(".soundBgMain"), "soundBgHover")
 
 
-let clickCount =0
+// MUSIC CONTROLS
+let clickCount = 0
 
-
-document.getElementById("soundContainer").onclick= function () {
+document.getElementById("soundContainer").onclick = function () {
 
   clickCount++;
 
-  document.querySelector(".soundIcon").src = "./images/buttons_icons/sound_off.svg";
-  backgroundSound.play()
+  document.querySelector(".soundIconMain").src = "./images/buttons_icons/sound_off.svg";
+  // backgroundSound.play()
 
-  if (clickCount=== 2) {
-    clickCount=0;
-  document.querySelector(".soundIcon").src ="./images/buttons_icons/sound_on.svg";
-  backgroundSound.pause();
+  document.querySelectorAll(".soundOption").forEach(e => {
+    e.classList.toggle("p-absolute")
+  })
+
+  if (clickCount === 2) {
+    clickCount = 0;
+    document.querySelector(".soundIconMain").src = "./images/buttons_icons/sound_on.svg";
+    backgroundSound.pause();
   }
 }
 
