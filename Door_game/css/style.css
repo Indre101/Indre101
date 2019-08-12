@@ -388,10 +388,10 @@ h2 {
 
 }
 
-.returnButton:hover {
+.returnButtonHover {
   background-color: rgb(6, 138, 37);
-  width: 8.5rem;
-  height: 8.5rem;
+  width: 10.5rem;
+  height: 10.5rem;
 }
 
 

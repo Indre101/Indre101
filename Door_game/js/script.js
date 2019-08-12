@@ -90,12 +90,13 @@ infoButtonContainer.onclick = function () {
 
 }
 
+
+// TRANSITION FUNCTION FOR BUTTONS ON HOVER
 function mouseOverAndOut(triggerElement, changingElement, className) {
   
   triggerElement.onmouseover = function () {
 
     addClass(changingElement, className)
-  
   
   }
   
@@ -109,8 +110,10 @@ function mouseOverAndOut(triggerElement, changingElement, className) {
   }
 }
 
-mouseOverAndOut(infoButtonContainer, document.getElementById("infoButtonBg"), "infoButtonHover")
+mouseOverAndOut(returnButtonContainer, document.querySelector(".returnButton"), "returnButtonHover")
 
+
+mouseOverAndOut(infoButtonContainer, document.getElementById("infoButtonBg"), "infoButtonHover")
 
 
 
