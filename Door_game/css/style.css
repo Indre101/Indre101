@@ -671,7 +671,6 @@ h2 {
 
 .soundOption {
   animation: moveIn 0.5s linear forwards 1;
-  opacity: 0;
   transition: background-color 0.5s;
 }
 
