@@ -21,6 +21,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 
 }
 
@@ -29,6 +30,10 @@ body {
   --colNum: 2;
 }
 
+
+.mt-20 {
+  margin-top: 20%;
+}
 
 
 #bg {
@@ -709,4 +714,20 @@ h2 {
 
   }
 
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (min-width: 1300px) {
+
+  .door-w {
+    width: 13%;
+  }
+
+  .frame-w {
+    width: 19%;
+  }
 }
