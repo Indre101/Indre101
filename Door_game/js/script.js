@@ -473,14 +473,16 @@ function countLives() {
 
     highScore.push(score);
 
-    document.getElementById("playAgain").onclick = function () {
-      gameOver()
-      doorsOpeningFunction(doorsOpening, doorsOpeningArr);
+    document.querySelectorAll(".playAgain").forEach(playAgainBtn => {
 
 
+      playAgainBtn.onclick = function () {
+        gameOver()
+        doorsOpeningFunction(doorsOpening, doorsOpeningArr);
 
+      }
 
-    }
+    })
 
 
 

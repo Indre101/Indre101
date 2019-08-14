@@ -67,16 +67,22 @@
     <div class="nextLevelShoutOutContainer d-flex">
       <div class="containerImgShoutout winColor d-none">
         <h1>You won! Congrats </h1>
+
+        <div class="infoButtonContainer pointer no-gutters m-1rem playAgain ">
+          <div class="infoButton p-absolute button v-h-11 pulseBtn"></div>
+          <h2 class="no-gutters p-absolute font-4">Play again</h2>
+        </div>
       </div>
+
     </div>
 
     <div class="nextLevelShoutOutContainer d-flex">
-      <div class="containerImgShoutout looseColor d-none">
+      <div class="looseColor d-none">
         <h1>You Loose</h1>
         <h1>Good luck next time!</h1>
         <div class="d-flex-column">
-          <div id="playAgain" class="infoButtonContainer pointer no-gutters m-1rem">
-            <div class="infoButton p-absolute button v-h-11"></div>
+          <div id="playAgain" class="infoButtonContainer pointer no-gutters m-1rem playAgain">
+            <div class="infoButton p-absolute button v-h-11  pulseBtn"></div>
             <h2 class="no-gutters p-absolute font-4">Play again</h2>
           </div>
         </div>
@@ -162,12 +168,6 @@ grid-flex-column ">
         <img class="door-w  " alt="" />
         <img class="open doors door-w " src="./images/images/door_2_1.png" alt="" />
       </div>
-      <!-- <div class="entrance">
-        <img class="doors frame-w " src="./images/images/door-frame_v_3_1.png" alt="" />
-        <img class="doors door-w imgBehidDoors" alt="" />
-        <img class="door-w  " alt="" />
-        <img class="open doors door-w " src="./images/images/door_2_1.png" alt="" />
-      </div> -->
     </div>
 
     <!--End of door  game container -->
@@ -188,9 +188,6 @@ grid-flex-column ">
 
 
     <div class="soundOptionContainer grid-2X2-10">
-
-
-
       <div id="soundContainer" class="soundContainer pointer grid-area-2-1  z-8  ">
         <div class="infoButton p-absolute soundBG soundBgMain"></div>
         <img class="img-icon-1 soundIcon soundIconMain" src="./images/buttons_icons/sound_on.svg" alt="">

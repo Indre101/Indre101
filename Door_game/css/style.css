@@ -585,8 +585,9 @@ h2 {
 
 .looseColor {
   font-size: 3vw;
-  background-color: #1d0118de;
+  background-color: #000000de;
   color: White;
+  border-radius: 50px;
 
 
 }
@@ -661,70 +662,6 @@ h2 {
   width: 4rem;
   height: 4rem;
   background-color: rgba(255, 132, 0, 0.893);
-
-}
-
-
-.grid-2X2-10 {
-  width: 10%;
-  display: grid;
-  grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
-}
-
-
-.grid-area-2-2 {
-  grid-area: 2/2;
-}
-
-.grid-area-1-1 {
-  grid-area: 1/1;
-
-}
-
-.grid-area-2-1 {
-  grid-area: 2/1;
-
-}
-
-.soundOption {
-  animation: moveIn 0.5s linear forwards 1;
-  transition: background-color 0.5s;
-}
-
-
-.soundSecondaryBgHover {
-  background-color: #23B19B;
-  width: 5rem;
-  height: 5rem;
-  transition: width 1s, height 1s;
-
-}
-
-
-
-@keyframes moveIn {
-  0% {
-    transform: translate(-30px, 10px);
-
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.moveOut {
-  opacity: 1;
-  animation: moveOut 1s linear forwards 1;
-
-}
-
-@keyframes moveOut {
-  100% {
-    transform: translate(-30px, 10px);
-    opacity: 0;
-
-  }
 
 }
 
