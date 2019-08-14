@@ -520,7 +520,13 @@ function calculateScore() {
 
     setTimeout(() => {
       b.classList.remove("d-none");
+      elmnt.forEach(entrances => {
 
+        entrances.onclick = function () {
+          this.style.pointerEvents = "none";
+
+        }
+      })
 
     }, 1000);
 
@@ -575,6 +581,15 @@ function calculateScore() {
 
     setTimeout(() => {
       b.classList.remove("d-none");
+      // 
+      elmnt.forEach(entrances => {
+
+        entrances.onclick = function () {
+          this.style.pointerEvents = "none";
+
+        }
+      })
+      // 
 
 
     }, 1000);
@@ -582,7 +597,9 @@ function calculateScore() {
     setTimeout(() => {
       winScenario()
       b.classList.add("d-none");
-
+      elmnt.forEach(entrances => {
+        entrances.style.pointerEvents = "auto";
+      })
     }, 3500);
 
 
