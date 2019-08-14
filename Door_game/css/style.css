@@ -35,6 +35,9 @@ body {
   margin-top: 20%;
 }
 
+.p-3rem {
+  padding: 3rem;
+}
 
 #bg {
   position: fixed;

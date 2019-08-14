@@ -165,11 +165,7 @@ let columnNumber = colNum
 
 
 
-// function selectAllQuery() {
-//   let doorsOpening = document.querySelectorAll(".open");
-//   return doorsOpening;
-
-// }
+// SELECT ALL 
 
 function selectAllQuery(c) {
   let nodeArray = document.querySelectorAll(c);
@@ -512,6 +508,7 @@ function countLives() {
 function calculateScore() {
 
   score++;
+  let elmnt = selectAllQuery(".open");
 
 
   if (score === 4) {
@@ -527,34 +524,49 @@ function calculateScore() {
 
     }, 1000);
 
-    setTimeout(() => {
-      // winScenario()
-      b.classList.add("d-none");
-      gameOver();
-    }, 3500);
 
+    // 
+    highScore.push(score);
 
+    document.getElementById("playAgain").onclick = function () {
+      gameOver()
+      doorsOpeningFunction(doorsOpening, doorsOpeningArr);
 
+    }
+    // 
   } else if (score === 2) {
-
 
     let c = document.querySelector(".third")
 
     setTimeout(() => {
+      elmnt.forEach(entrances => {
+
+
+        entrances.onclick = function () {
+          this.style.pointerEvents = "none";
+
+
+        }
+      })
       c.classList.remove("d-none");
 
 
     }, 1000);
 
-    setTimeout(() => {
-      winScenario()
 
-      document.getElementById("gotIt").onclick = function () {
-        c.classList.add("d-none");
+    document.getElementById("gotIt").onclick = function () {
 
-      }
+      c.classList.add("d-none");
+      setTimeout(() => {
+        winScenario()
+        elmnt.forEach(entrances => {
+          entrances.style.pointerEvents = "auto";
+        })
 
-    }, 3500);
+      }, 1000);
+    }
+
+
 
 
   } else if (score === 1) {
@@ -637,7 +649,7 @@ function gameOver() {
 
   let doorsOpening = selectAllQuery(".open");
 
-  let elmnt = selectAllQuery(".entrance");
+  // let elmnt = selectAllQuery(".entrance");
 
   let select = document.querySelector('#styleOftheDoorContainer');
   let child = select.lastElementChild;
