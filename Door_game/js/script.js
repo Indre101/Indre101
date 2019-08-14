@@ -120,22 +120,7 @@ mouseOverAndOut(infoButtonContainer, document.getElementById("infoButtonBg"), "i
 
 mouseOverAndOut(document.getElementById("soundContainer"), document.querySelector(".soundBgMain"), "soundBgHover")
 
-// SOUND OPTIONS BUTTONS ANIMATIONS
-soundsOptionsArray.forEach(f => {
 
-  f.onmouseover = function () {
-
-    document.querySelectorAll(".soundSecondaryBg")[soundsOptionsArray.indexOf(f)].classList.add("soundSecondaryBgHover")
-
-  }
-
-  f.onmouseout = function () {
-
-    document.querySelectorAll(".soundSecondaryBg")[soundsOptionsArray.indexOf(f)].classList.remove("soundSecondaryBgHover")
-
-  }
-
-})
 
 
 // MUSIC CONTROLS
@@ -147,37 +132,13 @@ document.getElementById("soundContainer").onclick = function () {
   clickCount++;
 
   document.querySelector(".soundIconMain").src = "./images/buttons_icons/sound_off.svg";
-  // backgroundSound.play()
+  backgroundSound.play()
 
-  soundOptions.forEach(e => {
-    e.classList.remove("d-none")
-    e.classList.remove("moveOut")
-
-  
-
-
-  })
 
   if (clickCount === 2) {
     clickCount = 0;
     document.querySelector(".soundIconMain").src = "./images/buttons_icons/sound_on.svg";
     backgroundSound.pause();
-
-    soundOptions.forEach(e => {
-      e.classList.add("moveOut")
-    
-      setTimeout(() => {
-
-  console.log("hkjl")
-
-        e.classList.add("d-none")
-      
-      }, 1000);
-  
-    })
-
-
-   
 
   }
 }
