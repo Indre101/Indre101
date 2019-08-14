@@ -67,6 +67,10 @@ body {
 
 }
 
+.playAgain {
+  margin: 0 auto;
+}
+
 .justify-self-end {
   justify-self: flex-end;
 }
@@ -488,15 +492,9 @@ h2 {
 
 /* animations   */
 
-.opacity-animation {}
 
-@keyframes opacityToOne {
 
-  100% {
-    opacity: 1;
-  }
 
-}
 
 
 /* Notifications for next level */
@@ -541,9 +539,35 @@ h2 {
 }
 
 .winColor {
-  background-color: #ffee00ab;
+  background-color: #00ffe7ab;
+  border-radius: 50px;
+  opacity: 0;
+  animation: opacityToOne 0.5s linear forwards 1;
+
 }
 
+.bg-playagain {
+  background-color: #a8b123;
+}
+
+.w-15vw {
+  width: 16vw;
+  height: 11vh;
+
+}
+
+.c-black {
+  color: black;
+}
+
+.font-4rem {
+  font-size: 4rem;
+}
+
+.reward {
+  width: 10vw;
+  object-fit: contain;
+}
 
 
 .p-4vw h1 {
@@ -585,12 +609,17 @@ h2 {
 
 .looseColor {
   font-size: 3vw;
-  background-color: #000000de;
+  background-color: #961919de;
   color: White;
   border-radius: 50px;
+  opacity: 0;
+  animation: opacityToOne 0.5s linear forwards 1;
+
 
 
 }
+
+
 
 .m-1rem {
   margin: 1rem;
@@ -665,6 +694,13 @@ h2 {
 
 }
 
+@keyframes opacityToOne {
+
+  100% {
+    opacity: 1;
+  }
+
+}
 
 
 /* MEDIA QUERIES */

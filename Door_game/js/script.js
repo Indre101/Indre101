@@ -514,7 +514,7 @@ function calculateScore() {
   let elmnt = selectAllQuery(".open");
 
 
-  if (score === 4) {
+  if (score === 1) {
 
 
 
@@ -537,11 +537,16 @@ function calculateScore() {
     // 
     highScore.push(score);
 
-    document.getElementById("playAgain").onclick = function () {
-      gameOver()
-      doorsOpeningFunction(doorsOpening, doorsOpeningArr);
+    document.querySelectorAll(".playAgain").forEach(playAgainBtn => {
+      playAgainBtn.onclick = function () {
+      console.log("ghiljæ")
+        gameOver()
+        doorsOpeningFunction(doorsOpening, doorsOpeningArr);
+        b.classList.add("d-none");
 
-    }
+      }
+
+    })
     // 
   } else if (score === 2) {
 
@@ -578,7 +583,7 @@ function calculateScore() {
 
 
 
-  } else if (score === 1) {
+  } else if (score === 4) {
 
     let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
 
