@@ -320,11 +320,17 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
   let i = selectAllQuery(".imgBehidDoors");
 
+
   arrDoor.forEach((f) => {
 
 
     f.onclick = function () {
 
+
+      i.forEach(imgInf => {
+        console.log("nll")
+        imgInf.classList.remove("inf");
+      })
 
 
       addClass(this, "door-animation")
@@ -459,6 +465,7 @@ let looseColor = document.querySelector(".looseColor")
 // COUNT LIVES
 function countLives() {
 
+  let elmnt = selectAllQuery(".open");
 
 
   lives--;
@@ -485,7 +492,13 @@ function countLives() {
     })
 
 
+    elmnt.forEach(entrances => {
 
+      entrances.onclick = function () {
+        this.style.pointerEvents = "none";
+
+      }
+    })
 
 
 
@@ -539,7 +552,7 @@ function calculateScore() {
 
     document.querySelectorAll(".playAgain").forEach(playAgainBtn => {
       playAgainBtn.onclick = function () {
-      console.log("ghiljæ")
+        console.log("ghiljæ")
         gameOver()
         doorsOpeningFunction(doorsOpening, doorsOpeningArr);
         b.classList.add("d-none");
@@ -664,13 +677,11 @@ function gameOver() {
   scoreCount.textContent = score;
   livesCount.textContent = lives;
 
-
-  // startNewLevel(doorsOpening, i);
-
-
-  // document.location.reload();
-
   let i = selectAllQuery(".imgBehidDoors")
+
+  i.forEach(imgBehind => {
+    imgBehind.classList.remove("inf");
+  })
 
   let doorsOpening = selectAllQuery(".open");
 
