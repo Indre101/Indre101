@@ -158,6 +158,11 @@ body {
 
 }
 
+.imgBehidDoors {
+  z-index: 3;
+  width: 10vw;
+}
+
 
 .frame-w {
   /* width: 50%; */
@@ -184,7 +189,7 @@ body {
 }
 
 .inf {
-  animation: scare 0.3s linear forwards 5;
+  animation: scare 0.3s linear backwards 5;
   perspective-origin: center;
   -webkit-perspective-origin: center;
   -moz-perspective-origin: center;
@@ -219,7 +224,7 @@ body {
   }
 
   100% {
-    transform: rotate(10deg) scale(1);
+    transform: rotate(10deg) scale(1.5);
     /* Chrome, Opera 15+, Safari 3.1+ */
 
   }
