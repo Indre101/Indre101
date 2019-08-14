@@ -550,6 +550,10 @@ h2 {
   background-color: #a8b123;
 }
 
+em {
+  color: white;
+}
+
 .w-15vw {
   width: 16vw;
   height: 11vh;
