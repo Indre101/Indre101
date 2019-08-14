@@ -584,13 +584,11 @@ function calculateScore() {
     document.getElementById("gotIt").onclick = function () {
 
       c.classList.add("d-none");
-      setTimeout(() => {
-        winScenario()
-        elmnt.forEach(entrances => {
-          entrances.style.pointerEvents = "auto";
-        })
+      winScenario()
+      elmnt.forEach(entrances => {
+        entrances.style.pointerEvents = "auto";
+      })
 
-      }, 1000);
     }
 
 

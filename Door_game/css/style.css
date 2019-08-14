@@ -203,7 +203,7 @@ body {
 
 .heartPulse {
   transition: all;
-  animation: pulse 0.5s 4 alternate ease-in-out;
+  animation: pulse 0.4s 4 alternate ease-in-out;
 }
 
 
@@ -397,7 +397,7 @@ h2 {
   background-color: #23B19B;
   width: 3.5rem;
   height: 3.5rem;
-  transition: background-Color 1s, width 1s, height 1s;
+  transition: background-Color 0.5s, width 0.5s, height 0.5s;
 
 
 }
@@ -414,7 +414,7 @@ h2 {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  transition: background-Color 1s, width 1s, height 1s;
+  transition: background-Color 0.5s, width 0.5s, height 0.5s;
 
 }
 
@@ -477,7 +477,7 @@ h2 {
 }
 
 .d-block {
-  animation: opacityToOne 1s linear forwards 1;
+  animation: opacityToOne 0.5s linear forwards 1;
   transition: 2s;
   opacity: 0;
 }
@@ -534,7 +534,7 @@ h2 {
 
 .containerImgShoutout {
   border-radius: 50px;
-  animation: pulseNextlvl 1s ease-in-out 3 alternate backwards;
+  animation: pulseNextlvl 0.5s ease-in-out 3 alternate backwards;
 
 }
 
@@ -567,6 +567,10 @@ em {
 
 .c-black {
   color: black;
+}
+
+.c-white {
+  color: white;
 }
 
 .font-4rem {
@@ -647,7 +651,7 @@ em {
 .pulseBtn {
   cursor: pointer;
   box-shadow: 0 0 0 0 rgba(236, 227, 227, 0.4);
-  animation: pulsebtn 1s infinite alternate;
+  animation: pulsebtn 0.5s infinite alternate;
 }
 
 .pulseBtn:hover {
@@ -692,7 +696,9 @@ em {
 
 .soundBG {
   background-color: #fff;
-  transition: background-Color 1s, width 1s, height 1s, background-Image 1s;
+  transition: background-Color 0.5s, width 0.5s, height 0.5s;
+
+
 
 }
 
