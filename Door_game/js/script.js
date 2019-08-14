@@ -113,12 +113,13 @@ function mouseOverAndOut(triggerElement, changingElement, className) {
   }
 }
 
+
+
 mouseOverAndOut(returnButtonContainer, document.querySelector(".returnButton"), "returnButtonHover")
-
-
 mouseOverAndOut(infoButtonContainer, document.getElementById("infoButtonBg"), "infoButtonHover")
-
 mouseOverAndOut(document.getElementById("soundContainer"), document.querySelector(".soundBgMain"), "soundBgHover")
+mouseOverAndOut(document.getElementById("gotIt"), document.querySelector(".gotItbg"), "gotItHover")
+
 
 
 
