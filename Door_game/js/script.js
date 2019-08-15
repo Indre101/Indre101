@@ -347,9 +347,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
         if (looseImg.includes(i[a].getAttribute('src'))) {
 
 
-          i.forEach(imgInf => {
-            imgInf.classList.remove("inf");
-          })
 
           messageInf[a].classList.remove("d-none");
 
@@ -385,11 +382,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
         if (looseImg.includes(i[a].getAttribute('src'))) {
-
-
-          i.forEach(imgInf => {
-            imgInf.classList.remove("inf");
-          })
 
           i[a].classList.add("inf")
 
@@ -444,9 +436,6 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
         } else if (looseImg.includes(i[a].getAttribute('src'))) {
 
 
-          i.forEach(imgInf => {
-            imgInf.classList.remove("inf");
-          })
 
 
           i[a].classList.add("inf")
@@ -667,6 +656,11 @@ function startNewLevel(arr, imgBehinddor) {
 
   let messageInf = selectAllQuery(".message")
 
+
+  let i = selectAllQuery(".imgBehidDoors");
+
+
+
   openDoorsCount = 0;
 
   arr.forEach((f) => {
@@ -675,12 +669,18 @@ function startNewLevel(arr, imgBehinddor) {
     setTimeout(() => {
       removeClass(f, "door-animation");
       f.style.pointerEvents = "auto";
+
+
       messageInf.forEach(messageImg => {
-        console.log("kjlæ")
         messageImg.classList.add("d-none");
-    
+
       })
-    
+
+      i.forEach(imgInf => {
+        imgInf.classList.remove("inf");
+      })
+
+
       // missing animation to display for loose
     }, 2000);
 
