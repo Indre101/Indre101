@@ -172,9 +172,8 @@ body {
 
 .message {
   z-index: 6;
-  align-self: baseline;
-  /* margin-top: 4rem;
-  margin-left: 17rem; */
+  align-self: center;
+  margin-top: -7rem;
   width: 12vw;
   animation: zoomIn 1s linear backwards 3;
   -webkit-animation: zoomIn 1s linear backwards 3;
@@ -729,5 +728,18 @@ em {
 
   .frame-w {
     width: 19%;
+  }
+}
+
+
+@media screen and (min-width:1024px) {
+
+  .font-4 {
+    font-size: 9vw;
+  }
+
+
+  .pb-2 {
+    font-size: 3vw;
   }
 }
