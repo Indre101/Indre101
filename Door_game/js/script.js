@@ -326,6 +326,10 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
     f.onclick = function () {
 
       let i = selectAllQuery(".imgBehidDoors");
+      let messageInf = selectAllQuery(".message")
+
+
+
       addClass(this, "door-animation")
 
 
@@ -344,12 +348,15 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
           i.forEach(imgInf => {
-            console.log("nll")
-            console.log(i);
             imgInf.classList.remove("inf");
           })
 
+          messageInf[a].classList.remove("d-none");
+
+
+
           i[a].classList.add("inf")
+
 
           state = "loose"
 
@@ -385,6 +392,9 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
           })
 
           i[a].classList.add("inf")
+
+          messageInf[a].classList.remove("d-none");
+
 
           arrDoor.forEach(d => {
             d.style.pointerEvents = "none";
@@ -437,7 +447,11 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
           i.forEach(imgInf => {
             imgInf.classList.remove("inf");
           })
+
+
           i[a].classList.add("inf")
+
+          messageInf[a].classList.remove("d-none");
 
 
 
@@ -568,7 +582,7 @@ function calculateScore() {
 
     document.querySelectorAll(".playAgain").forEach(playAgainBtn => {
       playAgainBtn.onclick = function () {
-        console.log("ghiljæ")
+
         gameOver()
         doorsOpeningFunction(doorsOpening, doorsOpeningArr);
         b.classList.add("d-none");
@@ -651,6 +665,8 @@ function calculateScore() {
 function startNewLevel(arr, imgBehinddor) {
 
 
+  let messageInf = selectAllQuery(".message")
+
   openDoorsCount = 0;
 
   arr.forEach((f) => {
@@ -659,7 +675,12 @@ function startNewLevel(arr, imgBehinddor) {
     setTimeout(() => {
       removeClass(f, "door-animation");
       f.style.pointerEvents = "auto";
-
+      messageInf.forEach(messageImg => {
+        console.log("kjlæ")
+        messageImg.classList.add("d-none");
+    
+      })
+    
       // missing animation to display for loose
     }, 2000);
 
