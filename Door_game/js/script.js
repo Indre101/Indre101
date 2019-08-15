@@ -318,7 +318,6 @@ function assignImageIfTwoCilckableImg() {
 function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
-  let i = selectAllQuery(".imgBehidDoors");
 
 
   arrDoor.forEach((f) => {
@@ -326,19 +325,12 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
     f.onclick = function () {
 
-
-      i.forEach(imgInf => {
-        console.log("nll")
-        imgInf.classList.remove("inf");
-      })
-
-
+      let i = selectAllQuery(".imgBehidDoors");
       addClass(this, "door-animation")
 
 
       let a = doorConvertedArray.indexOf(this)
 
-      i[a].classList.add("inf")
 
       openDoorsCount++
 
@@ -349,6 +341,15 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
         if (looseImg.includes(i[a].getAttribute('src'))) {
+
+
+          i.forEach(imgInf => {
+            console.log("nll")
+            console.log(i);
+            imgInf.classList.remove("inf");
+          })
+
+          i[a].classList.add("inf")
 
           state = "loose"
 
@@ -378,6 +379,12 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
         if (looseImg.includes(i[a].getAttribute('src'))) {
 
+
+          i.forEach(imgInf => {
+            imgInf.classList.remove("inf");
+          })
+
+          i[a].classList.add("inf")
 
           arrDoor.forEach(d => {
             d.style.pointerEvents = "none";
@@ -418,11 +425,20 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
         if (goodImg.includes(i[a].getAttribute('src'))) {
 
 
+
+
           state = "win"
           startNewLevel(arrDoor, i)
           calculateScore()
 
         } else if (looseImg.includes(i[a].getAttribute('src'))) {
+
+
+          i.forEach(imgInf => {
+            imgInf.classList.remove("inf");
+          })
+          i[a].classList.add("inf")
+
 
 
           startNewLevel(arrDoor, i)
