@@ -822,4 +822,48 @@ em {
     margin-top: 0;
     z-index: 1000;
   }
+
+  .font-4 {
+    font-size: 5vw;
+  }
+
+  .frame-w {
+    width: 19%;
+  }
+
+  .door-w {
+    width: 13%;
+  }
+
+  .highScore {
+    margin-left: 10%;
+  }
+
+  .third h1 {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-column-center {
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+
+  .infoButtonContainer {
+    margin: 0rem;
+  }
+
+  .popUpInstructionsContainer {
+    padding: 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  #returnButtonContainer {
+    margin-top: 3.5rem;
+  }
+
+  .looseColor {
+    font-size: 3.5vw;
+  }
 }
