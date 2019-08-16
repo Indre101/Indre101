@@ -650,6 +650,7 @@ em {
   }
 }
 
+/* TELEPHONES */
 @media screen and (max-width: 1024px) {
   .font-4 {
     font-size: 9vw;
@@ -770,6 +771,9 @@ em {
     height: 4rem;
   }
 
+  .bg-playagain {
+    border-radius: 50%;
+  }
   .gotItbg {
     width: 7rem;
     height: 4rem;
@@ -781,5 +785,41 @@ em {
 
   .playAgain {
     margin-top: 5rem;
+  }
+
+  .w-15vw {
+    width: 16vw;
+    height: 22vh;
+  }
+
+  .font-4 {
+    font-size: 4vw;
+  }
+
+  .reward {
+    width: 13vw;
+  }
+
+  .looseColor {
+    font-size: 2.5vw;
+    padding: 1rem;
+  }
+}
+
+/* 800PX */
+@media screen and (max-width: 800px) {
+  #popUpInstructionsContainer {
+    margin-top: 1rem;
+  }
+
+  .imgBehidDoors {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #popUpInstructionsContainer {
+    margin-top: 0;
+    z-index: 1000;
   }
 }
