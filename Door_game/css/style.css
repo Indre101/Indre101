@@ -161,9 +161,9 @@ body {
   margin-top: -15rem;
   width: 12vw;
   opacity: 0;
-  animation: zoomIn 1s 0.4s linear forwards 2;
-  -webkit-animation: zoomIn 1s 0.4s linear forwards 2;
-  -moz-animation: zoomIn 1s 0.4s linear forwards 2;
+  animation: zoomIn 1s 0.5s linear forwards 2;
+  -webkit-animation: zoomIn 1s 0.5s linear forwards 2;
+  -moz-animation: zoomIn 1s 0.5s linear forwards 2;
 }
 
 @keyframes zoomIn {
