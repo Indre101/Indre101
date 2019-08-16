@@ -546,7 +546,7 @@ function calculateScore() {
   let elmnt = selectAllQuery(".open");
 
 
-  if (score === 4) {
+  if (score === 1) {
 
 
 
@@ -613,7 +613,7 @@ function calculateScore() {
 
 
 
-  } else if (score === 1) {
+  } else if (score === 4) {
 
     let b = selectAllQuery(".shout")[randomNumberGenerator(selectAllQuery(".shout"))]
 

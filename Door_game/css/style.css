@@ -678,6 +678,7 @@ em {
 
   .pb-1 {
     padding-bottom: 0.5rem;
+    margin-top: 1rem;
   }
 
   .startButton {
@@ -696,7 +697,7 @@ em {
   .infoButtonContainer {
     height: fit-content;
     width: fit-content;
-    padding: 3rem;
+    margin: 1rem;
     float: left;
   }
 
@@ -727,6 +728,7 @@ em {
   .soundContainer {
     padding: 0;
     float: right;
+    margin: 1rem;
   }
 
   .infoButton {
@@ -738,5 +740,46 @@ em {
     padding: 0.5rem;
     margin-left: 40%;
     float: left;
+  }
+
+  .popUpInstructionsContainer {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  #popUpInstructionsContainer {
+    padding: 0;
+  }
+
+  #returnButtonContainer {
+    padding: 0;
+    margin: 3rem;
+  }
+
+  .returnButton {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .font-3rem {
+    font-size: 3rem;
+  }
+
+  .playAgainBgBtn {
+    width: 9rem;
+    height: 4rem;
+  }
+
+  .gotItbg {
+    width: 7rem;
+    height: 4rem;
+  }
+
+  .font-4rem {
+    font-size: 1.3rem;
+  }
+
+  .playAgain {
+    margin-top: 5rem;
   }
 }
