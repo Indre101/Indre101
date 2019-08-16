@@ -1,13 +1,12 @@
 @font-face {
-  font-family: 'Indie Flower';
-  src: url('./font/IndieFlower-Regular.ttf');
+  font-family: "Indie Flower";
+  src: url("./font/IndieFlower-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('./font/Roboto-Regular.ttf');
+  font-family: "Roboto";
+  src: url("./font/Roboto-Regular.ttf");
 }
-
 
 body {
   font-family: "Indie Flower", cursive;
@@ -22,14 +21,11 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-
 }
-
 
 :root {
   --colNum: 2;
 }
-
 
 .mt-20 {
   margin-top: 20%;
@@ -64,7 +60,6 @@ body {
   display: grid;
   grid-template-columns: repeat(var(--colNum), 1fr);
   grid-gap: 2rem;
-
 }
 
 .playAgain {
@@ -80,7 +75,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .container-row-center {
@@ -88,7 +82,6 @@ body {
   justify-content: center;
   align-items: center;
   /* width: 100%; */
-
 }
 
 .grid-two-column {
@@ -104,7 +97,6 @@ body {
 .container-row {
   display: flex;
   align-items: center;
-
 }
 
 .justify-evenly {
@@ -121,7 +113,6 @@ body {
   border-radius: 15%;
 }
 
-
 .number_score {
   border-radius: 15% 0 0 15%;
   border-right: 1px solid black;
@@ -129,24 +120,17 @@ body {
 
 .number_score_2 {
   border-radius: 0 15% 15% 0;
-
 }
-
-
 
 .z-5 {
   z-index: 5;
 }
 
 .entrance {
-
-
   display: flex;
   justify-content: center;
   align-items: center;
   /* width: 100%; */
-
-
 }
 
 .door-w {
@@ -155,14 +139,15 @@ body {
   transition: all;
   transition: 3s;
   z-index: 6;
-
 }
 
 .imgBehidDoors {
   z-index: 3;
   width: 10vw;
+  margin-top: 3rem;
+  position: absolute;
+  padding: 0;
 }
-
 
 .frame-w {
   /* width: 50%; */
@@ -173,38 +158,25 @@ body {
 .message {
   z-index: 6;
   align-self: center;
-  margin-top: -7rem;
+  margin-top: -15rem;
   width: 12vw;
-  animation: zoomIn 1s linear backwards 3;
-  -webkit-animation: zoomIn 1s linear backwards 3;
-  -moz-animation: zoomIn 1s linear backwards 3;
-
+  opacity: 0;
+  animation: zoomIn 1s 0.4s linear forwards 2;
+  -webkit-animation: zoomIn 1s 0.4s linear forwards 2;
+  -moz-animation: zoomIn 1s 0.4s linear forwards 2;
 }
 
 @keyframes zoomIn {
   100% {
     transform: scale(1.5);
+    opacity: 1;
   }
 }
-
-.inf {
-  animation: scare 0.3s linear backwards 5;
-  perspective-origin: center;
-  -webkit-perspective-origin: center;
-  -moz-perspective-origin: center;
-  -ms-perspective-origin: center;
-  z-index: 3;
-
-
-
-}
-
 
 .heartPulse {
   transition: all;
   animation: pulse 0.4s 4 alternate ease-in-out;
 }
-
 
 @keyframes pulse {
   0% {
@@ -213,19 +185,31 @@ body {
 
   100% {
     width: 3rem;
-    filter: drop-shadow(10px 10px 10px red)
+    filter: drop-shadow(10px 10px 10px red);
   }
+}
+
+.inf {
+  animation: scare 0.5s linear backwards 2;
+  perspective-origin: center;
+  -webkit-perspective-origin: center;
+  -moz-perspective-origin: center;
+  -ms-perspective-origin: center;
+  z-index: 3;
 }
 
 @keyframes scare {
   0% {
-    transform: rotate(-10deg) scale(0.4);
+    transform: scale(0.4);
+  }
+
+  50% {
+    transform: rotate(-30deg);
   }
 
   100% {
-    transform: rotate(10deg) scale(1.5);
+    transform: rotate(30deg);
     /* Chrome, Opera 15+, Safari 3.1+ */
-
   }
 }
 
@@ -241,7 +225,6 @@ body {
   -moz-transform-origin: left bottom;
   -ms-transform-origin: left bottom;
 
-
   perspective-origin: bottom;
   -webkit-perspective-origin: bottom;
   -moz-perspective-origin: bottom;
@@ -249,7 +232,6 @@ body {
 
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-
 
   perspective: 10000px;
   -moz-perspective: 10000px;
@@ -260,20 +242,13 @@ body {
   animation: openDoors 0.5s linear forwards 1;
   -webkit-animation: openDoors 0.5s linear forwards 1;
   -moz-animation: openDoors 0.5s linear forwards 1;
-
 }
-
-
 
 @keyframes openDoors {
   to {
     transform: rotateY(-90deg);
   }
 }
-
-
-
-
 
 h4 {
   font-size: 3rem;
@@ -292,7 +267,6 @@ h4 {
 .no-gutters {
   margin: 0;
   padding: 0;
-
 }
 
 h3 {
@@ -305,8 +279,6 @@ h2 {
   z-index: 1000;
 }
 
-
-
 .pb-1 {
   padding-bottom: 2.5rem;
 }
@@ -315,7 +287,6 @@ h2 {
   padding-bottom: 1rem;
   font-size: 2vw;
 }
-
 
 .h-100 {
   height: 100vh;
@@ -355,7 +326,6 @@ h2 {
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
-
 }
 
 .infoButtonContainer {
@@ -367,7 +337,6 @@ h2 {
   justify-content: center;
 }
 
-
 .soundContainer {
   display: flex;
   align-items: center;
@@ -376,12 +345,8 @@ h2 {
   justify-content: center;
 }
 
-
-
-
 .text-center {
   text-align: center;
-
 }
 
 .startButton {
@@ -393,12 +358,10 @@ h2 {
 
 .infoButton {
   border-radius: 50%;
-  background-color: #23B19B;
+  background-color: #23b19b;
   width: 3.5rem;
   height: 3.5rem;
   transition: background-Color 0.5s, width 0.5s, height 0.5s;
-
-
 }
 
 .infoButtonHover {
@@ -407,14 +370,12 @@ h2 {
   height: 5rem;
 }
 
-
 .returnButton {
-  background-color: #A00B0B;
+  background-color: #a00b0b;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
   transition: background-Color 0.5s, width 0.5s, height 0.5s;
-
 }
 
 .returnButtonHover {
@@ -422,7 +383,6 @@ h2 {
   width: 9rem;
   height: 9rem;
 }
-
 
 .popUpInstructionsContainer {
   background-color: bisque;
@@ -444,9 +404,7 @@ h2 {
 .gotItbg {
   width: 10vw;
   height: 10vh;
-
 }
-
 
 .gotItHover {
   width: 15vw;
@@ -472,7 +430,6 @@ h2 {
 .d-none {
   display: none;
   transition: 2s;
-
 }
 
 .d-block {
@@ -485,7 +442,6 @@ h2 {
   height: 60%;
 }
 
-
 .opacity-0 {
   opacity: 0;
 }
@@ -496,17 +452,10 @@ h2 {
 
 /* animations   */
 
-
-
-
-
-
 /* Notifications for next level */
-
 
 .d-flex {
   display: flex;
-
 }
 
 .nextLevelShoutOutContainer {
@@ -522,21 +471,16 @@ h2 {
   text-align: center;
 
   font-size: 5vw;
-
 }
-
 
 .containerImgShoutout_bg_blue {
   background-color: #07b6d2f0;
-
 }
 
 .containerImgShoutout {
   border-radius: 50px;
   animation: pulseNextlvl 0.5s ease-in-out 3 alternate backwards;
-
 }
-
 
 .containerImgShoutout_bg_yellow {
   background-color: #d25d07f0;
@@ -547,7 +491,6 @@ h2 {
   border-radius: 50px;
   opacity: 0;
   animation: opacityToOne 0.5s linear forwards 1;
-
 }
 
 .bg-playagain {
@@ -561,7 +504,6 @@ em {
 .w-15vw {
   width: 16vw;
   height: 11vh;
-
 }
 
 .c-black {
@@ -581,15 +523,12 @@ em {
   object-fit: contain;
 }
 
-
 .p-4vw h1 {
   margin: 0;
   padding: 0;
   padding: 4vw;
   /* transition: all; */
-
 }
-
 
 @keyframes pulseNextlvl {
   0% {
@@ -602,7 +541,6 @@ em {
   }
 }
 
-
 .button {
   width: 10vw;
   height: 10vh;
@@ -612,11 +550,8 @@ em {
   font-size: 6vw;
 }
 
-
-
 .third h1 {
   font-size: 3vw;
-
 }
 
 .looseColor {
@@ -626,12 +561,7 @@ em {
   border-radius: 50px;
   opacity: 0;
   animation: opacityToOne 0.5s linear forwards 1;
-
-
-
 }
-
-
 
 .m-1rem {
   margin: 1rem;
@@ -646,7 +576,6 @@ em {
   font-size: 4vw;
 }
 
-
 .pulseBtn {
   cursor: pointer;
   box-shadow: 0 0 0 0 rgba(236, 227, 227, 0.4);
@@ -655,7 +584,6 @@ em {
 
 .pulseBtn:hover {
   animation: none;
-
 }
 
 @-webkit-keyframes pulsebtn {
@@ -696,32 +624,23 @@ em {
 .soundBG {
   background-color: #fff;
   transition: background-Color 0.5s, width 0.5s, height 0.5s;
-
-
-
 }
 
 .soundBgHover {
   width: 4rem;
   height: 4rem;
   background-color: rgba(255, 132, 0, 0.893);
-
 }
 
 @keyframes opacityToOne {
-
   100% {
     opacity: 1;
   }
-
 }
-
 
 /* MEDIA QUERIES */
 
-
 @media screen and (min-width: 1300px) {
-
   .door-w {
     width: 13%;
   }
@@ -731,13 +650,10 @@ em {
   }
 }
 
-
-@media screen and (min-width:1024px) {
-
+@media screen and (max-width: 1024px) {
   .font-4 {
     font-size: 9vw;
   }
-
 
   .pb-2 {
     font-size: 3vw;
