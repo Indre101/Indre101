@@ -546,7 +546,7 @@ function calculateScore() {
   let elmnt = selectAllQuery(".open");
 
 
-  if (score === 2) {
+  if (score === 4) {
 
 
 
@@ -580,7 +580,7 @@ function calculateScore() {
 
     })
     // 
-  } else if (score === 4) {
+  } else if (score === 2) {
 
     let c = document.querySelector(".third")
 

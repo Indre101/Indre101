@@ -156,10 +156,7 @@ body {
 }
 
 .door-w {
-  /* width: 35%; */
   width: 15%;
-  transition: all;
-  transition: 3s;
   z-index: 6;
 }
 
@@ -196,7 +193,7 @@ body {
 }
 
 .heartPulse {
-  transition: all;
+  /* transition: all; */
   animation: pulse 0.4s 4 alternate ease-in-out;
 }
 
@@ -260,7 +257,7 @@ body {
   -webkit-perspective: 10000px;
   -moz-perspective: 10000px;
   /* transform: rotateY(-180deg); */
-  transition: all;
+  transition: transform 0.5s;
   animation: openDoors 0.5s linear forwards 1;
   -webkit-animation: openDoors 0.5s linear forwards 1;
   -moz-animation: openDoors 0.5s linear forwards 1;
