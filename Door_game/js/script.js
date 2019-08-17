@@ -1,8 +1,7 @@
 const landingPageContainer = document.getElementById("landingPageContainer");
 const startGamePage = document.getElementById("startGamePage");
 const popUpInstructionsContainer = document.getElementById("popUpInstructionsContainer");
-
-
+const gameContainer = document.querySelector(".body");
 const startButton = document.getElementById("startButton");
 const infoButtonContainer = document.getElementById("infoButtonContainer");
 const returnButtonContainer = document.getElementById("returnButtonContainer");
@@ -17,6 +16,7 @@ let score = 0;
 const backgroundSound = new Audio("./audio/backgroundImg.mp3");
 const soundOptions = document.querySelectorAll(".soundOption")
 let soundsOptionsArray = Array.prototype.slice.call(soundOptions);
+
 
 
 function randomNumberGenerator(l) {
@@ -74,7 +74,7 @@ startButton.onclick = function () {
 
   // start page changes to the game beginng
   let url1 = "url('./images/images/bg_2.jpg')"
-  changeBackground(document.querySelector("body"), url1);
+  changeBackground(gameContainer, url1);
   toggleClasses(landingPageContainer, dNone);
   toggleClasses(startGamePage, dBlock);
   toggleClasses(startGamePage, dNone);
