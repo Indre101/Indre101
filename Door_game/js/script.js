@@ -217,11 +217,6 @@ let doorsOpeningArr = Array.prototype.slice.call(doorsOpening);
 
 // function to assign images
 
-
-// let imgSrc1 = 
-// let imgSrc2 = 
-// let imgSrc3 = 
-
 let inf1 = "./images/images/in_1.png";
 let inf2 = "./images/images/in_2.png";
 
@@ -233,6 +228,7 @@ function selectAll(h) {
 }
 
 let goodImg = ["./images/images/bunny_1.png", "./images/images/bunny_2.png", "./images/images/puppy_1.png"];
+let messageSrcArr = ["./images/images/message_1.png", "./images/images/message_2.png", "./images/images/message_3.png", "./images/images/message_4.png"]
 let looseImg = [inf1, inf2];
 
 
@@ -346,6 +342,7 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
         if (looseImg.includes(i[a].getAttribute('src'))) {
 
+          messageInf[a].src = messageSrcArr[randomNumberGenerator(messageSrcArr)];
 
 
           messageInf[a].classList.remove("d-none");
@@ -384,6 +381,8 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
         if (looseImg.includes(i[a].getAttribute('src'))) {
 
           i[a].classList.add("inf")
+
+          messageInf[a].src = messageSrcArr[randomNumberGenerator(messageSrcArr)];
 
           messageInf[a].classList.remove("d-none");
 
@@ -439,6 +438,7 @@ function doorsOpeningFunction(arrDoor, doorConvertedArray) {
 
 
           i[a].classList.add("inf")
+          messageInf[a].src = messageSrcArr[randomNumberGenerator(messageSrcArr)];
 
           messageInf[a].classList.remove("d-none");
 
