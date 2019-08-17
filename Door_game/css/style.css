@@ -10,8 +10,6 @@
 
 body {
   font-family: "Indie Flower", cursive;
-  /* owerflow */
-
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -193,7 +191,6 @@ body {
 }
 
 .heartPulse {
-  /* transition: all; */
   animation: pulse 0.4s 4 alternate ease-in-out;
 }
 
@@ -331,6 +328,11 @@ h2 {
   margin-top: 4rem;
 }
 
+#landingPageContainer,
+#startGamePage {
+  transition: opacity 2s;
+}
+
 .d-flex-column {
   display: flex;
   flex-direction: column;
@@ -448,12 +450,10 @@ h2 {
 
 .d-none {
   display: none;
-  transition: 2s;
 }
 
 .d-block {
   animation: opacityToOne 0.5s linear forwards 1;
-  transition: 2s;
   opacity: 0;
 }
 
@@ -468,10 +468,6 @@ h2 {
 .pointer {
   cursor: pointer;
 }
-
-/* animations   */
-
-/* Notifications for next level */
 
 .d-flex {
   display: flex;
@@ -547,7 +543,6 @@ em {
   margin: 0;
   padding: 0;
   padding: 4vw;
-  /* transition: all; */
 }
 
 @keyframes pulseNextlvl {
@@ -691,13 +686,13 @@ em {
 }
 
 /* TELEPHONES */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .font-4 {
-    font-size: 9vw;
+    font-size: 7vw;
   }
 
   .pb-2 {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 }
 
