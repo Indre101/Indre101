@@ -503,7 +503,7 @@ h2 {
 }
 
 .winColor {
-  background-color: #00ffe7d1;
+  background-color: #00ffe7ed;
   border-radius: 50px;
   opacity: 0;
   animation: opacityToOne 0.5s linear forwards 1;
@@ -941,7 +941,7 @@ em {
 
   .winColor {
     padding: 2rem;
-    background-color: #00ffe7d9;
+    background-color: #00ffe7ed;
   }
 
   .playAgain {
