@@ -257,7 +257,7 @@ h4 {
 }
 
 .img-icon-1 {
-  width: 4rem;
+  width: 2rem;
   object-fit: contain;
   align-self: center;
   justify-self: center;
@@ -495,6 +495,7 @@ h2 {
 
 .bg-playagain {
   background-color: #a8b123;
+  border-radius: 50%;
 }
 
 em {
@@ -850,6 +851,11 @@ em {
     padding-bottom: 0;
   }
 
+  #startButton {
+    justify-content: center;
+    margin-top: 25vh;
+  }
+
   .infoButtonContainer {
     margin: 0rem;
   }
@@ -865,5 +871,17 @@ em {
 
   .looseColor {
     font-size: 3.5vw;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .third {
+    padding: 1rem;
+  }
+
+  .font-5 {
+    font-size: 5.5vw;
   }
 }
