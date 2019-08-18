@@ -14,8 +14,7 @@ let score = 0;
 
 // AUDIO
 const backgroundSound = new Audio("./audio/backgroundImg.mp3");
-const soundOptions = document.querySelectorAll(".soundOption")
-let soundsOptionsArray = Array.prototype.slice.call(soundOptions);
+
 
 
 
@@ -133,7 +132,14 @@ document.getElementById("soundContainer").onclick = function () {
   clickCount++;
 
   document.querySelector(".soundIconMain").src = "./images/buttons_icons/sound_off.svg";
-  backgroundSound.play()
+
+
+
+  backgroundSound.addEventListener('ended', function () {
+    this.currentTime = 0;
+    this.play();
+  }, false);
+  backgroundSound.play();
 
 
   if (clickCount === 2) {
