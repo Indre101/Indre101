@@ -13,7 +13,7 @@ let lives = 3;
 let score = 0;
 
 // AUDIO
-const backgroundSound = new Audio("./audio/backgroundImg.mp3");
+const backgroundSound = new Audio("./audio/backgroundSound.mp3");
 
 
 
