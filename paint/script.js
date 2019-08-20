@@ -1,5 +1,6 @@
 const canvas = document.querySelector("canvas");
 const items = document.querySelectorAll(".itemColor");
+const tools = document.querySelectorAll(".tool");
 
 
 canvas.width = canvas.scrollWidth;
@@ -7,6 +8,39 @@ canvas.height = canvas.scrollHeight;
 
 
 const ctx = canvas.getContext("2d");
+
+
+
+
+
+
+
+
+
+tools.forEach(t => {
+
+  t.onclick = function () {
+
+    tools.forEach(t => {
+
+      t.style.backgroundColor = "blue";
+
+    })
+
+
+
+    this.style.backgroundColor = "red";
+
+
+
+  }
+
+
+})
+
+
+
+
 
 // CLEAR CANVAS BUTTON;
 
@@ -30,6 +64,7 @@ function colorChange() {
 
       let colorBG = window.getComputedStyle(this, null).getPropertyValue('background-color');
       ctx.fillStyle = colorBG
+      ctx.strokeStyle = colorBG;
 
     }
 
@@ -39,16 +74,25 @@ function colorChange() {
 
 colorChange()
 
-
-
 // FUNCTION TO DRAW
+
+
+function arcDraw() {
+
+  ctx.arc(mousePos.x, mousePos.y, 5, 0, Math.PI * 2, false)
+
+}
+
 function draw() {
 
   ctx.beginPath();
-  ctx.fillRect(mousePos.x, mousePos.y, 5, 5)
+
+
+
+  arcDraw()
+  ctx.fill();
   ctx.stroke();
 }
-
 
 
 
@@ -60,12 +104,9 @@ function mouseCoordinates(e) {
     x: e.clientX,
     y: e.clientY
   };
-
+  console.log("hjlk")
   draw()
-
 }
-
-
 
 
 
