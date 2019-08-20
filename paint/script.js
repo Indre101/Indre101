@@ -1,5 +1,5 @@
 const canvas = document.querySelector("canvas");
-const items = document.querySelectorAll(".item");
+const items = document.querySelectorAll(".itemColor");
 
 
 canvas.width = canvas.scrollWidth;
@@ -8,7 +8,16 @@ canvas.height = canvas.scrollHeight;
 
 const ctx = canvas.getContext("2d");
 
+// CLEAR CANVAS BUTTON;
 
+document.getElementById("clearCanvas").onclick = function () {
+  clearCanvas()
+}
+
+function clearCanvas() {
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 
 
 function colorChange() {
@@ -51,7 +60,7 @@ function mouseCoordinates(e) {
   };
 
 
-  animate()
+  draw()
 
 
 }
