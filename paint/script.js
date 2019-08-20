@@ -1,26 +1,44 @@
 const canvas = document.querySelector("canvas");
+const items = document.querySelectorAll(".item");
 
-// canvas.width = window.innerWidth * 0.50;
-// canvas.height = window.innerHeight * 0.50;
+
+canvas.width = canvas.scrollWidth;
+canvas.height = canvas.scrollHeight;
+
 
 const ctx = canvas.getContext("2d");
 
 
 
 
-function animate() {
+function colorChange() {
 
-  requestAnimationFrame(animate);
+  items.forEach(i => {
+
+    i.onclick = function () {
+
+      let colorBG = window.getComputedStyle(this, null).getPropertyValue('background-color');
+      ctx.fillStyle = colorBG
+
+    }
+
+
+  })
+}
+
+colorChange()
+
+
+
+
+function draw() {
+
   ctx.beginPath();
-  ctx.fillRect(mousePos.x, mousePos.y, 10, 10)
+  ctx.fillRect(mousePos.x, mousePos.y, 5, 5)
   ctx.stroke();
 }
 
-function stopDraw() {
 
-  ctx.clearRect;
-
-}
 
 
 
@@ -32,13 +50,14 @@ function mouseCoordinates(e) {
     y: e.clientY
   };
 
-  console.log(mousePos.x, mousePos.y)
+
   animate()
+
+
 }
 
 
 
-canvas.addEventListener("mouseup", stopDraw, false)
 
 
 
@@ -49,8 +68,5 @@ canvas.onmousedown = function () {
   canvas.onmouseup = function () {
     canvas.removeEventListener("mousemove", mouseCoordinates);
   }
-
-
-
 
 }
