@@ -65,6 +65,7 @@ tools.forEach(t => {
 
 
 function findButton() {
+
   if (window.getComputedStyle(tools[0], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
     ctx.rect(mousePos.x, mousePos.y, 1, 1)
 
@@ -82,14 +83,69 @@ function findButton() {
     ctx.arc(mousePos.x, mousePos.y, 3, 0, Math.PI * 2, false)
   } else if (window.getComputedStyle(tools[5], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
     ctx.arc(mousePos.x, mousePos.y, 6, 0, Math.PI * 2, false)
+  } else if (window.getComputedStyle(tools[6], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
+
+    drawLine(onmousedown)
+    drawLineEnd(onmousemove)
+  } else if (window.getComputedStyle(tools[7], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
+
+
+
+  } else if (window.getComputedStyle(tools[8], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
+
+
+
+
+
   }
+
 
 }
 
 
+document.querySelector(".circle").onclick = function () {
+  expandCircle()
+}
+
+function expandCircle() {
+
+  requestAnimationFrame(expandCircle)
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  let dW = 5;
+  let dH = 5;
+
+
+  canvas.onmousedown = function () {
+
+    dW++;
+
+    e = event || window.event;
+    mousePos = {
+      x: e.clientX,
+      y: e.clientY
+    };
+
+
+    ctx.beginPath();
+    ctx.arc(mousePos.x, mousePos.y, dW, 0, Math.PI * 2, false)
+    ctx.fill();
+    ctx.stroke();
+    // dH++;
+
+
+  }
+
+
+}
+
+
+
+// REGULAr
 function drawRect(e) {
 
-  e = onmousedown || window.event;
+  e = event || window.event;
   mousePos = {
     x: e.clientX,
     y: e.clientY
@@ -100,9 +156,65 @@ function drawRect(e) {
   ctx.fill();
   ctx.stroke();
 
-
-  // draw()
 }
+
+
+
+// Draw line
+function drawLine(e) {
+
+  e = event || window.event;
+  mousePos = {
+    x: e.clientX,
+    y: e.clientY
+  };
+
+  ctx.beginPath();
+  ctx.moveTo(mousePos.x, mousePos.y);
+
+
+
+}
+
+function drawLineEnd(e) {
+
+
+  e = event || window.event;
+  mousePos = {
+    x: e.clientX,
+    y: e.clientY
+  };
+
+  ctx.lineTo(mousePos.x, mousePos.y);
+  ctx.stroke();
+
+
+}
+
+
+
+
+// document.querySelector(".line").onclick = function () {
+
+//   canvas.onmousedown = function () {
+//     canvas.addEventListener("mousedown", drawLine, false);
+//     canvas.addEventListener("mousemove", drawLineEnd, false);
+
+
+
+
+//     canvas.onmouseup = function () {
+//       canvas.removeEventListener("mousedown", drawLine);
+//       canvas.removeEventListener("mousemove", drawLineEnd);
+
+//     }
+//   }
+
+// }
+
+
+
+
 
 
 
@@ -112,68 +224,3 @@ canvas.onmousedown = function () {
     canvas.removeEventListener("mousemove", drawRect);
   }
 }
-
-
-
-// TEST CODE END
-
-// function drawSmallCircle(e) {
-
-//   e = onmousedown || window.event;
-//   mousePos = {
-//     x: e.clientX,
-//     y: e.clientY
-//   };
-
-
-//   ctx.beginPath();
-//   ctx.arc(mousePos.x, mousePos.y, 1, 0, Math.PI * 2, false)
-//   ctx.fill();
-//   ctx.stroke();
-
-
-//   // draw()
-// }
-
-// tools.forEach(t => {
-
-//   t.onclick = function () {
-
-//     switch (this) {
-//       case tools[0]:
-//         canvas.onmousedown = function () {
-//           canvas.addEventListener("mousemove", drawRect, false)
-//           canvas.onmouseup = function () {
-//             canvas.removeEventListener("mousemove", drawRect);
-//           }
-//         }
-//         break;
-//       case tools[1]:
-//         canvas.onmousedown = function () {
-//           canvas.addEventListener("mousemove", drawSmallCircle, false)
-//           canvas.onmouseup = function () {
-//             canvas.removeEventListener("mousemove", drawSmallCircle);
-//           }
-//         }
-//         break;
-//       default:
-//         break;
-//     }
-
-
-//   }
-// })
-
-
-
-
-// MOUSE EVENT HANDLERS
-// canvas.onmousedown = function () {
-
-//   canvas.addEventListener("mousemove", mouseCoordinates, false)
-
-//   canvas.onmouseup = function () {
-//     canvas.removeEventListener("mousemove", mouseCoordinates);
-//   }
-
-// }
