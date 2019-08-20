@@ -20,6 +20,8 @@ function clearCanvas() {
 }
 
 
+
+// CHANGE COLOR OF STROKE
 function colorChange() {
 
   items.forEach(i => {
@@ -39,7 +41,7 @@ colorChange()
 
 
 
-
+// FUNCTION TO DRAW
 function draw() {
 
   ctx.beginPath();
@@ -50,7 +52,7 @@ function draw() {
 
 
 
-
+// FUNCTION TO TRACK COORDINATES
 function mouseCoordinates(e) {
 
   e = onmousedown || window.event;
@@ -59,9 +61,7 @@ function mouseCoordinates(e) {
     y: e.clientY
   };
 
-
   draw()
-
 
 }
 
@@ -69,7 +69,7 @@ function mouseCoordinates(e) {
 
 
 
-
+// MOUSE EVENT HANDLERS
 canvas.onmousedown = function () {
 
   canvas.addEventListener("mousemove", mouseCoordinates, false)
