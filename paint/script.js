@@ -65,6 +65,7 @@ tools.forEach(t => {
 
 let dw = 3
 let clickCount = 0;
+let pixelData;
 
 function findButton() {
 
@@ -103,6 +104,9 @@ function findButton() {
 
 
 
+
+
+
   } else if (window.getComputedStyle(tools[8], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
 
 
@@ -117,25 +121,14 @@ function findButton() {
       dw = 1
     } else if (mousePos.x > xArray[0] + dw || mousePos.y > yArray[0] + dw) {
       dw++
-      console.log("cia")
     } else if (mousePos.x < xArray[0] + dw || mousePos.y < yArray[0] + dw) {
       dw--
-      console.log("hkj")
     } else if (mousePos.x < xArray[0] + dw || mousePos.y > yArray[0] + dw) {
       dw++
-      console.log("hkj")
     } else if (mousePos.x > xArray[0] + dw || mousePos.y < yArray[0] + dw) {
       dw--
-      console.log("hkj")
     }
-
-    // xArray = [];
-    // yArray = [];
   }
-
-
-
-
 
 }
 
@@ -148,25 +141,6 @@ let xArray = [];
 let yArray = [];
 
 
-// function drawCircle(e) {
-
-//   e = onclick || window.event;
-//   mousePos = {
-//     x: e.clientX,
-//     y: e.clientY
-//   };
-
-
-
-
-//   ctx.beginPath();
-//   ctx.stroke();
-
-// }
-
-
-
-
 // REGULAr
 function drawRect(e) {
 
@@ -175,10 +149,6 @@ function drawRect(e) {
     x: e.clientX,
     y: e.clientY
   };
-
-  console.log(mousePos.y)
-
-
 
 
   ctx.beginPath();
@@ -220,7 +190,86 @@ function drawLineEnd(e) {
   ctx.stroke();
 
 
+
 }
+
+
+
+// FIND COLOR
+let firstColorArr = []
+
+let dx = 0;
+let dy = 0;
+
+function findColor(color, x, y) {
+
+  requestAnimationFrame(findColor)
+
+
+
+
+  pixelData = ctx.getImageData(x, y, 1, 1).data;
+
+  do {
+    x++;
+    y++
+    console.log(x);
+    console.log("y" + y);
+
+    // pixelData[0] = "rgba(120, 120, 30, 200)"
+    // pixelData.forEach(i => {
+    //   i = "rgba(120, 120, 120, 200)"
+    // })
+
+    pixelData.set(Uint8ClampedArray[120, 120, 120, 255])
+
+  } while (color === firstColorArr[0] && x <= canvas.width && y <= canvas.height);
+
+}
+
+// do {
+
+//   pixelData = "red";
+//   dx++;
+//   dy++
+
+//   console.log("sokj")
+// } while (colorValue === firstColorArr[0])
+
+
+
+
+
+document.querySelector(".fillAll").onclick = function () {
+
+  canvas.onclick = function () {
+    firstColorArr = [];
+
+    e = event || window.event;
+    mousePos = {
+      x: e.clientX,
+      y: e.clientY
+    };
+
+
+    let x = mousePos.x;
+    let y = mousePos.y;
+
+
+    pixelData = ctx.getImageData(mousePos.x, mousePos.y, 1, 1).data;
+    let colorValue = `rgba(${pixelData[0]},${pixelData[1]}, ${pixelData[2]}, ${pixelData[3]})`
+
+    firstColorArr.push(colorValue);
+
+
+    findColor(colorValue, x, y)
+
+
+  }
+}
+
+
+
 
 
 canvas.onmousedown = function () {
