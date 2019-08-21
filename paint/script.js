@@ -65,7 +65,6 @@ tools.forEach(t => {
 
 let dw = 3
 let clickCount = 0;
-let pixelData;
 
 function findButton() {
 
@@ -201,44 +200,39 @@ let firstColorArr = []
 let dx = 0;
 let dy = 0;
 
-function findColor(color, x, y) {
+function findColor(z, g, pixelDatas, pixelNew) {
 
   requestAnimationFrame(findColor)
 
 
+  if (pixelNew[0] === pixelDatas[0] && pixelNew[1] === pixelDatas[1] && pixelNew[2] === pixelDatas[2] && pixelNew[3] === pixelDatas[3]) {
+
+    z++;
+    g++;
+
+    pixelNew[0] = 120;
+    pixelNew[1] = 120;
+    pixelNew[2] = 120;
+    pixelNew[3] = 120;
+
+  } else {
+    console.log("bhjknlm")
+    return false;
+  }
 
 
-  pixelData = ctx.getImageData(x, y, 1, 1).data;
 
-  do {
-    x++;
-    y++
-    console.log(x);
-    console.log("y" + y);
+  // for (let i = 0; i < = firstColorArr[0]; i++) {
 
-    // pixelData[0] = "rgba(120, 120, 30, 200)"
-    // pixelData.forEach(i => {
-    //   i = "rgba(120, 120, 120, 200)"
-    // })
+  //   pixelDataNew[i] = "rgba(120,120, 120, 30)"
 
-    pixelData.set(Uint8ClampedArray[120, 120, 120, 255])
 
-  } while (color === firstColorArr[0] && x <= canvas.width && y <= canvas.height);
+
+
+  // }
+
 
 }
-
-// do {
-
-//   pixelData = "red";
-//   dx++;
-//   dy++
-
-//   console.log("sokj")
-// } while (colorValue === firstColorArr[0])
-
-
-
-
 
 document.querySelector(".fillAll").onclick = function () {
 
@@ -252,17 +246,50 @@ document.querySelector(".fillAll").onclick = function () {
     };
 
 
-    let x = mousePos.x;
-    let y = mousePos.y;
+    let dx = mousePos.x;
+    let dy = mousePos.y;
 
 
-    pixelData = ctx.getImageData(mousePos.x, mousePos.y, 1, 1).data;
+    let pixelData = ctx.getImageData(mousePos.x, mousePos.y, 1, 1).data;
+    console.log(pixelData)
+
+    let pixelDataNew = ctx.getImageData(dx, dy, 1, 1).data;
+
+    console.log(pixelDataNew)
+
     let colorValue = `rgba(${pixelData[0]},${pixelData[1]}, ${pixelData[2]}, ${pixelData[3]})`
 
-    firstColorArr.push(colorValue);
+    // firstColorArr.push(pixelData);
 
 
-    findColor(colorValue, x, y)
+    // findColor(dx, dy, pixelData, pixelDataNew)
+
+
+
+
+
+
+    if (pixelDataNew[0] === pixelData[0] && pixelDataNew[1] === pixelData[1] && pixelDataNew[2] === pixelData[2] && pixelDataNew[3] === pixelData[3]) {
+
+      dx++;
+      dy++;
+
+      pixelDataNew[0] = 120;
+      pixelDataNew[1] = 120;
+      pixelDataNew[2] = 120;
+      pixelDataNew[3] = 120;
+
+      console.log("dx, dy")
+
+      ctx.putImageData(pixelDataNew, dx, dy)
+
+
+
+    } else if (dx > canvas.width || dy > canvas.height) {
+      console.log("false")
+      return false;
+    }
+
 
 
   }
