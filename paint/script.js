@@ -63,6 +63,8 @@ tools.forEach(t => {
 })
 
 
+let dw = 3
+let clickCount = 0;
 
 function findButton() {
 
@@ -71,22 +73,32 @@ function findButton() {
 
   } else if (window.getComputedStyle(tools[1], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
     ctx.rect(mousePos.x, mousePos.y, 5, 5)
+    ctx.fill();
 
   } else if (window.getComputedStyle(tools[2], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
     ctx.rect(mousePos.x, mousePos.y, 10, 10)
+    ctx.fill();
 
   } else if (window.getComputedStyle(tools[3], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
 
     ctx.arc(mousePos.x, mousePos.y, 1, 0, Math.PI * 2, false)
+    ctx.fill();
+
   } else if (window.getComputedStyle(tools[4], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
 
     ctx.arc(mousePos.x, mousePos.y, 3, 0, Math.PI * 2, false)
+    ctx.fill();
+
   } else if (window.getComputedStyle(tools[5], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
     ctx.arc(mousePos.x, mousePos.y, 6, 0, Math.PI * 2, false)
+    ctx.fill();
+
   } else if (window.getComputedStyle(tools[6], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
 
     drawLine(onmousedown)
     drawLineEnd(onmousemove)
+    ctx.fill();
+
   } else if (window.getComputedStyle(tools[7], null).getPropertyValue('background-color') === "rgb(0, 0, 255)") {
 
 
@@ -95,50 +107,63 @@ function findButton() {
 
 
 
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    xArray.push(mousePos.x);
+    yArray.push(mousePos.y);
+    ctx.arc(xArray[0], yArray[0], dw, 0, Math.PI * 2, false)
 
 
+    if (dw < 1) {
+      dw = 1
+    } else if (mousePos.x > xArray[0] + dw || mousePos.y > yArray[0] + dw) {
+      dw++
+      console.log("cia")
+    } else if (mousePos.x < xArray[0] + dw || mousePos.y < yArray[0] + dw) {
+      dw--
+      console.log("hkj")
+    } else if (mousePos.x < xArray[0] + dw || mousePos.y > yArray[0] + dw) {
+      dw++
+      console.log("hkj")
+    } else if (mousePos.x > xArray[0] + dw || mousePos.y < yArray[0] + dw) {
+      dw--
+      console.log("hkj")
+    }
+
+    // xArray = [];
+    // yArray = [];
   }
 
 
-}
 
-
-document.querySelector(".circle").onclick = function () {
-  expandCircle()
-}
-
-function expandCircle() {
-
-  requestAnimationFrame(expandCircle)
-
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  let dW = 5;
-  let dH = 5;
-
-
-  canvas.onmousedown = function () {
-
-    dW++;
-
-    e = event || window.event;
-    mousePos = {
-      x: e.clientX,
-      y: e.clientY
-    };
-
-
-    ctx.beginPath();
-    ctx.arc(mousePos.x, mousePos.y, dW, 0, Math.PI * 2, false)
-    ctx.fill();
-    ctx.stroke();
-    // dH++;
-
-
-  }
 
 
 }
+
+
+
+
+
+
+let xArray = [];
+let yArray = [];
+
+
+// function drawCircle(e) {
+
+//   e = onclick || window.event;
+//   mousePos = {
+//     x: e.clientX,
+//     y: e.clientY
+//   };
+
+
+
+
+//   ctx.beginPath();
+//   ctx.stroke();
+
+// }
+
 
 
 
@@ -151,16 +176,20 @@ function drawRect(e) {
     y: e.clientY
   };
 
+  console.log(mousePos.y)
+
+
+
+
   ctx.beginPath();
   findButton()
-  ctx.fill();
   ctx.stroke();
 
 }
 
 
 
-// Draw line
+// DRAW LINE
 function drawLine(e) {
 
   e = event || window.event;
@@ -185,12 +214,21 @@ function drawLineEnd(e) {
     y: e.clientY
   };
 
+
+
   ctx.lineTo(mousePos.x, mousePos.y);
   ctx.stroke();
 
 
 }
 
+
+canvas.onmousedown = function () {
+  canvas.addEventListener("mousemove", drawRect, false)
+  canvas.onmouseup = function () {
+    canvas.removeEventListener("mousemove", drawRect);
+  }
+}
 
 
 
@@ -211,16 +249,3 @@ function drawLineEnd(e) {
 //   }
 
 // }
-
-
-
-
-
-
-
-canvas.onmousedown = function () {
-  canvas.addEventListener("mousemove", drawRect, false)
-  canvas.onmouseup = function () {
-    canvas.removeEventListener("mousemove", drawRect);
-  }
-}
