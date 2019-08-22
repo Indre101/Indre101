@@ -30,8 +30,6 @@ function colorChange() {
   });
 }
 
-colorChange();
-
 // FUNCTION TO DRAW
 
 // FUNCTION TO TRACK COORDINATES
@@ -104,6 +102,7 @@ function findButton() {
       .getComputedStyle(tools[7], null)
       .getPropertyValue("background-color") === "rgb(0, 0, 255)"
   ) {
+    fillAll();
   } else if (
     window
       .getComputedStyle(tools[8], null)
@@ -140,6 +139,7 @@ function drawRect(e) {
   };
 
   ctx.beginPath();
+  colorChange();
   findButton();
   ctx.stroke();
 }
@@ -173,32 +173,8 @@ function drawLineEnd(e) {
 let dx = 0;
 let dy = 0;
 
-// function findColor(z, g, pixelDatas, pixelNew) {
-//   requestAnimationFrame(findColor);
-
-//   if (
-//     pixelNew[0] === pixelDatas[0] &&
-//     pixelNew[1] === pixelDatas[1] &&
-//     pixelNew[2] === pixelDatas[2] &&
-//     pixelNew[3] === pixelDatas[3]
-//   ) {
-//     z++;
-//     g++;
-//     pixelNew[0] = 120;
-//     pixelNew[1] = 120;
-//     pixelNew[2] = 120;
-//     pixelNew[3] = 120;
-
-//     console.log(z, g);
-
-//     // ctx.putImageData(pixelDataNew, dx, dy)
-//   } else if (dx > canvas.width || dy > canvas.height) {
-//     console.log("false");
-//     return false;
-//   }
-// }
-
-document.querySelector(".fillAll").onclick = function() {
+// document.querySelector(".fillAll").onclick =
+function fillAll() {
   canvas.onclick = function() {
     firstColorArr = [];
 
@@ -237,15 +213,40 @@ document.querySelector(".fillAll").onclick = function() {
         pixelDataNew = pixelDataParent.data;
 
         ctx.beginPath();
+        colorChange();
+
+        ctx.fillRect(dx, dy, 1, 1);
+        ctx.stroke();
+      }
+    }
+
+    //   BOTTOM LEFT
+    findColorBootomLeft();
+    function findColorBootomLeft() {
+      requestAnimationFrame(findColorBootomLeft);
+      while (
+        pixelDataNew[0] === pixelData[0] &&
+        pixelDataNew[1] === pixelData[1] &&
+        pixelDataNew[2] === pixelData[2] &&
+        pixelDataNew[3] === pixelData[3] &&
+        dx > 0 &&
+        dy > 0 &&
+        dx < canvas.width &&
+        dy < canvas.height
+      ) {
+        dx--;
+        dy++;
+        pixelDataParent = ctx.getImageData(dx, dy, 1, 1);
+        pixelDataNew = pixelDataParent.data;
+
+        ctx.beginPath();
         ctx.fillStyle = "red";
         ctx.fillRect(dx, dy, 1, 1);
         ctx.stroke();
-        console.log(dx);
-        console.log(pixelDataNew);
       }
     }
   };
-};
+}
 
 // FUNCTION FOR DRAWING LINES
 canvas.onmousedown = function() {
