@@ -168,35 +168,35 @@ function drawLineEnd(e) {
 }
 
 // FIND COLOR
-let firstColorArr = [];
+// let firstColorArr = [];
 
 let dx = 0;
 let dy = 0;
 
-function findColor(z, g, pixelDatas, pixelNew) {
-  requestAnimationFrame(findColor);
+// function findColor(z, g, pixelDatas, pixelNew) {
+//   requestAnimationFrame(findColor);
 
-  if (
-    pixelNew[0] === pixelDatas[0] &&
-    pixelNew[1] === pixelDatas[1] &&
-    pixelNew[2] === pixelDatas[2] &&
-    pixelNew[3] === pixelDatas[3]
-  ) {
-    z++;
-    g++;
-    pixelNew[0] = 120;
-    pixelNew[1] = 120;
-    pixelNew[2] = 120;
-    pixelNew[3] = 120;
+//   if (
+//     pixelNew[0] === pixelDatas[0] &&
+//     pixelNew[1] === pixelDatas[1] &&
+//     pixelNew[2] === pixelDatas[2] &&
+//     pixelNew[3] === pixelDatas[3]
+//   ) {
+//     z++;
+//     g++;
+//     pixelNew[0] = 120;
+//     pixelNew[1] = 120;
+//     pixelNew[2] = 120;
+//     pixelNew[3] = 120;
 
-    console.log(z, g);
+//     console.log(z, g);
 
-    // ctx.putImageData(pixelDataNew, dx, dy)
-  } else if (dx > canvas.width || dy > canvas.height) {
-    console.log("false");
-    return false;
-  }
-}
+//     // ctx.putImageData(pixelDataNew, dx, dy)
+//   } else if (dx > canvas.width || dy > canvas.height) {
+//     console.log("false");
+//     return false;
+//   }
+// }
 
 document.querySelector(".fillAll").onclick = function() {
   canvas.onclick = function() {
@@ -212,135 +212,38 @@ document.querySelector(".fillAll").onclick = function() {
     let dy = mousePos.y;
 
     let pixelData = ctx.getImageData(mousePos.x, mousePos.y, 1, 1).data;
+
+    let pixelDataParent = ctx.getImageData(dx, dy, 1, 1);
+    let pixelDataNew = pixelDataParent.data;
     console.log(dx, dy);
+    console.log(canvas.height);
 
     findColorBootomRight();
     function findColorBootomRight() {
       requestAnimationFrame(findColorBootomRight);
-
-      let pixelDataParent = ctx.getImageData(dx, dy, 1, 1);
-      let pixelDataNew = pixelDataParent.data;
-
-      console.log("data Before" + pixelDataNew);
-      do {
+      while (
+        pixelDataNew[0] === pixelData[0] &&
+        pixelDataNew[1] === pixelData[1] &&
+        pixelDataNew[2] === pixelData[2] &&
+        pixelDataNew[3] === pixelData[3] &&
+        dx > 0 &&
+        dy > 0 &&
+        dx < canvas.width &&
+        dy < canvas.height
+      ) {
         dx++;
         dy++;
         pixelDataParent = ctx.getImageData(dx, dy, 1, 1);
         pixelDataNew = pixelDataParent.data;
-        console.log("data After" + pixelDataNew);
-
-        console.log(dx, dy);
 
         ctx.beginPath();
         ctx.fillStyle = "red";
         ctx.fillRect(dx, dy, 1, 1);
         ctx.stroke();
-
-        return pixelDataNew;
-      } while (
-        pixelDataNew[0] === pixelData[0] &&
-        pixelDataNew[1] === pixelData[1] &&
-        pixelDataNew[2] === pixelData[2] &&
-        pixelDataNew[3] === pixelData[3]
-        // dx > 0 &&
-        // dx < canvas.innerWidth &&
-        // dy < canvas.innerHeight
-      );
+        console.log(dx);
+        console.log(pixelDataNew);
+      }
     }
-
-    // BOTTOM LEFT
-    // findColorBootomLeft();
-    // function findColorBootomLeft() {
-    //   requestAnimationFrame(findColorBootomLeft);
-    //   pixelDataNew = ctx.getImageData(dx, dy, 1, 1).data;
-
-    //   do {
-    //     dx--;
-    //     dy++;
-    //     // pixelDataNew[0] = 120;
-    //     // pixelDataNew[1] = 120;
-    //     // pixelDataNew[2] = 120;
-    //     // pixelDataNew[3] = 255;
-
-    //     console.log(dx, dy, pixelDataNew);
-    //     ctx.beginPath();
-    //     ctx.fillStyle = "red";
-    //     ctx.fillRect(dx, dy, 1, 1);
-    //     ctx.stroke();
-    //     // ctx.putImageData(pixelDataNew, dx, dy)
-    //   } while (
-    //     pixelDataNew[0] === pixelData[0] &&
-    //     pixelDataNew[1] === pixelData[1] &&
-    //     pixelDataNew[2] === pixelData[2] &&
-    //     pixelDataNew[3] === pixelData[3] &&
-    //     dx > 0 &&
-    //     dx < canvas.innerWidth &&
-    //     dy < canvas.innerHeight
-    //   );
-    // }
-    //
-
-    // TOP LEFT
-    // findColorTopLeft();
-    // function findColorTopLeft() {
-    //   requestAnimationFrame(findColorTopLeft);
-    //   pixelDataNew = ctx.getImageData(dx, dy, 1, 1).data;
-
-    //   do {
-    //     dx--;
-    //     dy--;
-    //     // pixelDataNew[0] = 120;
-    //     // pixelDataNew[1] = 120;
-    //     // pixelDataNew[2] = 120;
-    //     // pixelDataNew[3] = 255;
-
-    //     console.log(dx, dy, pixelDataNew);
-    //     ctx.beginPath();
-    //     ctx.fillStyle = "red";
-    //     ctx.fillRect(dx, dy, 1, 1);
-    //     ctx.stroke();
-    //     // ctx.putImageData(pixelDataNew, dx, dy)
-    //   } while (
-    //     pixelDataNew[0] === pixelData[0] &&
-    //     pixelDataNew[1] === pixelData[1] &&
-    //     pixelDataNew[2] === pixelData[2] &&
-    //     pixelDataNew[3] === pixelData[3] &&
-    //     dx > 0 &&
-    //     dx < canvas.innerWidth &&
-    //     dy < canvas.innerHeight
-    //   );
-    // }
-
-    // TOP Right
-    // findColorTopRight();
-    // function findColorTopRight() {
-    //   requestAnimationFrame(findColorTopRight);
-    //   pixelDataNew = ctx.getImageData(dx, dy, 1, 1).data;
-
-    //   do {
-    //     dx++;
-    //     dy--;
-    //     // pixelDataNew[0] = 120;
-    //     // pixelDataNew[1] = 120;
-    //     // pixelDataNew[2] = 120;
-    //     // pixelDataNew[3] = 255;
-
-    //     console.log(dx, dy, pixelDataNew);
-    //     ctx.beginPath();
-    //     ctx.fillStyle = "red";
-    //     ctx.fillRect(dx, dy, 1, 1);
-    //     ctx.stroke();
-    //     // ctx.putImageData(pixelDataNew, dx, dy)
-    //   } while (
-    //     pixelDataNew[0] === pixelData[0] &&
-    //     pixelDataNew[1] === pixelData[1] &&
-    //     pixelDataNew[2] === pixelData[2] &&
-    //     pixelDataNew[3] === pixelData[3] &&
-    //     dx > 0 &&
-    //     dx < canvas.innerWidth &&
-    //     dy < canvas.innerHeight
-    //   );
-    // }
   };
 };
 
