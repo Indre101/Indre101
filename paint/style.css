@@ -1,7 +1,7 @@
 body {
   width: 100%;
   height: 100vh;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -10,7 +10,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   /* grid-gap: 2%; */
   /* width: 100%; */
   height: 100%;
@@ -19,16 +19,18 @@ body {
 }
 
 .containerCanvas {
-  grid-area: 1/2/ span 1/ span 2;
+  display: flex;
+  grid-area: 1/2/ span 1/ span 3;
   /* width: 100%; */
   height: 100%;
+  align-items: center;
 }
 
 canvas {
   position: absolute;
   border: 1px solid black;
   height: 80%;
-  width: 70%;
+  width: 77%;
 
 }
 
@@ -38,6 +40,7 @@ canvas {
   /* width: 100%; */
   height: 100%;
   display: flex;
+  align-items: center;
 }
 
 .containerSmaller {
@@ -46,7 +49,7 @@ canvas {
   justify-content: space-around;
   width: 100%;
   height: 80%;
-  padding: 0 0.5rem;
+
 
 }
 
@@ -58,10 +61,17 @@ canvas {
   align-items: flex-start;
 }
 
+.aling-items-center {
+  align-items: center;
+}
+
 .item {
-  width: 50%;
+  width: 60%;
   height: 10%;
   border: 1px solid black;
+  margin: 0.2rem 0.2rem;
+
+
 }
 
 
