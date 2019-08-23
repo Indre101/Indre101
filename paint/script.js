@@ -41,7 +41,7 @@ function checkIfClicked() {
       tools.forEach(t => {
         t.style.backgroundColor = "white";
       });
-
+      document.querySelector(".form").classList.add("d-none");
       this.style.backgroundColor = "rgba(0, 8, 255, 0.52)";
     };
   });
@@ -53,10 +53,14 @@ let dw = 3;
 let clickCount = 0;
 
 document.querySelector(".earase").onclick = function() {
-  console.group(clickCount);
-
   if (clickCount === 0) {
     clickCount++;
+
+    tools.forEach(t => {
+      tools.forEach(t => {
+        t.style.backgroundColor = "white";
+      });
+    });
 
     document.querySelector(".form").classList.remove("d-none");
     document.querySelector(".earase").style.backgroundColor =
@@ -156,12 +160,34 @@ function findButton(x, y) {
       .getComputedStyle(tools[9], null)
       .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    let size = document.getElementById("input").value;
     console.log(size);
-    ctx.rect(x, y, size, size);
+
+    ctx.fillStyle = "white";
+
+    ctx.fillRect(x, y, size, size);
+    ctx.stroke();
     ctx.fill();
   }
 }
+
+function brushSize() {
+  document.getElementById("input").onclick = function() {
+    size = document.getElementById("input").value;
+    console.log(size);
+
+    return size;
+  };
+
+  let size;
+  let brush = size;
+  console.log(brush);
+
+  return brush;
+}
+
+brushSize();
+
+// return size;
 
 // let Circle = {
 //   x: x,
@@ -230,12 +256,6 @@ function drawRect(e) {
   // colorChange();
   findButton(pos.x, pos.y);
   ctx.stroke();
-
-  // console.log(pos.x, pos.y);
-  // ctx.beginPath();
-  // // colorChange();
-  // findButton(pos.x, pos.y);
-  // ctx.stroke();
 }
 
 // DRAW LINE
