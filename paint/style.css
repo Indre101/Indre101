@@ -2,25 +2,25 @@ body {
   width: 100%;
   height: 100vh;
   /* overflow: hidden; */
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2%;
-  width: 100%;
+  /* grid-gap: 2%; */
+  /* width: 100%; */
   height: 100%;
   justify-content: center;
   align-items: center;
 }
 
 .containerCanvas {
-  grid-area: 1/1/ span 1/ span 2;
-  width: 100%;
+  grid-area: 1/2/ span 1/ span 2;
+  /* width: 100%; */
   height: 100%;
 }
 
@@ -28,14 +28,14 @@ canvas {
   position: absolute;
   border: 1px solid black;
   height: 80%;
-  width: 80%;
+  width: 70%;
 
 }
 
 .containerSmall {
-  grid-area: 1/4/ span 1/ span 1;
+  grid-area: 1/1/ span 1/ span 1;
 
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   display: flex;
 }
