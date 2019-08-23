@@ -2,6 +2,19 @@ const canvas = document.querySelector("canvas");
 const items = document.querySelectorAll(".itemColor");
 const tools = document.querySelectorAll(".tool");
 
+// function canvasWidth() {
+//   canvas.height = window.innerHeight * 0.8; //ie. 62% of width
+
+//   canvas.width = window.innerWidth * 0.62; //ie. 62% of width
+//   console.log("hjk");
+//   return canvas.width;
+// }
+
+// function canvasHeight() {
+//   canvas.height = window.innerHeight * 0.8; //ie. 62% of width
+//   return canvas.height;
+// }
+
 canvas.width = canvas.scrollWidth;
 canvas.height = canvas.scrollHeight;
 
@@ -48,13 +61,15 @@ tools.forEach(t => {
 let dw = 3;
 let clickCount = 0;
 
-function findButton() {
+function findButton(x, y) {
   if (
     window
       .getComputedStyle(tools[0], null)
       .getPropertyValue("background-color") === "rgb(0, 0, 255)"
   ) {
-    ctx.rect(mousePos.x, mousePos.y, 0.5, 0.5);
+    ctx.rect(x, y, 0.5, 0.5);
+    // context.fillRect (pos.x, pos.y, 4, 4);
+
     ctx.fill();
   } else if (
     window
@@ -132,18 +147,46 @@ function findButton() {
 let xArray = [];
 let yArray = [];
 
+// GET MOUSE POSTITIONS
+
+function checkWindowResize() {
+  window.onresize = function() {
+    canvas.height = canvas.scrollHeight;
+    canvas.width = canvas.scrollWidth;
+
+    console.log(canvas.width);
+    drawRect("onmousedown");
+  };
+}
+
+checkWindowResize();
+
+function getMousePos(canvas, evt) {
+  let rect = canvas.getBoundingClientRect();
+
+  evt = event || window.event;
+
+  return {
+    x: evt.clientX - rect.left,
+    y: evt.clientY - rect.top
+  };
+}
+
 // REGULAr
 function drawRect(e) {
-  e = event || window.event;
-  mousePos = {
-    x: e.clientX,
-    y: e.clientY
-  };
+  let pos = getMousePos(canvas, "onmousedown");
 
+  pos = getMousePos(canvas, "onmousedown");
   ctx.beginPath();
   // colorChange();
-  findButton();
+  findButton(pos.x, pos.y);
   ctx.stroke();
+
+  // console.log(pos.x, pos.y);
+  // ctx.beginPath();
+  // // colorChange();
+  // findButton(pos.x, pos.y);
+  // ctx.stroke();
 }
 
 // DRAW LINE
