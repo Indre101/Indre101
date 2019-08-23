@@ -34,67 +34,89 @@ colorChange();
 // FUNCTION TO DRAW
 
 // FUNCTION TO TRACK IF BUTTON IS CLICKED
-tools.forEach(t => {
-  t.onclick = function() {
-    tools.forEach(t => {
-      t.style.backgroundColor = "white";
-    });
 
-    this.style.backgroundColor = "#0008ff85";
-  };
-});
+function checkIfClicked() {
+  tools.forEach(t => {
+    t.onclick = function() {
+      tools.forEach(t => {
+        t.style.backgroundColor = "white";
+      });
+
+      this.style.backgroundColor = "rgba(0, 8, 255, 0.52)";
+    };
+  });
+}
+
+checkIfClicked();
 
 let dw = 3;
 let clickCount = 0;
+
+document.querySelector(".earase").onclick = function() {
+  console.group(clickCount);
+
+  if (clickCount === 0) {
+    clickCount++;
+
+    document.querySelector(".form").classList.remove("d-none");
+    document.querySelector(".earase").style.backgroundColor =
+      "rgba(0, 8, 255, 0.52)";
+  } else if (clickCount === 1) {
+    document.querySelector(".earase").style.backgroundColor = "white";
+    document.querySelector(".form").classList.add("d-none");
+
+    clickCount = 0;
+  }
+};
 
 // FUNCTION TO FIND WHICH FUNCTION WILL BE SELECTED
 function findButton(x, y) {
   if (
     window
       .getComputedStyle(tools[0], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.rect(x, y, 0.5, 0.5);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[1], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.rect(x, y, 5, 5);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[2], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.rect(x, y, 10, 10);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[3], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.arc(x, y, 1, 0, Math.PI * 2, false);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[4], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.arc(x, y, 3, 0, Math.PI * 2, false);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[5], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.arc(x, y, 6, 0, Math.PI * 2, false);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[6], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     drawLine(onmousedown);
     drawLineEnd(onmousemove);
@@ -102,13 +124,13 @@ function findButton(x, y) {
   } else if (
     window
       .getComputedStyle(tools[7], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     // fillAll();
   } else if (
     window
       .getComputedStyle(tools[8], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     // clickCount++;
 
@@ -132,10 +154,12 @@ function findButton(x, y) {
   } else if (
     window
       .getComputedStyle(tools[9], null)
-      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    // document.querySelector(".form").classList.toggle("d-none");
-    console.log("ghjkjl");
+    let size = document.getElementById("input").value;
+    console.log(size);
+    ctx.rect(x, y, size, size);
+    ctx.fill();
   }
 }
 
