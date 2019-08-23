@@ -2,7 +2,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  /* background-image: url(./img/wood.jpeg); */
+  background-image: url(./img/wood.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   /* display: flex;
@@ -10,6 +10,20 @@ body {
   align-items: center; */
 }
 
+
+
+.d-none {
+  display: none;
+}
+
+.icon {
+  /* width: 90%; */
+
+  width: 100%;
+  height: 60%;
+  object-fit: contain;
+
+}
 
 .container {
   display: grid;
@@ -31,10 +45,11 @@ body {
 
 canvas {
   position: absolute;
-  border: 1px solid black;
+  border: 1px solid #d0c3c0;
   height: 80%;
   width: 77%;
-  /* background-color: #fff; */
+  background-color: #fff;
+  border-radius: 30px;
 
 }
 
@@ -72,10 +87,27 @@ canvas {
 .item {
   width: 60%;
   height: 10%;
-  border: 1px solid black;
+  border: 1px solid #d0c3c0;
   margin: 0.2rem 0.2rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
 
 
+
+}
+
+
+form {
+  position: absolute;
+  margin-top: -26px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 100;
+  border: 1px solid grey;
+  padding: 0.5rem;
 }
 
 

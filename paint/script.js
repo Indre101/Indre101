@@ -2,19 +2,6 @@ const canvas = document.querySelector("canvas");
 const items = document.querySelectorAll(".itemColor");
 const tools = document.querySelectorAll(".tool");
 
-// function canvasWidth() {
-//   canvas.height = window.innerHeight * 0.8; //ie. 62% of width
-
-//   canvas.width = window.innerWidth * 0.62; //ie. 62% of width
-//   console.log("hjk");
-//   return canvas.width;
-// }
-
-// function canvasHeight() {
-//   canvas.height = window.innerHeight * 0.8; //ie. 62% of width
-//   return canvas.height;
-// }
-
 canvas.width = canvas.scrollWidth;
 canvas.height = canvas.scrollHeight;
 
@@ -46,21 +33,21 @@ function colorChange() {
 colorChange();
 // FUNCTION TO DRAW
 
-// FUNCTION TO TRACK COORDINATES
-
+// FUNCTION TO TRACK IF BUTTON IS CLICKED
 tools.forEach(t => {
   t.onclick = function() {
     tools.forEach(t => {
       t.style.backgroundColor = "white";
     });
 
-    this.style.backgroundColor = "blue";
+    this.style.backgroundColor = "#0008ff85";
   };
 });
 
 let dw = 3;
 let clickCount = 0;
 
+// FUNCTION TO FIND WHICH FUNCTION WILL BE SELECTED
 function findButton(x, y) {
   if (
     window
@@ -68,43 +55,41 @@ function findButton(x, y) {
       .getPropertyValue("background-color") === "rgb(0, 0, 255)"
   ) {
     ctx.rect(x, y, 0.5, 0.5);
-    // context.fillRect (pos.x, pos.y, 4, 4);
-
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[1], null)
       .getPropertyValue("background-color") === "rgb(0, 0, 255)"
   ) {
-    ctx.rect(mousePos.x, mousePos.y, 5, 5);
+    ctx.rect(x, y, 5, 5);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[2], null)
       .getPropertyValue("background-color") === "rgb(0, 0, 255)"
   ) {
-    ctx.rect(mousePos.x, mousePos.y, 10, 10);
+    ctx.rect(x, y, 10, 10);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[3], null)
       .getPropertyValue("background-color") === "rgb(0, 0, 255)"
   ) {
-    ctx.arc(mousePos.x, mousePos.y, 1, 0, Math.PI * 2, false);
+    ctx.arc(x, y, 1, 0, Math.PI * 2, false);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[4], null)
       .getPropertyValue("background-color") === "rgb(0, 0, 255)"
   ) {
-    ctx.arc(mousePos.x, mousePos.y, 3, 0, Math.PI * 2, false);
+    ctx.arc(x, y, 3, 0, Math.PI * 2, false);
     ctx.fill();
   } else if (
     window
       .getComputedStyle(tools[5], null)
       .getPropertyValue("background-color") === "rgb(0, 0, 255)"
   ) {
-    ctx.arc(mousePos.x, mousePos.y, 6, 0, Math.PI * 2, false);
+    ctx.arc(x, y, 6, 0, Math.PI * 2, false);
     ctx.fill();
   } else if (
     window
@@ -125,24 +110,40 @@ function findButton(x, y) {
       .getComputedStyle(tools[8], null)
       .getPropertyValue("background-color") === "rgb(0, 0, 255)"
   ) {
+    // clickCount++;
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    xArray.push(mousePos.x);
-    yArray.push(mousePos.y);
+    xArray.push(x);
+    yArray.push(y);
+
     ctx.arc(xArray[0], yArray[0], dw, 0, Math.PI * 2, false);
 
     if (dw < 1) {
       dw = 1;
-    } else if (mousePos.x > xArray[0] + dw || mousePos.y > yArray[0] + dw) {
+    } else if (x > xArray[0] + dw || y > yArray[0] + dw) {
       dw++;
-    } else if (mousePos.x < xArray[0] + dw || mousePos.y < yArray[0] + dw) {
+    } else if (x < xArray[0] + dw || y < yArray[0] + dw) {
       dw--;
-    } else if (mousePos.x < xArray[0] + dw || mousePos.y > yArray[0] + dw) {
+    } else if (x < xArray[0] + dw || y > yArray[0] + dw) {
       dw++;
-    } else if (mousePos.x > xArray[0] + dw || mousePos.y < yArray[0] + dw) {
+    } else if (x > xArray[0] + dw || y < yArray[0] + dw) {
       dw--;
     }
+  } else if (
+    window
+      .getComputedStyle(tools[9], null)
+      .getPropertyValue("background-color") === "rgb(0, 0, 255)"
+  ) {
+    // document.querySelector(".form").classList.toggle("d-none");
+    console.log("ghjkjl");
   }
 }
+
+// let Circle = {
+//   x: x,
+//   y: y,
+//   dw: dw
+// };
 
 let xArray = [];
 let yArray = [];
@@ -151,9 +152,6 @@ let yArray = [];
 function saveResizeAndRedisplay(scaleFactor) {
   // save the canvas content as imageURL
   var data = canvas.toDataURL();
-
-  // scaleFactorW = canvas.width / canvas.scrollWidth;
-  // scaleFactorH = canvas.heigh / canvas.scrollHeight;
 
   // resize the canvas
   canvas.width *= scaleFactor;
@@ -179,11 +177,9 @@ function saveResizeAndRedisplay(scaleFactor) {
 
 function checkWindowResize() {
   window.onresize = function() {
-    saveResizeAndRedisplay(1);
+    saveResizeAndRedisplay(1.5);
     canvas.height = canvas.scrollHeight;
     canvas.width = canvas.scrollWidth;
-
-    console.log(canvas.width);
     drawRect("onmousedown");
   };
 }
@@ -353,6 +349,9 @@ function fillAll() {
 canvas.onmousedown = function() {
   canvas.addEventListener("mousemove", drawRect, false);
   canvas.onmouseup = function() {
+    // dw = 1;/
+    xArray = [];
+    yArray = [];
     canvas.removeEventListener("mousemove", drawRect);
     // yArray = [];
     // xArray = [];
