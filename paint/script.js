@@ -148,9 +148,38 @@ let xArray = [];
 let yArray = [];
 
 // GET MOUSE POSTITIONS
+function saveResizeAndRedisplay(scaleFactor) {
+  // save the canvas content as imageURL
+  var data = canvas.toDataURL();
+
+  // scaleFactorW = canvas.width / canvas.scrollWidth;
+  // scaleFactorH = canvas.heigh / canvas.scrollHeight;
+
+  // resize the canvas
+  canvas.width *= scaleFactor;
+  canvas.height *= scaleFactor;
+
+  // scale and redraw the canvas content
+  var img = new Image();
+  img.onload = function() {
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+  };
+  img.src = data;
+}
 
 function checkWindowResize() {
   window.onresize = function() {
+    saveResizeAndRedisplay(1);
     canvas.height = canvas.scrollHeight;
     canvas.width = canvas.scrollWidth;
 
