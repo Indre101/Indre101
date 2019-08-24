@@ -74,7 +74,8 @@ document.querySelector(".earase").onclick = function() {
 };
 
 // FUNCTION TO FIND WHICH FUNCTION WILL BE SELECTED
-function findButton(x, y) {
+
+function findButton(x, y, size) {
   if (
     window
       .getComputedStyle(tools[0], null)
@@ -160,32 +161,9 @@ function findButton(x, y) {
       .getComputedStyle(tools[9], null)
       .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    console.log(size);
-
-    ctx.fillStyle = "white";
-
-    ctx.fillRect(x, y, size, size);
-    ctx.stroke();
-    ctx.fill();
+    console.log("ghk");
   }
 }
-
-function brushSize() {
-  document.getElementById("input").onclick = function() {
-    size = document.getElementById("input").value;
-    console.log(size);
-
-    return size;
-  };
-
-  let size;
-  let brush = size;
-  console.log(brush);
-
-  return brush;
-}
-
-brushSize();
 
 // return size;
 
@@ -247,14 +225,42 @@ function getMousePos(canvas, evt) {
   };
 }
 
+let sizes = document.getElementById("input").value;
+
+// EARASER function
+
+function brush() {
+  document.getElementById("input").onclick = function() {
+    console.log("brush");
+    return true;
+    // size = document.getElementById("input").value;
+    // console.log(size);
+    // return size;
+  };
+}
+
 // REGULAr
+
+let size;
+
 function drawRect(e) {
   let pos = getMousePos(canvas, "onmousedown");
+
+  if (brush) {
+    size = document.getElementById("input").value;
+
+    ctx.fillStyle = "white";
+
+    ctx.fillRect(pos.x, pos.y, size, size);
+
+    ctx.stroke();
+    ctx.fill();
+  }
 
   pos = getMousePos(canvas, "onmousedown");
   ctx.beginPath();
   // colorChange();
-  findButton(pos.x, pos.y);
+  findButton(pos.x, pos.y, size);
   ctx.stroke();
 }
 
