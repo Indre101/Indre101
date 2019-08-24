@@ -66,7 +66,7 @@ document.querySelector(".earase").onclick = function() {
     document.querySelector(".earase").style.backgroundColor =
       "rgba(0, 8, 255, 0.52)";
   } else if (clickCount === 1) {
-    document.querySelector(".earase").style.backgroundColor = "white";
+    // document.querySelector(".earase").style.backgroundColor = "white";
     document.querySelector(".form").classList.add("d-none");
 
     clickCount = 0;
@@ -75,28 +75,25 @@ document.querySelector(".earase").onclick = function() {
 
 // FUNCTION TO FIND WHICH FUNCTION WILL BE SELECTED
 
-function findButton(x, y, size) {
+function findButton(x, y) {
   if (
     window
       .getComputedStyle(tools[0], null)
       .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    ctx.rect(x, y, 0.5, 0.5);
-    ctx.fill();
+    ctx.fillRect(x, y, 0.5, 0.5);
   } else if (
     window
       .getComputedStyle(tools[1], null)
       .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    ctx.rect(x, y, 5, 5);
-    ctx.fill();
+    ctx.fillRect(x, y, 5, 5);
   } else if (
     window
       .getComputedStyle(tools[2], null)
       .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    ctx.rect(x, y, 10, 10);
-    ctx.fill();
+    ctx.fillRect(x, y, 10, 10);
   } else if (
     window
       .getComputedStyle(tools[3], null)
@@ -104,6 +101,7 @@ function findButton(x, y, size) {
   ) {
     ctx.arc(x, y, 1, 0, Math.PI * 2, false);
     ctx.fill();
+    ctx.stroke();
   } else if (
     window
       .getComputedStyle(tools[4], null)
@@ -161,17 +159,10 @@ function findButton(x, y, size) {
       .getComputedStyle(tools[9], null)
       .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    console.log("ghk");
+    size = document.getElementById("input").value;
+    ctx.clearRect(x, y, size, size);
   }
 }
-
-// return size;
-
-// let Circle = {
-//   x: x,
-//   y: y,
-//   dw: dw
-// };
 
 let xArray = [];
 let yArray = [];
@@ -229,38 +220,14 @@ let sizes = document.getElementById("input").value;
 
 // EARASER function
 
-function brush() {
-  document.getElementById("input").onclick = function() {
-    console.log("brush");
-    return true;
-    // size = document.getElementById("input").value;
-    // console.log(size);
-    // return size;
-  };
-}
-
-// REGULAr
-
 let size;
 
 function drawRect(e) {
   let pos = getMousePos(canvas, "onmousedown");
-
-  if (brush) {
-    size = document.getElementById("input").value;
-
-    ctx.fillStyle = "white";
-
-    ctx.fillRect(pos.x, pos.y, size, size);
-
-    ctx.stroke();
-    ctx.fill();
-  }
-
-  pos = getMousePos(canvas, "onmousedown");
   ctx.beginPath();
-  // colorChange();
-  findButton(pos.x, pos.y, size);
+
+  findButton(pos.x, pos.y);
+
   ctx.stroke();
 }
 
@@ -288,14 +255,11 @@ function drawLineEnd(e) {
 }
 
 // FIND COLOR
-// let firstColorArr = [];
 
 let dx = 0;
 let dy = 0;
 let xPositionArray = [];
 let yPositionArray = [];
-
-// document.querySelector(".fillAll").onclick =
 
 function fillAll() {
   canvas.onclick = function() {
@@ -310,8 +274,6 @@ function fillAll() {
     let dx = mousePos.x;
     let dy = mousePos.y;
     let dr = 1;
-    // let rw = 1;
-    // let rh = 1;
 
     let pixelData = ctx.getImageData(mousePos.x, mousePos.y, 1, 1).data;
 
@@ -334,35 +296,20 @@ function fillAll() {
         dx++;
         dy++;
         dr++;
-        // rw++;
-        // rh++;
+
         pixelDataParent = ctx.getImageData(dx, dy, 1, 1);
         pixelDataNew = pixelDataParent.data;
 
         xPositionArray.push(dx);
         yPositionArray.push(dy);
 
-        // console.log(xPositionArray[xPositionArray.length - 1]);
-
         ctx.beginPath();
-        // colorChange();
-        // ctx.arc(mousePos.x, mousePos.y, dr, 0, 2 * Math.PI);
-        // ctx.rect(mousePos.x, mousePos.y, rw, rh);
-        // ctx.fillRect(dx, dy, 1, 1);
+
         ctx.moveTo(mousePos.x, mousePos.y);
         ctx.lineTo(dx, dy);
 
         ctx.fill();
         ctx.stroke();
-
-        // if (
-        //   Math.max.apply(null, xPositionArray)++ != pixelData[0] &&
-        //   pixelDataParentTest[1] != pixelData[1] &&
-        //   pixelDataParentTest[2] != pixelData[2] &&
-        //   pixelDataParentTest[3] != pixelData[3]
-        // ) {
-        //   console.log("dx, dy");
-        // }
       }
 
       let tx = Math.max.apply(null, xPositionArray);
@@ -399,26 +346,8 @@ function fillAll() {
 canvas.onmousedown = function() {
   canvas.addEventListener("mousemove", drawRect, false);
   canvas.onmouseup = function() {
-    // dw = 1;/
     xArray = [];
     yArray = [];
     canvas.removeEventListener("mousemove", drawRect);
-    // yArray = [];
-    // xArray = [];
   };
 };
-
-// document.querySelector(".line").onclick = function () {
-
-//   canvas.onmousedown = function () {
-//     canvas.addEventListener("mousedown", drawLine, false);
-//     canvas.addEventListener("mousemove", drawLineEnd, false);
-
-//     canvas.onmouseup = function () {
-//       canvas.removeEventListener("mousedown", drawLine);
-//       canvas.removeEventListener("mousemove", drawLineEnd);
-
-//     }
-//   }
-
-// }
