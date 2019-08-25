@@ -137,7 +137,12 @@ function findButton(x, y) {
   ) {
     // clickCount++;
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(
+      xArray[0] - dw,
+      yArray[0] - dw,
+      Math.pow(dw, 2) * Math.PI,
+      Math.pow(dw, 2) * Math.PI
+    );
     xArray.push(x);
     yArray.push(y);
 
@@ -163,6 +168,40 @@ function findButton(x, y) {
   ) {
     let size = document.getElementById("input").value;
     ctx.clearRect(x, y, size, size);
+  } else if (
+    window
+      .getComputedStyle(tools[10], null)
+      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+  ) {
+    // ctx.clearRect(
+    //   xArray[0] - dw,
+    //   yArray[0] - dw,
+    //   Math.pow(dw, 2) * Math.PI,
+    //   Math.pow(dw, 2) * Math.PI
+    // );
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    xArray.push(x);
+    yArray.push(y);
+
+    ctx.rect(xArray[0] - dw / 2, yArray[0] - dw / 2, dw, dw);
+
+    // ctx.arc(xArray[0], yArray[0], dw, 0, Math.PI * 2, false);
+
+    if (dw < 1) {
+      dw = 1;
+    } else if (x > xArray[0] + dw && y > yArray[0] + dw) {
+      dw++;
+    } else if (x < xArray[0] - dw && y > yArray[0] + dw) {
+      dw++;
+    } else if (x < xArray[0] - dw || y < yArray[0] - dw) {
+      dw++;
+    } else if (x > xArray[0] + dw || y < yArray[0] - dw) {
+      dw++;
+    } else {
+      dw--;
+    }
   }
 }
 
