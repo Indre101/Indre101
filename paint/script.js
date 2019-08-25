@@ -145,13 +145,15 @@ function findButton(x, y) {
 
     if (dw < 1) {
       dw = 1;
-    } else if (x > xArray[0] + dw || y > yArray[0] + dw) {
+    } else if (x > xArray[0] + dw && y > yArray[0] + dw) {
       dw++;
-    } else if (x < xArray[0] + dw || y < yArray[0] + dw) {
-      dw--;
-    } else if (x < xArray[0] + dw || y > yArray[0] + dw) {
+    } else if (x < xArray[0] - dw && y > yArray[0] + dw) {
       dw++;
-    } else if (x > xArray[0] + dw || y < yArray[0] + dw) {
+    } else if (x < xArray[0] - dw || y < yArray[0] - dw) {
+      dw++;
+    } else if (x > xArray[0] + dw || y < yArray[0] - dw) {
+      dw++;
+    } else {
       dw--;
     }
   } else if (
