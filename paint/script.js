@@ -159,7 +159,7 @@ function findButton(x, y) {
       .getComputedStyle(tools[9], null)
       .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    size = document.getElementById("input").value;
+    let size = document.getElementById("input").value;
     ctx.clearRect(x, y, size, size);
   }
 }
@@ -220,7 +220,7 @@ let sizes = document.getElementById("input").value;
 
 // EARASER function
 
-let size;
+// let size;
 
 function drawRect(e) {
   let pos = getMousePos(canvas, "onmousedown");
