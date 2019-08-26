@@ -1,0 +1,48 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+
+main {
+    font-family: Avenir, Roboto, Helvetica, san-serif;
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-gap: 1rem;
+}
+
+
+.sale-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 15px;
+
+}
+
+
+
+article button {
+    background: teal;
+    margin-top: 1rem;
+    /* align-self: baseline; */
+    border-radius: 15px;
+    margin-top: auto;
+
+}
+
+img {
+    align-self: center;
+    order: -1;
+
+}
+
+p {
+    /* align-self: flex-start; */
+
+}
