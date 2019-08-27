@@ -8,23 +8,34 @@
   <title>Document</title>
 
   <style>
+    .rotate {
+      animation: rotate 1s linear infinite alternate;
+    }
 
+    @keyframes rotate {
 
+      100% {
+        transform: rotate(180deg);
+      }
+
+      ;
+    }
   </style>
 </head>
 
 <body>
+  <template>
+    <h2>Nope</h2>
+    <p class="infoText">Lorem, ipsum dolor.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  </template>
+
 
   <div class="main">
     <h1>It's the page</h1>
   </div>
 
 
-  <template>
-    <h2>Nope</h2>
-    <p class="infoText">Lorem, ipsum dolor.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-  </template>
 
 
 
