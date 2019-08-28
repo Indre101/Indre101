@@ -49,7 +49,7 @@ menuBtn.onclick = function () {
 
 // OBJECT BLUEPRINT
 
-function Dish(category, name, isVegStatus, price, discountAmount, dishImg, shortDes, longDes, soldOutStatus, allergies) {
+function Dish(category, name, price, soldOutStatus, discountAmount, shortDes, longDes, isVegStatus, allergies, dishImg) {
   this.category = category;
   this.name = name;
   this.isVegStatus = isVegStatus;
@@ -126,16 +126,19 @@ function Dish(category, name, isVegStatus, price, discountAmount, dishImg, short
 
 
 
+let cabanossiWithBeetrootcreme = new Dish("starter", "Cabanossi with beetrootcreme", 49, 0, 10, "Cabanossi med rødbedecreme og løg", "Cabanossi med rødbedecreme og creme er egentlig en forret, men kammerat Vladimir elskede denne ret så højt, at han forbød restauranter i Krigien at sælge det som andet end en hovedret. Vi anbefaler det dog som forret, inden en god Bortsjs. Skylles helst ned med vodka.", 1, ["laktose"], "./img/medium/rodbede-cabanossi-md.jpg");
+let caviarBruschetta = new Dish("starter", "Caviar bruschetta", 49, 0, 0, "Brushcetta med russisk Caviar", "Til denne dejlige Bruschetta anvender vi kun de dejligste sibiriske Caviar. Caviarerne presses ud af fiskene mens de stadig er levende, og vædes derefter i Putinka Vodka. Der er masser af bjerggedesmør på bruschettaene.", 0, "./img/medium/caviarbruschetta-md.jpg");
+let stakeWithVegetables = new Dish("main", "Stake with vegetables", 179, 0, 20, "Diplomat-bøf med grønt", "Diplomatiet har haft mange udfordringer i USSR. Derfor blev der sørget godt for dem, og som nogen af de få, fik diplomaterne mange bøffer under den kolde krig. Diplomat-bøffen med grillede grøntsager og koldpresset olie er af ypperste kvalitet - kødet kommer fra udsultede ungkalve i Viktoriagrad.", 0, [], "./img/medium/boef-md.jpg");
+let guzni = new Dish("dessert", "Guzni", 69, 0, 0, "Guzni - Rødbede/nøddeis ", "Guzni - den verdenskendte rødbede/nøddeis fra Petrograd. Kammerat Boris Guzni var stor fan af den, og spiste den hver dag under Den kolde krig.", 1, [], "./img/medium/guzni-md.jpg");
+let vodka = new Dish("drinks", "Voda-vodka", 19, 0, 0, "Voda-vodka - vodka i rigelige mængder", "Voda-vodka - en vodka brygget på det pureste vand af smeltet sne fra Sibirien. Passer godt til alle hovedretter", 1, ["kartofler"], "./img/medium/voda-md.jpg");
 
-let newDish = new Dish("starter", "Voda", 2, 25, 1, "./img/medium/cola-md.jpg", "lorem4dsælæa", "loremijkæ", 2, ["peanut", "sun"])
-let russianRingbread = new Dish("main", "Russian Ringbread", 2, 30, 1, "./img/medium/ringbroed-druer-md.jpg", "Russisk ringbrød af Karapatisk mel", "Russisk ringbrød efter en klassisk opskrift fra Karapatien. Dejen blandes koldhæver 30 dage, inde brødet bages over bål. Meget sprødt, godt med Karapatisk bjerggedsmør.", 1, ["laktose"])
-let russianRingbreadTwo = new Dish("starter", "Russian Ringbread", 2, 30, 1, "./img/medium/ringbroed-druer-md.jpg", "Russisk ringbrød af Karapatisk mel", "Russisk ringbrød efter en klassisk opskrift fra Karapatien. Dejen blandes koldhæver 30 dage, inde brødet bages over bål. Meget sprødt, godt med Karapatisk bjerggedsmør.", 1, ["laktose"])
+addNewElements(cabanossiWithBeetrootcreme)
+addNewElements(caviarBruschetta)
+addNewElements(stakeWithVegetables)
+addNewElements(guzni)
+addNewElements(vodka)
 
 
-
-addNewElements(newDish)
-addNewElements(russianRingbread)
-addNewElements(russianRingbreadTwo)
 
 const startersList = document.querySelector(".starter");
 
@@ -257,9 +260,7 @@ function addNewElements(newObjectName) {
 
 
 
-
-
-let courseArray = [newDish, russianRingbread, russianRingbreadTwo]
+let courseArray = [cabanossiWithBeetrootcreme, caviarBruschetta, stakeWithVegetables, guzni, vodka]
 
 
 
@@ -276,9 +277,10 @@ function listToShow(nameOfTheCategory) {
 
 
     } else if (courseArray[i].whichCategory() === nameOfTheCategory && window.innerWidth > 700) {
-
+      arrayIndex.push(i);
 
       let minIndex = Math.min.apply(Math, arrayIndex);
+
       informationContainer[i].style.visibilyty = "hidden";
       informationContainer[minIndex].style.display = "grid";
 
@@ -323,7 +325,7 @@ document.querySelector(".main").onclick = function () {
 
 document.querySelector(".desserts").onclick = function () {
 
-  listToShow("desserts");
+  listToShow("dessert");
 }
 
 document.querySelector(".drinks").onclick = function () {
