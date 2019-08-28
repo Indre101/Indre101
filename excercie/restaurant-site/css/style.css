@@ -101,13 +101,17 @@ img {
 }
 
 .dishImg {
-  height: 30vh;
+  height: 28vh;
   position: absolute;
   align-self: flex-end;
 }
 
 .iconVeg {
-  width: 15%;
+  width: 3vw;
+}
+
+.vegetarian {
+  width: 6vw;
 }
 
 .informationContainer {
@@ -128,7 +132,7 @@ img {
 
 .longDescribtions {
   z-index: 1;
-  align-self: center;
+  align-self: flex-end;
   width: 70%;
   border: 1px solid;
   height: 70%;
@@ -154,7 +158,7 @@ img {
 }
 
 .dishName {
-  margin: 0.5rem 0;
+  padding: 2.5rem 0 0.5rem 0;
   border: 1px solid;
   border-radius: 0 0 15px 15px;
   border-top: none;
@@ -167,6 +171,7 @@ img {
   margin-left: 2rem;
   font-family: 'Raleway', sans-serif;
   display: inline;
+  font-size: 1rem;
 }
 
 .d-none {
@@ -186,6 +191,16 @@ img {
   margin: 0;
 
 }
+
+
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-style: solid;
+  text-decoration-color: red;
+}
+
+
 
 /* MEDIA QUERIES */
 
@@ -215,9 +230,6 @@ img {
     width: 100%;
   }
 
-  .dishImg {
-    height: 30vh;
-  }
 
   .longDescribtions {
     width: 90%;
@@ -293,6 +305,9 @@ img {
   .informationContainer {
     grid-template-columns: 1fr;
     margin-top: 5%;
+    background-image: linear-gradient(to bottom, #07081399, #000000), url(../img/photo-1521017432531-fbd92d768814.jpeg);
+    background-size: cover;
+    height: 100vh;
   }
 
   .menuButtonContainer {
@@ -319,11 +334,8 @@ img {
     border: 1px solid;
     height: 100vh;
     padding: 1rem 0;
-    background-image: linear-gradient(to bottom, #07081399, #000000), url(../img/photo-1521017432531-fbd92d768814.jpeg);
-
-
-
-    background-size: cover;
+    /* background-image: linear-gradient(to bottom, #07081399, #000000), url(../img/photo-1521017432531-fbd92d768814.jpeg);
+    background-size: cover; */
 
   }
 

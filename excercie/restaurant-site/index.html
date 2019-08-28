@@ -11,9 +11,47 @@
 
 <body>
 
-  <div class="bgImg">
+  <template id="dishListTemplate">
+    <div class="dishName">
+      <h2 class="name">Starters</h2>
+      <img class="iconVeg" src="" alt="">
+    </div>
+  </template>
 
+
+
+  <template id="dishInformationTemplate">
+    <div class="informationContainer">
+
+      <div class="imgContainer">
+        <img class="dishImg" src="./img/medium/voda-md.jpg" alt="">
+        <p class="longDescribtions d-none">Russisk ringbrød efter en klassisk opskrift fra Karapatien. Dejen blandes
+          koldhæver 30 dage, inde brødet bages over bål. Meget sprødt, godt med Karapatisk bjerggedsmør.</p>
+        <h3 class="soldOut d-none">SoldOut</h3>
+
+      </div>
+      <div class="info">
+        <h1 class="name">Name</h1>
+
+        <p class="shortDescirbtion">Voda-vodka - vodka i rigelige mængder</p>
+        <em class="more">Read more</em>
+
+
+        <h3 class="price "><del>19,-</del></h3>
+        <h3 class="discount">Discount Price</h3>
+
+        <img class="vegetarian" src="" alt="">
+        <h4 class="allergies">Allergens: laktose</h4>
+      </div>
+    </div>
+  </template>
+
+  <!-- BACKGROUND IMG -->
+  <div class="bgImg">
   </div>
+
+
+
   <div class="mainContainer">
 
     <!-- CATEGORIES -->
@@ -35,62 +73,20 @@
       </div>
     </div>
 
-    <div class="courseListContainer">
-      <div class="dishName">
-        <h2>Starters</h2>
-        <img class="vegatrian iconVeg" src="./img/icons-img/veg_1.svg" alt="">
 
-      </div>
+    <!-- LIST OS DISHES -->
+    <div class="courseListContainer">
+
     </div>
 
+
+    <!-- INFORMATION  -->
     <section class="descriptionContainer">
 
-      <div class="informationContainer">
 
-        <div class="imgContainer">
-          <img class="dishImg" src="./img/medium/voda-md.jpg" alt="">
-          <p class="longDescribtions d-none">Russisk ringbrød efter en klassisk opskrift fra Karapatien. Dejen blandes
-            koldhæver 30 dage, inde brødet bages over bål. Meget sprødt, godt med Karapatisk bjerggedsmør.</p>
-          <h3 class="soldOut">SoldOut</h3>
-
-        </div>
-        <div class="info">
-          <h1 class="name ">Name</h1>
-
-          <p class="shortDescirbtion">Voda-vodka - vodka i rigelige mængder<em>Read more</em></p>
-
-
-          <h3 class="price">19,-</h3>
-          <h3 class="size">Discount Price</h3>
-          <img class="vegatrian iconVeg" src="./img/icons-img/veg_1.svg" alt="">
-          <h4>Allergens: laktose</h4>
-        </div>
-      </div>
     </section>
 
-    <!-- <section class="descriptionContainer">
 
-      <div class="informationContainer">
-
-        <div class="imgContainer">
-          <img class="dishImg" src="./img/medium/voda-md.jpg" alt="">
-
-          <p class="longDescribtions">Russisk ringbrød efter en klassisk opskrift fra Karapatien. Dejen blandes
-            koldhæver 30 dage, inde brødet bages over bål. Meget sprødt, godt med Karapatisk bjerggedsmør.</p>
-        </div>
-        <div class="info">
-          <h1 class="name ">Name</h1>
-
-          <p class="shortDescirbtion">Voda-vodka - vodka i rigelige mængder<em>Read more</em></p>
-
-
-          <h3 class="price">19,-</h3>
-          <h3 class="size">Discount Price</h3>
-          <img class="vegatrian iconVeg" src="./img/icons-img/veg_1.svg" alt="">
-          <h4>Allergens: laktose</h4>
-        </div>
-      </div>
-    </section> -->
 
 
 
