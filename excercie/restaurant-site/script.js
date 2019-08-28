@@ -1,4 +1,4 @@
-const catogoriesContainer = document.querySelector(".catogoriesContainer");
+const categoriesContainer = document.querySelector(".categoriesContainer");
 const menuBtn = document.getElementById("menuBtn")
 
 const dishListTemplate = document.getElementById("dishListTemplate").content;
@@ -14,19 +14,33 @@ function toggleClass(element, className) {
 
 }
 
+// CATEGORIES MENU
+
+document.querySelectorAll(".category").forEach(c => {
+
+  c.addEventListener("click", displayNone)
+
+})
+
+function displayNone() {
+
+  categoriesContainer.style.display = "none";
+
+}
+
 
 // MEDIA QUERY TO ADD CLASSES
 function media_q() {
   if (window.innerWidth <= 500) {
-    toggleClass(catogoriesContainer, "d-flex")
-    toggleClass(catogoriesContainer, "d-none")
+    toggleClass(categoriesContainer, "d-flex")
+    toggleClass(categoriesContainer, "d-none")
   } else {
 
-    catogoriesContainer.classList.remove("d-none");
-    catogoriesContainer.classList.add("d-flex");
+    categoriesContainer.classList.remove("d-none");
+    categoriesContainer.classList.add("d-flex");
 
-    // toggleClass(catogoriesContainer, "d-flex")
-    // toggleClass(catogoriesContainer, "d-none")
+    // toggleClass(categoriesContainer, "d-flex")
+    // toggleClass(categoriesContainer, "d-none")
   }
 }
 
@@ -40,8 +54,8 @@ window.onresize = function () {
 
 menuBtn.onclick = function () {
 
-  toggleClass(catogoriesContainer, "d-none");
-  toggleClass(catogoriesContainer, "slideIn");
+  toggleClass(categoriesContainer, "d-none");
+  toggleClass(categoriesContainer, "slideIn");
 
 }
 
@@ -127,7 +141,7 @@ function Dish(category, name, price, soldOutStatus, discountAmount, shortDes, lo
 
 
 let cabanossiWithBeetrootcreme = new Dish("starter", "Cabanossi with beetrootcreme", 49, 0, 10, "Cabanossi med rødbedecreme og løg", "Cabanossi med rødbedecreme og creme er egentlig en forret, men kammerat Vladimir elskede denne ret så højt, at han forbød restauranter i Krigien at sælge det som andet end en hovedret. Vi anbefaler det dog som forret, inden en god Bortsjs. Skylles helst ned med vodka.", 1, ["laktose"], "./img/medium/rodbede-cabanossi-md.jpg");
-let caviarBruschetta = new Dish("starter", "Caviar bruschetta", 49, 0, 0, "Brushcetta med russisk Caviar", "Til denne dejlige Bruschetta anvender vi kun de dejligste sibiriske Caviar. Caviarerne presses ud af fiskene mens de stadig er levende, og vædes derefter i Putinka Vodka. Der er masser af bjerggedesmør på bruschettaene.", 0, "./img/medium/caviarbruschetta-md.jpg");
+let caviarBruschetta = new Dish("starter", "Caviar bruschetta", 49, 0, 0, "Brushcetta med russisk Caviar", "Til denne dejlige Bruschetta anvender vi kun de dejligste sibiriske Caviar. Caviarerne presses ud af fiskene mens de stadig er levende, og vædes derefter i Putinka Vodka. Der er masser af bjerggedesmør på bruschettaene.", 0, [], "./img/medium/caviarbruschetta-md.jpg");
 let stakeWithVegetables = new Dish("main", "Stake with vegetables", 179, 0, 20, "Diplomat-bøf med grønt", "Diplomatiet har haft mange udfordringer i USSR. Derfor blev der sørget godt for dem, og som nogen af de få, fik diplomaterne mange bøffer under den kolde krig. Diplomat-bøffen med grillede grøntsager og koldpresset olie er af ypperste kvalitet - kødet kommer fra udsultede ungkalve i Viktoriagrad.", 0, [], "./img/medium/boef-md.jpg");
 let guzni = new Dish("dessert", "Guzni", 69, 0, 0, "Guzni - Rødbede/nøddeis ", "Guzni - den verdenskendte rødbede/nøddeis fra Petrograd. Kammerat Boris Guzni var stor fan af den, og spiste den hver dag under Den kolde krig.", 1, [], "./img/medium/guzni-md.jpg");
 let vodka = new Dish("drinks", "Voda-vodka", 19, 0, 0, "Voda-vodka - vodka i rigelige mængder", "Voda-vodka - en vodka brygget på det pureste vand af smeltet sne fra Sibirien. Passer godt til alle hovedretter", 1, ["kartofler"], "./img/medium/voda-md.jpg");

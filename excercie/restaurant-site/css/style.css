@@ -63,7 +63,7 @@ button {
 
 
 
-.catogoriesContainer {
+.categoriesContainer {
   /* flex-direction: column; */
   align-content: space-around;
   justify-content: space-around;
@@ -276,7 +276,7 @@ img {
 
   }
 
-  .catogoriesContainer {
+  .categoriesContainer {
     flex-direction: column;
     position: fixed;
     width: 100%;
