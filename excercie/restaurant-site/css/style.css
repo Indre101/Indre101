@@ -31,6 +31,7 @@ button {
 
 .bgImg {
   background-image: url(../img/photo-1521017432531-fbd92d768814.jpeg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -59,6 +60,8 @@ button {
 .d-flex {
   display: flex;
 }
+
+
 
 .catogoriesContainer {
   /* flex-direction: column; */
@@ -104,7 +107,7 @@ img {
 }
 
 .iconVeg {
-  width: 10%;
+  width: 15%;
 }
 
 .informationContainer {
@@ -150,9 +153,20 @@ img {
   border-radius: 0;
 }
 
+.dishName {
+  margin: 0.5rem 0;
+  border: 1px solid;
+  border-radius: 0 0 15px 15px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+
 .dishName h2 {
   margin-left: 2rem;
   font-family: 'Raleway', sans-serif;
+  display: inline;
 }
 
 .d-none {
@@ -160,6 +174,20 @@ img {
 }
 
 
+.soldOut {
+  position: absolute;
+
+  font-size: 3rem;
+  align-self: center;
+  justify-self: center;
+  background-color: red;
+  padding: 3rem;
+  z-index: 5;
+  margin: 0;
+
+}
+
+/* MEDIA QUERIES */
 
 
 @media screen and (max-width:1300px) {
@@ -227,7 +255,9 @@ img {
 
   .dishImg {
     height: 35vh;
+    position: relative;
   }
+
 
   .courseListContainer {
     display: none;
@@ -270,42 +300,40 @@ img {
   }
 
 
+
+
   .menuButtonContainer {
     width: 100%;
     position: fixed;
     bottom: 0;
     height: 5rem;
-    background-color: #bcbfc3;
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #07081399);
+
+    /* background-color: #bcbfc3; */
     border-radius: 0;
     display: flex;
     justify-content: flex-end;
   }
 
   .descriptionContainer {
-    background-color: #0a1e1f82;
     border: 1px solid;
     height: 100vh;
-
     padding: 1rem 0;
+    background-image: linear-gradient(to bottom, #07081399, #000000), url(../img/photo-1521017432531-fbd92d768814.jpeg);
 
-  }
 
-  .descriptionContainer::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/photo-1521017432531-fbd92d768814.jpeg);
+
     background-size: cover;
-    z-index: -1;
-    left: 0;
-    top: 0;
+
   }
+
+
 
 
   .longDescribtions {
-    width: 50%;
+    width: 60%;
     height: 30vh;
+    position: absolute;
   }
 
   button {
@@ -345,7 +373,13 @@ img {
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 515px) {
+
+
+  .dishImg {
+    height: 32vh;
+  }
+
   .longDescribtions {
     width: 100%;
   }

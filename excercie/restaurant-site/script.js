@@ -44,3 +44,18 @@ menuBtn.onclick = function () {
   toggleClass(catogoriesContainer, "slideIn");
 
 }
+
+
+
+// OBJECT BLUEPRINT
+
+
+// function Dish() {
+
+//   this.id = id;
+//   this.name = name;
+//   this.price = price;
+//   this.
+
+
+// }
