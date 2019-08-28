@@ -30,10 +30,7 @@ cln.querySelector(".size").textContent = `${dog.size}`;
 cln.querySelector(".sex").textContent = `${dog.sex}`;
 cln.querySelector(".birthday").textContent = `${dog.birthday.year}-${dog.birthday.month}-${dog.birthday.day}`;
 cln.querySelector(".owners").textContent = `${dog.owners[0]} and ${dog.owners[1]}`;
-
-
 cln.querySelector("img").src = dog.img
-
 
 
 parent.appendChild(cln);

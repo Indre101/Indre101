@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+
+
+* {
+  box-sizing: border-box;
+  border-radius: 15px;
+
+}
+
+
+
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+
+}
+
+.bgImg {
+  background-image: url(../img/photo-1521017432531-fbd92d768814.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 0;
+}
+
+
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: 20% 3fr;
+  align-items: center;
+  width: 80%;
+  height: 50%;
+  border: 2px solid black;
+  background-color: #0a1e1fbd;
+  color: white;
+
+
+}
+
+.catogoriesContainer {
+  display: flex;
+  /* flex-direction: column; */
+  align-content: space-around;
+  justify-content: space-around;
+  height: 100%;
+  text-align: center;
+  background-color: #1f2323;
+  font-family: 'Ubuntu', sans-serif;
+  grid-area: 1/1/span 1/ span 2;
+  height: fit-content;
+  margin-bottom: auto;
+
+
+}
+
+
+
+h1 {
+  margin: -3% 0 0 0;
+  font-size: 2rem;
+}
+
+.noGutters {
+  padding: 0;
+  margin: 0;
+}
+
+.category {
+  border: 1px solid white;
+  width: 20%;
+}
+
+
+img {
+  object-fit: contain;
+}
+
+.dishImg {
+  height: 30vh;
+  position: absolute;
+
+}
+
+.iconVeg {
+  width: 10%;
+}
+
+.informationContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  margin-top: 3%;
+}
+
+.info {
+  padding-left: 2rem;
+}
+
+.descriptionContainer {
+  height: 100%;
+  padding: 3rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.longDescribtions {
+  z-index: 1;
+  width: 70%;
+  border: 1px solid;
+  height: 100%;
+  background-color: #251915de;
+  color: white;
+  padding: 2rem;
+  line-height: 1.5rem;
+  margin-right: 1rem;
+}
+
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.courseListContainer {
+  height: 100%;
+  margin: 0.5rem 0;
+  border-right: 1px solid white;
+  border-radius: none;
+  border-radius: 0;
+}
+
+.dishName h2 {
+  margin-left: 2rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.d-none {
+  display: none;
+}
