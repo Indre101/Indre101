@@ -11,14 +11,27 @@ function toggleClass(element, className) {
 
 
 // MEDIA QUERY TO ADD CLASSES
-
 function media_q() {
   if (window.innerWidth <= 500) {
     toggleClass(catogoriesContainer, "d-flex")
     toggleClass(catogoriesContainer, "d-none")
+  } else {
+
+    catogoriesContainer.classList.remove("d-none");
+    catogoriesContainer.classList.add("d-flex");
+
+    // toggleClass(catogoriesContainer, "d-flex")
+    // toggleClass(catogoriesContainer, "d-none")
   }
 }
-media_q()
+
+// WINDOW RESIZE FUNCTION
+window.onresize = function () {
+  media_q()
+}
+
+
+
 
 
 // COUNTER
