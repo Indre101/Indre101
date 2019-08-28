@@ -303,6 +303,7 @@ img {
 
 
   .informationContainer {
+    display: grid;
     grid-template-columns: 1fr;
     margin-top: 5%;
     background-image: linear-gradient(to bottom, #07081399, #000000), url(../img/photo-1521017432531-fbd92d768814.jpeg);

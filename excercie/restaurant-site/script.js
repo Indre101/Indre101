@@ -143,7 +143,6 @@ const startersList = document.querySelector(".starter");
 function displayNoneAll(arrayTodisplayNone) {
 
   arrayTodisplayNone.forEach(element => {
-    console.log(informationContainer)
     element.style.display = "none";
   });
 }
@@ -215,6 +214,8 @@ function addNewElements(newObjectName) {
 
   clnListItem.querySelector(".dishName").onclick = function () {
 
+
+
     displayNoneAll(informationContainer)
 
     oneInformationContainer.style.display = "grid";
@@ -263,21 +264,45 @@ let courseArray = [newDish, russianRingbread, russianRingbreadTwo]
 
 
 function listToShow(nameOfTheCategory) {
-  descriptionContainer.innerHTML = "";
 
-  courseListContainer.innerHTML = "";
-
+  let arrayIndex = [];
 
   for (let i = 0; i < courseArray.length; i++) {
 
-    if (courseArray[i].whichCategory() === nameOfTheCategory) {
-      addNewElements(courseArray[i]);
+    if (courseArray[i].whichCategory() === nameOfTheCategory && window.innerWidth <= 700) {
+      arrayIndex.push(i);
+
+      informationContainer[i].style.display = "grid";
+
+
+    } else if (courseArray[i].whichCategory() === nameOfTheCategory && window.innerWidth > 700) {
+
+
+      let minIndex = Math.min.apply(Math, arrayIndex);
+      informationContainer[i].style.visibilyty = "hidden";
+      informationContainer[minIndex].style.display = "grid";
+
+
+      dishNameContainers[i].style.visibilyty = "hidden";
+      dishNameContainers[minIndex].style.display = "block";
+
+
+
+
+    } else {
+      informationContainer[i].style.display = "none";
+      dishNameContainers[i].style.display = "none";
+
 
     }
 
   }
 
+
+
+
 }
+
 
 
 
