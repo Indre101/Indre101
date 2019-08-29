@@ -46,7 +46,9 @@ button {
 
 .mainContainer {
   display: grid;
+
   grid-template-columns: 20% 3fr;
+  grid-template-rows: min-content;
   /* align-items: center; */
   width: 80%;
   height: 600px;
@@ -133,7 +135,7 @@ h1 {
 
 .longDescribtions {
   z-index: 1;
-  align-self: flex-end;
+  align-self: center;
   width: 70%;
   border: 1px solid;
   height: 70%;

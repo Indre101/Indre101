@@ -343,8 +343,7 @@ function listToShow(nameOfTheCategory) {
 
       informationContainer[i].style.display = "none";
       informationContainer[minIndex].style.display = "grid";
-
-      // dishNameContainers[i].style.visibilyty = "hidden";
+      // NAMES OF THE DISHES
       dishNameContainers[i].style.display = "block";
     } else {
       informationContainer[i].style.display = "none";
