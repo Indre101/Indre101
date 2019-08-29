@@ -47,7 +47,7 @@ button {
 .mainContainer {
   display: grid;
   grid-template-columns: 20% 3fr;
-  align-items: center;
+  /* align-items: center; */
   width: 80%;
   height: 600px;
   /* border: 2px solid black; */
@@ -65,15 +65,17 @@ button {
 
 .categoriesContainer {
   /* flex-direction: column; */
-  align-content: space-around;
+  /* align-content: space-around;
   justify-content: space-around;
-  height: 100%;
+  height: 100%; */
   text-align: center;
   background-color: #1f2323;
   font-family: 'Ubuntu', sans-serif;
   grid-area: 1/1/span 1/ span 2;
   height: fit-content;
-  margin-bottom: auto;
+
+  /* height: fit-content;
+  margin-bottom: auto; */
 
 
 }
@@ -150,7 +152,7 @@ h1 {
 
 .courseListContainer {
   height: 100%;
-  margin: 0.5rem 0;
+  padding: 0.5rem 0;
   border-right: 1px solid white;
   border-radius: none;
   border-radius: 0;

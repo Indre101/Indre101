@@ -341,11 +341,11 @@ function listToShow(nameOfTheCategory) {
 
       let minIndex = Math.min.apply(Math, arrayIndex);
 
-      informationContainer[i].style.visibilyty = "hidden";
+      informationContainer[i].style.display = "none";
       informationContainer[minIndex].style.display = "grid";
 
-      dishNameContainers[i].style.visibilyty = "hidden";
-      dishNameContainers[minIndex].style.display = "block";
+      // dishNameContainers[i].style.visibilyty = "hidden";
+      dishNameContainers[i].style.display = "block";
     } else {
       informationContainer[i].style.display = "none";
       dishNameContainers[i].style.display = "none";
