@@ -49,7 +49,7 @@ button {
   grid-template-columns: 20% 3fr;
   align-items: center;
   width: 80%;
-  height: fit-content;
+  height: 600px;
   /* border: 2px solid black; */
   background-color: #0a1e1fbd;
   color: white;
@@ -82,7 +82,7 @@ button {
 
 h1 {
   margin: -3% 0 0 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .noGutters {
@@ -95,15 +95,12 @@ h1 {
   width: 20%;
 }
 
-
-img {
-  object-fit: contain;
-}
-
 .dishImg {
   height: 28vh;
   position: absolute;
   align-self: flex-end;
+  object-fit: cover;
+
 }
 
 .iconVeg {
@@ -111,7 +108,8 @@ img {
 }
 
 .vegetarian {
-  width: 6vw;
+  height: 3rem;
+  object-fit: contain;
 }
 
 .informationContainer {
