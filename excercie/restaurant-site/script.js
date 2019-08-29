@@ -300,6 +300,8 @@ function addNewElements(newObjectName) {
     cln.querySelector(".allergies").textContent = `Alergies: ${
       newObjectName.allergies[0]
     }`;
+  } else {
+    cln.querySelector(".allergies").style.visibilyty = "hidden";
   }
 
   // APPEND TO LIST

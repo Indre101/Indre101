@@ -96,9 +96,10 @@ h1 {
 }
 
 .dishImg {
+  width: 25%;
   height: 28vh;
   position: absolute;
-  align-self: flex-end;
+  align-self: center;
   object-fit: cover;
 
 }
@@ -114,17 +115,17 @@ h1 {
 
 .informationContainer {
   display: grid;
+  height: 100%;
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-  margin-top: 3%;
 }
 
 .info {
-  margin-right: auto;
+  align-self: center;
 }
 
 .descriptionContainer {
   height: 100%;
-  padding: 3rem 0;
+  padding: 2rem;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -153,6 +154,7 @@ h1 {
   border-right: 1px solid white;
   border-radius: none;
   border-radius: 0;
+  overflow: scroll;
 }
 
 .dishName {
@@ -242,8 +244,13 @@ h1 {
     margin: 0 auto;
   }
 
+  .soldOut {
+    font-size: 2rem;
+  }
+
   .dishImg {
-    height: 20vh;
+    height: 30vh;
+    width: 30%;
     align-self: center;
   }
 
@@ -265,9 +272,14 @@ h1 {
 
   .dishImg {
     height: 35vh;
+    width: 90%;
     position: relative;
   }
 
+
+  .descriptionContainer {
+    padding: 0;
+  }
 
   .courseListContainer {
     display: none;
@@ -303,7 +315,6 @@ h1 {
   .informationContainer {
     display: grid;
     grid-template-columns: 1fr;
-    margin-top: 5%;
     background-image: linear-gradient(to bottom, #07081399, #000000), url(../img/photo-1521017432531-fbd92d768814.jpeg);
     background-size: cover;
     height: 100vh;
@@ -329,14 +340,7 @@ h1 {
     justify-content: flex-end;
   }
 
-  .descriptionContainer {
-    border: 1px solid;
-    height: 100vh;
-    padding: 1rem 0;
-    /* background-image: linear-gradient(to bottom, #07081399, #000000), url(../img/photo-1521017432531-fbd92d768814.jpeg);
-    background-size: cover; */
 
-  }
 
 
 
@@ -375,7 +379,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 4rem;
   }
 
   .info {
