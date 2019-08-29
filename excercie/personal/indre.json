@@ -1,0 +1,19 @@
+{
+  "name": "Indre",
+  "birthday": "1989-10-17",
+  "nationality": "lithuanian",
+  "studyPrograme": "MMD",
+  "children": [],
+  "skills": [{
+    "name": "sleeping",
+    "level": 5
+  }, {
+    "name": "drinking coffe",
+    "level": 5
+  }, {
+    "name": "CSS",
+    "level": 3
+  }],
+  "genger": "female",
+  "IamThisScaredOfJs": "3"
+}

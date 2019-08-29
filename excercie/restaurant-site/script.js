@@ -16,11 +16,6 @@ function toggleClass(element, className) {
 
 // CATEGORIES MENU
 
-document.querySelectorAll(".category").forEach(c => {
-
-  c.addEventListener("click", displayNone)
-
-})
 
 function displayNone() {
 
@@ -34,10 +29,22 @@ function media_q() {
   if (window.innerWidth <= 500) {
     toggleClass(categoriesContainer, "d-flex")
     toggleClass(categoriesContainer, "d-none")
+
+    document.querySelectorAll(".category").forEach(c => {
+
+      c.addEventListener("click", displayNone)
+
+    })
   } else {
 
     categoriesContainer.classList.remove("d-none");
     categoriesContainer.classList.add("d-flex");
+
+    document.querySelectorAll(".category").forEach(c => {
+
+      c.removeEventListener("click", displayNone)
+
+    })
 
     // toggleClass(categoriesContainer, "d-flex")
     // toggleClass(categoriesContainer, "d-none")
