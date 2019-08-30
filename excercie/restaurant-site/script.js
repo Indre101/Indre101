@@ -131,15 +131,7 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
     data.forEach(showCourses);
   });
 
-let courseArray = [
-  // cabanossiWithBeetrootcreme,
-  // caviarBruschetta,
-  // stakeWithVegetables,
-  // guzni,
-  // vodka,
-  // zygroffsFarmersPlate,
-  // russianRingbread
-];
+let courseArray = [];
 
 function showCourses(course) {
   let newDish = new Dish(
@@ -156,12 +148,12 @@ function showCourses(course) {
   );
 
   courseArray.push(newDish);
-  console.log(course);
 
   let informationContainer = document.querySelectorAll(".informationContainer");
   displayNoneAll(informationContainer);
   // informationContainer[0].style.display = "grid";
   addNewElements(newDish);
+  console.log(newDish);
 }
 
 const startersList = document.querySelector(".starter");
@@ -169,7 +161,6 @@ const startersList = document.querySelector(".starter");
 function displayNoneAll(arrayTodisplayNone) {
   arrayTodisplayNone.forEach(element => {
     element.style.display = "none";
-    console.log("ghkjl");
   });
 }
 
@@ -264,10 +255,12 @@ function addNewElements(newObjectName) {
   descriptionContainer.appendChild(cln);
 }
 
-// let informationContainer = document.querySelectorAll(".informationContainer");
-
 function listToShow(nameOfTheCategory) {
+  let informationContainer = document.querySelectorAll(".informationContainer");
+  let dishNameContainers = document.querySelectorAll(".dishName");
+
   let arrayIndex = [];
+
   media_q();
 
   for (let i = 0; i < courseArray.length; i++) {
@@ -285,6 +278,8 @@ function listToShow(nameOfTheCategory) {
       arrayIndex.push(i);
 
       let minIndex = Math.min.apply(Math, arrayIndex);
+
+      console.log(dishNameContainers);
 
       informationContainer[i].style.display = "none";
       informationContainer[minIndex].style.display = "grid";
@@ -316,8 +311,6 @@ document.querySelector(".desserts").onclick = function() {
 document.querySelector(".drinks").onclick = function() {
   listToShow("drinks");
 };
-
-let dishNameContainers = document.querySelectorAll(".dishName");
 
 // let informationContainer = document.querySelectorAll(".informationContainer");
 
