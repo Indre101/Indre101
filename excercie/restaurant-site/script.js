@@ -9,6 +9,8 @@ const dishInformationTemplate = document.getElementById(
 const descriptionContainer = document.querySelector(".descriptionContainer");
 const courseListContainer = document.querySelector(".courseListContainer");
 
+let categoryButtonsList = document.querySelectorAll(".category");
+
 // FUNCTION TO TOGGLE CLASSES
 function toggleClass(element, className) {
   element.classList.toggle(className);
@@ -22,25 +24,25 @@ function displayNone() {
 
 // MEDIA QUERY TO ADD CLASSES
 function media_q() {
-  if (window.innerWidth <= 500) {
-    toggleClass(categoriesContainer, "d-flex");
-    toggleClass(categoriesContainer, "d-none");
+  if (window.innerWidth <= 700) {
+    categoriesContainer.classList.toggle("d-none");
+    categoriesContainer.classList.toggle("d-flex");
+    console.log("jhbknlm");
 
-    document.querySelectorAll(".category").forEach(c => {
-      c.addEventListener("click", displayNone);
-    });
+    // CATEGORY BUTTONS CLICKED REMOVES THE CATEGORY MENU
   } else {
     categoriesContainer.classList.remove("d-none");
     categoriesContainer.classList.add("d-flex");
-
-    document.querySelectorAll(".category").forEach(c => {
-      c.removeEventListener("click", displayNone);
-    });
-
-    // toggleClass(categoriesContainer, "d-flex")
-    // toggleClass(categoriesContainer, "d-none")
   }
 }
+
+media_q();
+
+categoryButtonsList.forEach(c => {
+  c.onclick = function() {
+    console.log("fgvhjk");
+  };
+});
 
 // WINDOW RESIZE FUNCTION
 window.onresize = function() {
@@ -50,8 +52,11 @@ window.onresize = function() {
 // MENU BUTTON FUNCTION
 
 menuBtn.onclick = function() {
-  toggleClass(categoriesContainer, "d-none");
-  toggleClass(categoriesContainer, "slideIn");
+  media_q();
+
+  // toggleClass(categoriesContainer, "slideIn");
+  // // toggleClass(categoriesContainer, "d-flex");
+  // toggleClass(categoriesContainer, "d-none");
 };
 
 // OBJECT BLUEPRINT
@@ -324,6 +329,7 @@ let courseArray = [
 
 function listToShow(nameOfTheCategory) {
   let arrayIndex = [];
+  media_q();
 
   for (let i = 0; i < courseArray.length; i++) {
     if (

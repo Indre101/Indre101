@@ -110,6 +110,7 @@ h1 {
 
 .iconVeg {
   width: 3vw;
+  display: none;
 }
 
 .vegetarian {
@@ -125,6 +126,10 @@ h1 {
 
 .info {
   align-self: center;
+  grid-template-columns: 1fr;
+  display: grid;
+  height: 400px;
+  grid-auto-rows: minmax(50px, auto);
 }
 
 .descriptionContainer {
@@ -154,7 +159,6 @@ h1 {
 
 .courseListContainer {
   height: 100%;
-  padding: 0.5rem 0;
   border-right: 1px solid white;
   border-radius: none;
   border-radius: 0;
@@ -162,12 +166,9 @@ h1 {
 }
 
 .dishName {
-  padding: 2.5rem 0 0.5rem 0;
-  border: 1px solid;
+  padding: 2rem 0 0.5rem 0.8rem;
+  border-bottom: 1px solid;
   border-radius: 0 0 15px 15px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
 }
 
 
