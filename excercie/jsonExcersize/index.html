@@ -7,14 +7,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    .main {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: 2rem;
+    }
 
+    .tweet {
+      border: 1px solid;
+      padding: 1rem;
+      border-radius: 15px;
+    }
+
+    img {
+      width: 10%;
+    }
   </style>
 </head>
 
 <body>
   <template>
-    <h2 class="item"></h2>
-    <p class="text"></p>
+    <div class="tweet">
+      <h2 class="item"></h2>
+      <p class="text"></p>
+      <img src="" alt="">
+    </div>
   </template>
 
   <div class="main"></div>

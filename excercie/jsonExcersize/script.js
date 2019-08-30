@@ -18,8 +18,11 @@ function showText(e) {
   const template = document.querySelector("template").content;
   const myCln = template.cloneNode(true);
   const main = document.querySelector(".main");
-  myCln.querySelector(".item").textContent = e.user.name
-  myCln.querySelector(".text").textContent = e.text
+  myCln.querySelector(".item").textContent = e.user.name;
+  myCln.querySelector(".text").textContent = e.text;
+  myCln.querySelector("img").src = e.user.profile_image_url;
+
+
 
 
   main.appendChild(myCln);
