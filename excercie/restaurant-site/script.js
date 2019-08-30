@@ -27,7 +27,6 @@ function media_q() {
   if (window.innerWidth <= 700) {
     categoriesContainer.classList.toggle("d-none");
     categoriesContainer.classList.toggle("d-flex");
-    console.log("jhbknlm");
 
     // CATEGORY BUTTONS CLICKED REMOVES THE CATEGORY MENU
   } else {
@@ -37,12 +36,6 @@ function media_q() {
 }
 
 media_q();
-
-categoryButtonsList.forEach(c => {
-  c.onclick = function() {
-    console.log("fgvhjk");
-  };
-});
 
 // WINDOW RESIZE FUNCTION
 window.onresize = function() {
@@ -114,7 +107,7 @@ function Dish(
   };
 
   this.isVegIcon = function() {
-    if (this.isVegStatus === 1) {
+    if (this.isVegStatus === true) {
       return "./img/icons-img/veg_1.svg";
     } else {
       return "./img/icons-img/non-veg_1.svg";
@@ -122,7 +115,7 @@ function Dish(
   };
 
   this.isSoldOut = function() {
-    if (soldOutStatus === 1) {
+    if (soldOutStatus) {
       return true;
     } else {
       return false;
@@ -130,109 +123,61 @@ function Dish(
   };
 }
 
-let cabanossiWithBeetrootcreme = new Dish(
-  "starter",
-  "Cabanossi with beetrootcreme",
-  49,
-  0,
-  10,
-  "Cabanossi med rødbedecreme og løg",
-  "Cabanossi med rødbedecreme og creme er egentlig en forret, men kammerat Vladimir elskede denne ret så højt, at han forbød restauranter i Krigien at sælge det som andet end en hovedret. Vi anbefaler det dog som forret, inden en god Bortsjs. Skylles helst ned med vodka.",
-  1,
-  ["laktose"],
-  "./img/medium/rodbede-cabanossi-md.jpg"
-);
-let caviarBruschetta = new Dish(
-  "starter",
-  "Caviar bruschetta",
-  49,
-  0,
-  0,
-  "Brushcetta med russisk Caviar",
-  "Til denne dejlige Bruschetta anvender vi kun de dejligste sibiriske Caviar. Caviarerne presses ud af fiskene mens de stadig er levende, og vædes derefter i Putinka Vodka. Der er masser af bjerggedesmør på bruschettaene.",
-  0,
-  [],
-  "./img/medium/caviarbruschetta-md.jpg"
-);
-let stakeWithVegetables = new Dish(
-  "main",
-  "Stake with vegetables",
-  179,
-  0,
-  20,
-  "Diplomat-bøf med grønt",
-  "Diplomatiet har haft mange udfordringer i USSR. Derfor blev der sørget godt for dem, og som nogen af de få, fik diplomaterne mange bøffer under den kolde krig. Diplomat-bøffen med grillede grøntsager og koldpresset olie er af ypperste kvalitet - kødet kommer fra udsultede ungkalve i Viktoriagrad.",
-  0,
-  [],
-  "./img/medium/boef-md.jpg"
-);
-let guzni = new Dish(
-  "dessert",
-  "Guzni",
-  69,
-  0,
-  0,
-  "Guzni - Rødbede/nøddeis ",
-  "Guzni - den verdenskendte rødbede/nøddeis fra Petrograd. Kammerat Boris Guzni var stor fan af den, og spiste den hver dag under Den kolde krig.",
-  1,
-  [],
-  "./img/medium/guzni-md.jpg"
-);
-let vodka = new Dish(
-  "drinks",
-  "Voda-vodka",
-  19,
-  0,
-  0,
-  "Voda-vodka - vodka i rigelige mængder",
-  "Voda-vodka - en vodka brygget på det pureste vand af smeltet sne fra Sibirien. Passer godt til alle hovedretter",
-  1,
-  ["kartofler"],
-  "./img/medium/voda-md.jpg"
-);
-let zygroffsFarmersPlate = new Dish(
-  "main",
-  "Zygroffs farmers plate",
-  109,
-  1,
-  0,
-  "Zygroffs bondeplatte - bøndernes svar på Tapas",
-  "Under de trange vilkår på landet Sibirien, bød husmændene på Zygroffs bondeplatte, når der var fest. Gode, grove grøntsager, tørret bøffelkod og masser af æg. Specielt for bondeplatten blev de dejlige caviar skiftet ud med billige kapers. ",
-  0,
-  ["Laktose"],
-  "./img/medium/bondeplatte-md.jpg"
-);
+fetch("https://kea-alt-del.dk/t5/api/productlist")
+  .then(res => {
+    return res.json();
+  })
+  .then(data => {
+    data.forEach(showCourses);
+  });
 
-let russianRingbread = new Dish(
-  "sideorders",
-  "Russian Ringbread",
-  29,
-  1,
-  0,
-  "Russisk ringbrød bagt med det fineste gryzni-mel fra Gryzkigistan",
-  "Russisk ringbrød bagt med det fineste gryzni-mel fra Gryzkigistan",
-  1,
-  ["laktose"],
-  "./img/medium/ringbroed-md.jpg"
-);
+let courseArray = [
+  // cabanossiWithBeetrootcreme,
+  // caviarBruschetta,
+  // stakeWithVegetables,
+  // guzni,
+  // vodka,
+  // zygroffsFarmersPlate,
+  // russianRingbread
+];
 
-addNewElements(cabanossiWithBeetrootcreme);
-addNewElements(caviarBruschetta);
-addNewElements(stakeWithVegetables);
-addNewElements(guzni);
-addNewElements(vodka);
-addNewElements(zygroffsFarmersPlate);
-addNewElements(russianRingbread);
+function showCourses(course) {
+  let newDish = new Dish(
+    course.category,
+    course.name,
+    course.price,
+    course.soldout,
+    course.discount,
+    course.shortdescription,
+    course.shortdescription,
+    course.vegetarian,
+    course.vegetarian,
+    course.image
+  );
+
+  courseArray.push(newDish);
+  console.log(course);
+
+  let informationContainer = document.querySelectorAll(".informationContainer");
+  displayNoneAll(informationContainer);
+  // informationContainer[0].style.display = "grid";
+  addNewElements(newDish);
+}
 
 const startersList = document.querySelector(".starter");
 
 function displayNoneAll(arrayTodisplayNone) {
   arrayTodisplayNone.forEach(element => {
     element.style.display = "none";
+    console.log("ghkjl");
   });
 }
 
 function addNewElements(newObjectName) {
+  let informationContainer = document.querySelectorAll(".informationContainer");
+
+  // displayfirst(informationContainer);
+
   // CLONE LIST ITEM
   let clnListItem = dishListTemplate.cloneNode(true);
   clnListItem.querySelector("h2").textContent = newObjectName.name;
@@ -250,7 +195,9 @@ function addNewElements(newObjectName) {
   }
 
   // DISH IMAGE
-  cln.querySelector(".dishImg").src = newObjectName.dishImg;
+  cln.querySelector(
+    ".dishImg"
+  ).src = `./img/medium/${newObjectName.dishImg}-md.jpg`;
 
   // LONG DESCRIPTION
   const longDes = cln.querySelector(".longDescribtions");
@@ -317,15 +264,7 @@ function addNewElements(newObjectName) {
   descriptionContainer.appendChild(cln);
 }
 
-let courseArray = [
-  cabanossiWithBeetrootcreme,
-  caviarBruschetta,
-  stakeWithVegetables,
-  guzni,
-  vodka,
-  zygroffsFarmersPlate,
-  russianRingbread
-];
+// let informationContainer = document.querySelectorAll(".informationContainer");
 
 function listToShow(nameOfTheCategory) {
   let arrayIndex = [];
@@ -379,11 +318,9 @@ document.querySelector(".drinks").onclick = function() {
 };
 
 let dishNameContainers = document.querySelectorAll(".dishName");
-let informationContainer = document.querySelectorAll(".informationContainer");
+
+// let informationContainer = document.querySelectorAll(".informationContainer");
 
 function displayfirst(array) {
   array[0].style.display = "grid";
 }
-
-displayNoneAll(informationContainer);
-displayfirst(informationContainer);

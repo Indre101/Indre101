@@ -158,7 +158,7 @@ h1 {
 }
 
 .courseListContainer {
-  height: 100%;
+  height: inherit;
   border-right: 1px solid white;
   border-radius: none;
   border-radius: 0;
