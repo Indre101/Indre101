@@ -46,10 +46,6 @@ window.onresize = function() {
 
 menuBtn.onclick = function() {
   media_q();
-
-  // toggleClass(categoriesContainer, "slideIn");
-  // // toggleClass(categoriesContainer, "d-flex");
-  // toggleClass(categoriesContainer, "d-none");
 };
 
 // OBJECT BLUEPRINT
@@ -123,6 +119,7 @@ function Dish(
   };
 }
 
+// FETCH FUNCTION
 fetch("https://kea-alt-del.dk/t5/api/productlist")
   .then(res => {
     return res.json();
@@ -134,6 +131,7 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
 let courseArray = [];
 
 function showCourses(course) {
+  // CREATING NEW OBJECTS
   let newDish = new Dish(
     course.category,
     course.name,
@@ -147,24 +145,28 @@ function showCourses(course) {
     course.image
   );
 
+  // PUSSHING CREATED OBJECTS
   courseArray.push(newDish);
 
-  let informationContainer = document.querySelectorAll(".informationContainer");
-  displayNoneAll(informationContainer);
-  // informationContainer[0].style.display = "grid";
   addNewElements(newDish);
+  informationContainer = document.querySelectorAll(".informationContainer");
+
+  displayNoneAll(informationContainer);
+  informationContainer[0].style.display = "grid";
 }
+
+let informationContainer = document.querySelectorAll(".informationContainer");
 
 function displayNoneAll(arrayTodisplayNone) {
   arrayTodisplayNone.forEach(element => {
     element.style.display = "none";
+    console.log("jklk");
   });
 }
 
 function addNewElements(newObjectName) {
   // displayfirst(informationContainer);
-  let informationContainer = document.querySelectorAll(".informationContainer");
-
+  informationContainer = document.querySelectorAll(".informationContainer");
   // CLONE LIST ITEM
   let clnListItem = dishListTemplate.cloneNode(true);
   clnListItem.querySelector("h2").textContent = newObjectName.name;
@@ -217,10 +219,17 @@ function addNewElements(newObjectName) {
   }
 
   let oneInformationContainer = cln.querySelector(".informationContainer");
+  oneInformationContainer.style.display = "none";
 
   clnListItem.querySelector(".dishName").onclick = function() {
-    displayNoneAll(informationContainer);
-    console.log(oneInformationContainer);
+    // displayNoneAll(informationContainer);
+
+    console.log(informationContainer.length);
+
+    informationContainer.forEach(element => {
+      element.style.display = "none";
+    });
+
     oneInformationContainer.style.display = "grid";
   };
 
