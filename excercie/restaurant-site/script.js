@@ -153,10 +153,7 @@ function showCourses(course) {
   displayNoneAll(informationContainer);
   // informationContainer[0].style.display = "grid";
   addNewElements(newDish);
-  console.log(newDish);
 }
-
-const startersList = document.querySelector(".starter");
 
 function displayNoneAll(arrayTodisplayNone) {
   arrayTodisplayNone.forEach(element => {
@@ -165,9 +162,8 @@ function displayNoneAll(arrayTodisplayNone) {
 }
 
 function addNewElements(newObjectName) {
-  let informationContainer = document.querySelectorAll(".informationContainer");
-
   // displayfirst(informationContainer);
+  let informationContainer = document.querySelectorAll(".informationContainer");
 
   // CLONE LIST ITEM
   let clnListItem = dishListTemplate.cloneNode(true);
@@ -224,7 +220,7 @@ function addNewElements(newObjectName) {
 
   clnListItem.querySelector(".dishName").onclick = function() {
     displayNoneAll(informationContainer);
-
+    console.log(oneInformationContainer);
     oneInformationContainer.style.display = "grid";
   };
 
@@ -278,9 +274,6 @@ function listToShow(nameOfTheCategory) {
       arrayIndex.push(i);
 
       let minIndex = Math.min.apply(Math, arrayIndex);
-
-      console.log(dishNameContainers);
-
       informationContainer[i].style.display = "none";
       informationContainer[minIndex].style.display = "grid";
       // NAMES OF THE DISHES
@@ -291,6 +284,8 @@ function listToShow(nameOfTheCategory) {
     }
   }
 }
+
+const startersList = document.querySelector(".starter");
 
 startersList.onclick = function() {
   listToShow("starter");
