@@ -26,7 +26,7 @@ function changeBg() {
     btn.style.backgroundColor = "";
   });
 
-  this.style.backgroundColor = "blue";
+  this.style.backgroundColor = "rgb(111, 111, 154)";
 }
 
 // CATEGORIES MENU
@@ -51,23 +51,6 @@ function media_q() {
 media_q();
 
 // WINDOW RESIZE FUNCTION
-window.onresize = function() {
-  media_q();
-
-  if (window.innerWidth > 700) {
-    categoryButtonsList.forEach(btn => {
-      let bgColor = getComputedStyle(btn).backgroundColor;
-
-      if (bgColor === "rgb(0, 0, 255)") {
-        let quotedVar = btn.textContent.toLowerCase();
-        let str = quotedVar.replace(/\s+/g, "");
-        listToShow(str);
-
-        console.log(str);
-      }
-    });
-  }
-};
 
 // MENU BUTTON FUNCTION
 
@@ -87,7 +70,8 @@ function Dish(
   longDes,
   isVegStatus,
   allergies,
-  dishImg
+  dishImg,
+  alcohol
 ) {
   this.category = category;
   this.name = name;
@@ -99,6 +83,15 @@ function Dish(
   this.longDes = longDes;
   this.soldOutStatus = soldOutStatus;
   this.allergies = allergies;
+  this.alcohol = alcohol;
+
+  this.containsAlcohol = function() {
+    if (this.alcohol > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
   this.whichCategory = function() {
     let categoryName;
@@ -152,6 +145,7 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
     return res.json();
   })
   .then(data => {
+    // console.log(data);
     data.forEach(showCourses);
   });
 
@@ -169,7 +163,8 @@ function showCourses(course) {
     course.shortdescription,
     course.vegetarian,
     course.vegetarian,
-    course.image
+    course.image,
+    course.alcohol
   );
 
   // PUSSHING CREATED OBJECTS
@@ -250,14 +245,25 @@ function addNewElements(newObjectName) {
   clnListItem.querySelector(".dishName").onclick = function() {
     // displayNoneAll(informationContainer);
 
-    console.log(informationContainer.length);
-
     informationContainer.forEach(element => {
       element.style.display = "none";
     });
 
     oneInformationContainer.style.display = "grid";
   };
+
+  // ALCOHOL
+
+  if (newObjectName.containsAlcohol()) {
+    cln.querySelector(".alcoContainer").style.visibility = "visible";
+    console.log(cln.querySelector(".alcoContainer"));
+
+    cln.querySelector(
+      ".alcoContainer h4"
+    ).textContent = `Contains ${newObjectName.alcohol}%`;
+  } else {
+    cln.querySelector(".alcoContainer").style.visibility = "hidden";
+  }
 
   // VEGETARIAN OR NOT
   cln.querySelector(".vegetarian").src = newObjectName.isVegIcon();
@@ -321,6 +327,23 @@ function listToShow(nameOfTheCategory) {
     }
   }
 }
+
+window.onresize = function() {
+  media_q();
+
+  if (window.innerWidth > 700) {
+    categoryButtonsList.forEach(btn => {
+      let bgColor = getComputedStyle(btn).backgroundColor;
+      console.log(bgColor);
+
+      if (bgColor === "rgb(111, 111, 154)") {
+        let quotedVar = btn.textContent.toLowerCase();
+        let str = quotedVar.replace(/\s+/g, "");
+        listToShow(str);
+      }
+    });
+  }
+};
 
 const startersList = document.querySelector(".starter");
 

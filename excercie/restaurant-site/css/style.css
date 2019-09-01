@@ -85,7 +85,6 @@ button {
 
 
 h1 {
-  margin: -3% 0 0 0;
   font-size: 1.5rem;
 }
 
@@ -163,6 +162,16 @@ h1 {
   border-radius: none;
   border-radius: 0;
   overflow: scroll;
+}
+
+.alcoContainer {
+  display: flex;
+  /* visibility: hidden; */
+
+}
+
+.alco {
+  width: 4rem;
 }
 
 .dishName {
