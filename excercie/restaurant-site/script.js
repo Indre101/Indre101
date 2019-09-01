@@ -16,24 +16,17 @@ function toggleClass(element, className) {
   element.classList.toggle(className);
 }
 
-
-
 // CATEGORY BUTTON PRESSED FUNCTION
-categoryButtonsList.forEach((btn) => {
-
-  btn.addEventListener("click", changeBg)
- 
-
-
-})
-
+categoryButtonsList.forEach(btn => {
+  btn.addEventListener("click", changeBg);
+});
 
 function changeBg() {
-  categoryButtonsList.forEach(btn=>{
-    btn.style.backgroundColor ="";
-  })
+  categoryButtonsList.forEach(btn => {
+    btn.style.backgroundColor = "";
+  });
 
-  this.style.backgroundColor="blue";
+  this.style.backgroundColor = "blue";
 }
 
 // CATEGORIES MENU
@@ -58,13 +51,27 @@ function media_q() {
 media_q();
 
 // WINDOW RESIZE FUNCTION
-window.onresize = function () {
+window.onresize = function() {
   media_q();
+
+  if (window.innerWidth > 700) {
+    categoryButtonsList.forEach(btn => {
+      let bgColor = getComputedStyle(btn).backgroundColor;
+
+      if (bgColor === "rgb(0, 0, 255)") {
+        let quotedVar = btn.textContent.toLowerCase();
+        let str = quotedVar.replace(/\s+/g, "");
+        listToShow(str);
+
+        console.log(str);
+      }
+    });
+  }
 };
 
 // MENU BUTTON FUNCTION
 
-menuBtn.onclick = function () {
+menuBtn.onclick = function() {
   media_q();
 };
 
@@ -93,7 +100,7 @@ function Dish(
   this.soldOutStatus = soldOutStatus;
   this.allergies = allergies;
 
-  this.whichCategory = function () {
+  this.whichCategory = function() {
     let categoryName;
 
     if (this.category.toLowerCase() === "starter") {
@@ -111,7 +118,7 @@ function Dish(
     return categoryName;
   };
 
-  this.disCountPrice = function () {
+  this.disCountPrice = function() {
     let finalPrice;
 
     if (this.discountAmount > 0) {
@@ -122,7 +129,7 @@ function Dish(
     }
   };
 
-  this.isVegIcon = function () {
+  this.isVegIcon = function() {
     if (this.isVegStatus === true) {
       return "./img/icons-img/veg_1.svg";
     } else {
@@ -130,7 +137,7 @@ function Dish(
     }
   };
 
-  this.isSoldOut = function () {
+  this.isSoldOut = function() {
     if (soldOutStatus) {
       return true;
     } else {
@@ -210,11 +217,11 @@ function addNewElements(newObjectName) {
   // LONG DESCRIPTION
   const longDes = cln.querySelector(".longDescribtions");
   longDes.textContent = newObjectName.longDes;
-  cln.querySelector(".more").onmouseover = function () {
+  cln.querySelector(".more").onmouseover = function() {
     longDes.classList.remove("d-none");
   };
 
-  cln.querySelector(".more").onmouseout = function () {
+  cln.querySelector(".more").onmouseout = function() {
     longDes.classList.add("d-none");
   };
 
@@ -240,7 +247,7 @@ function addNewElements(newObjectName) {
   let oneInformationContainer = cln.querySelector(".informationContainer");
   oneInformationContainer.style.display = "none";
 
-  clnListItem.querySelector(".dishName").onclick = function () {
+  clnListItem.querySelector(".dishName").onclick = function() {
     // displayNoneAll(informationContainer);
 
     console.log(informationContainer.length);
@@ -293,7 +300,6 @@ function listToShow(nameOfTheCategory) {
       window.innerWidth <= 700
     ) {
       arrayIndex.push(i);
-
       informationContainer[i].style.display = "grid";
     } else if (
       courseArray[i].whichCategory() === nameOfTheCategory &&
@@ -301,37 +307,40 @@ function listToShow(nameOfTheCategory) {
     ) {
       arrayIndex.push(i);
 
+      console.log("show");
       let minIndex = Math.min.apply(Math, arrayIndex);
       informationContainer[i].style.display = "none";
       informationContainer[minIndex].style.display = "grid";
       // NAMES OF THE DISHES
       dishNameContainers[i].style.display = "block";
     } else {
+      console.log("nothing");
       informationContainer[i].style.display = "none";
       dishNameContainers[i].style.display = "none";
+      // arrayIndex = [];
     }
   }
 }
 
 const startersList = document.querySelector(".starter");
 
-startersList.onclick = function () {
+startersList.onclick = function() {
   listToShow("starter");
 };
 
-document.querySelector(".sideOrder").onclick = function () {
+document.querySelector(".sideOrder").onclick = function() {
   listToShow("sideorders");
 };
 
-document.querySelector(".main").onclick = function () {
+document.querySelector(".main").onclick = function() {
   listToShow("main");
 };
 
-document.querySelector(".desserts").onclick = function () {
+document.querySelector(".desserts").onclick = function() {
   listToShow("dessert");
 };
 
-document.querySelector(".drinks").onclick = function () {
+document.querySelector(".drinks").onclick = function() {
   listToShow("drinks");
 };
 
