@@ -16,6 +16,26 @@ function toggleClass(element, className) {
   element.classList.toggle(className);
 }
 
+
+
+// CATEGORY BUTTON PRESSED FUNCTION
+categoryButtonsList.forEach((btn) => {
+
+  btn.addEventListener("click", changeBg)
+ 
+
+
+})
+
+
+function changeBg() {
+  categoryButtonsList.forEach(btn=>{
+    btn.style.backgroundColor ="";
+  })
+
+  this.style.backgroundColor="blue";
+}
+
 // CATEGORIES MENU
 
 function displayNone() {
@@ -38,13 +58,13 @@ function media_q() {
 media_q();
 
 // WINDOW RESIZE FUNCTION
-window.onresize = function() {
+window.onresize = function () {
   media_q();
 };
 
 // MENU BUTTON FUNCTION
 
-menuBtn.onclick = function() {
+menuBtn.onclick = function () {
   media_q();
 };
 
@@ -73,7 +93,7 @@ function Dish(
   this.soldOutStatus = soldOutStatus;
   this.allergies = allergies;
 
-  this.whichCategory = function() {
+  this.whichCategory = function () {
     let categoryName;
 
     if (this.category.toLowerCase() === "starter") {
@@ -91,7 +111,7 @@ function Dish(
     return categoryName;
   };
 
-  this.disCountPrice = function() {
+  this.disCountPrice = function () {
     let finalPrice;
 
     if (this.discountAmount > 0) {
@@ -102,7 +122,7 @@ function Dish(
     }
   };
 
-  this.isVegIcon = function() {
+  this.isVegIcon = function () {
     if (this.isVegStatus === true) {
       return "./img/icons-img/veg_1.svg";
     } else {
@@ -110,7 +130,7 @@ function Dish(
     }
   };
 
-  this.isSoldOut = function() {
+  this.isSoldOut = function () {
     if (soldOutStatus) {
       return true;
     } else {
@@ -160,7 +180,6 @@ let informationContainer = document.querySelectorAll(".informationContainer");
 function displayNoneAll(arrayTodisplayNone) {
   arrayTodisplayNone.forEach(element => {
     element.style.display = "none";
-    console.log("jklk");
   });
 }
 
@@ -191,11 +210,11 @@ function addNewElements(newObjectName) {
   // LONG DESCRIPTION
   const longDes = cln.querySelector(".longDescribtions");
   longDes.textContent = newObjectName.longDes;
-  cln.querySelector(".more").onmouseover = function() {
+  cln.querySelector(".more").onmouseover = function () {
     longDes.classList.remove("d-none");
   };
 
-  cln.querySelector(".more").onmouseout = function() {
+  cln.querySelector(".more").onmouseout = function () {
     longDes.classList.add("d-none");
   };
 
@@ -221,7 +240,7 @@ function addNewElements(newObjectName) {
   let oneInformationContainer = cln.querySelector(".informationContainer");
   oneInformationContainer.style.display = "none";
 
-  clnListItem.querySelector(".dishName").onclick = function() {
+  clnListItem.querySelector(".dishName").onclick = function () {
     // displayNoneAll(informationContainer);
 
     console.log(informationContainer.length);
@@ -296,23 +315,23 @@ function listToShow(nameOfTheCategory) {
 
 const startersList = document.querySelector(".starter");
 
-startersList.onclick = function() {
+startersList.onclick = function () {
   listToShow("starter");
 };
 
-document.querySelector(".sideOrder").onclick = function() {
+document.querySelector(".sideOrder").onclick = function () {
   listToShow("sideorders");
 };
 
-document.querySelector(".main").onclick = function() {
+document.querySelector(".main").onclick = function () {
   listToShow("main");
 };
 
-document.querySelector(".desserts").onclick = function() {
+document.querySelector(".desserts").onclick = function () {
   listToShow("dessert");
 };
 
-document.querySelector(".drinks").onclick = function() {
+document.querySelector(".drinks").onclick = function () {
   listToShow("drinks");
 };
 
