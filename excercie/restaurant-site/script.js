@@ -145,7 +145,6 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
     return res.json();
   })
   .then(data => {
-    // console.log(data);
     data.forEach(showCourses);
   });
 
@@ -195,6 +194,11 @@ function addNewElements(newObjectName) {
 
   // ASSIGN NAMES
   let cln = dishInformationTemplate.cloneNode(true);
+
+  //CATEGORIES
+  cln.querySelector(
+    ".categoryName"
+  ).textContent = `(${newObjectName.category})`;
 
   cln.querySelector("h1").textContent = newObjectName.name;
   // CLONE DISH INFO
@@ -256,7 +260,6 @@ function addNewElements(newObjectName) {
 
   if (newObjectName.containsAlcohol()) {
     cln.querySelector(".alcoContainer").style.visibility = "visible";
-    console.log(cln.querySelector(".alcoContainer"));
 
     cln.querySelector(
       ".alcoContainer h4"
@@ -313,14 +316,12 @@ function listToShow(nameOfTheCategory) {
     ) {
       arrayIndex.push(i);
 
-      console.log("show");
       let minIndex = Math.min.apply(Math, arrayIndex);
       informationContainer[i].style.display = "none";
       informationContainer[minIndex].style.display = "grid";
       // NAMES OF THE DISHES
       dishNameContainers[i].style.display = "block";
     } else {
-      console.log("nothing");
       informationContainer[i].style.display = "none";
       dishNameContainers[i].style.display = "none";
       // arrayIndex = [];
@@ -334,7 +335,6 @@ window.onresize = function() {
   if (window.innerWidth > 700) {
     categoryButtonsList.forEach(btn => {
       let bgColor = getComputedStyle(btn).backgroundColor;
-      console.log(bgColor);
 
       if (bgColor === "rgb(111, 111, 154)") {
         let quotedVar = btn.textContent.toLowerCase();

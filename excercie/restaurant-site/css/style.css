@@ -85,6 +85,7 @@ button {
 
 
 h1 {
+  margin: 0;
   font-size: 1.5rem;
 }
 
@@ -106,6 +107,12 @@ h1 {
   object-fit: cover;
 
 }
+
+.vegetarianAndAlcoContainer {
+  display: flex;
+  align-items: center;
+}
+
 
 .iconVeg {
   width: 3vw;
@@ -167,11 +174,13 @@ h1 {
 .alcoContainer {
   display: flex;
   /* visibility: hidden; */
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
 .alco {
-  width: 4rem;
+  width: 3rem;
 }
 
 .dishName {
@@ -283,6 +292,11 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+
+  .info {
+
+    grid-auto-rows: minmax(1rem, auto);
+  }
 
   .dishImg {
     height: 35vh;
