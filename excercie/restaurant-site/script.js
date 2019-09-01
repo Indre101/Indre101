@@ -97,11 +97,11 @@ function Dish(
     let categoryName;
 
     if (this.category.toLowerCase() === "starter") {
-      categoryName = "starter";
+      categoryName = "starters";
     } else if (this.category.toLowerCase() === "main") {
       categoryName = "main";
     } else if (this.category.toLowerCase() === "dessert") {
-      categoryName = "dessert";
+      categoryName = "desserts";
     } else if (this.category.toLowerCase() === "drinks") {
       categoryName = "drinks";
     } else if (this.category.toLowerCase() === "sideorders") {
@@ -348,7 +348,7 @@ window.onresize = function() {
 const startersList = document.querySelector(".starter");
 
 startersList.onclick = function() {
-  listToShow("starter");
+  listToShow("starters");
 };
 
 document.querySelector(".sideOrder").onclick = function() {
@@ -360,7 +360,7 @@ document.querySelector(".main").onclick = function() {
 };
 
 document.querySelector(".desserts").onclick = function() {
-  listToShow("dessert");
+  listToShow("desserts");
 };
 
 document.querySelector(".drinks").onclick = function() {
