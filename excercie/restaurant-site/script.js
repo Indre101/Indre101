@@ -11,6 +11,7 @@ const courseListContainer = document.querySelector(".courseListContainer");
 
 let categoryButtonsList = document.querySelectorAll(".category");
 
+
 // FUNCTION TO TOGGLE CLASSES
 function toggleClass(element, className) {
   element.classList.toggle(className);
@@ -87,7 +88,6 @@ function Dish(
 
   this.isCatogery = function () {
     if (!this.category) {
-      console.log("true");
       return true;
     }
   };
@@ -100,27 +100,6 @@ function Dish(
     }
   };
 
-  this.whichCategory = function () {
-    let categoryName;
-
-    if (this.category.toLowerCase() === "starter") {
-      categoryName = "starters";
-    } else if (this.category.toLowerCase() === "main") {
-      categoryName = "main";
-    } else if (this.category.toLowerCase() === "dessert") {
-      categoryName = "desserts";
-    } else if (this.category.toLowerCase() === "drinks") {
-      categoryName = "drinks";
-    } else if (this.category.toLowerCase() === "sideorders") {
-      categoryName = "sideorders";
-    } else {
-      console.log("false")
-
-      return false;
-    }
-
-    return categoryName;
-  };
 
   this.disCountPrice = function () {
     let finalPrice;
@@ -152,18 +131,44 @@ function Dish(
 
 // FETCH FUNCTION
 fetch("https://kea-alt-del.dk/t5/api/productlist")
-  .then(res => {
-    return res.json();
-  })
+  .then(res => res.json())
   .then(data => {
-    let testDish = new Dish("bla", "bla", 49, 0, 0, "blalvl", "blklk", 1, [], "cola", 1);
-
-    addNewElements(testDish);
 
     data.forEach(showCourses);
+    const A = filteredCategoriesArray()
+
+    A.forEach(el => {
+      let newCategory = document.createElement("div");
+      newCategory.classList.add("category");
+      let newCategoryName = document.createElement("h2");
+      newCategoryName.textContent = el;
+      newCategory.appendChild(newCategoryName);
+
+
+      newCategory.addEventListener("click", listToShow)
+      categoriesContainer.appendChild(newCategory);
+    })
   });
 
+
+
+
+
+
+
+
 let courseArray = [];
+
+
+let informationContainer = document.querySelectorAll(".informationContainer");
+
+let categoriesArray = [];
+
+let filteredCategoriesArray = () => categoriesArray.filter(function (item, index) {
+  return categoriesArray.indexOf(item) >= index;
+});
+
+
 
 
 
@@ -186,13 +191,18 @@ function showCourses(course) {
   // PUSSHING CREATED OBJECTS
   courseArray.push(newDish);
 
+
   addNewElements(newDish);
+
+
   informationContainer = document.querySelectorAll(".informationContainer");
+
 
   displayNoneAll(informationContainer);
   informationContainer[0].style.display = "grid";
 
 
+  categoriesArray.push(newDish.category)
 
 
 }
@@ -200,7 +210,8 @@ function showCourses(course) {
 
 
 
-let informationContainer = document.querySelectorAll(".informationContainer");
+
+// let informationContainer = document.querySelectorAll(".informationContainer");
 
 function displayNoneAll(arrayTodisplayNone) {
   arrayTodisplayNone.forEach(element => {
@@ -208,8 +219,17 @@ function displayNoneAll(arrayTodisplayNone) {
   });
 }
 
+
+
+
+
+
+
+
 function addNewElements(newObjectName) {
   // displayfirst(informationContainer);
+
+
   informationContainer = document.querySelectorAll(".informationContainer");
   // CLONE LIST ITEM
   let clnListItem = dishListTemplate.cloneNode(true);
@@ -223,11 +243,7 @@ function addNewElements(newObjectName) {
   cln.querySelector(
     ".categoryName"
   ).textContent = `(${newObjectName.category})`;
-  // NEW CATEGORY
 
-
-
-  // 
 
   // NAME
   cln.querySelector("h1").textContent = newObjectName.name;
@@ -322,17 +338,7 @@ function addNewElements(newObjectName) {
 
 
   // NEW  CATEGORIES ADDED
-  if (!newObjectName.whichCategory()) {
 
-    let newCategory = document.createElement("div");
-    let newCategoryName = document.createElement("h2");
-    newCategoryName.textContent = newObjectName.category;
-    newCategory.appendChild(newCategoryName);
-    categoriesContainer.appendChild(newCategory);
-    console.log("false")
-
-
-  }
 
   // APPEND TO LIST
   // courseListContainer.appendChild(clnListItem);
@@ -349,23 +355,32 @@ function addNewElements(newObjectName) {
 
 }
 
+
+
+
+
+
 function listToShow(nameOfTheCategory) {
-  let informationContainer = document.querySelectorAll(".informationContainer");
+
+  informationContainer = document.querySelectorAll(".informationContainer");
   let dishNameContainers = document.querySelectorAll(".dishName");
 
   let arrayIndex = [];
 
   media_q();
 
+
   for (let i = 0; i < courseArray.length; i++) {
+
+
     if (
-      courseArray[i].whichCategory() === nameOfTheCategory &&
+      courseArray[i].category.toLowerCase() === this.textContent.toLowerCase() &&
       window.innerWidth <= 700
     ) {
       arrayIndex.push(i);
       informationContainer[i].style.display = "grid";
     } else if (
-      courseArray[i].whichCategory() === nameOfTheCategory &&
+      courseArray[i].category.toLowerCase() === this.textContent.toLowerCase() &&
       window.innerWidth > 700
     ) {
       arrayIndex.push(i);
@@ -386,6 +401,7 @@ function listToShow(nameOfTheCategory) {
 window.onresize = function () {
   media_q();
 
+
   if (window.innerWidth > 700) {
     categoryButtonsList.forEach(btn => {
       let bgColor = getComputedStyle(btn).backgroundColor;
@@ -399,29 +415,12 @@ window.onresize = function () {
   }
 };
 
-const startersList = document.querySelector(".starter");
 
-startersList.onclick = function () {
-  listToShow("starters");
-};
 
-document.querySelector(".sideOrder").onclick = function () {
-  listToShow("sideorders");
-};
-
-document.querySelector(".main").onclick = function () {
-  listToShow("main");
-};
-
-document.querySelector(".desserts").onclick = function () {
-  listToShow("desserts");
-};
-
-document.querySelector(".drinks").onclick = function () {
-  listToShow("drinks");
-};
 
 // let informationContainer = document.querySelectorAll(".informationContainer");
+
+
 
 function displayfirst(array) {
   array[0].style.display = "grid";
