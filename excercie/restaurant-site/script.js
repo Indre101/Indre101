@@ -54,7 +54,7 @@ media_q();
 
 // MENU BUTTON FUNCTION
 
-menuBtn.onclick = function() {
+menuBtn.onclick = function () {
   media_q();
 };
 
@@ -85,7 +85,14 @@ function Dish(
   this.allergies = allergies;
   this.alcohol = alcohol;
 
-  this.containsAlcohol = function() {
+  this.isCatogery = function () {
+    if (!this.category) {
+      console.log("true");
+      return true;
+    }
+  };
+
+  this.containsAlcohol = function () {
     if (this.alcohol > 0) {
       return true;
     } else {
@@ -93,7 +100,7 @@ function Dish(
     }
   };
 
-  this.whichCategory = function() {
+  this.whichCategory = function () {
     let categoryName;
 
     if (this.category.toLowerCase() === "starter") {
@@ -106,12 +113,16 @@ function Dish(
       categoryName = "drinks";
     } else if (this.category.toLowerCase() === "sideorders") {
       categoryName = "sideorders";
+    } else {
+      console.log("false")
+
+      return false;
     }
 
     return categoryName;
   };
 
-  this.disCountPrice = function() {
+  this.disCountPrice = function () {
     let finalPrice;
 
     if (this.discountAmount > 0) {
@@ -122,7 +133,7 @@ function Dish(
     }
   };
 
-  this.isVegIcon = function() {
+  this.isVegIcon = function () {
     if (this.isVegStatus === true) {
       return "./img/icons-img/veg_1.svg";
     } else {
@@ -130,7 +141,7 @@ function Dish(
     }
   };
 
-  this.isSoldOut = function() {
+  this.isSoldOut = function () {
     if (soldOutStatus) {
       return true;
     } else {
@@ -145,10 +156,16 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
     return res.json();
   })
   .then(data => {
+    let testDish = new Dish("bla", "bla", 49, 0, 0, "blalvl", "blklk", 1, [], "cola", 1);
+
+    addNewElements(testDish);
+
     data.forEach(showCourses);
   });
 
 let courseArray = [];
+
+
 
 function showCourses(course) {
   // CREATING NEW OBJECTS
@@ -174,7 +191,14 @@ function showCourses(course) {
 
   displayNoneAll(informationContainer);
   informationContainer[0].style.display = "grid";
+
+
+
+
 }
+
+
+
 
 let informationContainer = document.querySelectorAll(".informationContainer");
 
@@ -199,7 +223,13 @@ function addNewElements(newObjectName) {
   cln.querySelector(
     ".categoryName"
   ).textContent = `(${newObjectName.category})`;
+  // NEW CATEGORY
 
+
+
+  // 
+
+  // NAME
   cln.querySelector("h1").textContent = newObjectName.name;
   // CLONE DISH INFO
 
@@ -216,11 +246,11 @@ function addNewElements(newObjectName) {
   // LONG DESCRIPTION
   const longDes = cln.querySelector(".longDescribtions");
   longDes.textContent = newObjectName.longDes;
-  cln.querySelector(".more").onmouseover = function() {
+  cln.querySelector(".more").onmouseover = function () {
     longDes.classList.remove("d-none");
   };
 
-  cln.querySelector(".more").onmouseout = function() {
+  cln.querySelector(".more").onmouseout = function () {
     longDes.classList.add("d-none");
   };
 
@@ -246,7 +276,7 @@ function addNewElements(newObjectName) {
   let oneInformationContainer = cln.querySelector(".informationContainer");
   oneInformationContainer.style.display = "none";
 
-  clnListItem.querySelector(".dishName").onclick = function() {
+  clnListItem.querySelector(".dishName").onclick = function () {
     // displayNoneAll(informationContainer);
 
     informationContainer.forEach(element => {
@@ -287,12 +317,36 @@ function addNewElements(newObjectName) {
     cln.querySelector(".allergies").style.visibilyty = "hidden";
   }
 
+
+
+
+
+  // NEW  CATEGORIES ADDED
+  if (!newObjectName.whichCategory()) {
+
+    let newCategory = document.createElement("div");
+    let newCategoryName = document.createElement("h2");
+    newCategoryName.textContent = newObjectName.category;
+    newCategory.appendChild(newCategoryName);
+    categoriesContainer.appendChild(newCategory);
+    console.log("false")
+
+
+  }
+
   // APPEND TO LIST
   // courseListContainer.appendChild(clnListItem);
   courseListContainer.appendChild(clnListItem);
 
   // APPEND TO THE DESCRIPTION
   descriptionContainer.appendChild(cln);
+
+
+
+
+
+
+
 }
 
 function listToShow(nameOfTheCategory) {
@@ -329,7 +383,7 @@ function listToShow(nameOfTheCategory) {
   }
 }
 
-window.onresize = function() {
+window.onresize = function () {
   media_q();
 
   if (window.innerWidth > 700) {
@@ -347,23 +401,23 @@ window.onresize = function() {
 
 const startersList = document.querySelector(".starter");
 
-startersList.onclick = function() {
+startersList.onclick = function () {
   listToShow("starters");
 };
 
-document.querySelector(".sideOrder").onclick = function() {
+document.querySelector(".sideOrder").onclick = function () {
   listToShow("sideorders");
 };
 
-document.querySelector(".main").onclick = function() {
+document.querySelector(".main").onclick = function () {
   listToShow("main");
 };
 
-document.querySelector(".desserts").onclick = function() {
+document.querySelector(".desserts").onclick = function () {
   listToShow("desserts");
 };
 
-document.querySelector(".drinks").onclick = function() {
+document.querySelector(".drinks").onclick = function () {
   listToShow("drinks");
 };
 
