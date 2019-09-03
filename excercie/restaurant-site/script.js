@@ -380,18 +380,15 @@ function addNewElements(newObjectName) {
 
     if (data.allergens.length > 0) {
       data.allergens.forEach(alergyItem => {
-
-
         // const parent = cln.querySelector(".allergies")
         const li = document.createElement("li");
-        li.textContent = data.allergens;
+        li.textContent = alergyItem;
         allergies.appendChild(li);
-
-
-
-
       })
 
+    } else {
+
+      allergies.style.visibility = "hidden";
     }
 
 
