@@ -73,7 +73,6 @@ function Dish(
   shortDes,
   longDes,
   isVegStatus,
-  allergies,
   dishImg,
   alcohol
 ) {
@@ -87,8 +86,8 @@ function Dish(
   this.shortDes = shortDes;
   this.longDes = longDes;
   this.soldOutStatus = soldOutStatus;
-  this.allergies = allergies;
   this.alcohol = alcohol;
+
 
   this.isCatogery = function () {
     if (!this.category) {
@@ -226,7 +225,6 @@ function showCourses(course) {
     course.shortdescription,
     course.shortdescription,
     course.vegetarian,
-    course.vegetarian,
     course.image,
     course.alcohol
   );
@@ -300,30 +298,25 @@ function addNewElements(newObjectName) {
     ".dishImg"
   ).src = `./img/medium/${newObjectName.dishImg}-md.jpg`;
 
-  // LONG DESCRIPTION
+  // LONG DESCRIPTION DYNAMIC ADDING
   const longDes = cln.querySelector(".longDescribtions");
 
-
   cln.querySelector(".more").onmouseover = function () {
-
-
     fetch(`https://kea-alt-del.dk/t5/api/product?id=${newObjectName.id}`).then(res => {
       return res.json()
     }).then(data => {
 
-      console.log(data);
-
       longDes.textContent = data.longdescription;
       longDes.classList.remove("d-none");
-
     })
-
-
   };
 
   cln.querySelector(".more").onmouseout = function () {
     longDes.classList.add("d-none");
   };
+
+
+
 
   // SHORT DESCRIPTION
   cln.querySelector(".shortDescirbtion").textContent = newObjectName.shortDes;
@@ -355,7 +348,60 @@ function addNewElements(newObjectName) {
     });
 
     oneInformationContainer.style.display = "grid";
+
   };
+
+
+  let allergies = cln.querySelector(".allergies")
+
+
+
+  // ALLERGIES  
+  fetch(`https://kea-alt-del.dk/t5/api/product?id=${newObjectName.id}`).then(res => {
+    return res.json()
+  }).then(data => {
+
+    console.log(data);
+
+    // if (data.allergens.length > 0) {
+    //   data.allergens.forEach(alergyItem => {
+
+    //     const parent = document.querySelector(".allergies")
+    //     parent.textContent = "jlklækl"
+    //     const li = document.createElement("li");
+    //     li.textContent = data.allergens;
+    //     parent.appendChild(li);
+
+
+    //   })
+
+    // }
+
+
+    if (data.allergens.length > 0) {
+      data.allergens.forEach(alergyItem => {
+
+
+        // const parent = cln.querySelector(".allergies")
+        const li = document.createElement("li");
+        li.textContent = data.allergens;
+        allergies.appendChild(li);
+
+
+
+
+      })
+
+    }
+
+
+
+
+  })
+
+
+
+
 
   // ALCOHOL
 
@@ -371,23 +417,6 @@ function addNewElements(newObjectName) {
 
   // VEGETARIAN OR NOT
   cln.querySelector(".vegetarian").src = newObjectName.isVegIcon();
-
-  // ALERGENS
-
-  let arr = newObjectName.allergies;
-
-  if (newObjectName.allergies.length === 2) {
-    cln.querySelector(".allergies").textContent = `Alergies: ${
-      newObjectName.allergies[0]
-    }, ${newObjectName.allergies[1]}`;
-  } else if (newObjectName.allergies.length === 1) {
-    cln.querySelector(".allergies").textContent = `Alergies: ${
-      newObjectName.allergies[0]
-    }`;
-  } else {
-    cln.querySelector(".allergies").style.visibilyty = "hidden";
-  }
-
 
 
   // courseListContainer.appendChild(clnListItem);
