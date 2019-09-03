@@ -12,23 +12,25 @@ const courseListContainer = document.querySelector(".courseListContainer");
 let categoryButtonsList = document.querySelectorAll(".category");
 
 
+
+
 // FUNCTION TO TOGGLE CLASSES
 function toggleClass(element, className) {
   element.classList.toggle(className);
 }
 
-// CATEGORY BUTTON PRESSED FUNCTION
-categoryButtonsList.forEach(btn => {
-  btn.addEventListener("click", changeBg);
-});
+// // CATEGORY BUTTON PRESSED FUNCTION
+// categoryButtonsList.forEach(btn => {
+//   btn.addEventListener("click", changeBg);
+// });
 
-function changeBg() {
-  categoryButtonsList.forEach(btn => {
-    btn.style.backgroundColor = "";
-  });
+// function changeBg() {
+//   categoryButtonsList.forEach(btn => {
+//     btn.style.backgroundColor = "";
+//   });
 
-  this.style.backgroundColor = "rgb(111, 111, 154)";
-}
+//   this.style.backgroundColor = "rgb(111, 111, 154)";
+// }
 
 // CATEGORIES MENU
 
@@ -62,6 +64,7 @@ menuBtn.onclick = function () {
 // OBJECT BLUEPRINT
 
 function Dish(
+  id,
   category,
   name,
   price,
@@ -74,6 +77,7 @@ function Dish(
   dishImg,
   alcohol
 ) {
+  this.id = id;
   this.category = category;
   this.name = name;
   this.isVegStatus = isVegStatus;
@@ -135,21 +139,59 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
   .then(data => {
 
     data.forEach(showCourses);
-    const A = filteredCategoriesArray()
+    const filteredCategoriesNamesOnly = filteredCategoriesArray()
 
-    A.forEach(el => {
+    filteredCategoriesNamesOnly.forEach(el => {
       let newCategory = document.createElement("div");
       newCategory.classList.add("category");
       let newCategoryName = document.createElement("h2");
       let categoryName = el.charAt(0).toUpperCase() + el.slice(1)
-      console.log(categoryName)
       newCategoryName.textContent = categoryName;
       newCategory.appendChild(newCategoryName);
-      newCategory.addEventListener("click", listToShow)
-      categoriesContainer.appendChild(newCategory);
-    })
-  });
 
+      window.onresize = function () {
+        media_q();
+
+        if (window.innerWidth > 700) {
+          categoryButtonsList.forEach(btn => {
+            let bgColor = getComputedStyle(btn).backgroundColor;
+
+            if (bgColor === "rgb(111, 111, 154)") {
+              let quotedVar = btn.textContent;
+              let str = quotedVar.replace(/\s+/g, "");
+              btn.addEventListener("click", listToShow)
+
+            }
+          });
+        }
+      };
+
+      newCategory.addEventListener("click", listToShow)
+
+      categoriesContainer.appendChild(newCategory);
+
+
+
+      let categoryButtonsList = document.querySelectorAll(".category");
+      // CATEGORY BUTTON PRESSED FUNCTION
+      categoryButtonsList.forEach(btn => {
+        btn.addEventListener("click", changeBg);
+      });
+
+      function changeBg() {
+        categoryButtonsList.forEach(btn => {
+          btn.style.backgroundColor = "";
+        });
+
+        this.style.backgroundColor = "rgb(111, 111, 154)";
+      }
+    })
+
+
+
+
+
+  });
 
 
 
@@ -175,6 +217,7 @@ let filteredCategoriesArray = () => categoriesArray.filter(function (item, index
 function showCourses(course) {
   // CREATING NEW OBJECTS
   let newDish = new Dish(
+    course.id,
     course.category,
     course.name,
     course.price,
@@ -190,8 +233,6 @@ function showCourses(course) {
 
   // PUSSHING CREATED OBJECTS
   courseArray.push(newDish);
-
-
   addNewElements(newDish);
 
 
@@ -261,9 +302,23 @@ function addNewElements(newObjectName) {
 
   // LONG DESCRIPTION
   const longDes = cln.querySelector(".longDescribtions");
-  longDes.textContent = newObjectName.longDes;
+
+
   cln.querySelector(".more").onmouseover = function () {
-    longDes.classList.remove("d-none");
+
+
+    fetch(`https://kea-alt-del.dk/t5/api/product?id=${newObjectName.id}`).then(res => {
+      return res.json()
+    }).then(data => {
+
+      console.log(data);
+
+      longDes.textContent = data.longdescription;
+      longDes.classList.remove("d-none");
+
+    })
+
+
   };
 
   cln.querySelector(".more").onmouseout = function () {
@@ -346,7 +401,7 @@ function addNewElements(newObjectName) {
 
 
 
-function listToShow(nameOfTheCategory) {
+function listToShow(categoryBtn) {
 
   informationContainer = document.querySelectorAll(".informationContainer");
   let dishNameContainers = document.querySelectorAll(".dishName");
@@ -355,27 +410,32 @@ function listToShow(nameOfTheCategory) {
 
   media_q();
 
+  categoryBtn = this;
+  console.log(categoryBtn.textContent.toLowerCase())
+
+  let nameOfTheCategory = this.textContent.toLowerCase()
 
   for (let i = 0; i < courseArray.length; i++) {
 
 
     if (
       courseArray[i].category.toLowerCase() === this.textContent.toLowerCase() &&
-      window.innerWidth <= 700
-    ) {
-      arrayIndex.push(i);
-      informationContainer[i].style.display = "grid";
-    } else if (
-      courseArray[i].category.toLowerCase() === this.textContent.toLowerCase() &&
       window.innerWidth > 700
     ) {
-      arrayIndex.push(i);
 
+      console.log("test")
+      arrayIndex.push(i);
       let minIndex = Math.min.apply(Math, arrayIndex);
       informationContainer[i].style.display = "none";
       informationContainer[minIndex].style.display = "grid";
       // NAMES OF THE DISHES
       dishNameContainers[i].style.display = "block";
+    } else if (
+      courseArray[i].category.toLowerCase() === this.textContent.toLowerCase() &&
+      window.innerWidth <= 700
+    ) {
+      arrayIndex.push(i);
+      informationContainer[i].style.display = "grid";
     } else {
       informationContainer[i].style.display = "none";
       dishNameContainers[i].style.display = "none";
@@ -384,22 +444,23 @@ function listToShow(nameOfTheCategory) {
   }
 }
 
-window.onresize = function () {
-  media_q();
+// window.onresize = function () {
+//   media_q();
 
 
-  if (window.innerWidth > 700) {
-    categoryButtonsList.forEach(btn => {
-      let bgColor = getComputedStyle(btn).backgroundColor;
+//   // if (window.innerWidth > 700) {
+//   //   console.log(categoryButtonsList)
+//   //   categoryButtonsList.forEach(btn => {
+//   //     let bgColor = getComputedStyle(btn).backgroundColor;
 
-      if (bgColor === "rgb(111, 111, 154)") {
-        let quotedVar = btn.textContent.toLowerCase();
-        let str = quotedVar.replace(/\s+/g, "");
-        listToShow(str);
-      }
-    });
-  }
-};
+//   //     if (bgColor === "rgb(111, 111, 154)") {
+//   //       let quotedVar = btn.textContent.toLowerCase();
+//   //       let str = quotedVar.replace(/\s+/g, "");
+//   //       listToShow(str);
+//   //     }
+//   //   });
+//   // }
+// };
 
 
 

@@ -93,6 +93,9 @@ button {
 }
 
 
+.discount {
+  align-self: center;
+}
 
 .categoriesContainer {
   /* flex-direction: column; */
@@ -174,7 +177,7 @@ h1 {
 }
 
 .longDescribtions {
-  z-index: 1;
+  z-index: 6;
   align-self: center;
   width: 70%;
   border: 1px solid;
@@ -183,6 +186,7 @@ h1 {
   color: white;
   padding: 2rem;
   line-height: 1.5rem;
+  overflow: scroll;
   /* margin-right: 1rem; */
 }
 
