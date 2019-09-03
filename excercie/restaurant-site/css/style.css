@@ -187,6 +187,10 @@ h1 {
 }
 
 
+.more {
+  align-self: center;
+}
+
 .imgContainer {
   display: flex;
   justify-content: center;

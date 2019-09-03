@@ -141,10 +141,10 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
       let newCategory = document.createElement("div");
       newCategory.classList.add("category");
       let newCategoryName = document.createElement("h2");
-      newCategoryName.textContent = el;
+      let categoryName = el.charAt(0).toUpperCase() + el.slice(1)
+      console.log(categoryName)
+      newCategoryName.textContent = categoryName;
       newCategory.appendChild(newCategoryName);
-
-
       newCategory.addEventListener("click", listToShow)
       categoriesContainer.appendChild(newCategory);
     })
@@ -335,12 +335,6 @@ function addNewElements(newObjectName) {
 
 
 
-
-
-  // NEW  CATEGORIES ADDED
-
-
-  // APPEND TO LIST
   // courseListContainer.appendChild(clnListItem);
   courseListContainer.appendChild(clnListItem);
 
@@ -348,15 +342,7 @@ function addNewElements(newObjectName) {
   descriptionContainer.appendChild(cln);
 
 
-
-
-
-
-
 }
-
-
-
 
 
 
