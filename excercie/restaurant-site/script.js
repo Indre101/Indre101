@@ -361,23 +361,6 @@ function addNewElements(newObjectName) {
     return res.json()
   }).then(data => {
 
-    console.log(data);
-
-    // if (data.allergens.length > 0) {
-    //   data.allergens.forEach(alergyItem => {
-
-    //     const parent = document.querySelector(".allergies")
-    //     parent.textContent = "jlklækl"
-    //     const li = document.createElement("li");
-    //     li.textContent = data.allergens;
-    //     parent.appendChild(li);
-
-
-    //   })
-
-    // }
-
-
     if (data.allergens.length > 0) {
       data.allergens.forEach(alergyItem => {
         // const parent = cln.querySelector(".allergies")
