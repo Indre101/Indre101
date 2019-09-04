@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-  img{
-    width:5rem;
-    
-    </style>
+    img {
+      width: 5rem;
+    }
+  </style>
 </head>
+
 <body>
-  
-  <img src="emily-wilson-CsqQRUkvE80-unsplash.jpg" alt="" >
+
+  <img src="" alt="">
+
+  <script>
+    async function showImg() {
+      const res = await fetch("emily-wilson-CsqQRUkvE80-unsplash.jpg");
+      const data = await res.blob();
+      console.log(data);
+
+      document.querySelector("img").src = URL.createObjectURL(data);
+
+
+    }
+
+
+    showImg()
+  </script>
 </body>
+
 </html>
