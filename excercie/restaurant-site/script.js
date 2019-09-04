@@ -155,7 +155,7 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
           categoryButtonsList.forEach(btn => {
             let bgColor = getComputedStyle(btn).backgroundColor;
 
-            if (bgColor === "rgb(111, 111, 154)") {
+            if (bgColor === "rgb(41, 86, 12)") {
               let quotedVar = btn.textContent;
               let str = quotedVar.replace(/\s+/g, "");
               btn.addEventListener("click", listToShow)
@@ -182,7 +182,7 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
           btn.style.backgroundColor = "";
         });
 
-        this.style.backgroundColor = "rgb(111, 111, 154)";
+        this.style.backgroundColor = "rgb(41, 86, 12)";
       }
     })
 
