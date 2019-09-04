@@ -18,8 +18,8 @@
   <img src="" alt="">
 
   <script>
-    showImg().then(() => {
-      console.log("yay")
+    showImg().catch(error => {
+      console.log("error")
     })
 
     async function showImg() {
@@ -28,8 +28,6 @@
       document.querySelector("img").src = URL.createObjectURL(data);
 
     }
-
-    showImg()
   </script>
 </body>
 
