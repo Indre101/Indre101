@@ -18,16 +18,16 @@
   <img src="" alt="">
 
   <script>
+    showImg().then(() => {
+      console.log("yay")
+    })
+
     async function showImg() {
       const res = await fetch("emily-wilson-CsqQRUkvE80-unsplash.jpg");
       const data = await res.blob();
-      console.log(data);
-
       document.querySelector("img").src = URL.createObjectURL(data);
 
-
     }
-
 
     showImg()
   </script>
