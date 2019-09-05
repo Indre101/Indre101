@@ -11,9 +11,6 @@ const courseListContainer = document.querySelector(".courseListContainer");
 
 let categoryButtonsList = document.querySelectorAll(".category");
 
-
-
-
 // FUNCTION TO TOGGLE CLASSES
 function toggleClass(element, className) {
   element.classList.toggle(className);
@@ -57,7 +54,7 @@ media_q();
 
 // MENU BUTTON FUNCTION
 
-menuBtn.onclick = function () {
+menuBtn.onclick = function() {
   media_q();
 };
 
@@ -88,14 +85,13 @@ function Dish(
   this.soldOutStatus = soldOutStatus;
   this.alcohol = alcohol;
 
-
-  this.isCatogery = function () {
+  this.isCatogery = function() {
     if (!this.category) {
       return true;
     }
   };
 
-  this.containsAlcohol = function () {
+  this.containsAlcohol = function() {
     if (this.alcohol > 0) {
       return true;
     } else {
@@ -103,8 +99,7 @@ function Dish(
     }
   };
 
-
-  this.disCountPrice = function () {
+  this.disCountPrice = function() {
     let finalPrice;
 
     if (this.discountAmount > 0) {
@@ -115,7 +110,7 @@ function Dish(
     }
   };
 
-  this.isVegIcon = function () {
+  this.isVegIcon = function() {
     if (this.isVegStatus === true) {
       return "./img/icons-img/veg_1.svg";
     } else {
@@ -123,7 +118,7 @@ function Dish(
     }
   };
 
-  this.isSoldOut = function () {
+  this.isSoldOut = function() {
     if (soldOutStatus) {
       return true;
     } else {
@@ -136,19 +131,18 @@ function Dish(
 fetch("https://kea-alt-del.dk/t5/api/productlist")
   .then(res => res.json())
   .then(data => {
-
     data.forEach(showCourses);
-    const filteredCategoriesNamesOnly = filteredCategoriesArray()
+    const filteredCategoriesNamesOnly = filteredCategoriesArray();
 
     filteredCategoriesNamesOnly.forEach(el => {
       let newCategory = document.createElement("div");
       newCategory.classList.add("category");
       let newCategoryName = document.createElement("h2");
-      let categoryName = el.charAt(0).toUpperCase() + el.slice(1)
+      let categoryName = el.charAt(0).toUpperCase() + el.slice(1);
       newCategoryName.textContent = categoryName;
       newCategory.appendChild(newCategoryName);
 
-      window.onresize = function () {
+      window.onresize = function() {
         media_q();
 
         if (window.innerWidth > 700) {
@@ -156,20 +150,23 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
             let bgColor = getComputedStyle(btn).backgroundColor;
 
             if (bgColor === "rgb(41, 86, 12)") {
+              console.log("window resize");
+
               let quotedVar = btn.textContent;
               let str = quotedVar.replace(/\s+/g, "");
-              btn.addEventListener("click", listToShow)
-
+              listToShow(btn);
             }
           });
         }
       };
 
-      newCategory.addEventListener("click", listToShow)
+      // newCategory.addEventListener("click", listToShow);
+
+      newCategory.onclick = function() {
+        listToShow(newCategory);
+      };
 
       categoriesContainer.appendChild(newCategory);
-
-
 
       let categoryButtonsList = document.querySelectorAll(".category");
       // CATEGORY BUTTON PRESSED FUNCTION
@@ -184,34 +181,19 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
 
         this.style.backgroundColor = "rgb(41, 86, 12)";
       }
-    })
-
-
-
-
-
+    });
   });
 
-
-
-
-
-
-
 let courseArray = [];
-
 
 let informationContainer = document.querySelectorAll(".informationContainer");
 
 let categoriesArray = [];
 
-let filteredCategoriesArray = () => categoriesArray.filter(function (item, index) {
-  return categoriesArray.indexOf(item) >= index;
-});
-
-
-
-
+let filteredCategoriesArray = () =>
+  categoriesArray.filter(function(item, index) {
+    return categoriesArray.indexOf(item) >= index;
+  });
 
 function showCourses(course) {
   // CREATING NEW OBJECTS
@@ -233,22 +215,13 @@ function showCourses(course) {
   courseArray.push(newDish);
   addNewElements(newDish);
 
-
   informationContainer = document.querySelectorAll(".informationContainer");
-
 
   displayNoneAll(informationContainer);
   informationContainer[0].style.display = "grid";
 
-
-  categoriesArray.push(newDish.category)
-
-
+  categoriesArray.push(newDish.category);
 }
-
-
-
-
 
 // let informationContainer = document.querySelectorAll(".informationContainer");
 
@@ -258,16 +231,8 @@ function displayNoneAll(arrayTodisplayNone) {
   });
 }
 
-
-
-
-
-
-
-
 function addNewElements(newObjectName) {
   // displayfirst(informationContainer);
-
 
   informationContainer = document.querySelectorAll(".informationContainer");
   // CLONE LIST ITEM
@@ -282,7 +247,6 @@ function addNewElements(newObjectName) {
   cln.querySelector(
     ".categoryName"
   ).textContent = `(${newObjectName.category})`;
-
 
   // NAME
   cln.querySelector("h1").textContent = newObjectName.name;
@@ -301,22 +265,20 @@ function addNewElements(newObjectName) {
   // LONG DESCRIPTION DYNAMIC ADDING
   const longDes = cln.querySelector(".longDescribtions");
 
-  cln.querySelector(".more").onmouseover = function () {
-    fetch(`https://kea-alt-del.dk/t5/api/product?id=${newObjectName.id}`).then(res => {
-      return res.json()
-    }).then(data => {
-
-      longDes.textContent = data.longdescription;
-      longDes.classList.remove("d-none");
-    })
+  cln.querySelector(".more").onmouseover = function() {
+    fetch(`https://kea-alt-del.dk/t5/api/product?id=${newObjectName.id}`)
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        longDes.textContent = data.longdescription;
+        longDes.classList.remove("d-none");
+      });
   };
 
-  cln.querySelector(".more").onmouseout = function () {
+  cln.querySelector(".more").onmouseout = function() {
     longDes.classList.add("d-none");
   };
-
-
-
 
   // SHORT DESCRIPTION
   cln.querySelector(".shortDescirbtion").textContent = newObjectName.shortDes;
@@ -340,7 +302,7 @@ function addNewElements(newObjectName) {
   let oneInformationContainer = cln.querySelector(".informationContainer");
   oneInformationContainer.style.display = "none";
 
-  clnListItem.querySelector(".dishName").onclick = function () {
+  clnListItem.querySelector(".dishName").onclick = function() {
     // displayNoneAll(informationContainer);
 
     informationContainer.forEach(element => {
@@ -348,40 +310,27 @@ function addNewElements(newObjectName) {
     });
 
     oneInformationContainer.style.display = "grid";
-
   };
 
+  let allergies = cln.querySelector(".allergies");
 
-  let allergies = cln.querySelector(".allergies")
-
-
-
-  // ALLERGIES  
-  fetch(`https://kea-alt-del.dk/t5/api/product?id=${newObjectName.id}`).then(res => {
-    return res.json()
-  }).then(data => {
-
-    if (data.allergens.length > 0) {
-      data.allergens.forEach(alergyItem => {
-        // const parent = cln.querySelector(".allergies")
-        const li = document.createElement("li");
-        li.textContent = alergyItem;
-        allergies.appendChild(li);
-      })
-
-    } else {
-
-      allergies.style.visibility = "hidden";
-    }
-
-
-
-
-  })
-
-
-
-
+  // ALLERGIES
+  fetch(`https://kea-alt-del.dk/t5/api/product?id=${newObjectName.id}`)
+    .then(res => {
+      return res.json();
+    })
+    .then(data => {
+      if (data.allergens.length > 0) {
+        data.allergens.forEach(alergyItem => {
+          // const parent = cln.querySelector(".allergies")
+          const li = document.createElement("li");
+          li.textContent = alergyItem;
+          allergies.appendChild(li);
+        });
+      } else {
+        allergies.style.visibility = "hidden";
+      }
+    });
 
   // ALCOHOL
 
@@ -398,20 +347,14 @@ function addNewElements(newObjectName) {
   // VEGETARIAN OR NOT
   cln.querySelector(".vegetarian").src = newObjectName.isVegIcon();
 
-
   // courseListContainer.appendChild(clnListItem);
   courseListContainer.appendChild(clnListItem);
 
   // APPEND TO THE DESCRIPTION
   descriptionContainer.appendChild(cln);
-
-
 }
 
-
-
 function listToShow(categoryBtn) {
-
   informationContainer = document.querySelectorAll(".informationContainer");
   let dishNameContainers = document.querySelectorAll(".dishName");
 
@@ -419,20 +362,13 @@ function listToShow(categoryBtn) {
 
   media_q();
 
-  categoryBtn = this;
-  console.log(categoryBtn.textContent.toLowerCase())
-
-  let nameOfTheCategory = this.textContent.toLowerCase()
-
   for (let i = 0; i < courseArray.length; i++) {
-
-
     if (
-      courseArray[i].category.toLowerCase() === this.textContent.toLowerCase() &&
+      courseArray[i].category.toLowerCase() ===
+        categoryBtn.textContent.toLowerCase() &&
       window.innerWidth > 700
     ) {
-
-      console.log("test")
+      console.log("test");
       arrayIndex.push(i);
       let minIndex = Math.min.apply(Math, arrayIndex);
       informationContainer[i].style.display = "none";
@@ -440,9 +376,12 @@ function listToShow(categoryBtn) {
       // NAMES OF THE DISHES
       dishNameContainers[i].style.display = "block";
     } else if (
-      courseArray[i].category.toLowerCase() === this.textContent.toLowerCase() &&
+      courseArray[i].category.toLowerCase() ===
+        categoryBtn.textContent.toLowerCase() &&
       window.innerWidth <= 700
     ) {
+      console.log("test smaller");
+
       arrayIndex.push(i);
       informationContainer[i].style.display = "grid";
     } else {
@@ -455,7 +394,6 @@ function listToShow(categoryBtn) {
 
 // window.onresize = function () {
 //   media_q();
-
 
 //   // if (window.innerWidth > 700) {
 //   //   console.log(categoryButtonsList)
@@ -471,12 +409,7 @@ function listToShow(categoryBtn) {
 //   // }
 // };
 
-
-
-
 // let informationContainer = document.querySelectorAll(".informationContainer");
-
-
 
 function displayfirst(array) {
   array[0].style.display = "grid";
