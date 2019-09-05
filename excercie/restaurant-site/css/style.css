@@ -14,29 +14,35 @@
 
 
 body {
+  overflow: hidden;
   display: grid;
   height: 100vh;
   width: 100%;
   justify-content: center;
   grid-template-columns: 1fr;
-  grid-auto-rows: max-content;
-  grid-gap: 2rem;
+  grid-auto-rows: auto 1fr auto;
+  margin: 0;
+  grid-gap: 3.5rem;
 
 }
 
 header {
-  width: 80%;
+
   display: flex;
   justify-content: space-between;
   margin-bottom: auto;
   background-color: #1f2323;
-  width: 80%;
   justify-self: center;
+}
+
+
+.sameWidth {
+  width: 80%;
 }
 
 .nameRestaurant {
 
-  width: 80%;
+
   text-align: center;
   justify-self: center;
   display: flex;
@@ -58,6 +64,9 @@ nav {
   justify-content: space-around;
 }
 
+h4 {
+  color: white;
+}
 
 a {
   text-decoration: none;
@@ -98,10 +107,7 @@ button {
   align-self: center;
   grid-template-columns: 20% 3fr;
   grid-template-rows: min-content;
-  /* align-items: center; */
-  width: 80%;
   height: 600px;
-  /* border: 2px solid black; */
   background-color: #0a1e1fbd;
   color: white;
 
@@ -118,18 +124,11 @@ button {
 }
 
 .categoriesContainer {
-  /* flex-direction: column; */
-  /* align-content: space-around;
-  justify-content: space-around;
-  height: 100%; */
   text-align: center;
   background-color: #1f2323;
   font-family: 'Ubuntu', sans-serif;
   grid-area: 1/1/span 1/ span 2;
   height: fit-content;
-
-  /* height: fit-content;
-  margin-bottom: auto; */
 
 
 }
@@ -239,12 +238,12 @@ h1 {
   border-right: 1px solid white;
   border-radius: none;
   border-radius: 0;
+  scroll-behavior: smooth;
   overflow: scroll;
 }
 
 .alcoContainer {
   display: flex;
-  /* visibility: hidden; */
   margin-left: auto;
   margin-right: auto;
 
@@ -297,17 +296,27 @@ h1 {
 
 
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2323;
+  ;
+  justify-self: center;
+}
+
+
 /* MEDIA QUERIES */
 
 
 @media screen and (max-width:1300px) {
-  .mainContainer {
+
+
+  .sameWidth {
     width: 90%;
   }
 
-  header {
-    width: 90%;
-  }
+
 
   .dishImg {
     height: 27vh;
@@ -325,11 +334,7 @@ h1 {
 
 @media screen and (max-width:1130px) {
 
-  .mainContainer {
-    width: 100%;
-  }
-
-  header {
+  .sameWidth {
     width: 100%;
   }
 
@@ -357,14 +362,18 @@ h1 {
   }
 
   .longDescribtions {
-    /* height: 60%;
-    width: 100%; */
     padding: 1rem;
   }
 }
 
 
 @media screen and (max-width: 700px) {
+
+  header,
+  footer,
+  .nameRestaurant {
+    display: none;
+  }
 
   .mainContainer {
     height: 100%;
@@ -440,8 +449,6 @@ h1 {
     bottom: 0;
     height: 5rem;
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #07081399);
-
-    /* background-color: #bcbfc3; */
     border-radius: 0;
     display: flex;
     justify-content: flex-end;
@@ -470,7 +477,6 @@ h1 {
     margin: 0 2rem;
     cursor: pointer;
     font-family: 'Ubuntu', sans-serif;
-
     background-color: #111f21;
     color: white;
     font-size: 1.5rem;
