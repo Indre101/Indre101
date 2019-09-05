@@ -16,19 +16,6 @@ function toggleClass(element, className) {
   element.classList.toggle(className);
 }
 
-// // CATEGORY BUTTON PRESSED FUNCTION
-// categoryButtonsList.forEach(btn => {
-//   btn.addEventListener("click", changeBg);
-// });
-
-// function changeBg() {
-//   categoryButtonsList.forEach(btn => {
-//     btn.style.backgroundColor = "";
-//   });
-
-//   this.style.backgroundColor = "rgb(111, 111, 154)";
-// }
-
 // CATEGORIES MENU
 
 function displayNone() {
@@ -387,29 +374,9 @@ function listToShow(categoryBtn) {
     } else {
       informationContainer[i].style.display = "none";
       dishNameContainers[i].style.display = "none";
-      // arrayIndex = [];
     }
   }
 }
-
-// window.onresize = function () {
-//   media_q();
-
-//   // if (window.innerWidth > 700) {
-//   //   console.log(categoryButtonsList)
-//   //   categoryButtonsList.forEach(btn => {
-//   //     let bgColor = getComputedStyle(btn).backgroundColor;
-
-//   //     if (bgColor === "rgb(111, 111, 154)") {
-//   //       let quotedVar = btn.textContent.toLowerCase();
-//   //       let str = quotedVar.replace(/\s+/g, "");
-//   //       listToShow(str);
-//   //     }
-//   //   });
-//   // }
-// };
-
-// let informationContainer = document.querySelectorAll(".informationContainer");
 
 function displayfirst(array) {
   array[0].style.display = "grid";
