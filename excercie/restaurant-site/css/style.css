@@ -6,7 +6,10 @@
 :root {
   --background-color: #1f2323;
   --background-color-dark: #0a1e1fbd;
-  --background-modal: #251915de
+  --background-modal: #251915de;
+  --ubuntu-font-family: 'Ubuntu', sans-serif;
+  --railway-font: 'Raleway', sans-serif;
+
 }
 
 
@@ -33,7 +36,6 @@ body {
 }
 
 header {
-
   display: flex;
   justify-content: space-between;
   margin-bottom: auto;
@@ -59,7 +61,7 @@ header {
 }
 
 .nameRestaurant h1 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: var(--ubuntu-font-family);
   font-size: 2.5rem;
   padding: 1rem 0;
 }
@@ -132,7 +134,7 @@ button {
 .categoriesContainer {
   text-align: center;
   background-color: var(--background-color-dark);
-  font-family: 'Ubuntu', sans-serif;
+  font-family: var(--ubuntu-font-family);
   grid-area: 1/1/span 1/ span 2;
   height: fit-content;
 
@@ -198,7 +200,7 @@ h1 {
 .descriptionContainer {
   height: 100%;
   padding: 2rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--railway-font);
 }
 
 .longDescribtions {
@@ -212,7 +214,6 @@ h1 {
   padding: 2rem;
   line-height: 1.5rem;
   overflow: scroll;
-  /* margin-right: 1rem; */
 }
 
 
@@ -269,7 +270,7 @@ h1 {
 
 .dishName h2 {
   margin-left: 0.3rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--railway-font);
   display: inline;
   font-size: 1rem;
 }
@@ -306,7 +307,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color-dark);
+  background-color: var(--background-color);
   justify-self: center;
 }
 
@@ -408,6 +409,7 @@ footer {
   }
 
   .categoriesContainer {
+    background-color: var(--background-color);
     flex-direction: column;
     position: fixed;
     width: 100%;
@@ -481,7 +483,7 @@ footer {
     right: 0;
     margin: 0 2rem;
     cursor: pointer;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: var(--ubuntu-font-family);
     background-color: #111f21;
     color: white;
     font-size: 1.5rem;
