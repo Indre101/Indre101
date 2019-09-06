@@ -156,6 +156,7 @@ h1 {
 .category {
   border: 1px solid white;
   width: 20%;
+  cursor: pointer;
 }
 
 .dishImg {
@@ -239,7 +240,7 @@ span {
 .more {
   align-self: center;
   transition: color 0.5s, text-decoration 0.5s;
-
+  cursor: pointer;
   font-style: italic;
 }
 
@@ -261,8 +262,29 @@ span {
   border-right: 1px solid white;
   border-radius: none;
   border-radius: 0;
-  scroll-behavior: smooth;
-  overflow: scroll;
+  /*scroll-behavior: smooth;*/
+  overflow-y: scroll;
+}
+
+.courseListContainer::-webkit-scrollbar {
+  width: 10px;
+  cursor: pointer;
+}
+
+
+/* Track */
+.courseListContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+
+
+
+/* Handle */
+.courseListContainer::-webkit-scrollbar-thumb {
+  background: var(--font-color-white);
+  border-radius: 10px;
 }
 
 .alcoContainer {
@@ -281,6 +303,7 @@ span {
   padding: 2rem 0 0.5rem 0.8rem;
   border-bottom: 1px solid;
   border-radius: 0 0 15px 15px;
+  cursor: pointer;
 }
 
 
@@ -448,6 +471,7 @@ footer {
   .category {
     width: 100%;
   }
+
 
 
 
