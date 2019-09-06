@@ -263,6 +263,7 @@ function addNewElements(newObjectName) {
   };
 
   cln.querySelector(".more").onmouseout = function () {
+
     longDes.classList.add("d-none");
   };
 
@@ -299,6 +300,7 @@ function addNewElements(newObjectName) {
   };
 
   let allergies = cln.querySelector(".allergies");
+  let ratings = cln.querySelector(".rating");
 
   // ALLERGIES
   fetch(`https://kea-alt-del.dk/t5/api/product?id=${newObjectName.id}`)
@@ -315,6 +317,15 @@ function addNewElements(newObjectName) {
         });
       } else {
         allergies.style.visibility = "hidden";
+      }
+
+      console.log(data)
+
+      for (let index = 0; index < data.stars; index++) {
+
+        const span = document.createElement("span");
+        span.textContent = "☆";
+        ratings.appendChild(span);
       }
     });
 

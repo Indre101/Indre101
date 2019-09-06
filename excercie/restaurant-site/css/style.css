@@ -231,6 +231,10 @@ h1 {
 }
 
 
+span {
+  background-color: orange;
+}
+
 .more {
   align-self: center;
   transition: color 0.5s, text-decoration 0.5s;
