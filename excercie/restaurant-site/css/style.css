@@ -9,6 +9,7 @@
   --background-modal: #251915de;
   --ubuntu-font-family: 'Ubuntu', sans-serif;
   --railway-font: 'Raleway', sans-serif;
+  --font-color-white: white;
 
 }
 
@@ -41,6 +42,7 @@ header {
   margin-bottom: auto;
   background-color: var(--background-color);
   justify-self: center;
+
 }
 
 
@@ -49,8 +51,6 @@ header {
 }
 
 .nameRestaurant {
-
-
   text-align: center;
   justify-self: center;
   display: flex;
@@ -73,12 +73,12 @@ nav {
 }
 
 h4 {
-  color: white;
+  color: var(--font-color-white);
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--font-color-white);
   border: 1px solid white;
   width: 50%;
   text-align: center;
@@ -117,7 +117,7 @@ button {
   grid-template-rows: min-content;
   height: 600px;
   background-color: var(--background-color-dark);
-  color: white;
+  color: var(--font-color-white);
 
 
 }
@@ -210,7 +210,7 @@ h1 {
   border: 1px solid;
   height: 70%;
   background-color: var(--background-modal);
-  color: white;
+  color: var(--font-color-white);
   padding: 2rem;
   line-height: 1.5rem;
   overflow: scroll;
@@ -485,7 +485,7 @@ footer {
     cursor: pointer;
     font-family: var(--ubuntu-font-family);
     background-color: #111f21;
-    color: white;
+    color: var(--font-color-white);
     font-size: 1.5rem;
   }
 
