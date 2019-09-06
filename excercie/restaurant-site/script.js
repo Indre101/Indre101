@@ -319,13 +319,14 @@ function addNewElements(newObjectName) {
         allergies.style.visibility = "hidden";
       }
 
-      console.log(data)
+
 
       for (let index = 0; index < data.stars; index++) {
 
         const span = document.createElement("span");
         span.textContent = "☆";
         ratings.appendChild(span);
+
       }
     });
 
