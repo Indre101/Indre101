@@ -233,7 +233,18 @@ h1 {
 
 .more {
   align-self: center;
+  transition: color 0.5s, text-decoration 0.5s;
+
+  font-style: italic;
 }
+
+.more:hover {
+  color: black;
+  text-decoration: underline;
+
+}
+
+
 
 .imgContainer {
   display: flex;
