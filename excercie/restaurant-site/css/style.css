@@ -3,6 +3,12 @@
 
 
 
+:root {
+  --background-color: #1f2323;
+  --background-color-dark: #0a1e1fbd;
+  --background-modal: #251915de
+}
+
 
 * {
   box-sizing: border-box;
@@ -31,7 +37,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: auto;
-  background-color: #1f2323;
+  background-color: var(--background-color);
   justify-self: center;
 }
 
@@ -88,7 +94,7 @@ button {
 
 .bgImg {
   background-image: url(../img/photo-1521017432531-fbd92d768814.jpeg);
-  background-size: cover;
+
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -108,7 +114,7 @@ button {
   grid-template-columns: 20% 3fr;
   grid-template-rows: min-content;
   height: 600px;
-  background-color: #0a1e1fbd;
+  background-color: var(--background-color-dark);
   color: white;
 
 
@@ -125,7 +131,7 @@ button {
 
 .categoriesContainer {
   text-align: center;
-  background-color: #1f2323;
+  background-color: var(--background-color-dark);
   font-family: 'Ubuntu', sans-serif;
   grid-area: 1/1/span 1/ span 2;
   height: fit-content;
@@ -201,7 +207,7 @@ h1 {
   width: 90%;
   border: 1px solid;
   height: 70%;
-  background-color: #251915de;
+  background-color: var(--background-modal);
   color: white;
   padding: 2rem;
   line-height: 1.5rem;
@@ -300,8 +306,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1f2323;
-  ;
+  background-color: var(--background-color-dark);
   justify-self: center;
 }
 
