@@ -191,6 +191,7 @@ h1 {
 
 .info {
   align-self: center;
+  align-items: center;
   grid-template-columns: 1fr;
   display: grid;
   height: 400px;

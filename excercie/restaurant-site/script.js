@@ -243,6 +243,7 @@ function addNewElements(newObjectName) {
     cln.querySelector(".soldOut").style.display = "block";
   }
 
+
   // DISH IMAGE
   cln.querySelector(
     ".dishImg"
@@ -284,7 +285,11 @@ function addNewElements(newObjectName) {
     discountPrice.style.fontSize = "1.5rem";
     discountPrice.style.color = "red";
     discountPrice.textContent = `Price now  ${newObjectName.disCountPrice()},-`;
+
   }
+
+
+
 
   let oneInformationContainer = cln.querySelector(".informationContainer");
   oneInformationContainer.style.display = "none";
