@@ -41,7 +41,7 @@ media_q();
 
 // MENU BUTTON FUNCTION
 
-menuBtn.onclick = function() {
+menuBtn.onclick = function () {
   media_q();
 };
 
@@ -72,13 +72,13 @@ function Dish(
   this.soldOutStatus = soldOutStatus;
   this.alcohol = alcohol;
 
-  this.isCatogery = function() {
+  this.isCatogery = function () {
     if (!this.category) {
       return true;
     }
   };
 
-  this.containsAlcohol = function() {
+  this.containsAlcohol = function () {
     if (this.alcohol > 0) {
       return true;
     } else {
@@ -86,7 +86,7 @@ function Dish(
     }
   };
 
-  this.disCountPrice = function() {
+  this.disCountPrice = function () {
     let finalPrice;
 
     if (this.discountAmount > 0) {
@@ -97,7 +97,7 @@ function Dish(
     }
   };
 
-  this.isVegIcon = function() {
+  this.isVegIcon = function () {
     if (this.isVegStatus === true) {
       return "./img/icons-img/veg_1.svg";
     } else {
@@ -105,7 +105,7 @@ function Dish(
     }
   };
 
-  this.isSoldOut = function() {
+  this.isSoldOut = function () {
     if (soldOutStatus) {
       return true;
     } else {
@@ -129,7 +129,7 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
       newCategoryName.textContent = categoryName;
       newCategory.appendChild(newCategoryName);
 
-      window.onresize = function() {
+      window.onresize = function () {
         media_q();
 
         if (window.innerWidth > 700) {
@@ -137,7 +137,6 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
             let bgColor = getComputedStyle(btn).backgroundColor;
 
             if (bgColor === "rgb(41, 86, 12)") {
-              console.log("window resize");
 
               let quotedVar = btn.textContent;
               let str = quotedVar.replace(/\s+/g, "");
@@ -149,7 +148,7 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
 
       // newCategory.addEventListener("click", listToShow);
 
-      newCategory.onclick = function() {
+      newCategory.onclick = function () {
         listToShow(newCategory);
       };
 
@@ -178,7 +177,7 @@ let informationContainer = document.querySelectorAll(".informationContainer");
 let categoriesArray = [];
 
 let filteredCategoriesArray = () =>
-  categoriesArray.filter(function(item, index) {
+  categoriesArray.filter(function (item, index) {
     return categoriesArray.indexOf(item) >= index;
   });
 
@@ -252,7 +251,7 @@ function addNewElements(newObjectName) {
   // LONG DESCRIPTION DYNAMIC ADDING
   const longDes = cln.querySelector(".longDescribtions");
 
-  cln.querySelector(".more").onmouseover = function() {
+  cln.querySelector(".more").onmouseover = function () {
     fetch(`https://kea-alt-del.dk/t5/api/product?id=${newObjectName.id}`)
       .then(res => {
         return res.json();
@@ -263,7 +262,7 @@ function addNewElements(newObjectName) {
       });
   };
 
-  cln.querySelector(".more").onmouseout = function() {
+  cln.querySelector(".more").onmouseout = function () {
     longDes.classList.add("d-none");
   };
 
@@ -289,7 +288,7 @@ function addNewElements(newObjectName) {
   let oneInformationContainer = cln.querySelector(".informationContainer");
   oneInformationContainer.style.display = "none";
 
-  clnListItem.querySelector(".dishName").onclick = function() {
+  clnListItem.querySelector(".dishName").onclick = function () {
     // displayNoneAll(informationContainer);
 
     informationContainer.forEach(element => {
@@ -352,10 +351,9 @@ function listToShow(categoryBtn) {
   for (let i = 0; i < courseArray.length; i++) {
     if (
       courseArray[i].category.toLowerCase() ===
-        categoryBtn.textContent.toLowerCase() &&
+      categoryBtn.textContent.toLowerCase() &&
       window.innerWidth > 700
     ) {
-      console.log("test");
       arrayIndex.push(i);
       let minIndex = Math.min.apply(Math, arrayIndex);
       informationContainer[i].style.display = "none";
@@ -364,10 +362,9 @@ function listToShow(categoryBtn) {
       dishNameContainers[i].style.display = "block";
     } else if (
       courseArray[i].category.toLowerCase() ===
-        categoryBtn.textContent.toLowerCase() &&
+      categoryBtn.textContent.toLowerCase() &&
       window.innerWidth <= 700
     ) {
-      console.log("test smaller");
 
       arrayIndex.push(i);
       informationContainer[i].style.display = "grid";
