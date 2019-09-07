@@ -9,7 +9,7 @@ const ctx = canvas.getContext("2d");
 
 // CLEAR CANVAS BUTTON;
 
-document.getElementById("clearCanvas").onclick = function() {
+document.getElementById("clearCanvas").onclick = function () {
   clearCanvas();
 };
 
@@ -20,7 +20,7 @@ function clearCanvas() {
 // CHANGE COLOR OF STROKE
 function colorChange() {
   items.forEach(i => {
-    i.onclick = function() {
+    i.onclick = function () {
       let colorBG = window
         .getComputedStyle(this, null)
         .getPropertyValue("background-color");
@@ -37,7 +37,7 @@ colorChange();
 
 function checkIfClicked() {
   tools.forEach(t => {
-    t.onclick = function() {
+    t.onclick = function () {
       tools.forEach(t => {
         t.style.backgroundColor = "white";
       });
@@ -52,7 +52,7 @@ checkIfClicked();
 let dw = 3;
 let clickCount = 0;
 
-document.querySelector(".earase").onclick = function() {
+document.querySelector(".earase").onclick = function () {
   if (clickCount === 0) {
     clickCount++;
 
@@ -78,62 +78,62 @@ document.querySelector(".earase").onclick = function() {
 function findButton(x, y) {
   if (
     window
-      .getComputedStyle(tools[0], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[0], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    ctx.fillRect(x, y, 0.5, 0.5);
+    ctx.fillRect(x, y, 1, 1);
   } else if (
     window
-      .getComputedStyle(tools[1], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[1], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.fillRect(x, y, 5, 5);
   } else if (
     window
-      .getComputedStyle(tools[2], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[2], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.fillRect(x, y, 10, 10);
   } else if (
     window
-      .getComputedStyle(tools[3], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[3], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.arc(x, y, 1, 0, Math.PI * 2, false);
     ctx.fill();
     ctx.stroke();
   } else if (
     window
-      .getComputedStyle(tools[4], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[4], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.arc(x, y, 3, 0, Math.PI * 2, false);
     ctx.fill();
   } else if (
     window
-      .getComputedStyle(tools[5], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[5], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     ctx.arc(x, y, 6, 0, Math.PI * 2, false);
     ctx.fill();
   } else if (
     window
-      .getComputedStyle(tools[6], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[6], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     drawLine(onmousedown);
     drawLineEnd(onmousemove);
     ctx.fill();
   } else if (
     window
-      .getComputedStyle(tools[7], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[7], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     // fillAll();
   } else if (
     window
-      .getComputedStyle(tools[8], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[8], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     // clickCount++;
 
@@ -163,22 +163,16 @@ function findButton(x, y) {
     }
   } else if (
     window
-      .getComputedStyle(tools[9], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[9], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
     let size = document.getElementById("input").value;
     ctx.clearRect(x, y, size, size);
   } else if (
     window
-      .getComputedStyle(tools[10], null)
-      .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
+    .getComputedStyle(tools[10], null)
+    .getPropertyValue("background-color") === "rgba(0, 8, 255, 0.52)"
   ) {
-    // ctx.clearRect(
-    //   xArray[0] - dw,
-    //   yArray[0] - dw,
-    //   Math.pow(dw, 2) * Math.PI,
-    //   Math.pow(dw, 2) * Math.PI
-    // );
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -187,23 +181,51 @@ function findButton(x, y) {
 
     ctx.rect(xArray[0] - dw / 2, yArray[0] - dw / 2, dw, dw);
 
-    // ctx.arc(xArray[0], yArray[0], dw, 0, Math.PI * 2, false);
+    canvas.onclick = function () {
 
-    if (dw < 1) {
-      dw = 1;
-    } else if (x > xArray[0] + dw && y > yArray[0] + dw) {
-      dw++;
-    } else if (x < xArray[0] - dw && y > yArray[0] + dw) {
-      dw++;
-    } else if (x < xArray[0] - dw || y < yArray[0] - dw) {
-      dw++;
-    } else if (x > xArray[0] + dw || y < yArray[0] - dw) {
-      dw++;
-    } else {
-      dw--;
+      let newSquareElement = new Square()
     }
+
+
   }
 }
+
+
+function Square(squareWidth, event) {
+
+  this.squareWidth = squareWidth;
+  this.event = event;
+  this.x = function () {
+    this.event || window.event;
+    let mousePos = {
+      x: e.clientX,
+    };
+  }
+  this.y = function () {
+    this.event || window.event;
+    let mousePos = {
+      y: e.clientY
+    };
+  }
+  this.squareDrawingBoundries = function () {
+    if (this.squareWidth < 1) {
+      this.squareWidth = 1;
+    } else if (this.x > this.xArray[0] + this.squareWidth && this.y > this.yArray[0] + this.squareWidth) {
+      this.squareWidth++;
+    } else if (this.x < this.xArray[0] - this.squareWidth && this.y > this.yArray[0] + this.squareWidth) {
+      this.squareWidth++;
+    } else if (this.x < this.xArray[0] - this.squareWidth || this.y < this.yArray[0] - this.squareWidth) {
+      this.squareWidth++;
+    } else if (this.x > this.xArray[0] + this.squareWidth || this.y < this.yArray[0] - this.squareWidth) {
+      this.squareWidth++;
+    } else {
+      this.squareWidth--;
+    }
+
+  }
+
+}
+
 
 let xArray = [];
 let yArray = [];
@@ -219,7 +241,7 @@ function saveResizeAndRedisplay(scaleFactor) {
 
   // scale and redraw the canvas content
   var img = new Image();
-  img.onload = function() {
+  img.onload = function () {
     ctx.drawImage(
       img,
       0,
@@ -236,7 +258,7 @@ function saveResizeAndRedisplay(scaleFactor) {
 }
 
 function checkWindowResize() {
-  window.onresize = function() {
+  window.onresize = function () {
     saveResizeAndRedisplay(1.5);
     canvas.height = canvas.scrollHeight;
     canvas.width = canvas.scrollWidth;
@@ -303,7 +325,7 @@ let xPositionArray = [];
 let yPositionArray = [];
 
 function fillAll() {
-  canvas.onclick = function() {
+  canvas.onclick = function () {
     firstColorArr = [];
 
     e = event || window.event;
@@ -384,9 +406,9 @@ function fillAll() {
 }
 
 // FUNCTION FOR DRAWING LINES
-canvas.onmousedown = function() {
+canvas.onmousedown = function () {
   canvas.addEventListener("mousemove", drawRect, false);
-  canvas.onmouseup = function() {
+  canvas.onmouseup = function () {
     xArray = [];
     yArray = [];
     canvas.removeEventListener("mousemove", drawRect);
