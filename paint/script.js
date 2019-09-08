@@ -176,35 +176,32 @@ function findButton(x, y) {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    xArray.push(x);
-    yArray.push(y);
 
-    ctx.rect(xArray[0] - dw / 2, yArray[0] - dw / 2, dw, dw);
+    let newSquareElement = new Square(dw)
 
-    canvas.onclick = function () {
+    xArray.push(newSquareElement.x());
+    yArray.push(newSquareElement.y());
 
-      let newSquareElement = new Square()
-    }
-
+    ctx.rect(xArray[0] - newSquareElement.squareWidth / 2, yArray[0] - newSquareElement.squareWidth / 2, newSquareElement.squareWidth, newSquareElement.squareWidth);
 
   }
 }
 
 
-function Square(squareWidth, event) {
+function Square(squareWidth) {
 
   this.squareWidth = squareWidth;
-  this.event = event;
+  this.event = "mousedown";
   this.x = function () {
     this.event || window.event;
-    let mousePos = {
-      x: e.clientX,
+    return {
+      x: event.clientX
     };
   }
   this.y = function () {
     this.event || window.event;
-    let mousePos = {
-      y: e.clientY
+    return {
+      y: event.clientY
     };
   }
   this.squareDrawingBoundries = function () {
