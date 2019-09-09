@@ -178,11 +178,9 @@ function findButton(x, y) {
 
 
     let newSquareElement = new Square(dw)
+    newSquareElement.squareDrawingBoundries()
 
-    xArray.push(newSquareElement.x());
-    yArray.push(newSquareElement.y());
 
-    ctx.rect(xArray[0] - newSquareElement.squareWidth / 2, yArray[0] - newSquareElement.squareWidth / 2, newSquareElement.squareWidth, newSquareElement.squareWidth);
 
   }
 }
@@ -205,15 +203,23 @@ function Square(squareWidth) {
     };
   }
   this.squareDrawingBoundries = function () {
+
+    xArray.push(this.x);
+    yArray.push(this.y);
+
+    console.log(xArray[0]);
+
+    ctx.rect(xArray[0] - this.squareWidth / 2, yArray[0] - this.squareWidth / 2, this.squareWidth, this.squareWidth);
+
     if (this.squareWidth < 1) {
       this.squareWidth = 1;
-    } else if (this.x > this.xArray[0] + this.squareWidth && this.y > this.yArray[0] + this.squareWidth) {
+    } else if (this.x > xArray[0] + this.squareWidth && this.y > yArray[0] + this.squareWidth) {
       this.squareWidth++;
-    } else if (this.x < this.xArray[0] - this.squareWidth && this.y > this.yArray[0] + this.squareWidth) {
+    } else if (this.x < xArray[0] - this.squareWidth && this.y > yArray[0] + this.squareWidth) {
       this.squareWidth++;
-    } else if (this.x < this.xArray[0] - this.squareWidth || this.y < this.yArray[0] - this.squareWidth) {
+    } else if (this.x < xArray[0] - this.squareWidth || this.y < yArray[0] - this.squareWidth) {
       this.squareWidth++;
-    } else if (this.x > this.xArray[0] + this.squareWidth || this.y < this.yArray[0] - this.squareWidth) {
+    } else if (this.x > xArray[0] + this.squareWidth || this.y < yArray[0] - this.squareWidth) {
       this.squareWidth++;
     } else {
       this.squareWidth--;
