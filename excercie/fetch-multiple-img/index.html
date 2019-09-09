@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fecth stuff</title>
+  <style>
+    img {
+      width: 10%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+  <script>
+    const body = document.querySelector("body");
+
+    const arrImg = ["charles-K4mSJ7kc0As-unsplash (1).jpg", "louis-hansel-OgDrj7Q8EAw-unsplash.jpg", "veg.svg"];
+
+    arrImg.forEach(e => {
+
+
+      fetch(e).then(res => {
+        return res.blob()
+      }).then(data => {
+
+        let newImg = document.createElement("img");
+        newImg.src = URL.createObjectURL(data);
+        body.appendChild(newImg)
+      })
+
+    })
+  </script>
+</body>
+
+</html>
