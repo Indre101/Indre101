@@ -4,7 +4,7 @@ const expandableContentArr = document.querySelectorAll(".expandableContent");
 
 console.log(btnExpandArr)
 
-btnExpandArr.forEach(btn => btn.addEventListener("click", expandContent));
+btnExpandArr.forEach(btn => btn.addEventListener("mouseover", expandContent));
 
 
 function expandContent() {
